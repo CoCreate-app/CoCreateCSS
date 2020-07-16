@@ -1,0 +1,20 @@
+{
+  "name": "CoCreate",
+  "version": "0.1.149",
+  "description": "CoCreatejs realtime CRUD using html5 data-attributes",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CoCreate-app"
+  },
+  "author": "Frankie Pagan",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "aws-s3": "^2.0.5",
+    "fs": "0.0.1-security",
+    "uglifycss": "0.0.29",
+    "webpack-s3-uploader": "^1.3.3"
+  }
+}

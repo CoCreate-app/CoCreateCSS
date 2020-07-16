@@ -1,0 +1,162 @@
+ /*flex css */ 
+ 
+.display-flex {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.display-inline-flex {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.align-items-center{                /*.align-items-center { */
+  -webkit-align-items: center; 
+  align-items: center; 
+}  
+.justify-content-center{            /*.justify-content-center { */
+  justify-content:center;
+}
+.align-items-flex-end{             /*.align-items-flex-end { */
+  -webkit-align-items: flex-end; 
+  align-items: flex-end;
+}
+.justify-content-flex-end{         /*.justify-content-flex-end { */
+  -webkit-justify-content: flex-end; 
+  justify-content: flex-end;
+}
+
+.justify-content-space-between{    /*.justify-content-space-between { */
+  -webkit-justify-content: space-between; 
+  justify-content: space-between;
+}
+
+.align-items-flex-start{          /*.align-items-flex-start {*/
+  align-items: flex-start;
+}
+.justify-content-flex-start{      /*.justify-content-flex-start {*/
+  justify-content: flex-start;
+}
+
+.flex-dirction-column {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-direction: normal;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-dirction-row {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.flex-direction-row-reverse{     /* flex-row-reverse */
+  -webkit-box-orient: horizontal!important;
+  -webkit-box-direction: reverse!important;
+  -ms-flex-direction: row-reverse!important;
+  flex-direction: row-reverse!important;
+}
+         
+.flex-wrap-nowrap{              /*.flex-nowrap {*/
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap-wrap: none;
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-wrap{                /*.flex-wrap-wrap{*/
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse{        /*.flex-reserve-wrap {*/
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.flex-1-1{                      /*.flex-1 {*/
+  flex: 1 1;
+}
+.flex-50{
+  flex:0 0 50%;
+}
+
+/* Flexbox grow */
+.flex-grow-1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex: 1;
+  flex-grow: 1;
+}
+.flex-grow-2 {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex: 2;
+  flex-grow: 2;
+}
+.flex-grow-3 { 
+  -webkit-box-flex: 3;
+  -moz-box-flex: 3;
+  -webkit-flex-grow: 3;
+  -ms-flex: 3;
+  flex-grow: 3;
+}
+
+/* Flexbox shrink */
+.flex-shrink-0{
+  -webkit-flex-shrink: 0;
+  -moz-flex-shrink: 0;
+  -ms-flex: 0;
+  flex-shrink: 0;
+}
+.flex-shrink-1{
+  -webkit-flex-shrink: 1;
+  -moz-flex-shrink: 1;
+  -ms-flex: 1;
+  flex-shrink: 1;
+}
+.flex-shrink-2{
+  -webkit-flex-shrink: 2;
+  -moz-flex-shrink: 2;
+  -ms-flex: 2;
+  flex-shrink: 2;
+}
+
+organize-flex-basis{
+/* Specify <'width'> */
+flex-basis: 10em;      
+flex-basis: 3px;
+flex-basis: auto;
+
+/* Intrinsic sizing keywords */
+flex-basis: fill;
+flex-basis: max-content;
+flex-basis: min-content;
+flex-basis: fit-content;
+
+/* Automatically size based on the flex item’s content */
+flex-basis: content;
+
+/* Global values */
+flex-basis: inherit;
+flex-basis: initial;
+flex-basis: unset;}
