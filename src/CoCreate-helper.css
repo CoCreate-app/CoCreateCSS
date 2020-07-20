@@ -69,7 +69,8 @@
 .position-inherit {position:inherit !important}
 .position-relative {position:relative !important;}
 .position-absolute {position:absolute !important;}
-.position-fixed {position:fixed !important;}
+.position-sticky {position:sticky !important;}
+.position-static {position:static !important;}
 
 
 /* z-index */

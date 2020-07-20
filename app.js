@@ -1,4 +1,4 @@
-const upload_s3 = require('../CoCreateJS/upload_s3');
+// const upload_s3 = require('../CoCreateJS/upload_s3');
 var UglifyCss = require("uglifycss");
 var fs = require('fs');
 const pkg = require('./package.json');
@@ -10,7 +10,7 @@ console.log("Compiling and minifying...")
 const file_to_compress = [
 
 // components
-'../CoCreate-components/CoCreate-floating-label/src/CoCreate-floating-label.css',
+'../CoCreate-components/CoCreate-floating-labels/src/CoCreate-floating-label.css',
 '../CoCreate-components/CoCreate-select/src/CoCreate-select.css',
 '../CoCreate-components/CoCreate-modal/src/CoCreate-modal.css',
 '../CoCreate-components/CoCreate-menu-icon/src/CoCreate-menu-icon.css',
@@ -60,4 +60,4 @@ fs.copyFile(fileOutput, '../css/' + name + '.min.css', err => {
     }
 })
 
-upload_s3(fileOutput)
+// upload_s3(fileOutput)
