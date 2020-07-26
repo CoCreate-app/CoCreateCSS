@@ -17,6 +17,7 @@ const file_to_compress = [
 '../CoCreate-components/CoCreate-sidenav/src/CoCreate-sidenav.css',
 '../CoCreate-components/CoCreate-scroll/src/CoCreate-scroll.css',
 '../CoCreate-components/CoCreate-flip-item/src/CoCreate-flip-item.css',
+'../CoCreate-components/CoCreate-splitview/src/CoCreate-splitview.css',
 
 '../CoCreate-components/CoCreate-cursors/src/CoCreate-cursors.css',
 // '../CoCreate-components/CoCreate-builder/CoCreate-builder.css',
