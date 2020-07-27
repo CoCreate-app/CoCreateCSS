@@ -164,6 +164,12 @@
 .top\:90px {top:90px}
 .top\:95px {top:95px}
 .top\:100px {top:100px}
+.top\:150px {top:150px}
+.top\:200px {top:200px}
+.top\:250px {top:250px}
+.top\:300px {top:300px}
+.top\:350px {top:350px}
+.top\:400px {top:400px}
 
 .top\:-1px {top:-1px}
 .top\:-2px {top:-2px}
@@ -225,6 +231,12 @@
 .top\:-90px {top:-90px}
 .top\:-95px {top:-95px}
 .top\:-100px {top:-100px}
+.top\:-150px {top:-150px}
+.top\:-200px {top:-200px}
+.top\:-250px {top:-250px}
+.top\:-300px {top:-300px}
+.top\:-350px {top:-350px}
+.top\:-400px {top:-400px}
 
 
 /* bottom */
@@ -290,6 +302,12 @@
 .bottom\:90px {bottom:90px}
 .bottom\:95px {bottom:95px}
 .bottom\:100px {bottom:100px}
+.bottom\:150px {bottom:150px}
+.bottom\:200px {bottom:200px}
+.bottom\:250px {bottom:250px}
+.bottom\:300px {bottom:300px}
+.bottom\:350px {bottom:350px}
+.bottom\:400px {bottom:400px}
 
 .bottom\:-1px {bottom:-1px}
 .bottom\:-2px {bottom:-2px}
@@ -351,6 +369,12 @@
 .bottom\:-90px {bottom:-90px}
 .bottom\:-95px {bottom:-95px}
 .bottom\:-100px {bottom:-100px}
+.bottom\:-150px {bottom:-150px}
+.bottom\:-200px {bottom:-200px}
+.bottom\:-250px {bottom:-250px}
+.bottom\:-300px {bottom:-300px}
+.bottom\:-350px {bottom:-350px}
+.bottom\:-400px {bottom:-400px}
 
 /* left */
 .left\:auto {left:auto}
@@ -415,6 +439,12 @@
 .left\:90px {left:90px}
 .left\:95px {left:95px}
 .left\:100px {left:100px}
+.left\:150px {left:150px}
+.left\:200px {left:200px}
+.left\:250px {left:250px}
+.left\:300px {left:300px}
+.left\:350px {left:350px}
+.left\:400px {left:400px}
 
 .left\:-1px {left:-1px}
 .left\:-2px {left:-2px}
@@ -476,6 +506,12 @@
 .left\:-90px {left:-90px}
 .left\:-95px {left:-95px}
 .left\:-100px {left:-100px}
+.left\:-150px {left:-150px}
+.left\:-200px {left:-200px}
+.left\:-250px {left:-250px}
+.left\:-300px {left:-300px}
+.left\:-350px {left:-350px}
+.left\:-400px {left:-400px}
 
 /* right */
 .right\:auto {right:auto}
@@ -540,6 +576,12 @@
 .right\:90px {right:90px}
 .right\:95px {right:95px}
 .right\:100px {right:100px}
+.right\:150px {right:150px}
+.right\:200px {right:200px}
+.right\:250px {right:250px}
+.right\:300px {right:300px}
+.right\:350px {right:350px}
+.right\:400px {right:400px}
 
 .right\:-1px {right:-1px}
 .right\:-2px {right:-2px}
@@ -601,6 +643,12 @@
 .right\:-90px {right:-90px}
 .right\:-95px {right:-95px}
 .right\:-100px {right:-100px}
+.right\:-150px {right:-150px}
+.right\:-200px {right:-200px}
+.right\:-250px {right:-250px}
+.right\:-300px {right:-300px}
+.right\:-350px {right:-350px}
+.right\:-400px {right:-400px}
 
 /*================================ 
     Position
@@ -708,11 +756,11 @@
 .height\:350px {height: 350px}
 .height\:400px {height: 400px}
 
-.height\:25\% {height: 25%}
-.height\:33\% {height: 33.33%}
-.height\:50\% {height: 50%}
-.height\:66\% {height: 66.66%}
-.height\:75\% {height: 75%}
+.height\:25\%, .height\:1\/4 {height: 25%}
+.height\:33\.33\%, .height\:1\/3 {height: 33.333333%}
+.height\:50\%, .height\:1\/2 {height: 50%}
+.height\:66\.67\%, .height\:2\/3 {height: 66.666667%}
+.height\:75\%, .height\:3\/4 {height: 75%}
 .height\:100\% {height: 100% !important}
 .height\:auto {height:auto !important}
 .max-height\:60px {max-height: 60px}
@@ -746,74 +794,84 @@
     Width
 ================================*/
 
-.width\:0 {width:0;}
-.width\:1px {width:1px;}
-.width\:2px {width:2px;}
-.width\:3px {width:3px;}
-.width\:4px {width:4px;}
-.width\:5px {width:5px;}
-.width\:6px {width:6px;}
-.width\:7px {width:7px;}
-.width\:8px {width:8px;}
-.width\:9px {width:9px;}
-.width\:10px {width:10px;}
-.width\:15px {width:15px;}
-.width\:20px {width:20px;}
-.width\:25px {width:25px;}
-.width\:30px {width:30px;}
-.width\:35px {width:35px;}
-.width\:40px {width:40px;}
-.width\:50px {width:50px;}
-.width\:55px {width:55px;}
-.width\:60px {width:60px;}
-.width\:65px {width:65px;}
-.width\:70px {width:70px;}
-.width\:75px {width:75px;}
-.width\:80px {width:80px;}
-.width\:85px {width:85px;}
-.width\:90px {width:90px;}
-.width\:100px {width:100px;}
-.width\:110px {width:110px;}
-.width\:120px {width:120px;}
-.width\:130px {width:130px;}
-.width\:150px {width:150px;}
-.width\:180px {width:180px;}
-.width\:200px {width:200px;}
-.width\:250px {width:250px;}
-.width\:300px {width:300px;}
-.width\:350px {width:350px;}
-.width\:400px {width:400px;}
-.width\:450px {width:450px;}
-.width\:500px {width:500px;}
-.width\:550px {width:550px;}
-.width\:600px {width:600px;}
-.width\:650px {width:650px;}
-.width\:700px {width:700px;}
-.width\:750px {width:750px;}
-.width\:800px {width:800px;}
-.width\:850px {width:850px;}
-.width\:900px {width:900px;}
-.width\:950px {width:950px;}
-.width\:1000px {width:1000px;}
+.width\:0 {width:0}
+.width\:1px {width:1px}
+.width\:2px {width:2px}
+.width\:3px {width:3px}
+.width\:4px {width:4px}
+.width\:5px {width:5px}
+.width\:6px {width:6px}
+.width\:7px {width:7px}
+.width\:8px {width:8px}
+.width\:9px {width:9px}
+.width\:10px {width:10px}
+.width\:11px {width:11px}
+.width\:12px {width:12px}
+.width\:13px {width:13px}
+.width\:14px {width:14px}
+.width\:15px {width:15px}
+.width\:16px {width:16px}
+.width\:17px {width:17px}
+.width\:18px {width:18px}
+.width\:19px {width:19px}
+.width\:20px {width:20px}
+.width\:21px {width:21px}
+.width\:22px {width:22px}
+.width\:23px {width:23px}
+.width\:24px {width:24px}
+.width\:25px {width:25px}
+.width\:26px {width:26px}
+.width\:27px {width:27px}
+.width\:28px {width:28px}
+.width\:29px {width:29px}
+.width\:30px {width:30px}
+.width\:31px {width:31px}
+.width\:32px {width:32px}
+.width\:33px {width:33px}
+.width\:34px {width:34px}
+.width\:35px {width:35px}
+.width\:36px {width:36px}
+.width\:37px {width:37px}
+.width\:38px {width:38px}
+.width\:39px {width:39px}
+.width\:40px {width:40px}
+.width\:41px {width:41px}
+.width\:42px {width:42px}
+.width\:43px {width:43px}
+.width\:44px {width:44px}
+.width\:45px {width:45px}
+.width\:46px {width:46px}
+.width\:47px {width:47px}
+.width\:48px {width:48px}
+.width\:49px {width:49px}
+.width\:50px {width:50px}
+.width\:55px {width:55px}
+.width\:60px {width:60px}
+.width\:65px {width:65px}
+.width\:70px {width:70px}
+.width\:75px {width:75px}
+.width\:80px {width:80px}
+.width\:85px {width:85px}
+.width\:90px {width:90px}
+.width\:95px {width:95px}
+.width\:100px {width:100px}
+.width\:150px {width: 150px}
+.width\:200px {width: 200px}
+.width\:250px {width: 250px}
+.width\:300px {width: 300px}
+.width\:350px {width: 350px}
+.width\:400px {width: 400px}
 
-.width\:10\% {width:10%;}
-.width\:12\% {width:12%;}
-.width\:15\% {width:15%;}
-.width\:20\% {width:20%;}
-.width\:25\% {width:25%;}
-.width\:30\% {width:30%;}
-.width\:35\% {width:35%;}
-.width\:40\% {width:40%;}
-.width\:41\% {width:41%;}
-.width\:42\% {width:42%;}
-.width\:43\% {width:43%;}
-.width\:44\% {width:44%;}
-.width\:45\% {width:45%;}
-.width\:46\% {width:46%;}
-.width\:47\% {width:47%;}
-.width\:48\% {width:48%;}
-.width\:49\% {width:49%;}
-.width\:50\% {width:50%;}
+.width\:8\.33\%, .width\:1\/12 {width:8.333333%;}
+.width\:12\.5\%, .width\:1\/8 {width:12.5%;}
+.width\:16\.67\%, .width\:1\/6, .width\:2\/12 {width:16.666667%;}
+.width\:20\%, .width\:1\/5 {width:20%;}
+.width\:25\%, .width\:1\/4, .width\:2\/8, .width\:3\/12 {width:25%;}
+.width\:33\.33\%, .width\:1\/3, .width\:2\/6, .width\:4\/12 {width:33.333333%;}
+.width\:37\.5\%, .width\:3\/8 {width:37.5%;}
+.width\:40\%, .width\:2\/5 {width:40%;}
+.width\:41\.67\%, .width\:5\/12 {width:41.666667%;}
+.width\:50\%, .width\:1\/2, .width\:2\/4, .width\:3\/6, .width\:4\/8, .width\:6\/12 {width:50%;}
 .width\:55\% {width:55%;}
 .width\:60\% {width:60%;}
 .width\:65\% {width:65%;}
@@ -823,9 +881,7 @@
 .width\:85\% {width:85%;}
 .width\:90\% {width:90%;}
 .width\:95\% {width:95%;}
-.width\:100\% {
-  width:100%;
-}
+.width\:100\% {width:100%;}
 .width\:auto {width: auto}
 .width\:unset {width: unset}
 
