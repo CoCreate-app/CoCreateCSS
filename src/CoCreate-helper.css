@@ -879,6 +879,18 @@
 .width\:100\% {width:100%;}
 .width\:auto {width: auto}
 .width\:unset {width: unset}
+.width\:fill-available{
+  width:100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
+.width\:fit-content{
+  width:100%;
+  width: -webkit-fit-content;  /* Mozilla-based browsers will ignore this. */
+  width: fit-content;
+}
+.width\:100vw{width:100vw}
 
 /* min-width */
 .min-width\:75px {min-width: 75px;}
@@ -903,12 +915,6 @@
 .max-width\:100\%{max-width:100%;}
 
 /* max-width */
-.width\:fill-available{
-  width:100%;
-  width: -moz-available;          /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
-}
 
 /*================================ 
     Width
