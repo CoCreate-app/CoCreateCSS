@@ -1,0 +1,9 @@
+:root {
+  --lightred: brown;
+  --red: red;
+  --darkred: darkred;
+}
+
+.color\:lightred{var(--lightred)}
+.color\:red{var(--red)}
+.color\:darkred{var(--darkred)}

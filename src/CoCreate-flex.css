@@ -1,6 +1,6 @@
  /*flex css */ 
  
-.display:flex {
+.display\:flex {
   -ms-box-orient: horizontal;
   display: -webkit-box;
   display: -moz-box;
@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.display:inline-flex {
+.display\:inline-flex {
   display: -webkit-inline-box;
   display: -moz-inline-box;
   display: -webkit-inline-flex;
