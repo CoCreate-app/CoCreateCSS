@@ -2079,8 +2079,21 @@
 
 
 /* text color */
-.color\:white {color:#FFF}
-.color\:black {color:#000}
+.color\:white {color:white}
+.color\:black {color:black}
+.color\:red {color:red}
+.color\:green {color:green}
+.color\:blue {color:blue}
+.color\:cyan {color:cyan}
+.color\:magenta {color:magenta}
+.color\:yellow {color:yellow}
+.color\:gray {color:gray}
+.color\:darkred {color:darkred}
+.color\:darkgreen {color:darkgreen}
+.color\:darkblue {color:darkblue}
+.color\:darkcyan {color:darkcyan}
+.color\:darkmagenta {color:darkmagenta}
+
 .color\:extra-dark-gray {color:#232323}
 .color\:dark-gray {color:#626262}
 .color\:extra-medium-gray {color:#757575}
