@@ -3,7 +3,7 @@ let link = document.createElement("link");
 link.setAttribute("rel", "stylesheet");
 link.setAttribute("type", "text/css");
 document.head.querySelectorAll("link[rel=stylesheet]")[linklength - 1].insertAdjacentHTML('afterend', link.outerHTML);
-var helperClassList = [];
+var utilityClassList = [];
 var myStyle;
 myStyle = document.styleSheets[linklength];
 let elements = document.querySelectorAll("[class]");
@@ -25,7 +25,7 @@ function addParsingClassList(classList) {
     let re = /.+:.+/;
     for (let classname of classList) {
         if (re.exec(classname)) {
-            if (helperClassList.indexOf(classname) == -1) {
+            if (utilityClassList.indexOf(classname) == -1) {
                 let re_at = /.+@.+/;
                 if (re_at.exec(classname)) {
                     let parts = classname.split("@");
@@ -45,21 +45,21 @@ function addParsingClassList(classList) {
                         }
                         let rule = prefix + "{" + main_rule + "}";
                         myStyle.insertRule(rule);
-                        helperClassList.push(classname);
+                        utilityClassList.push(classname);
                     }
                 } else {
                     let re_at = new RegExp("^" + classname + "@");
                     let rulelist = [];
-                    let index = helperClassList.findIndex(value => re_at.test(value));
+                    let index = utilityClassList.findIndex(value => re_at.test(value));
                     while(index != -1) {
                         rulelist.push(myStyle.cssRules[index]);
-                        helperClassList.splice(index, 1);
+                        utilityClassList.splice(index, 1);
                         myStyle.deleteRule(index);
-                        index = helperClassList.findIndex(value => re_at.test(value));
+                        index = utilityClassList.findIndex(value => re_at.test(value));
                     }
                     let rule = parseClass(classname)
                     myStyle.insertRule(rule);
-                    helperClassList.push(classname);
+                    utilityClassList.push(classname);
                     if (rulelist.length > 0) {
                         for (let i = 0; i < rulelist.length; i++) {
                             myStyle.insertRule(rulelist[i].selectorText + rulelist[i].cssText);
