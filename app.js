@@ -37,7 +37,6 @@ const file_to_compress = [
 'src/CoCreate-menu.css',
 'src/social-icon-colors.css',
 'src/CoCreate-core.css',
-'src/CoCreate-flex.css',
 'src/CoCreate-height.css',
 'src/CoCreate-background-color.css',
 

@@ -55,10 +55,4 @@ CoCreate Navbar: Show/Hide Nav on Scroll
   clear: both;
 }
 
-/*.nav ul {*/
-/*  list-style: none;*/
-/*}*/
-.nav ul li a i:hover{
-  color:#3b97e3;
-}
 /* CoCreate Navbar End */
