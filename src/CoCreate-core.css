@@ -2,6 +2,7 @@
 CoCreateUI CSS
 */
 *{padding:0px; margin:0px;}
+/*body, ul{padding:0px; margin:0px;}*/
 
 *, *:before, *:after {
   -webkit-border-sizing: border-box;
@@ -118,6 +119,28 @@ a:hover, a :focus {
     overflow: hidden;
     white-space: nowrap;
 }
+
+
+.logo-box img{width:auto; height:42px;}
+.sticky-nav {
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+footer:before{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background: -webkit-linear-gradient(top, #008dd5, #008dd5 100%);
+    background: linear-gradient(to top, #008dd5 0%, #008dd5 100%);
+    opacity: 0.95;
+}
+.hidden {display:none!important;}
+.template {display:none!important;}
 
 /* class for changing color of field if data not unique*/	
 .data-unique-success{
@@ -261,3 +284,25 @@ progress.progressbar::-moz-progress-bar {
   color: rgba(0, 0, 0, 0.87);
   z-index: 1;
 }
+
+/*===============================
+    Responsive CSS
+=================================*/
+@media only screen and (max-width: 768px){
+    .hide-on-phone {display: none!important;}
+    .show-on-tablet-only {display: none!important;}
+    .show-on-tablet-and-up {display: none!important;}
+}
+@media only screen and (min-width: 769px){
+    .hide-on-tablet {display: none!important;}
+    .show-on-phone-only {display: none!important;}
+}
+@media only screen and (min-width: 993px){
+    .hide-on-desktop {display: none!important;}
+    .show-on-tablet-only {display: none!important;}
+    .show-on-tablet-down {display: none!important;}
+}
+@media only screen and (max-width: 992px){
+    .show-on-desktop-only {display: none!important;}
+}
+
