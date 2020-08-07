@@ -1,3 +1,5 @@
+/* Parsing CSS for Utility Class of CoCreate.app*/
+/* created by Webelf000 */
 let linklength = document.head.querySelectorAll("link[rel=stylesheet]").length;
 let link = document.createElement("link");
 link.setAttribute("rel", "stylesheet");
