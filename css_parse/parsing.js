@@ -1,28 +1,30 @@
 /* Parsing CSS for Utility Class of CoCreate.app*/
 /* created by Webelf000 */
-let linklength = document.head.querySelectorAll("link[rel=stylesheet]").length;
+let linklength = document.styleSheets.length;
 let link = document.createElement("link");
 link.setAttribute("rel", "stylesheet");
 link.setAttribute("type", "text/css");
-document.head.querySelectorAll("link[rel=stylesheet]")[linklength - 1].insertAdjacentHTML('afterend', link.outerHTML);
+link.setAttribute("href", "#");
+document.head.appendChild(link);
 var utilityClassList = [];
 var myStyle;
-myStyle = document.styleSheets[linklength];
-let elements = document.querySelectorAll("[class]");
-for (let element of elements) {
-    addParsingClassList(element.classList);
-}
-const ob_config = { attributes: true, childList: false, subtree: true };
-const callback = function(mutationsList, observer) {
-    let myStyle = document.styleSheets[linklength];
-    for(let mutation of mutationsList) {
-        if (mutation.type === 'attributes' && mutation.attributeName === "class") {
-            addParsingClassList(mutation.target.classList);
-        }
+link.addEventListener("load", function(){
+    myStyle = document.styleSheets[linklength];
+    let elements = document.querySelectorAll("[class]");
+    for (let element of elements) {
+        addParsingClassList(element.classList);
     }
-};
-const observer = new MutationObserver(callback);
-observer.observe(document.body, ob_config);
+    const ob_config = { attributes: true, childList: false, subtree: true };
+    const callback = function(mutationsList, observer) {
+        for(let mutation of mutationsList) {
+            if (mutation.type === 'attributes' && mutation.attributeName === "class") {
+                addParsingClassList(mutation.target.classList);
+            }
+        }
+    };
+    const observer = new MutationObserver(callback);
+    observer.observe(document.body, ob_config); 
+});
 function addParsingClassList(classList) {
     let re = /.+:.+/;
     for (let classname of classList) {
