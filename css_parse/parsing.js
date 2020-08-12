@@ -94,6 +94,7 @@ function addParsingClassList(classList) {
         } else {
             rule = `.${res[0]}\\:${suffix}{${res[0]}:${res[1]}}`;
         }
+        console.log(rule);
         return rule;
     }
 }
