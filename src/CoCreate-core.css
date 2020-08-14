@@ -67,32 +67,6 @@ a:hover, a :focus {
   color: black;
 }
 
-/*.cocreate-container{*/
-/*	padding:5px;*/
-/*	margin-top:50px;*/
-/*}*/
-
-
-
-/*floating btn*/
-/*.floating-btn{*/
-/*	display:flex;*/
-/*	justify-content:center;*/
-/*	 -webkit-align-items: center; */
-/*  align-items: center; */
-/*	text-align:center;*/
-/*	bottom: 15px;*/
-/*	right:15px;*/
-/*	padding: 15px;*/
-/*	background-color:#229954;*/
-/*	opacity: .7;*/
-/*	color:#FFF;*/
-/*	border-radius:50%;*/
-/*	box-shadow: 2px 2px 3px #999;*/
-/*	z-index:1000;*/
-/*	border-width: inherit;*/
-/*}*/
-
 .logo {
   display: block;
   height:50px;
