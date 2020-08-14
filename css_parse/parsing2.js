@@ -28,6 +28,7 @@ link.addEventListener("load", function(){
     observer.observe(document.body, ob_config); 
 });
 
+
 function sortRules(){
     let ruleList = [];
     let length = utilityClassList.length;
@@ -55,6 +56,7 @@ function sortRules(){
         myStyle.insertRule(ruleList[i].cssText);
     }
 }
+
 
 function addParsingClassList(classList) {
     let re = /.+:.+/;
