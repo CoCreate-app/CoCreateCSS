@@ -14,6 +14,7 @@ link.addEventListener("load", function(){
     for (let element of elements) {
         addParsingClassList(element.classList);
     }
+    sortRules();
     const ob_config = { attributes: true, childList: false, subtree: true };
     const callback = function(mutationsList, observer) {
         for(let mutation of mutationsList) {
@@ -21,10 +22,42 @@ link.addEventListener("load", function(){
                 addParsingClassList(mutation.target.classList);
             }
         }
+        sortRules();
     };
     const observer = new MutationObserver(callback);
     observer.observe(document.body, ob_config); 
 });
+
+
+function sortRules(){
+    let ruleList = [];
+    let length = utilityClassList.length;
+    for (let i in utilityClassList) {
+        ruleList.push(myStyle.cssRules[length - i - 1]);
+        myStyle.deleteRule(length - i - 1);
+    }
+    let swapped;
+    for (let i = 0; i < length; i++) {
+        swapped = false;
+        for (let j = length - 1; j > i; j--) {
+            if (utilityClassList[j - 1] > utilityClassList[j]) {
+                let temp = utilityClassList[j];
+                utilityClassList[j] = utilityClassList[j - 1];
+                utilityClassList[j - 1] = temp;
+                temp = ruleList[j];
+                ruleList[j] = ruleList[j - 1];
+                ruleList[j - 1] = temp;
+                swapped = true;
+            }
+        }
+        if (swapped == false) break;
+    }
+    for (let i = 0; i < length; i++) {
+        myStyle.insertRule(ruleList[i].cssText);
+    }
+}
+
+
 function addParsingClassList(classList) {
     let re = /.+:.+/;
     for (let classname of classList) {
@@ -52,49 +85,35 @@ function addParsingClassList(classList) {
                         utilityClassList.push(classname);
                     }
                 } else {
-                    let re_at = new RegExp("^" + classname + "@");
-                    let rulelist = [];
-                    let index = utilityClassList.findIndex(value => re_at.test(value));
-                    while(index != -1) {
-                        rulelist.push(myStyle.cssRules[index]);
-                        utilityClassList.splice(index, 1);
-                        myStyle.deleteRule(index);
-                        index = utilityClassList.findIndex(value => re_at.test(value));
-                    }
-                    let rule = parseClass(classname)
+                    let rule = parseClass(classname);
                     myStyle.insertRule(rule);
                     utilityClassList.push(classname);
-                    if (rulelist.length > 0) {
-                        for (let i = 0; i < rulelist.length; i++) {
-                            myStyle.insertRule(rulelist[i].selectorText + rulelist[i].cssText);
-                        }
-                    }
                 }
             }
         }
     }
-    function parseClass(classname) {
-        let res = classname.split(":");
-        let rule = "";
-        let suffix = res[1].replace(/\./g, "\\.").replace(/%/, "\\%").replace(/@/g, "\\@");
-        res[1] = res[1].split("@")[0];
-        res[1] = res[1].replace(/_/g, " ");
-        if (res.length > 2) {
-            let pseudo = [];
-            for (let i = 0; i < res.length - 2; i++) {
-                suffix += "\\:" + res[2 + i];
-                pseudo.push(":" + res[2 + i]);
-            }
-            let clsname = "." + res[0] + "\\:" + suffix;
-            rule += clsname + pseudo[0];
-            for (let i = 1; i < pseudo.length; i++) {
-                rule += ", " + clsname + pseudo[i];
-            }
-            rule += `{${res[0]}:${res[1]}}`;
-        } else {
-            rule = `.${res[0]}\\:${suffix}{${res[0]}:${res[1]}}`;
+}
+
+function parseClass(classname) {
+    let res = classname.split(":");
+    let rule = "";
+    let suffix = res[1].replace(/\./g, "\\.").replace(/%/, "\\%").replace(/@/g, "\\@");
+    res[1] = res[1].split("@")[0];
+    res[1] = res[1].replace(/_/g, " ");
+    if (res.length > 2) {
+        let pseudo = [];
+        for (let i = 0; i < res.length - 2; i++) {
+            suffix += "\\:" + res[2 + i];
+            pseudo.push(":" + res[2 + i]);
         }
-        console.log(rule);
-        return rule;
+        let clsname = "." + res[0] + "\\:" + suffix;
+        rule += clsname + pseudo[0];
+        for (let i = 1; i < pseudo.length; i++) {
+            rule += ", " + clsname + pseudo[i];
+        }
+        rule += `{${res[0]}:${res[1]}}`;
+    } else {
+        rule = `.${res[0]}\\:${suffix}{${res[0]}:${res[1]} !important}`;
     }
+    return rule;
 }
