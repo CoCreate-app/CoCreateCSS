@@ -1,3 +1,4 @@
+![GitHub](https://img.shields.io/github/license/CoCreate-app/CoCreateCSS)
 # CoCreateCSS
 A simple HTML5 and pure javascript component. Easy configuration using data-attributes and highly styleable.
 
