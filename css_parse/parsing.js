@@ -113,7 +113,7 @@ function parseClass(classname) {
         }
         rule += `{${res[0]}:${res[1]}}`;
     } else {
-        rule = `.${res[0]}\\:${suffix}{${res[0]}:${res[1]} !important}`;
+        rule = `.${res[0]}\\:${suffix}{${res[0]}:${res[1]}}`;
     }
     return rule;
 }
