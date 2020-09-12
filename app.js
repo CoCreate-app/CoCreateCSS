@@ -16,15 +16,18 @@ const file_to_compress = [
 '../CoCreate-components/CoCreate-menu-icon/src/CoCreate-menu-icon.css',
 '../CoCreate-components/CoCreate-sidenav/src/CoCreate-sidenav.css',
 '../CoCreate-components/CoCreate-scroll/src/CoCreate-scroll.css',
-'../CoCreate-components/CoCreate-flip-item/src/CoCreate-flip-item.css',
 '../CoCreate-components/CoCreate-splitview/src/CoCreate-splitview.css',
 
 '../CoCreate-components/CoCreate-cursors/src/CoCreate-cursors.css',
-// '../CoCreate-components/CoCreate-builder/CoCreate-builder.css',
+
+// Modules
+// '../CoCreate-modules/CoCreate-builder/CoCreate-builder.css',
 
 // plugins
 // '../CoCreate-plugins/CoCreate-dataTables/src/CoCreate-dataTables.css',
 '../CoCreate-plugins/CoCreate-fullcalendar/src/CoCreate-fullcalendar.css',
+// '../CoCreate-plugins/CoCreate-grapesjs/CoCreate-builder.css',
+
 
 // css
 'src/CoCreate-avatar.css',
@@ -39,6 +42,8 @@ const file_to_compress = [
 'src/CoCreate-core.css',
 'src/CoCreate-height.css',
 'src/CoCreate-background-color.css',
+'src/CoCreate-flip-item.css',
+
 
 ];
 
