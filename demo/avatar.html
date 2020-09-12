@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
     
     <!-- CoCreate Avatar -->
-    <link rel="stylesheet" href="./CoCreate-avatar.css" type="text/css" />
+    <!--<link rel="stylesheet" href="./CoCreate-avatar.css" type="text/css" />-->
     
     <!-- CoCreate Flip Item -->
     <!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate-flip-item.min.css" type="text/css" />-->
@@ -40,7 +40,7 @@
         			
       	<!-- Fullscreen toogle and icon transform -->
       	<li class="margin-right:15px">
-      		<a class="fs-toggle"><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
+      		<a data-fullscreen><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
       	</li>
 
       </ul>
@@ -56,10 +56,9 @@
 		  </div>
     </div>
 
-  	<div  data-main_content_id="content" style="margin-left: 235px">
-    
     <!-- container -->
-  	<div class="cocreate-container vh-60 padding:20px" id="modal-viewport" data-main_content_id="content">
+  	<div class="vh-60 padding:20px" id="modal-viewport" data-main_content_id="content"></div>
+  	<div class="vh-60 padding:20px" data-main_content_id="content">
 
 		  <!-- Avatar with label, status on and flip-item only -->
       <div class="avatar-wrapper flip-container">

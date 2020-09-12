@@ -279,4 +279,21 @@ progress.progressbar::-moz-progress-bar {
 @media only screen and (max-width: 992px){
     .show-on-desktop-only {display: none!important;}
 }
-
+/*===============================
+   toggle order icons transform filter.js
+=================================*/
+      a[data-toggle_order]:before {
+        font-family: 'Font Awesome 5 Free';
+        content: "\f0dc";
+        font-weight: 900;
+      }
+      a[data-toggle_order=asc]:before {
+        font-family: 'Font Awesome 5 Free';
+        content: "\f0de";
+        font-weight: 900;
+      }
+      a[data-toggle_order=desc]:before {
+        font-family: 'Font Awesome 5 Free';
+        content: "\f0dd";
+        font-weight: 900;   
+      }

@@ -23,8 +23,8 @@ const file_to_compress = [
 // '../CoCreate-components/CoCreate-builder/CoCreate-builder.css',
 
 // plugins
-'../CoCreate-plugins/CoCreate-dataTables/src/CoCreate-dataTables.css',
-'../CoCreate-plugins/CoCreate-calendar/src/CoCreate-calendar.css',
+// '../CoCreate-plugins/CoCreate-dataTables/src/CoCreate-dataTables.css',
+'../CoCreate-plugins/CoCreate-fullcalendar/src/CoCreate-fullcalendar.css',
 
 // css
 'src/CoCreate-avatar.css',
