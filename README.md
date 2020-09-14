@@ -47,3 +47,6 @@ We encourage contribution to our libraries (you might even score some nifty swag
 
 # License
 [The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-industry/blob/master/LICENSE)
+
+# New-Line
+This is a new line. 
