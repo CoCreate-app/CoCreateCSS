@@ -6,7 +6,7 @@ You're encouraged to submit [pull requests](https://github.com/CoCreate-app/CoCr
 
 In the examples below, substitute your Github username for `contributor` in URLs.
 
-## Fork the Project
+## Fork the Project in this file
 
 Fork the [project on Github](https://github.com/CoCreate-app/CoCreateCSS) and check out your copy.
 
