@@ -11,7 +11,7 @@ ul.cocreate-menu {
 ul.cocreate-menu li {
   display: block;
   overflow: hidden;
-  height:40px;
+  /*min-height:40px;*/
   border-top: 0px solid #ddd;
   line-height: 40px;
   color:inherit;

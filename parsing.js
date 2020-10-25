@@ -79,8 +79,8 @@ function addParsingClassList(classList) {
                     if (re_at.exec(classname)) {
                         let parts = classname.split("@");
                         let main_rule = parseClass(classname);
-                        const range_names = ["xs", "sm", "md", "lg", "xl"];
-                        const ranges = [[0, 567], [ 576, 768], [769, 992], [993, 1200], [1201, 0]];
+                        const range_names = ["xs", "sm", "md", "lg"];
+                        const ranges = [[0, 767], [768, 991], [992, 1199], [1200, 0]];
                         for (let i = 1; i < parts.length; i++) {
                             let range_num = range_names.indexOf(parts[i]);
                             if (range_num == -1) continue;
