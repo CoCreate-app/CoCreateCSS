@@ -1,31 +1,33 @@
 /* Parsing CSS for Utility Class of CoCreate.app*/
 /* created by Webelf000 */
-let linklength = document.styleSheets.length;
-let link = document.createElement("link");
-link.setAttribute("rel", "stylesheet");
-link.setAttribute("type", "text/css");
-link.setAttribute("href", "#");
-document.head.appendChild(link);
+
+
+let styleEl = document.createElement('style');
+document.head.appendChild(styleEl)
 var utilityClassList = [];
 var myStyle;
-link.addEventListener("load", function(){
-    myStyle = document.styleSheets[linklength];
-    let elements = document.querySelectorAll("[class]");
-    for (let element of elements) {
-        addParsingClassList(element.classList);
-    }
-    sortRules();
-    const ob_config = { attributes: true, childList: false, subtree: true };
+window.addEventListener("load", function(){
+
+   const ob_config = { attributes: true, childList: true, subtree: true };
     const callback = function(mutationsList, observer) {
         for(let mutation of mutationsList) {
-            if (mutation.type === 'attributes' && mutation.attributeName === "class") {
-                addParsingClassList(mutation.target.classList);
-            }
+              let elements = mutation.target.querySelectorAll("[class]");
+                for (let element of elements) {
+                    addParsingClassList(element.classList);
+                }
         }
         sortRules();
     };
     const observer = new MutationObserver(callback);
     observer.observe(document.body, ob_config); 
+
+    myStyle = styleEl.sheet;
+    let elements = document.querySelectorAll("[class]");
+    for (let element of elements) {
+        addParsingClassList(element.classList);
+    }
+    sortRules();
+ 
 });
 
 
