@@ -24,8 +24,10 @@ CoCreate Navbar: Show/Hide Nav on Scroll
   right: 0;
   height: auto;
   background: #fff;
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
-
 .hide-nav {
   transform: translateY(-120% )!important;
   -webkit-transform: translateY(-120%) !important;

@@ -96,7 +96,8 @@ a:hover, a :focus {
 
 
 .logo-box img{width:auto; height:42px;}
-.sticky-nav {
+
+.box-shadow-bottom-4 {
     -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
