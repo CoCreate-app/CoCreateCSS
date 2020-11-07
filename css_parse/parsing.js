@@ -8,7 +8,7 @@ var utilityClassList = [];
 var myStyle;
 window.addEventListener("load", function(){
 
-   const ob_config = { attributes: true, childList: true, subtree: true };
+   const ob_config = { attributes: true, childList: true, subtree: true, attributeFilter:['class'] };
     const callback = function(mutationsList, observer) {
         for(let mutation of mutationsList) {
               let elements = mutation.target.querySelectorAll("[class]");
