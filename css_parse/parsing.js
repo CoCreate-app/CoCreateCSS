@@ -2,26 +2,24 @@
 /* created by Webelf000 */
 
 let styleEl = document.createElement("style");
-// styleEl.setAttribute('componentnnn', 'CCCSS')
+styleEl.setAttribute('component', 'CoCreateCss')
 document.head.appendChild(styleEl);
 var utilityClassList = [];
 var myStyle;
 window.addEventListener("load", function () {
-  const ob_config = {
-    attributes: true,
-    childList: true,
-    subtree: true,
-    attributeFilter: ["class"],
-  };
-  const callback = function (mutationsList, observer) {
-    for (let mutation of mutationsList) {
-      let element = mutation.target;
-      addParsingClassList(element.classList);
-    }
-    sortRules();
-  };
-  const observer = new MutationObserver(callback);
-  observer.observe(document.body, ob_config);
+  window.CoCreateObserver.add({
+    name: "ccCss",
+    observe: ["attributes","childList"],
+    attributes: ["class"],
+    task: (mutation) => {
+      if (mutation.type == "childList")
+        mutation.target.querySelectorAll("*").forEach((el) => {
+          addParsingClassList(el.classList);
+        });
+      addParsingClassList(mutation.target.classList);
+      sortRules();
+    },
+  });
 
   myStyle = styleEl.sheet;
   let elements = document.querySelectorAll("[class]");
@@ -29,7 +27,7 @@ window.addEventListener("load", function () {
     addParsingClassList(element.classList);
   }
   sortRules();
-  
+
   // document.addEventListener('CoCreateHtmlTags-rendered',()=>{
   //     let elements = document.querySelectorAll("[class]");
   //     for (let element of elements) {
