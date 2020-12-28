@@ -1,13 +1,3 @@
-/*Flip container*/
-/*.flip-container {*/
-/*  background:transparent;*/
-/*  flex-shrink: 0;*/
-/*}*/
-
-/*.flip-container.active {*/
-/*  padding: 0;*/
-/*}*/
-
 .flip-container > .flip-item {
   position: absolute;
   left: 0;

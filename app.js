@@ -9,7 +9,7 @@ console.log("Compiling and minifying...")
 
 const file_to_compress = [
 
-// components
+// Components
 '../CoCreate-components/CoCreate-floating-labels/src/CoCreate-floating-label.css',
 '../CoCreate-components/CoCreate-select/src/CoCreate-select.css',
 '../CoCreate-components/CoCreate-modal/src/CoCreate-modal.css',
@@ -17,19 +17,11 @@ const file_to_compress = [
 '../CoCreate-components/CoCreate-sidenav/src/CoCreate-sidenav.css',
 '../CoCreate-components/CoCreate-scroll/src/CoCreate-scroll.css',
 '../CoCreate-components/CoCreate-splitview/src/CoCreate-splitview.css',
-
 '../CoCreate-components/CoCreate-cursors/src/CoCreate-cursors.css',
 
 // Modules
-// '../CoCreate-modules/CoCreate-builder/CoCreate-builder.css',
 
-// plugins
-// '../CoCreate-plugins/CoCreate-dataTables/src/CoCreate-dataTables.css',
-'../CoCreate-plugins/CoCreate-fullcalendar/src/CoCreate-fullcalendar.css',
-// '../CoCreate-plugins/CoCreate-grapesjs/CoCreate-builder.css',
-
-
-// css
+// CSS
 'src/CoCreate-avatar.css',
 'src/CoCreate-badge.css',
 'src/CoCreate-button.css',
@@ -37,11 +29,7 @@ const file_to_compress = [
 'src/CoCreate-card.css',
 'src/box-shadow.css',
 'src/CoCreate-navbar.css',
-'src/CoCreate-menu.css',
-'src/social-icon-colors.css',
 'src/CoCreate-core.css',
-'src/CoCreate-height.css',
-'src/CoCreate-background-color.css',
 'src/CoCreate-flip-item.css',
 
 
