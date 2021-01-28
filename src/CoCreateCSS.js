@@ -1,5 +1,4 @@
-/* Parsing CSS for Utility Class of CoCreate.app*/
-/* created by Webelf000 */
+/* Parsing CSS for Utility CSS*/
 
 let styleEl = document.createElement("style");
 styleEl.setAttribute('component', 'CoCreateCss')
@@ -28,14 +27,6 @@ window.addEventListener("load", function () {
   }
   sortRules();
 
-  // document.addEventListener('CoCreateHtmlTags-rendered',()=>{
-  //     let elements = document.querySelectorAll("[class]");
-  //     for (let element of elements) {
-  //       addParsingClassList(element.classList);
-  //     }
-  //     sortRules();
-  //     document.head.appendChild(styleEl);
-  // })
 });
 
 function sortRules() {
@@ -72,17 +63,6 @@ function addParsingClassList(classList) {
     try {
       if (re.exec(classname)) {
         if (utilityClassList.indexOf(classname) == -1) {
-          // let re_important = /.*!important.*/;
-          // let important = 0;
-          // if (re_important.exec(classname)) {
-          //     console.log("important");
-          //     important = 1;
-          //    let temp = classname.split("!important");
-          //    classname = "";
-          //    for (let tmp of temp) {
-          //        classname += tmp;
-          //    }
-          // }
           let re_at = /.+@.+/;
           if (re_at.exec(classname)) {
             let parts = classname.split("@");

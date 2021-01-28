@@ -1,6 +1,6 @@
-/* 
-CoCreateUI CSS
-*/
+/*===============================
+    CoCreateCSS
+=================================*/
 *{padding:0px; margin:0px;}
 /*body, ul{padding:0px; margin:0px;}*/
 
@@ -21,81 +21,14 @@ body {
   font-weight: 100;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  /*height: 100vh;*/
   }
   
-  /*::-webkit-scrollbar {*/
-  /*  width: 5px;*/
-  /*  height:5px;*/
-  /*}*/
-  /*::-webkit-scrollbar-thumb{*/
-  /*  background: rgba(0, 0, 0, 0.08);*/
-  /*}*/
-  /*  ::-webkit-scrollbar-thumb:hover {*/
-  /*    background: #3790ff;*/
-  /*    opacity: .08;*/
-  /*}*/
-
-  /*::-webkit-scrollbar-track{*/
-  /*  background: rgba(0, 0, 0, 0.04);*/
-  /*}*/
-
-/*body::-webkit-scrollbar {*/
-/*  width: 0px;*/
-/*}*/
-
-/*body::-webkit-scrollbar-track {*/
-/*  background: rgba(0, 0, 0, 0.04);*/
-  
-/*}*/
-
-/*body::-webkit-scrollbar-thumb {*/
-/*  background: rgba(0, 0, 0, 0.04);*/
-/*}*/
-
-/*body.scroll::-webkit-scrollbar-thumb {*/
-/*  background: #f13b48;*/
-/*}*/
-
 a {
   text-decoration: none;
   cursor: pointer;
   align-items: center;
   color: #505050;
 }
-a:hover, a :focus {
-  color: black;
-}
-
-.logo {
-  display: block;
-  height:50px;
-  overflow: hidden;
-  background:#D0D3D4;
-}
-
-.logo-icon {
-    display: inline-block;
-    height:50px;
-    width:50px;
-    padding:5px;
-}
-
-.logo-name {
-    display: inline-block;
-    height:50px;
-    /*width:50px;*/
-    vertical-align:top;
-    font-size:22px;
-    color:#17202A;
-    font-weight:900;
-    padding:8px 0px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-
-.logo-box img{width:auto; height:42px;}
 
 .box-shadow-bottom-4 {
     -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -125,141 +58,6 @@ footer:before{
 		border-color: red!important;
 		}
 
-
-/**
-  check box
-**/
-.checkbox {
-  position:relative;
-  padding-left: 35px;
-  cursor: pointer;
-  font-size: 20px;
-  min-height: 20px;
-}
-.checkbox input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkbox > span.mark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  border: 2px solid #999;
-}
-
-.checkbox > input:checked ~ span.mark {
-  background-color: #61dafb;
-  border: 0;
-}
-
-.checkbox > span.mark:after {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.checkbox > input:checked ~ span.mark:after {
-  display:block;
-}
-
-/**
-  Progress bar
-**/
-.progressbar {
-  flex-grow: 1;
-  height: 4px;
-  border: none;
-  position: relative;
-  background-color: rgb(194, 240, 253);
-  overflow: hidden;
-}
-
-.progressbar > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  transform-origin: left;
-  transition: transform .4s linear;
-  background-color: #61dafb;
-}
-
-progress.progressbar {
-  -webkit-appearance: none;
-   appearance: none;
-}
-
-progress.progressbar::-webkit-progress-bar{
-  background-color: rgb(194, 240, 253) !important;
-}
-
-progress.progressbar::-webkit-progress-value{
-  background-color: #61dafb !important;
-}
-
-progress.progressbar::-moz-progress-bar {
-  background-color: #61dafb !important;
-}
-
-
-/* overlays content with new content */
-  .overlay-content {
-    padding: 24px;
-    position: absolute;
-    background-color: #fff;
-    width: 100%;
-    overflow-y: auto;
-    left: 0;
-    /*top:0px;*/
-    top: 100%;
-    height: 100%;
-    z-index: 6;
-    display: none;
-    transition: all .3s ease-out;
-    transition-property: all;
-	transition-duration: .5s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-}
-
-.overlay-hover:hover > .overlay-content{
-  top: 0;
-  display:block;
-}
-
-.first-letter{
-  width: 1ch;
-  overflow: hidden;
-  white-space: nowrap; 
-}
-
-/* will be replaced by content editable*/
-.input_field {
-  /*padding: 8px 14px 8px 14px;*/
-  border: none !important;
-  outline: none !important;
-  background-color: transparent;
-  font-size: 16px;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.87);
-  z-index: 1;
-}
-
 /*===============================
     Responsive CSS
 =================================*/
@@ -280,6 +78,7 @@ progress.progressbar::-moz-progress-bar {
 @media only screen and (max-width: 992px){
     .show-on-desktop-only {display: none!important;}
 }
+
 /*===============================
    toggle order icons transform filter.js
 =================================*/
@@ -298,3 +97,19 @@ progress.progressbar::-moz-progress-bar {
         content: "\f0dd";
         font-weight: 900;   
       }
+
+/*===============================
+   background olors
+=================================*/
+.success {
+  background-color: #70ca63;
+  color: #fff;
+}
+.warning {
+  background-color: #fecd33;
+  color: #fff;
+}
+.danger {
+  background-color: #f13b48;
+  color: #fff;
+}
