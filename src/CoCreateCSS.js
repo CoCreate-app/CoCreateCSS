@@ -8,7 +8,7 @@ var myStyle;
 window.addEventListener("load", function () {
   window.CoCreateObserver.add({
     name: "ccCss",
-    observe: ["attributes","childList"],
+    observe: ["attributes","childList", "subtree"],
     attributes: ["class"],
     task: (mutation) => {
       if (mutation.type == "childList")

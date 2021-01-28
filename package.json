@@ -1,7 +1,7 @@
 {
   "name": "@cocreate/CSS",
   "version": "1.0.0",
-  "description": "A simple CSS component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "description": "A lightweight utility-first Atomic CSS framework promoting rapid UI development. No learning curve... Apply your native css property:value directly in class, then extract and transform it.",
   "keywords": ["CSS","cocreate","low-code-framework","no-code-framework","cocreatejs","cocreatejs-component","cocreate-framework","no-code","low-code","collaborative-framework","realtime","realtime-framework","collaboration","shared-editing","html5-framework","javascript-framework"],
   "publishConfig": {
     "access": "public"
