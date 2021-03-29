@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoCreate-app/CoCreate-CSS.git"
+    "url": "git+https://github.com/CoCreate-app/CoCreateCSS.git"
   },
   "author": "CoCreate LLC",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-CSS/issues"
+    "url": "https://github.com/CoCreate-app/CoCreateCSS/issues"
   },
   "homepage": "https://cocreate.app/docs/CSS",
   "funding": {
