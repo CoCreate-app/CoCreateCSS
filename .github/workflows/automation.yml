@@ -12,7 +12,7 @@ on:
     - master
 
 jobs:
-  updateKeyword:
+  about:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,7 +24,7 @@ jobs:
           direction: overwrite-github # default is overwrite-file
           githubToken: ${{ secrets.GITHUB }}
   
-  ci:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

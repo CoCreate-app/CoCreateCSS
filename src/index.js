@@ -1,4 +1,5 @@
 /* Parsing CSS for Utility CSS*/
+import observer from '../../CoCreate-components/CoCreate-observer/src'
 
 let styleEl = document.createElement("style");
 styleEl.setAttribute('component', 'CoCreateCss')
@@ -6,27 +7,29 @@ document.head.appendChild(styleEl);
 var utilityClassList = [];
 var myStyle;
 window.addEventListener("load", function () {
-  window.CoCreateObserver.add({
+  observer.init({
     name: "ccCss",
     observe: ["attributes","childList"],
     attributes: ["class"],
-    task: (mutation) => {
+    callback: (mutation) => {
+      // console.log('ccCSS observer start', performance.now())
       if (mutation.type == "childList")
         mutation.target.querySelectorAll("*").forEach((el) => {
           addParsingClassList(el.classList);
         });
       addParsingClassList(mutation.target.classList);
       sortRules();
+      // console.log('ccCSS observer finish', performance.now())
     },
   });
-
+  // console.log('ccCSS loaded', performance.now())
   myStyle = styleEl.sheet;
   let elements = document.querySelectorAll("[class]");
   for (let element of elements) {
     addParsingClassList(element.classList);
   }
   sortRules();
-
+  // console.log('ccCSS finished main execution', performance.now())
 });
 
 function sortRules() {
