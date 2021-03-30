@@ -1,5 +1,5 @@
 /* Parsing CSS for Utility CSS*/
-import observer from '../../CoCreate-components/CoCreate-observer/src'
+import observer from '@cocreate/observer'
 
 let styleEl = document.createElement("style");
 styleEl.setAttribute('component', 'CoCreateCss')
