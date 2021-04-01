@@ -1,6 +1,21 @@
 /* Parsing CSS for Utility CSS*/
 import observer from '@cocreate/observer'
 
+import './box-shadow.css'
+import './CoCreate-avatar.css'
+import './CoCreate-badge.css'
+import './CoCreate-button.css'
+import './CoCreate-card.css'
+import './CoCreate-checkbox.css'
+import './CoCreate-core.css'
+import './CoCreate-dropdown.css'
+import './CoCreate-flip-item.css'
+import './CoCreate-menu-icon.css'
+import './CoCreate-navbar.css'
+import './CoCreate-overlay-content.css'
+import './CoCreate-progressbar.css'
+import './CoCreate-scroll.css'
+
 let styleEl = document.createElement("style");
 styleEl.setAttribute('component', 'CoCreateCss')
 document.head.appendChild(styleEl);

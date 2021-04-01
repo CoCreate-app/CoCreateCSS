@@ -1,0 +1,23 @@
+/* overlays content with new content */
+.overlay-content {
+  padding: 24px;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  overflow-y: auto;
+  left: 0;
+  /*top:0px;*/
+  top: 100%;
+  height: 100%;
+  z-index: 6;
+  display: none;
+  transition: all .3s ease-out;
+  transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.overlay-hover:hover > .overlay-content{
+  top: 0;
+  display:block;
+}

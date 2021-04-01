@@ -47,6 +47,7 @@ module.exports = {
           { loader: "style-loader", options: { injectType: "linkTag" } },
           "file-loader",
         ],
+      // use: [MiniCssExtractPlugin.loader,    { loader: "style-loader", options: { injectType: "linkTag" } }],
       },
     ],
   },
