@@ -1,0 +1,1013 @@
+<form id="domEditorPanel" data-collection="builder" data-document_id="null" autocomplete="off">
+            <div class="">
+                <div class="display:flex tabs">
+                    <div class="padding:10px_18px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#styles" data-selected_group="editor-panels" selected=""><i class="fas fa-paint-brush"></i></div>
+                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#database" data-selected_group="editor-panels"><i class="fas fa-database"></i></div>
+                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#logic" data-selected_group="editor-panels"><i class="fas fa-brain"></i></div>
+                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#broadcast" data-selected_group="editor-panels"><i class="fas fa-plug"></i></div>
+                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#settings" data-selected_group="editor-panels"><i class="fas fa-cog"></i></div>
+                </div>
+                <div class="overflow:auto height:90vh">
+                    <div class="background:silver">
+                     <!--Styles -->
+                    <div id="styles" class="editor-panel display:none active">
+                         <!--Layout -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".sizing" data-hide=".sizing">
+                            <span class="sizing hidden"><i class="fas fa-plus"></i></span>
+                            <span class="sizing"><i class="fas fa-minus"></i></span>
+                            <span>Layout</span>
+                        </div>
+                        <div class="sizing padding-bottom:20px">
+                            <div class="margin:0_5px">
+                                <span>Visibility</span>
+                                <div class="display:flex">
+                                    <div class="card background:darkgrey width:50% text-align:center">
+                                        <input type="radio" class="display:none" id="layout-visible" value="visible">
+                                        <span class="" for="layout-visible">Visible</span>
+                                    </div>
+
+                                    <div class="card background:darkgrey width:50% text-align:center">
+                                        <input type="radio" class="display:none" id="layout-hidden" value="hidden">
+                                        <span class="" for="layout-hidden">Hidden</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <span>Behaviour</span>
+                                <div class="display:flex">
+                                    <div class="card background:darkgrey width:50% text-align:center">
+                                        <input type="radio" class="display:none" id="layout-fill-parent" value="inherit">
+                                        <span class="" for="layout-fill-parent">Fill parent</span>
+                                    </div>
+
+                                    <div class="card background:darkgrey width:50% text-align:center">
+                                        <input type="radio" class="display:none" id="layout-fit-content" value="none">
+                                        <span class="" for="layout-fit-content">Fit content</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <span> Vertical Align</span>
+                                <div class="display:flex">
+                                    <div class="card background:darkgrey text-align:center width:20% height:90% padding:10px">
+                                        <input type="radio" id="stretch" class="display:none">
+                                        <span class="" for="stretch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" fill-rule="nonzero" d="M15 19H9V6h6v13zM8 6v13H0v1h24v-1h-8V6h8V5H0v1h8z"></path></svg></span>
+                                    </div>
+                                    <div class="card background:darkgrey text-align:center width:20% height:90% padding:10px">
+                                        <input type="radio" id="top" class="display:none">
+                                        <span class="" for="top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" fill-rule="nonzero" d="M18 6H6v13h12V6zM5 6H0V5h24v1h-5v13c0 .6-.4 1-1 1H6a1 1 0 01-1-1V6zm14 6v1H5v-1h14z"></path></svg></span>
+                                    </div>
+                                    <div class="card background:darkgrey text-align:center width:20% height:90% padding:10px">
+                                        <input type="radio" id="center" class="display:none">
+                                        <span class="" for="center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" fill-rule="nonzero" d="M18 6H6v13h12V6zm1 0v13c0 .6-.4 1-1 1H6a1 1 0 01-1-1V6c0-.6.4-1 1-1h12c.6 0 1 .4 1 1zm5 6v1H0v-1h24z"></path></svg></span>
+                                    </div>
+                                    <div class="card background:darkgrey text-align:center width:20% height:90% padding:10px">
+                                        <input type="radio" id="bottom" class="display:none">
+                                        <span class="" for="bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" fill-rule="nonzero" d="M18 19H6V6h12v13zM5 19H0v1h24v-1h-5V6c0-.6-.4-1-1-1H6a1 1 0 00-1 1v13zm14-6v-1H5v1h14z"></path></svg></span>
+                                    </div>
+                                    <div class="card background:darkgrey text-align:center width:20% height:90% padding:10px">
+                                        <input type="radio" id="baseline" class="display:none">
+                                        <span class="" for="baseline"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#000" fill-rule="evenodd" d="M19 14h1.1a.5.5 0 01.4.8L19 17.3a.5.5 0 01-.8 0l-1.6-2.5a.5.5 0 01.4-.8H18V5.5a.5.5 0 111 0V14zM0 19h24v1H0v-1zM13.4 5l.1 2.9h-.3l-.2-1c-.2-.4-.5-.7-.8-.8-.3-.2-.7-.3-1.2-.3H9.4V15c0 .8 0 1.2.2 1.4.2.3.6.4 1 .4h.4v.3H6v-.3h.4c.5 0 .9-.2 1-.5.2-.2.3-.6.3-1.3V6H5c-.4.2-.6.4-.8.7-.2.3-.4.7-.4 1.3h-.4L3.7 5h9.7z"></path></svg></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Order:</label></div><div class="floating-label_trailing"></div></div><input id="order" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="order" data-collection="builder" data-document_id="null" active=""></div>
+                            </div>
+                        </div>
+                         <!--Spacing -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".spacing" data-hide=".spacing">
+                            <span class="spacing hidden"><i class="fas fa-plus"></i></span>
+                            <span class="spacing"><i class="fas fa-minus"></i></span>
+                            <span>Spacing</span>
+                        </div>
+                        <div class="spacing padding-bottom:20px">
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">margin-left:</label></div><div class="floating-label_trailing"></div></div><input id="margin-left" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="margin-left" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#margin-left">
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units1">
+                                                <li class="template selectable" data-template_id="units1" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">margin-right:</label></div><div class="floating-label_trailing"></div></div><input id="margin-right" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="margin-right" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#margin-right">
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units2">
+                                                <li class="template selectable" data-template_id="units2" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">margin-top:</label></div><div class="floating-label_trailing"></div></div><input id="margin-top" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="margin-top" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#margin-top">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units3">
+                                                <li class="template selectable" data-template_id="units3" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">margin-bottom:</label></div><div class="floating-label_trailing"></div></div><input id="margin-bottom" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="margin-bottom" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#margin-bottom">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units4">
+                                                <li class="template selectable" data-template_id="units4" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">padding-left:</label></div><div class="floating-label_trailing"></div></div><input id="padding-left" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="padding-left" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units5">
+                                                <li class="template selectable" data-template_id="units5" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">padding-right:</label></div><div class="floating-label_trailing"></div></div><input id="padding-right" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="padding-right" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units6">
+                                                <li class="template selectable" data-template_id="units6" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">padding-top:</label></div><div class="floating-label_trailing"></div></div><input id="padding-top" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="padding-top" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units7">
+                                                <li class="template selectable" data-template_id="units7" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">padding-bottom:</label></div><div class="floating-label_trailing"></div></div><input id="padding-bottom" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="padding-bottom" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units8">
+                                                <li class="template selectable" data-template_id="units8" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!--Size -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".sizeing" data-hide=".sizeing">
+                            <span class="sizeing hidden"><i class="fas fa-plus"></i></span>
+                            <span class="sizeing"><i class="fas fa-minus"></i></span>
+                            <span>Size</span>
+                        </div>
+                        <div class="sizeing padding-bottom:20px">
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">width:</label></div><div class="floating-label_trailing"></div></div><input id="width" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="width" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units9">
+                                                <li class="template selectable" data-template_id="units9" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">height:</label></div><div class="floating-label_trailing"></div></div><input id="height" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="height" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#height">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units10">
+                                                <li class="template selectable" data-template_id="units10" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">min-width:</label></div><div class="floating-label_trailing"></div></div><input id="min-width" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="min-width" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#min-width">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units11">
+                                                <li class="template selectable" data-template_id="units11" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">min-height:</label></div><div class="floating-label_trailing"></div></div><input id="min-height" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="min-height" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#min-height">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units12">
+                                                <li class="template selectable" data-template_id="units12" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">max-width:</label></div><div class="floating-label_trailing"></div></div><input id="max-width" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="max-width" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#max-width">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units13">
+                                                <li class="template selectable" data-template_id="units13" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">max-height:</label></div><div class="floating-label_trailing"></div></div><input id="max-height" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="max-height" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#max-height">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units14">
+                                                <li class="template selectable" data-template_id="units14" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!--Position -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".position" data-hide=".position">
+                            <span class="position hidden"><i class="fas fa-plus"></i></span>
+                            <span class="position"><i class="fas fa-minus"></i></span>
+                            <span>Position</span>
+                        </div>
+                        <div class="position padding-bottom:20px">
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">top:</label></div><div class="floating-label_trailing"></div></div><input id="top" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="top" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#top">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units15">
+                                                <li class="template selectable" data-template_id="units15" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">bottom:</label></div><div class="floating-label_trailing"></div></div><input id="bottom" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="bottom" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#bottom">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units16">
+                                                <li class="template selectable" data-template_id="units16" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">left:</label></div><div class="floating-label_trailing"></div></div><input id="left" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="left" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#left">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units17">
+                                                <li class="template selectable" data-template_id="units17" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">right:</label></div><div class="floating-label_trailing"></div></div><input id="right" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="right" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#right">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units18">
+                                                <li class="template selectable" data-template_id="units18" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!--typography -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".typography" data-hide=".typography">
+                            <span class="typography hidden"><i class="fas fa-plus"></i></span>
+                            <span class="typography"><i class="fas fa-minus"></i></span>
+                            <span>Typography</span>
+                        </div>
+                        <div class="typography padding:10px_0_20px_0">
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">font-family:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="font-family" placeholder="" data-attributes="classstyle" data-attributes_property="font-family" data-collection="builder" data-document_id="null" active="">
+                                    <input class="search-options" placeholder="Search" data-item_selector=".selectable">
+                                    <ul class="selectable--list z-index:7">
+                                        <li class="selectable" value="none"><span>none</span></li>
+                                        <li class="selectable" value="arial"><span>Arial</span></li>
+                                        <li class="selectable" value="arialblack"><span>Arial Black</span></li>
+                                        <li class="selectable" value="brushscriptmt"><span>Brush Script MT</span></li>
+                                        <li class="selectable" value="comicsansms"><span>Comic Sans MS</span></li>
+                                        <li class="selectable" value="couriernew"><span>Courier New</span></li>
+                                        <li class="selectable" value="georgia"><span>Georgia</span></li>
+                                        <li class="selectable" value="helvetica"><span>Helvetica</span></li>
+                                        <li class="selectable" value="lucidasansunicode"><span>Lucida Sans Unicode</span></li>
+                                        <li class="selectable" value="tahoma"><span>Tahoma</span></li>
+                                        <li class="selectable" value="trebuchetms"><span>Trebuchet MS</span></li>
+                                        <li class="selectable" value="impact"><span>Impact</span></li>
+                                        <li class="selectable" value="verdana"><span>Verdana</span></li>
+                                    </ul>
+                                </cocreate-select></div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">font-size:</label></div><div class="floating-label_trailing"></div></div><input id="font-size" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="font-size" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#font-size">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units19">
+                                                <li class="template selectable" data-template_id="units19" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">font-weight:</label></div><div class="floating-label_trailing"></div></div><input type="number" id="font-weight" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributes="classstyle" data-attributes_property="font-weight" data-collection="builder" data-document_id="null" active=""></div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">color</label></div><div class="floating-label_trailing"></div></div><div id="color" class="color-picker floating-label text_color" data-attributes="classstyle" data-attributes_property="color" placeholder="" active=""></div></div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">font-align:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="font-align" placeholder="" data-attributes="classstyle" data-attributes_property="font-align" data-collection="builder" data-document_id="null" active="">
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value="left">
+                                                <label class="fa fa-align-left"></label>
+                                            </li>
+                                            <li class="selectable" value="center">
+                                                <label class="fa fa-align-center"></label>
+                                            </li>
+                                            <li class="selectable" value="right">
+                                                <label class="fa fa-align-right"></label>
+                                            </li>
+                                            <li class="selectable" value="justify">
+                                                <label class="fa fa-align-justify"></label>
+                                            </li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">text-decoration:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" placeholder="" data-attributes="classstyle" data-attributes_property="text-decoration" data-collection="builder" data-document_id="null" active="">
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value="x">
+                                                <span class="fa fa-times"></span>
+                                            </li>
+                                            <li class="selectable" value="u">
+                                                <span class="fa fa-underline"></span>
+                                            </li>
+                                            <li class="selectable" value="s">
+                                                <span class="fa fa-strikethrough"></span>
+                                            </li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">font-style:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="styleunit remove-none floating-label text_color" placeholder="" data-attributes="classstyle" data-attributes_property="font-style" data-collection="builder" data-document_id="null" active="">
+                                    <ul class="selectable--list z-index:7 margin-top:5px">
+                                        <li class="selectable" value="a">
+                                            <label class="fa fa-font"></label>
+                                        </li>
+                                        <li class="selectable" value="em">
+                                            <label class="fa fa-italic"></label>
+                                        </li>
+                                    </ul>
+                                </cocreate-select></div>
+                            </div>
+                        </div>
+                         <!--Border -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".border" data-hide=".border">
+                            <span class="border hidden"><i class="fas fa-plus"></i></span>
+                            <span class="border"><i class="fas fa-minus"></i></span>
+                            <span>Border</span>
+                        </div>
+                        <div class="border padding-bottom:20px">
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">border-width:</label></div><div class="floating-label_trailing"></div></div><input id="border-width" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="border-width" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units21">
+                                                <li class="template selectable" data-template_id="units21" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">border-style:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="border-style" placeholder="" data-attributes="classstyle" data-attributes_property="border-style" data-collection="builder" data-document_id="null" active="">
+
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value="none"><span>none</span></li>
+                                            <li class="selectable" value="solid"><span>solid</span></li>
+                                            <li class="selectable" value="dotted"><span>dotted</span></li>
+                                            <li class="selectable" value="dashed"><span>dashed</span></li>
+                                            <li class="selectable" value="double"><span>double</span></li>
+                                            <li class="selectable" value="groove"><span>groove</span></li>
+                                            <li class="selectable" value="ridge"><span>ridge</span></li>
+                                            <li class="selectable" value="inset"><span>inset</span></li>
+                                            <li class="selectable" value="outset"><span>outset</span></li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">border-color</label></div><div class="floating-label_trailing"></div></div><div id="border-color" class="color-picker floating-label text_color" data-attributes="classstyle" data-attributes_property="border-color" placeholder="" active=""></div></div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">border-radius:</label></div><div class="floating-label_trailing"></div></div><input id="border-radius" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributes="classstyle" data-attributes_property="border-radius" data-collection="builder" data-document_id="null" active=""></div>
+                                <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                    <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="border-radius">
+                                        <li class="" value="px" selected=""><span class="margin:auto">px</span><span class="remove">x</span></li>
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units22">
+                                                <li class="template selectable" data-template_id="units22" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                         <!--Shadow -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".shadow" data-hide=".shadow">
+                            <span class="shadow hidden"><i class="fas fa-plus"></i></span>
+                            <span class="shadow"><i class="fas fa-minus"></i></span>
+                            <span>Shadow</span>
+                        </div>
+                        <div class="shadow padding:10px">
+                            <!--Box Shadow -->
+                            <div class="card padding:10px_0px">
+                                <div class="display:flex height:50px">
+                                    <div class="width:50% margin:0_5px">
+                                        <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Offset X:</label></div><div class="floating-label_trailing"></div></div><input id="offsetx" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributes="classstyle" data-attributes_property="offsetx" data-collection="builder" data-document_id="null" active=""></div>
+                                        <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                            <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+    
+                                                <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units23">
+                                                    <li class="template selectable" data-template_id="units23" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                                </ul>
+                                            </cocreate-select>
+                                        </div>
+                                    </div>
+                                    <div class="width:50% margin:0_5px">
+                                        <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Offset V:</label></div><div class="floating-label_trailing"></div></div><input id="offsetv" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributes="classstyle" data-attributes_property="offsetv" data-collection="builder" data-document_id="null" active=""></div>
+                                        <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                            <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+    
+                                                <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units24">
+                                                    <li class="template selectable" data-template_id="units24" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                                </ul>
+                                            </cocreate-select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="display:flex height:50px">
+                                    <div class="width:50% margin:0_5px">
+                                        <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Blur:</label></div><div class="floating-label_trailing"></div></div><input id="blur" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributess="classstyle" data-attributess_sync="blur" data-attributess_unit="px" data-collection="builder" data-document_id="null" active=""></div>
+                                        <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                            <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+    
+                                                <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units25" 25="">
+                                                    <li class="template selectable" data-template_id="units26" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                                </ul>
+                                            </cocreate-select>
+                                        </div>
+                                    </div>
+                                    <div class="width:50% margin:0_5px">
+                                        <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Spread:</label></div><div class="floating-label_trailing"></div></div><input id="spread" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributess="classstyle" data-attributess_sync="spread" data-attributess_unit="px" data-collection="builder" data-document_id="null" active=""></div>
+                                        <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                            <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+    
+                                                <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units27">
+                                                    <li class="template selectable" data-template_id="units27" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                                </ul>
+                                            </cocreate-select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">fill-color:</label></div><div class="floating-label_trailing"></div></div><input id="fill-color" type="color" class="floating-label z-index:0 text_color" placeholder="" data-attributess="classstyle" data-attributess_sync="fill-color" data-collection="builder" data-document_id="null" active=""></div>
+                                </div>
+                            </div>
+                        </div>    
+                             <!--Text Shadow -->
+                         <!--Background-->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".backgroundset" data-hide=".backgroundset">
+                            <span class="backgroundset hidden"><i class="fas fa-plus"></i></span>
+                            <span class="backgroundset"><i class="fas fa-minus"></i></span>
+                            <span>Background</span>
+                        </div>
+                        <div class="backgroundset padding:5px_5px_20px_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">background-color</label></div><div class="floating-label_trailing"></div></div><div id="background-color" class="color-picker floating-label text_color" data-attributess="classstyle" data-attributess_sync="background-color" placeholder="" active=""></div></div>
+                            
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">image:</label></div><div class="floating-label_trailing"></div></div><input id="background-image" type="file" class="floating-label z-index:0 display:none text_color" placeholder="" step="100" data-attributess="classstyle" data-attributess_sync="background-image" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">background-repeat:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="background-repeat" placeholder="" data-attributess="classstyle" data-attributes_property="background-repeat" data-collection="builder" data-document_id="null" active="">
+    
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value="none"><span>none</span></li>
+                                    <li class="selectable" value="repeat"><span>repeat</span></li>
+                                    <li class="selectable" value="repeat-x"><span>repeat-x</span></li>
+                                    <li class="selectable" value="repeat-y"><span>repeat-y</span></li>
+                                    <li class="selectable" value="norepeat"><span>no repeat</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">background-position</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="background-position" placeholder="" data-attributes="classstyle" data-collection="builder" data-document_id="null" active="">
+    
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value="background-position:none"><span>none</span></li>
+                                    <li class="selectable" value="background-position:lt"><span>left top</span></li>
+                                    <li class="selectable" value="background-position:lc"><span>left center</span></li>
+                                    <li class="selectable" value="background-position:lb"><span>left bottom</span></li>
+                                    <li class="selectable" value="background-position:rt"><span>right top</span></li>
+                                    <li class="selectable" value="background-position:rc"><span>right center</span></li>
+                                    <li class="selectable" value="background-position:rb"><span>right bottom</span></li>
+                                    <li class="selectable" value="background-position:ct"><span>center top</span></li>
+                                    <li class="selectable" value="background-position:cc"><span>center center</span></li>
+                                    <li class="selectable" value="background-position:cb"><span>center bottom</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">background-attachment:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="background-attachment" placeholder="" data-attributes="classstyle" data-attributes_property="background-attachment" data-collection="builder" data-document_id="null" active="">
+    
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value="none"><span>none</span></li>
+                                    <li class="selectable" value="scroll"><span>scroll</span></li>
+                                    <li class="selectable" value="fixed"><span>fixed</span></li>
+                                    <li class="selectable" value="local"><span>local</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">background-size:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="background-size" placeholder="" data-attributes="classstyle" data-attributes_property="background-size" data-collection="builder" data-document_id="null" active="">
+    
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value="none"><span>none</span></li>
+                                    <li class="selectable" value="auto"><span>auto</span></li>
+                                    <li class="selectable" value="cover"><span>cover</span></li>
+                                    <li class="selectable" value="contain"><span>contain</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                        </div>
+                         <!--Extra -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".extra" data-hide=".extra">
+                            <span class="extra hidden"><i class="fas fa-plus"></i></span>
+                            <span class="extra"><i class="fas fa-minus"></i></span>
+                            <span>Extra</span>
+                        </div>
+                        <div class="extra padding:10px_0">
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">opacity:</label></div><div class="floating-label_trailing"></div></div><input id="opacity" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="opacity" data-collection="builder" data-document_id="null" active=""></div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Cursor:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="cursor" placeholder="" data-attributes="classstyle" data-attributes_property="cursor" data-collection="builder" data-document_id="null" active="">
+                                    
+                                    <ul class="selectable--list z-index:7 margin-top:5px">
+                                        <li class="selectable" value="none"><span>none</span></li>
+                                        <li class="selectable" value="auto"><span>Auto</span></li>
+                                        <li class="selectable" value="default"><span></span>Default</li>
+                                        <li class="selectable" value="none"><span></span>None</li>
+                                        <li class="selectable" value="unset"><span></span>Unset</li>
+                                        <li class="selectable" value="alias"><span></span>Alias</li>
+                                        <li class="selectable" value="col-resize"><span>Column resize</span></li>
+                                        <li class="selectable" value="row-resize"><span>Row resize</span></li>
+                                        <li class="selectable" value="context-menu"><span>Context menu</span></li>
+                                        <li class="selectable" value="copy"><span>Copy</span></li>
+                                        <li class="selectable" value="crosshair"><span></span>Crosshair</li>
+                                        <li class="selectable" value="n-resize"><span>Resize N</span></li>
+                                        <li class="selectable" value="ne-resize"><span>Resize NE</span></li>
+                                        <li class="selectable" value="e-resize"><span>Resize E</span></li>
+                                        <li class="selectable" value="se-resize"><span>Resize SE</span></li>
+                                        <li class="selectable" value="s-resize"><span>Resize S</span></li>
+                                        <li class="selectable" value="sw-resize"><span>Resize SW</span></li>
+                                        <li class="selectable" value="w-resize"><span>Resize W</span></li>
+                                        <li class="selectable" value="nw-resize"><span>Resize NW</span></li>
+                                        <li class="selectable" value="ns-resize"><span>Resize NS</span></li>
+                                        <li class="selectable" value="nesw-resize"><span>Resize NESW</span></li>
+                                        <li class="selectable" value="ew-resize"><span>Resize EW</span></li>
+                                        <li class="selectable" value="nwse-resize"><span>Resize NWSE</span></li>
+                                        <li class="selectable" value="grab"><span>Grab</span></li>
+                                        <li class="selectable" value="grabbing"><span>Grabbing</span></li>
+                                        <li class="selectable" value="help"><span>Help</span></li>
+                                        <li class="selectable" value="move"><span>Move</span></li>
+                                        <li class="selectable" value="not-allowed"><span>Not allowed</span></li>
+                                        <li class="selectable" value="pointer"><span>Pointer</span></li>
+                                        <li class="selectable" value="progress"><span>Progress</span></li>
+                                        <li class="selectable" value="text"><span>Text</span></li>
+                                        <li class="selectable" value="vertical-text"><span>Vertical text</span></li>
+                                        <li class="selectable" value="zoom-in"><span>Zoom in</span></li>
+                                        <li class="selectable" value="zoom-out"><span>Zoom out</span></li>
+                                    </ul>
+                                </cocreate-select></div>
+                            </div>
+                            <div class="card margin:10px padding:10px_0px">
+                                <div class="margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">FilterType:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="filter-type" placeholder="" data-attributes="classstyle" data-attributes_property="filter-type" data-collection="builder" data-document_id="null" active="">
+            
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value="none"><span>none</span></li>
+                                            <li class="selectable" value="blur"><span>blur</span></li>
+                                            <li class="selectable" value="brightness"><span>brightness</span></li>
+                                            <li class="selectable" value="contrast"><span>contrast</span></li>
+                                            <li class="selectable" value="grayscale"><span>grayscale</span></li>
+                                            <li class="selectable" value="hue-rotate"><span>hue-rotate</span></li>
+                                            <li class="selectable" value="invert"><span>invert</span></li>
+                                            <li class="selectable" value="opacity"><span>opacity</span></li>
+                                            <li class="selectable" value="saturate"><span>saturate</span></li>
+                                            <li class="selectable" value="sepia"><span>sepia</span></li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                                <div class="margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">strenth:</label></div><div class="floating-label_trailing"></div></div><input id="strenth" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributes="classstyle" data-attributes_property="strenth" data-collection="builder" data-document_id="null" active=""></div>
+                                </div>
+                            </div>
+                            <div class="card margin:10px padding:10px_0px">
+                                <div class="margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">transform-type:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="transform-type" placeholder="" data-attributes="classstyle" data-attributes_property="transform-type" data-collection="builder" data-document_id="null" active="">
+            
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value="none"><span>none</span></li>
+                                            <li class="selectable" value="translateX"><span>Move X</span></li>
+                                            <li class="selectable" value="translateY"><span>Move Y</span></li>
+                                            <li class="selectable" value="translateZ"><span>Move Z</span></li>
+                                            <li class="selectable" value="scale"><span>Scale</span></li>
+                                            <li class="selectable" value="scaleX"><span>Scale X</span></li>
+                                            <li class="selectable" value="scaleY"><span>Scale Y</span></li>
+                                            <li class="selectable" value="scaleZ"><span>Scale Z</span></li>
+                                            <li class="selectable" value="rotateX"><span>Rotate X</span></li>
+                                            <li class="selectable" value="rotateY"><span>Rotate Y</span></li>
+                                            <li class="selectable" value="rotateZ"><span>Rotate Z</span></li>
+                                            <li class="selectable" value="skewX"><span>Skew X</span></li>
+                                            <li class="selectable" value="skewY"><span>Skew Y</span></li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                                <div class="margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Value:</label></div><div class="floating-label_trailing"></div></div><input id="translation-value" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributes="classstyle" data-attributes_property="translation-value" data-collection="builder" data-document_id="null" active=""></div>
+                                </div>
+                            </div>
+                            <div class="card margin:10px padding:10px_0px">
+                                <div class="margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">TransitionProperty:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="transition-property" placeholder="" data-attributes="classstyle" data-attributes_property="transition-property" data-collection="builder" data-document_id="null" active="">
+            
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value="none"><span>none</span></li>
+                                            <li class="selectable" value="all"><span>All</span></li>
+                                            <li class="selectable" value="width"><span>Width</span></li>
+                                            <li class="selectable" value="height"><span>Height</span></li>
+                                            <li class="selectable" value="background-color"><span>Background color</span></li>
+                                            <li class="selectable" value="transform"><span>Transform</span></li>
+                                            <li class="selectable" value="border"><span>Border</span></li>
+                                            <li class="selectable" value="box-shadow"><span>Box shadow</span></li>
+                                            <li class="selectable" value="text-shadow"><span>Text shadow</span></li>
+                                            <li class="selectable" value="opacity"><span>Opacity</span></li>
+                                            <li class="selectable" value="color"><span>Color</span></li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                                <div class="display:flex height:50px">
+                                    <div class="width:50% margin:0_5px">
+                                        <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">duration:</label></div><div class="floating-label_trailing"></div></div><input id="duration" class="floating-label z-index:0 text_color" placeholder="" step="100" data-attributes="classstyle" data-attributes_property="duration" data-collection="builder" data-document_id="null" active=""></div>
+                                    </div>
+                                    <div class="width:50% margin:0_5px">
+                                        <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Easing:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="easing" placeholder="" data-attributes="classstyle" data-attributes_property="easing" data-collection="builder" data-document_id="null" active="">
+                
+                                            <ul class="selectable--list z-index:7 margin-top:5px">
+                                                <li class="selectable" value="none"><span>none</span></li>
+                                                <li class="selectable" value="linear"><span>linear</span></li>
+                                                <li class="selectable" value="ease"><span>ease</span></li>
+                                                <li class="selectable" value="ease-in"><span>ease-in</span></li>
+                                                <li class="selectable" value="ease-out"><span>ease-out</span></li>
+                                                <li class="selectable" value="ease-in-out"><span>ease-in-out</span></li>
+                                            </ul>
+                                        </cocreate-select></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--data Base  -->
+                    <div id="database" class="editor-panel display:none">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".database" data-hide=".database">
+                            <span class="database hidden"><i class="fas fa-plus"></i></span>
+                            <span class="database"><i class="fas fa-minus"></i></span>
+                            <span>Database</span>
+                        </div>
+                        <div class="database padding-bottom:20px">
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                     <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-realtime:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-realtime" placeholder="" data-attributes="data-realtime" data-collection="builder" data-document_id="null" active="">
+                                        <ul class="selectable--list z-index:7 margin-top:5px" data-search_id="search_01">
+                                            <li class="selectable" value=""><span>none</span></li>
+                                            <li class="selectable" value="true"><span>true</span></li>
+                                            <li class="selectable" value="false"><span>false</span></li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-cursors:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-cursors" placeholder="" data-attributes="data-cursors" data-collection="builder" data-document_id="null" active="">
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value=""><span>none</span></li>
+                                            <li class="selectable" value="true"><span>true</span></li>
+                                            <li class="selectable" value="false"><span>false</span></li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                 <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-collection:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-collection" placeholder="" data-attributes="data-collection" data-collection="builder" data-document_id="null" active="">
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value=""><span>none</span></li>
+                                            <li class="selectable" value="true"><span>true</span></li>
+                                            <li class="selectable" value="false"><span>false</span></li>
+                                        </ul>
+                                </cocreate-select></div>
+                            </div>
+                            <div class="margin:0_5px">
+                                 <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-docuemnt_id:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-docuemnt_id" placeholder="" data-attributes="data-docuemnt_id" data-collection="builder" data-document_id="null" active="">
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value=""><span>none</span></li>
+                                            <li class="selectable" value="true"><span>true</span></li>
+                                            <li class="selectable" value="false"><span>false</span></li>
+                                        </ul>
+                                </cocreate-select></div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-prefix</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-prefix" type="text" class="floating-label text_color" placeholder="" id="data-prefix" data-collection="builder" data-document_id="null" active=""></div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">Name</label></div><div class="floating-label_trailing"></div></div><input data-attributes="name" type="text" class="floating-label text_color" placeholder="" id="name" data-collection="builder" data-document_id="null" active=""></div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-read_value:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-read_value" placeholder="" data-attributes="data-read_value" data-collection="builder" data-document_id="null" active="">
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value=""><span>none</span></li>
+                                            <li class="selectable" value="true"><span>true</span></li>
+                                            <li class="selectable" value="false"><span>false</span></li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                     <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-save_value:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-save" placeholder="" data-attributes="data-save" data-collection="builder" data-document_id="null" active="">
+                                        <ul class="selectable--list z-index:7 margin-top:5px">
+                                            <li class="selectable" value=""><span>none</span></li>
+                                            <li class="selectable" value="true"><span>true</span></li>
+                                            <li class="selectable" value="false"><span>false</span></li>
+                                        </ul>
+                                    </cocreate-select></div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                 <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-action:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-action" placeholder="" data-attributes="data-action" data-collection="builder" data-document_id="null" active="">
+                                    <ul class="selectable--list z-index:7 margin-top:5px">
+                                        <li class="selectable" value=""><span>none</span></li>
+                                        <li class="selectable" value="true"><span>true</span></li>
+                                        <li class="selectable" value="false"><span>false</span></li>
+                                    </ul>
+                                </cocreate-select></div>
+                            </div>
+                        </div>
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".fetchlist" data-hide=".fetchlist">
+                            <span class="fetchlist hidden"><i class="fas fa-plus"></i></span>
+                            <span class="fetchlist"><i class="fas fa-minus"></i></span>
+                            <span>Fetch List</span>
+                        </div>
+                        <div class="fetchlist padding-bottom:20px margin:0_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-fetch_collection:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-fetch_collection" placeholder="" data-attributes="data-fetch_collection" data-collection="builder" data-document_id="null" active="">
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value=""><span>none</span></li>
+                                    <li class="selectable" value="true"><span>true</span></li>
+                                    <li class="selectable" value="false"><span>false</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-fetch_docuemnt_id:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-fetch_docuemnt_id" placeholder="" data-attributes="data-fetch_docuemnt_id" data-collection="builder" data-document_id="null" active="">
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value=""><span>none</span></li>
+                                    <li class="selectable" value="true"><span>true</span></li>
+                                    <li class="selectable" value="false"><span>false</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-fetch_name</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-fetch_name" type="text" class="floating-label text_color" placeholder="" id="data-fetch_name" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-filter_name</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-filter_name" type="text" class="floating-label text_color" placeholder="" id="data-filter_name" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-filter_value</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-filter_value" type="text" class="floating-label text_color" placeholder="" id="data-filter_value" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-template_id</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-template_id" type="text" class="floating-label text_color" placeholder="" id="data-template_id" data-collection="builder" data-document_id="null" active=""></div>    
+                        </div>
+                    </div>
+                     <!--Logic -->
+                    <div id="logic" class="editor-panel display:none">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".logic" data-hide=".logic">
+                            <span class="logic hidden"><i class="fas fa-plus"></i></span>
+                            <span class="logic"><i class="fas fa-minus"></i></span>
+                            <span>Logic</span>
+                        </div>
+                        <div class="logic padding-bottom:20px margin:0_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_to</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_to" type="text" class="floating-label text_color" placeholder="" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_id</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_id" type="text" class="floating-label text_color" placeholder="" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_collection:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-pass_collection" placeholder="" data-attributes="data-pass_collection" data-collection="builder" data-document_id="null" active="">
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value=""><span>none</span></li>
+                                    <li class="selectable" value="true"><span>true</span></li>
+                                    <li class="selectable" value="false"><span>false</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_document_id:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-pass_document_id" placeholder="" data-attributes="data-pass_document_id" data-collection="builder" data-document_id="null" active="">
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value=""><span>none</span></li>
+                                    <li class="selectable" value="true"><span>true</span></li>
+                                    <li class="selectable" value="false"><span>false</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_prefix</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_prefix" type="text" class="floating-label text_color" placeholder="" id="data-pass_prefix" data-collection="builder" data-document_id="null" active=""></div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_name</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_name" type="text" class="floating-label text_color" placeholder="" id="data-pass_name" data-collection="builder" data-document_id="null" active=""></div>
+                                </div>
+                            </div>
+                    
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_value</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_value" type="text" class="floating-label text_color" placeholder="" id="data-pass_value" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_fetch_collection:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-pass_fetch_collection" placeholder="" data-attributes="data-pass_fetch_collection" data-collection="builder" data-document_id="null" active="">
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value=""><span>none</span></li>
+                                    <li class="selectable" value="true"><span>true</span></li>
+                                    <li class="selectable" value="false"><span>false</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_fetch_document_id:</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-pass_fetch_document_id" placeholder="" data-attributes="data-pass_fetch_document_id" data-collection="builder" data-document_id="null" active="">
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value=""><span>none</span></li>
+                                    <li class="selectable" value="true"><span>true</span></li>
+                                    <li class="selectable" value="false"><span>false</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_fetch_name</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_fetch_name" type="text" class="floating-label text_color" placeholder="" id="data-pass_fetch_name" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_filter_name</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_filter_name" type="text" class="floating-label text_color" placeholder="" id="data-pass_filter_name" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_filter_value</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_filter_value" type="text" class="floating-label text_color" placeholder="" id="data-pass_filter_value" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_refresh</label></div><div class="floating-label_trailing"></div></div><cocreate-select class="floating-label text_color" id="data-pass_refresh" placeholder="" data-attributes="data-pass_refresh" data-collection="builder" data-document_id="null" active="">
+                                <ul class="selectable--list z-index:7 margin-top:5px">
+                                    <li class="selectable" value=""><span>none</span></li>
+                                    <li class="selectable" value="true"><span>true</span></li>
+                                    <li class="selectable" value="false"><span>false</span></li>
+                                </ul>
+                            </cocreate-select></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_value_to</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_value_to" type="text" class="floating-label text_color" placeholder="" id="data-pass_value_to" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-pass_value_id</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-pass_value_id" type="text" class="floating-label text_color" placeholder="" id="data-pass_value_id" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-get_value</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-get_value" type="text" class="floating-label text_color" placeholder="" id="data-get_value" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-room</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-room" type="text" class="floating-label text_color" placeholder="" id="data-room" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-namespace</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-namespace" type="text" class="floating-label text_color" placeholder="" id="data-namespace" data-collection="builder" data-document_id="null" active=""></div>
+                        </div>
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".datavisible" data-hide=".datavisible">
+                            <span class="datavisible hidden"><i class="fas fa-plus"></i></span>
+                            <span class="datavisible"><i class="fas fa-minus"></i></span>
+                            <span>Conditional Logic</span>
+                        </div>
+                        <div class="datavisible padding-bottom:20px margin:0_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-show</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-show" type="text" class="floating-label text_color" placeholder="" id="data-show" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-hide</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-hide" type="text" class="floating-label text_color" placeholder="" id="data-hide" data-collection="builder" data-document_id="null" active=""></div>
+                        </div>
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".dataselected" data-hide=".dataselected">
+                            <span class="dataselected hidden"><i class="fas fa-plus"></i></span>
+                            <span class="dataselected"><i class="fas fa-minus"></i></span>
+                            <span>Selected</span>
+                        </div>
+                        <div class="dataselected padding-bottom:20px margin:0_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected" type="text" class="floating-label text_color" placeholder="" id="data-selected" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected_attribute</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected_attribute" type="text" class="floating-label text_color" placeholder="" id="data-selected_attribute" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected_target</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected_target" type="text" class="floating-label text_color" placeholder="" id="data-selected_target" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected_closest</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected_closest" type="text" class="floating-label text_color" placeholder="" id="data-selected_closest" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected_group</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected_group" type="text" class="floating-label text_color" placeholder="" id="data-selected_group" data-collection="builder" data-document_id="null" active=""></div>
+                        </div>
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".toggleattr" data-hide=".toggleattr">
+                            <span class="toggleattr hidden"><i class="fas fa-plus"></i></span>
+                            <span class="toggleattr"><i class="fas fa-minus"></i></span>
+                            <span>Toggle</span>
+                        </div>
+                        <div class="toggleattr padding-bottom:20px margin:0_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-toggle</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-toggle" type="text" class="floating-label text_color" placeholder="" id="data-toggle" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-toggle_attribute</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-toggle_attribute" type="text" class="floating-label text_color" placeholder="" id="data-toggle_attribute" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-toggle_target</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-toggle_target" type="text" class="floating-label text_color" placeholder="" id="data-toggle_target" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-toggle_closest</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-toggle_closest" type="text" class="floating-label text_color" placeholder="" id="data-toggle_closest" data-collection="builder" data-document_id="null" active=""></div>
+                        </div>
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".hoverattr" data-hide=".hoverattr">
+                            <span class="hoverattr hidden"><i class="fas fa-plus"></i></span>
+                            <span class="hoverattr"><i class="fas fa-minus"></i></span>
+                            <span>Hover</span>
+                        </div>
+                        <div class="hoverattr padding-bottom:20px margin:0_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label"></label></div><div class="floating-label_trailing"></div></div><input type="text" class="floating-label text_color" data-attributes="data-hover" id="data-hover" data-collection="builder" data-document_id="null" active="" placeholder=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-hover_attribute</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-hover_attribute" class="floating-label text_color" placeholder="" id="data-hover_attribute" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-hover_target</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-hover_target" class="floating-label text_color" placeholder="" id="data-hover_target" data-collection="builder" data-document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-hover_closest</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-hover_closest" class="floating-label text_color" placeholder="" id="data-hover_closest" data-collection="builder" data-document_id="null" active=""></div>
+                        </div>
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".scroll" data-hide=".scroll">
+                            <span class="scroll hidden"><i class="fas fa-plus"></i></span>
+                            <span class="scroll"><i class="fas fa-minus"></i></span>
+                            <span>Scroll</span>
+                        </div>
+                        <div class="scroll padding-bottom:20px">
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll" class="floating-label text_color" placeholder="" id="data-scroll" data-collection="builder" data-document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_attribute</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_attribute" class="floating-label text_color" placeholder="" id="data-scroll_attribute" data-collection="builder" data-document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_target</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_target" class="floating-label text_color" placeholder="" id="data-scroll_target" data-collection="builder" data-document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_closest</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_closest" class="floating-label text_color" placeholder="" id="data-scroll_closest" data-collection="builder" data-document_id="null" active=""></div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_up</label></div><div class="floating-label_trailing"></div></div><input id="data-scroll_up" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="data-scroll_up" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_up">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units29">
+                                                <li class="template selectable" data-template_id="units29" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_down:</label></div><div class="floating-label_trailing"></div></div><input id="data-scroll_down" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="data-scroll_down" data-collection="builder" data-document_id="null" active=""></div>
+                                    <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_down">
+
+                                            <ul class="selectable--list overflow:auto selectable--list z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units30">
+                                                <li class="template selectable" data-template_id="units30" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_position:</label></div><div class="floating-label_trailing"></div></div><input id="data-scroll_position" data-attributes="data-scroll_position" class="floating-label z-index:0 text_color" placeholder="" data-collection="builder" data-document_id="null" active=""></div>
+                                <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
+                                    <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_position">
+                                        
+                                        <ul class="selectable--list z-index:7">
+                                            <li class="selectable" value="px"><span class="margin:auto">px</span></li>
+                                            <li class="" value="%"><span class="margin:auto">%</span></li>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_top</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_top" class="floating-label text_color" placeholder="" id="data-scroll_top" data-collection="builder" data-document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_bottom</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_bottom" class="floating-label text_color" placeholder="" id="data-scroll_bottomn" data-collection="builder" data-document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scrolling</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scrolling" class="floating-label text_color" placeholder="" id="data-scrolling" data-collection="builder" data-document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_intersect</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_intersect" class="floating-label text_color" placeholder="" id="data-scroll_intersect" data-collection="builder" data-document_id="null" active=""></div>
+                            </div>
+                        </div>
+                         <!--Clone -->
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".clone" data-hide=".clone">
+                            <span class="clone hidden"><i class="fas fa-plus"></i></span>
+                            <span class="clone"><i class="fas fa-minus"></i></span>
+                            <span>Clone</span>
+                        </div>
+                        <div class="clone padding-bottom:20px margin:0_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-clone_id</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-clone_id" type="text" class="floating-label text_color" placeholder="" id="data-clone_id" data-collection="builder" data-document_id="null" active=""></div>
+                        </div>
+                          <!--Calculations -->
+                         <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".calculator" data-hide=".calculator">
+                            <span class="calculator hidden"><i class="fas fa-plus"></i></span>
+                            <span class="calculator"><i class="fas fa-minus"></i></span>
+                            <span>Calculations</span>
+                        </div>
+                        <div class="calculator padding-bottom:20px margin:0_5px">
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-calculation</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-calculation" type="text" class="floating-label text_color" placeholder="" id="data-calculation" data-collection="builder" data-document_id="null" active=""></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </form>

@@ -21,18 +21,23 @@ styleEl.setAttribute('component', 'CoCreateCss')
 document.head.appendChild(styleEl);
 var utilityClassList = [];
 var myStyle;
-window.addEventListener("load", function () {
+
+
+window.addEventListener("load", function() {
   observer.init({
     name: "ccCss",
-    observe: ["attributes","childList"],
+    observe: ["attributes", "childList"],
     attributes: ["class"],
     callback: (mutation) => {
-      // console.log('ccCSS observer start', performance.now())
+
+
+      // // console.log('ccCSS observer start', performance.now())
       if (mutation.type == "childList")
         mutation.target.querySelectorAll("*").forEach((el) => {
           addParsingClassList(el.classList);
         });
-      addParsingClassList(mutation.target.classList);
+      else
+        addParsingClassList(mutation.target.classList);
       sortRules();
       // console.log('ccCSS observer finish', performance.now())
     },
@@ -108,14 +113,16 @@ function addParsingClassList(classList) {
               myStyle.insertRule(rule);
               utilityClassList.push(classname);
             }
-          } else {
+          }
+          else {
             let rule = parseClass(classname);
             myStyle.insertRule(rule);
             utilityClassList.push(classname);
           }
         }
       }
-    } catch (e) {}
+    }
+    catch (e) {}
   }
 }
 
@@ -145,7 +152,8 @@ function parseClass(classname) {
       rule += ", " + clsname + pseudo[i];
     }
     rule += `{${res[0]}:${res[1]}}`;
-  } else {
+  }
+  else {
     rule = `.${res[0]}\\:${suffix}{${res[0]}:${res[1]}}`;
   }
   return rule;
