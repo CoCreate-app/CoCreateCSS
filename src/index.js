@@ -16,6 +16,20 @@ import './CoCreate-overlay-content.css'
 import './CoCreate-progressbar.css'
 import './CoCreate-scroll.css'
 
+
+const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
+
+const ranges = {
+    xs: [0, 567],
+    sm: [576, 768],
+    md: [769, 992],
+    lg: [993, 1200],
+    xl: [1201, 0],
+
+};
+ const rangesArray = Object.values(ranges); 
+
+
 let styleEl = document.createElement("style");
 styleEl.setAttribute('component', 'CoCreateCss')
 document.head.appendChild(styleEl);
@@ -90,18 +104,11 @@ function addParsingClassList(classList) {
           if (re_at.exec(classname)) {
             let parts = classname.split("@");
             let main_rule = parseClass(classname);
-            const range_names = ["xs", "sm", "md", "lg", "xl"];
-            const ranges = [
-              [0, 567],
-              [576, 768],
-              [769, 992],
-              [993, 1200],
-              [1201, 0],
-            ];
+    
             for (let i = 1; i < parts.length; i++) {
-              let range_num = range_names.indexOf(parts[i]);
+              let range_num = mediaRangeNames.indexOf(parts[i]);
               if (range_num == -1) continue;
-              let range = ranges[range_num];
+              let range = rangesArray[range_num];
               let prefix = "@media screen";
               if (range[0] != 0) {
                 prefix += " and (min-width:" + range[0] + "px)";
