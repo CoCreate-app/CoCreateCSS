@@ -20,14 +20,14 @@ import './CoCreate-scroll.css'
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
 
 const ranges = {
-    xs: [0, 567],
-    sm: [576, 768],
-    md: [769, 992],
-    lg: [993, 1200],
-    xl: [1201, 0],
+  xs: [0, 567],
+  sm: [576, 768],
+  md: [769, 992],
+  lg: [993, 1200],
+  xl: [1201, 0],
 
 };
- const rangesArray = Object.values(ranges); 
+const rangesArray = Object.values(ranges);
 
 
 let styleEl = document.createElement("style");
@@ -38,6 +38,8 @@ var myStyle;
 
 
 window.addEventListener("load", function() {
+  if (document.querySelector('link[parse="false"]'))
+    return;
   observer.init({
     name: "ccCss",
     observe: ["attributes", "childList"],
@@ -104,7 +106,7 @@ function addParsingClassList(classList) {
           if (re_at.exec(classname)) {
             let parts = classname.split("@");
             let main_rule = parseClass(classname);
-    
+
             for (let i = 1; i < parts.length; i++) {
               let range_num = mediaRangeNames.indexOf(parts[i]);
               if (range_num == -1) continue;
