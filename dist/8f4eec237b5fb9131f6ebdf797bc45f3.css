@@ -1,0 +1,40 @@
+/**
+  Progress bar
+**/
+.progressbar {
+  flex-grow: 1;
+  height: 4px;
+  border: none;
+  position: relative;
+  background-color: rgb(194, 240, 253);
+  overflow: hidden;
+}
+
+.progressbar > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  transform-origin: left;
+  transition: transform .4s linear;
+  background-color: #61dafb;
+}
+
+progress.progressbar {
+  -webkit-appearance: none;
+   appearance: none;
+}
+
+progress.progressbar::-webkit-progress-bar{
+  background-color: rgb(194, 240, 253) !important;
+}
+
+progress.progressbar::-webkit-progress-value{
+  background-color: #61dafb !important;
+}
+
+progress.progressbar::-moz-progress-bar {
+  background-color: #61dafb !important;
+}
+

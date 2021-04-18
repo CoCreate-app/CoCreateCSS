@@ -1,0 +1,115 @@
+/*===============================
+    CoCreateCSS
+=================================*/
+*{padding:0px; margin:0px;}
+/*body, ul{padding:0px; margin:0px;}*/
+
+*, *:before, *:after {
+  -webkit-border-sizing: border-box;
+  -moz-border-sizing: border-box;
+  border-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #505050;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  }
+  
+a {
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  color: #505050;
+}
+
+.box-shadow-bottom-4 {
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+footer:before{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    background: -webkit-linear-gradient(top, #008dd5, #008dd5 100%);
+    background: linear-gradient(to top, #008dd5 0%, #008dd5 100%);
+    opacity: 0.95;
+}
+.hidden {display:none!important;}
+.template {display:none!important;}
+
+/* class for changing color of field if data not unique*/	
+.data-unique-success{
+		border-color: green!important;
+		}
+.data-unique-error{
+		border-color: red!important;
+		}
+
+/*===============================
+    Responsive CSS
+=================================*/
+@media only screen and (max-width: 768px){
+    .hide-on-phone {display: none!important;}
+    .show-on-tablet-only {display: none!important;}
+    .show-on-tablet-and-up {display: none!important;}
+}
+@media only screen and (min-width: 769px){
+    .hide-on-tablet {display: none!important;}
+    .show-on-phone-only {display: none!important;}
+}
+@media only screen and (min-width: 993px){
+    .hide-on-desktop {display: none!important;}
+    .show-on-tablet-only {display: none!important;}
+    .show-on-tablet-down {display: none!important;}
+}
+@media only screen and (max-width: 992px){
+    .show-on-desktop-only {display: none!important;}
+}
+
+/*===============================
+   toggle order icons transform filter.js
+=================================*/
+      a[data-toggle_order]:before {
+        font-family: 'Font Awesome 5 Free';
+        content: "\f0dc";
+        font-weight: 900;
+      }
+      a[data-toggle_order=asc]:before {
+        font-family: 'Font Awesome 5 Free';
+        content: "\f0de";
+        font-weight: 900;
+      }
+      a[data-toggle_order=desc]:before {
+        font-family: 'Font Awesome 5 Free';
+        content: "\f0dd";
+        font-weight: 900;   
+      }
+
+/*===============================
+   background olors
+=================================*/
+.success {
+  background-color: #70ca63;
+  color: #fff;
+}
+.warning {
+  background-color: #fecd33;
+  color: #fff;
+}
+.danger {
+  background-color: #f13b48;
+  color: #fff;
+}
