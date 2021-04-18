@@ -33,13 +33,23 @@ const rangesArray = Object.values(ranges);
 let styleEl = document.createElement("style");
 styleEl.setAttribute('component', 'CoCreateCss')
 document.head.appendChild(styleEl);
-var utilityClassList = [];
-var myStyle;
+let selectorList = [];
+let styleList = [];
+let tempStyleList = [];
+let styleElSheet = styleEl.sheet;
+let onStyleChange
+
+export default {
+  setOnStyleChange(callback) {
+    onStyleChange = callback;
+  }
+}
+
 
 
 window.addEventListener("load", function() {
-  if (document.querySelector('link[parse="false"]'))
-    return;
+
+
   observer.init({
     name: "ccCss",
     observe: ["attributes", "childList"],
@@ -54,54 +64,71 @@ window.addEventListener("load", function() {
         });
       else
         addParsingClassList(mutation.target.classList);
-      sortRules();
-      // console.log('ccCSS observer finish', performance.now())
+      // styleList.forEach(i => styleElSheet.insertRule(i))
+      addNewRules()
+      if (onStyleChange) onStyleChange(false, styleList)
+
     },
   });
-  // console.log('ccCSS loaded', performance.now())
-  myStyle = styleEl.sheet;
+
+  if (document.querySelector('link[parse="false"]') || document.querySelector('link[onload="false"]'))
+    return;
+
+
   let elements = document.querySelectorAll("[class]");
   for (let element of elements) {
     addParsingClassList(element.classList);
   }
-  sortRules();
-  // console.log('ccCSS finished main execution', performance.now())
+  styleList = tempStyleList;
+  tempStyleList = []
+  styleList.sort();
+  styleList.forEach(i => styleElSheet.insertRule(i))
+  if (onStyleChange) onStyleChange(true, styleList)
+
+
+
+
 });
 
-function sortRules() {
-  let ruleList = [];
-  let length = utilityClassList.length;
-  for (let i in utilityClassList) {
-    ruleList.push(myStyle.cssRules[length - i - 1]);
-    myStyle.deleteRule(length - i - 1);
-  }
-  let swapped;
-  for (let i = 0; i < length; i++) {
-    swapped = false;
-    for (let j = length - 1; j > i; j--) {
-      if (utilityClassList[j - 1] > utilityClassList[j]) {
-        let temp = utilityClassList[j];
-        utilityClassList[j] = utilityClassList[j - 1];
-        utilityClassList[j - 1] = temp;
-        temp = ruleList[j];
-        ruleList[j] = ruleList[j - 1];
-        ruleList[j - 1] = temp;
-        swapped = true;
-      }
+
+function addNewRules() {
+
+  for (let i = 0, len = tempStyleList.length; i < len; i++) {
+    let rule = tempStyleList[i];
+
+    let low = 0,
+      high = styleList.length;
+    while (low < high) {
+      let index = (low + high) >>> 1;
+      let midItem = styleList[index];
+      if (rule < midItem)
+        high = index;
+      else
+        low = index + 1;
+
+
+
     }
-    if (swapped == false) break;
+
+    styleElSheet.insertRule(rule, low);
+    styleList.splice(low, 0, rule);
+
+
   }
-  for (let i = 0; i < length; i++) {
-    myStyle.insertRule(ruleList[i].cssText);
-  }
+
+  tempStyleList = []
+
 }
+
+
+
 
 function addParsingClassList(classList) {
   let re = /.+:.+/;
   for (let classname of classList) {
     try {
       if (re.exec(classname)) {
-        if (utilityClassList.indexOf(classname) == -1) {
+        if (selectorList.indexOf(classname) == -1) {
           let re_at = /.+@.+/;
           if (re_at.exec(classname)) {
             let parts = classname.split("@");
@@ -119,14 +146,16 @@ function addParsingClassList(classList) {
                 prefix += " and (max-width:" + range[1] + "px)";
               }
               let rule = prefix + "{" + main_rule + "}";
-              myStyle.insertRule(rule);
-              utilityClassList.push(classname);
+              tempStyleList.push(rule)
+
+              selectorList.push(classname);
             }
           }
           else {
             let rule = parseClass(classname);
-            myStyle.insertRule(rule);
-            utilityClassList.push(classname);
+
+            tempStyleList.push(rule)
+            selectorList.push(classname);
           }
         }
       }
