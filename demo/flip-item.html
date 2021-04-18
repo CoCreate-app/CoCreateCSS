@@ -1,107 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <title>Avatar | CoCreate</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+  <title>Avatar | CoCreate</title>
 
-    <!-- CoCreateCSS -->
-    <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
-    
-    <!-- CoCreate Avatar -->
-    <!--<link rel="stylesheet" href="./CoCreate-avatar.css" type="text/css" />-->
-    
-    <!-- CoCreate Flip Item -->
-    <!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate-flip-item.min.css" type="text/css" />-->
-    <link rel="stylesheet" href="https://server.cocreate.app/CoCreate-components/CoCreate-flip-item/src/CoCreate-flip-item.css" type="text/css" />
+  <!-- CoCreateCSS -->
+  <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
-  </head>
+  <!-- CoCreate Avatar -->
+  <!--<link rel="stylesheet" href="./CoCreate-avatar.css" type="text/css" />-->
 
-  <body>
+  <!-- CoCreate Flip Item -->
+  <!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate-flip-item.min.css" type="text/css" />-->
+  <link rel="stylesheet" href="https://server.cocreate.app/CoCreate-components/CoCreate-flip-item/src/CoCreate-flip-item.css" type="text/css" />
 
-    <!-- Navbar  -->
-    <div data-main_content_id="content" class="nav display:flex align-items-center bg-light-gray" data-scroll_effect="hide-nav" data-scroll_position="50"  data-background_color="random">
-      <!--<a href="#" class="logo">Navbar</a>-->
-      
-      <!-- Menu Icon Animations -->
-      <a aria-label="mobile menu" class="nav-toggle menu_icon--hamburger" data-toggle_sidenav="menuL">
-          <span></span>
-          <span></span>
-          <span></span>
-      </a>
-        
-        <!-- Horizontal Scroll Nav/Tabs -->
-      <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items-center list-style-type-none width:100%">
-        			
-      	<!-- Fullscreen toogle and icon transform -->
-      	<li class="margin-right:15px">
-      		<a data-fullscreen><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
-      	</li>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+</head>
 
-      </ul>
-		  <!-- Avatar -->
-      <div class="avatar-wrapper margin:5px_0px margin-right:10px">
-				  <a class="avatar round" data-background_color="random" data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="" data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-window_width="300px" data-window_height="375px">
-    				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name"></span>
-    				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
-    				  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
-    				</span>
-    			</a>
-			  <div class="avatar-status off"></div>
-		  </div>
+<body>
+
+  <form class=" margin:10px padding:10px background:blue" >
+    <div class="padding:10px background:red">
+      <div class="padding:20px background:yellow">
+        <h5>some text</h5>
+      </div>
     </div>
+  </form>
 
-    <!-- container -->
-  	<div class="vh-60 padding:20px" id="modal-viewport" data-main_content_id="content"></div>
-  	<div class="vh-60 padding:20px" data-main_content_id="content">
 
-		  <!-- Avatar with label, status on and flip-item only -->
-      <div class="avatar-wrapper flip-container" data-toggle="active">
-          <div class="avatar-selected flip-item flipped"><i class="fas fa-check"></i></div>
-				  <a class="avatar round flip-item">
-    				<span data-collection="users" data-module_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
-    				<span data-collection="users" data-module_id="" name="profile_image" class="sessionUser_Id avatar-image">
-    				  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
-    				</span>
-    			</a>
-			  <div class="avatar-status on"></div>
-			  <div class="avatar-label">3</div>
-		  </div>
-		  
-		  <!-- Avatar with label, status off and flip-item only -->
-      <div class="avatar-wrapper flip-container" data-toggle="active">
-          <div class="avatar-selected flip-item flipped"><i class="fas fa-check"></i></div>
-				  <a class="avatar round flip-item">
-    				<span data-collection="users" data-module_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
-    				<span data-collection="users" data-module_id="" name="profile_image" class="sessionUser_Id avatar-image">
-    				  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
-    				</span>
-    			</a>
-			  <div class="avatar-status off"></div>
-			  <div class="avatar-label">3</div>
-		  </div>
-			  
-    </div>
+  <!-- CoCreateJS -->
+  <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
+  <script src="https://server.cocreate.app/CoCreateCSS/dist/CoCreateCSS.js"></script>
 
-    <script>
-      var config = {
-        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
-        organization_Id: '5de0387b12e200ea63204d6c'
-      }
-    </script>
-    
-    <!-- CoCreateJS -->
-    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-    
-    <!-- CoCreate Color -->
-    <!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-color/src/CoCreate-color.js"></script>-->
-    
+  <!-- CoCreate Color -->
+  <!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-color/src/CoCreate-color.js"></script>-->
 
-  </body>
+
+</body>
+
 </html>
