@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.5...v1.0.6) (2021-04-19)
+
+
+### Bug Fixes
+
+* ci and build process ([1e6c86e](https://github.com/CoCreate-app/CoCreateCSS/commit/1e6c86ec09c933d80adc936d521b39a2daaf23f2))
+* npm publish and cdn deployment ([735dbe6](https://github.com/CoCreate-app/CoCreateCSS/commit/735dbe6f2cdbb5edbb0483471cb698ef9c59096d))
+
 ## [1.0.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.4...v1.0.5) (2021-04-14)
 
 
