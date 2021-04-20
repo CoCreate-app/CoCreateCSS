@@ -47,8 +47,9 @@ export default {
 
 
 
-window.addEventListener("load", function() {
 
+window.addEventListener("load", function() {
+  let hasChange = false;
 
   observer.init({
     name: "ccCss",
@@ -60,13 +61,13 @@ window.addEventListener("load", function() {
       // // console.log('ccCSS observer start', performance.now())
       if (mutation.type == "childList")
         mutation.target.querySelectorAll("*").forEach((el) => {
-          addParsingClassList(el.classList);
+         hasChange = addParsingClassList(el.classList) || hasChange;
         });
       else
-        addParsingClassList(mutation.target.classList);
+        hasChange = addParsingClassList(mutation.target.classList);
       // styleList.forEach(i => styleElSheet.insertRule(i))
       addNewRules()
-      if (onStyleChange) onStyleChange(false, styleList)
+      if (onStyleChange && hasChange) onStyleChange(false, styleList)
 
     },
   });
@@ -77,13 +78,13 @@ window.addEventListener("load", function() {
 
   let elements = document.querySelectorAll("[class]");
   for (let element of elements) {
-    addParsingClassList(element.classList);
+    hasChange = addParsingClassList(element.classList) || hasChange;
   }
   styleList = tempStyleList;
   tempStyleList = []
   styleList.sort();
   styleList.forEach(i => styleElSheet.insertRule(i))
-  if (onStyleChange) onStyleChange(true, styleList)
+  if (onStyleChange && hasChange) onStyleChange(true, styleList)
 
 
 
@@ -147,8 +148,8 @@ function addParsingClassList(classList) {
               }
               let rule = prefix + "{" + main_rule + "}";
               tempStyleList.push(rule)
-
               selectorList.push(classname);
+              return true;
             }
           }
           else {
@@ -156,6 +157,7 @@ function addParsingClassList(classList) {
 
             tempStyleList.push(rule)
             selectorList.push(classname);
+              return true;
           }
         }
       }
