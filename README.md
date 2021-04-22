@@ -1,6 +1,6 @@
 # CoCreateCSS
 
-A simple SS component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/CoCreateCSS)
+A lightweight utility-first Atomic CSS framework promoting rapid UI development. No learning curve... Apply your native css property:value directly in class, then extract and transform it.. Take it for a spin in our [playground!](https://cocreate.app/docs/CoCreateCSS)
 
 ![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreateCSS/dist/CoCreateCSS.min.js?label=minified%20size&style=for-the-badge)
 ![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreateCSS?style=for-the-badge)
