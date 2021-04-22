@@ -61,14 +61,22 @@ window.addEventListener("load", function() {
       // // console.log('ccCSS observer start', performance.now())
       if (mutation.type == "childList")
         mutation.target.querySelectorAll("*").forEach((el) => {
-         hasChange = addParsingClassList(el.classList) || hasChange;
+          hasChange = addParsingClassList(el.classList) || hasChange;
         });
       else
         hasChange = addParsingClassList(mutation.target.classList);
       // styleList.forEach(i => styleElSheet.insertRule(i))
       addNewRules()
-      if (onStyleChange && hasChange) onStyleChange(false, styleList)
-
+      if (onStyleChange && hasChange) {
+        const event = new CustomEvent("newCoCreateCssStyles", {
+          detail: {
+            isOnload: true,
+            styleList
+          },
+        });
+        window.dispatchEvent(event);
+        onStyleChange(false, styleList)
+      }
     },
   });
 
@@ -84,7 +92,16 @@ window.addEventListener("load", function() {
   tempStyleList = []
   styleList.sort();
   styleList.forEach(i => styleElSheet.insertRule(i))
-  if (onStyleChange && hasChange) onStyleChange(true, styleList)
+  if (onStyleChange && hasChange) {
+    const event = new CustomEvent("newCoCreateCssStyles", {
+      detail: {
+        isOnload: true,
+        styleList
+      },
+    });
+    window.dispatchEvent(event);
+    onStyleChange(true, styleList)
+  }
 
 
 
@@ -157,7 +174,7 @@ function addParsingClassList(classList) {
 
             tempStyleList.push(rule)
             selectorList.push(classname);
-              return true;
+            return true;
           }
         }
       }
