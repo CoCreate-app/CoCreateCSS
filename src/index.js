@@ -37,18 +37,12 @@ let selectorList = [];
 let styleList = [];
 let tempStyleList = [];
 let styleElSheet = styleEl.sheet;
-let onStyleChange
 
-export default {
-  setOnStyleChange(callback) {
-    onStyleChange = callback;
-  }
-}
 
 
 
 window.addEventListener("load", function() {
-
+  let hasChange = false;
 
   observer.init({
     name: "ccCss",
@@ -60,13 +54,21 @@ window.addEventListener("load", function() {
       // // console.log('ccCSS observer start', performance.now())
       if (mutation.type == "childList")
         mutation.target.querySelectorAll("*").forEach((el) => {
-          addParsingClassList(el.classList);
+          hasChange = addParsingClassList(el.classList) || hasChange;
         });
       else
-        addParsingClassList(mutation.target.classList);
+        hasChange = addParsingClassList(mutation.target.classList);
       // styleList.forEach(i => styleElSheet.insertRule(i))
       addNewRules()
-      if (onStyleChange) onStyleChange(false, styleList)
+
+      if (hasChange)
+        window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
+          detail: {
+            isOnload: true,
+            styleList
+          },
+        }));
+
 
     },
   });
@@ -77,16 +79,19 @@ window.addEventListener("load", function() {
 
   let elements = document.querySelectorAll("[class]");
   for (let element of elements) {
-    addParsingClassList(element.classList);
+    hasChange = addParsingClassList(element.classList) || hasChange;
   }
   styleList = tempStyleList;
   tempStyleList = []
   styleList.sort();
   styleList.forEach(i => styleElSheet.insertRule(i))
-  if (onStyleChange) onStyleChange(true, styleList)
-
-
-
+  if (hasChange)
+    window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
+      detail: {
+        isOnload: true,
+        styleList
+      },
+    }));
 
 });
 
@@ -125,43 +130,46 @@ function addNewRules() {
 
 function addParsingClassList(classList) {
   let re = /.+:.+/;
+  let hasChanged = false;
   for (let classname of classList) {
-    try {
-      if (re.exec(classname)) {
-        if (selectorList.indexOf(classname) == -1) {
-          let re_at = /.+@.+/;
-          if (re_at.exec(classname)) {
-            let parts = classname.split("@");
-            let main_rule = parseClass(classname);
 
-            for (let i = 1; i < parts.length; i++) {
-              let range_num = mediaRangeNames.indexOf(parts[i]);
-              if (range_num == -1) continue;
-              let range = rangesArray[range_num];
-              let prefix = "@media screen";
-              if (range[0] != 0) {
-                prefix += " and (min-width:" + range[0] + "px)";
-              }
-              if (range[1] != 0) {
-                prefix += " and (max-width:" + range[1] + "px)";
-              }
-              let rule = prefix + "{" + main_rule + "}";
-              tempStyleList.push(rule)
+    if (re.exec(classname)) {
+      if (selectorList.indexOf(classname) == -1) {
+        let re_at = /.+@.+/;
+        if (re_at.exec(classname)) {
+          let parts = classname.split("@");
+          let main_rule = parseClass(classname);
 
-              selectorList.push(classname);
+          for (let i = 1; i < parts.length; i++) {
+            let range_num = mediaRangeNames.indexOf(parts[i]);
+            if (range_num == -1) continue;
+            let range = rangesArray[range_num];
+            let prefix = "@media screen";
+            if (range[0] != 0) {
+              prefix += " and (min-width:" + range[0] + "px)";
             }
-          }
-          else {
-            let rule = parseClass(classname);
-
+            if (range[1] != 0) {
+              prefix += " and (max-width:" + range[1] + "px)";
+            }
+            let rule = prefix + "{" + main_rule + "}";
             tempStyleList.push(rule)
             selectorList.push(classname);
+            hasChanged = true;
+
           }
+        }
+        else {
+          let rule = parseClass(classname);
+
+          tempStyleList.push(rule)
+          selectorList.push(classname);
+          hasChanged = true;
+
         }
       }
     }
-    catch (e) {}
   }
+  return hasChanged;
 }
 
 function parseClass(classname) {
