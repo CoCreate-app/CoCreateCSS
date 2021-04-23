@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.8...v1.0.9) (2021-04-23)
+
+
+### Bug Fixes
+
+* readme and documentation. Removed securitykeys ([69fbbd0](https://github.com/CoCreate-app/CoCreateCSS/commit/69fbbd01975a569c0b9c954c4ce4e5581faaa30a))
+
 ## [1.0.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.7...v1.0.8) (2021-04-22)
 
 
