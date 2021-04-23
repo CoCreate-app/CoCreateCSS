@@ -11,7 +11,7 @@
         <meta name="robots" content="index,follow" />
         
         <!-- CoCreate CSS -->
-        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
         <!-- Highlight.js-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
@@ -31,24 +31,30 @@
                 <div class="display:flex align-items:center">
                     <h2 class="background:red@sm@md">CoCreate helper CSS</h2>
                 </div>
-                <div class="display:flex align-items:center font-size:20px social_share" data-height="600" data-width="500" data-media="https://via.placeholder.com/300/09f/fff.png">
+                <div class="display:flex align-items:center font-size:20px" data-share_height="600" data-share_width="500" data-share_media="https://via.placeholder.com/300/09f/fff.png">
                     <a href="https://github.com/CoCreate-app/CoCreateCSS" target="_blank" class="margin-right:15px"><i class="fab fa-github"></i></a>
-                    <a class="margin-right:15px share" data-network='twitter' title="Share on twitter"><i class="fab fa-twitter"></i></a>
-                    <a class="margin-right:15px share" data-network='facebook' title="Share on Facebook"><i class="fab fa-facebook"></i></a>
-                    <a class="margin-right:15px share" data-network='instagram' title="Share on instagram"><i class="fab fa-instagram"></i></a>
-                    <a class="margin-right:15px share" data-network='share' title="Share on share"><i class="fas fa-share-alt"></i></a>
+                    <a class="margin-right:15px" data-share_network='twitter' title="Share on twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="margin-right:15px" data-share_network='facebook' title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                    <a class="margin-right:15px" data-share_network='instagram' title="Share on instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="margin-right:15px" data-share_network='share' title="Share on share"><i class="fas fa-share-alt"></i></a>
                 </div>
             </div>
             <p class="max-width:500px margin-top:20px">CoCreate provides the most convenient helper class.</p>
             <div id="xxxxx-section" class="display:flex flex-wrap:wrap justify-content:space-between">
                 <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px">
-                    <h2 class="border-bottom:1px_solid_lightgrey  padding:5px_0px">Reference</h2>
+                                        <div id="boilerplate-reference" class="margin-top:80px border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#boilerplate-reference"]'>
+                            <h2 class="padding:5px_0px">Reference</h2>
+                            <a class="margin-left:10px display:none" href="#boilerplate-reference"><i class="fas fa-link"></i></a>
+                        </span>
+                    </div>
+
                     <div class="">
                         <p class="padding:10px_0px">CoCreate Helper Classes are very easy to use.</p>
                         <p class="padding:10px_0px">We can use exactly same class names with "style:value".</p>
                         <div class="flex-grow:1 min-width:300px width:100%">
                             <pre class="margin-bottom:10px">
-                                <code>
+                                <code class="language-js">
 &lt;div class="padding:16px"&gt;&lt;/div&gt;
 &lt;div class="font-size:0.5rem color:red"&gt;&lt;/div&gt;
                                 </code>
@@ -62,13 +68,13 @@
                         </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">direction</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="direction:ltr"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="direction:ltr"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">ltr</p> 
                         <p class="cocreate-badge">rtl</p>
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">display</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="display:block"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="display:block"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge copy@md">block</p>
                         <p class="cocreate-badge">inline-block</p>
                         <p class="cocreate-badge">inline</p>
@@ -80,7 +86,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">overflow</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="overflow:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="overflow:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">visible</p>
                         <p class="cocreate-badge">scroll</p>
@@ -88,14 +94,14 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">float</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="float:left"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="float:left"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">left</p>
                         <p class="cocreate-badge">right</p>
                         <p class="cocreate-badge">none</p>
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">position</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="position:relative"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="position:relative"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">inherit</p>
                         <p class="cocreate-badge">relative</p>
                         <p class="cocreate-badge">absolute</p>
@@ -104,7 +110,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">z-index</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="z-index:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="z-index:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">inherit</p>
                         <p class="cocreate-badge">initial</p>
@@ -119,7 +125,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">top / bottom / left / right</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="top:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="top:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">1px ~ 50px</p>
@@ -145,7 +151,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">bottom</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="bottom:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="bottom:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">1px ~ 50px</p>
@@ -171,7 +177,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">left</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="left:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="left:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">1px ~ 50px</p>
@@ -197,7 +203,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">right</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="right:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="right:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">1px ~ 50px</p>
@@ -223,7 +229,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">height</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="height:0"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="height:0"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">1px ~ 10px</p>
                         <p class="cocreate-badge">20px</p>
@@ -265,7 +271,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">min-height</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="min-height:100px"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="min-height:100px"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">100px</p>
                         <p class="cocreate-badge">200px</p>
                         <p class="cocreate-badge">...</p>
@@ -273,13 +279,13 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">max-height</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="max-height:300px"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="max-height:300px"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">60px</p>
                         <p class="cocreate-badge">100%</p>
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">width</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="width:0"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="width:0"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">1px ~ 10px</p>
                         <p class="cocreate-badge">15px</p>
@@ -324,7 +330,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">min-width</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="min-width:75px"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="min-width:75px"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">75px</p>
                         <p class="cocreate-badge">100px</p>
                         <p class="cocreate-badge">200px</p>
@@ -333,7 +339,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">max-width</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="max-width:300px"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="max-width:300px"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">75px</p>
                         <p class="cocreate-badge">100px</p>
                         <p class="cocreate-badge">300px</p>
@@ -344,7 +350,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">margin</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="margin:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="margin:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
@@ -369,7 +375,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">margin-top</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="margin=top:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="margin=top:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
@@ -380,7 +386,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">margin-bottom</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="margin-bottom:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="margin-bottom:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
@@ -391,7 +397,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">margin-left</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="margin-left:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="margin-left:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
@@ -402,7 +408,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">margin-right</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="margin-right:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="margin-right:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
@@ -413,7 +419,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">padding</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="padding:0"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="padding:0"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
                         <p class="cocreate-badge">10px</p>
@@ -436,7 +442,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">padding-top</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="padding-top:0"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="padding-top:0"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
                         <p class="cocreate-badge">10px</p>
@@ -446,7 +452,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">padding-bottom</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="padding-bottom:15px"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="padding-bottom:15px"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
                         <p class="cocreate-badge">10px</p>
@@ -456,7 +462,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">padding-left</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="padding-left:15px"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="padding-left:15px"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
                         <p class="cocreate-badge">10px</p>
@@ -466,7 +472,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">padding-right</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="padding-right:15px"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="padding-right:15px"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">5px</p>
                         <p class="cocreate-badge">10px</p>
@@ -476,14 +482,14 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">border-width</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="border-width:0"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="border-width:0"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">1px ~ 10px</p>
                         <p class="cocreate-badge">20px</p>
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">border-color</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="border-color:black"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="border-color:black"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">white</p>
                         <p class="cocreate-badge">black</p>
                         <p class="cocreate-badge">extra-dark-gray</p>
@@ -499,7 +505,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">border-style</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="border-style:dotted"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="border-style:dotted"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">dotted</p>
                         <p class="cocreate-badge">dashed</p>
                         <p class="cocreate-badge">solid</p>
@@ -514,7 +520,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">border-radius</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="border-radius:0"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="border-radius:0"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">1px ~ 10px</p>
                         <p class="cocreate-badge">50px</p>
@@ -523,7 +529,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">font-size</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="font-size:18px"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="font-size:18px"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">6px ~ 25px</p>
                         <p class="cocreate-badge">30px</p>
                         <p class="cocreate-badge">40px</p>
@@ -540,7 +546,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">font-weight</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="font-weight:800"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="font-weight:800"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">100</p>
                         <p class="cocreate-badge">200</p>
                         <p class="cocreate-badge">300</p>
@@ -550,14 +556,14 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">font-align</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="font-align:center"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="font-align:center"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">center</p>
                         <p class="cocreate-badge">left</p>
                         <p class="cocreate-badge">right</p>
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">color</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="color:blue"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="color:blue"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">white</p>
                         <p class="cocreate-badge">black</p>
                         <p class="cocreate-badge">extra-dark-gray</p>
@@ -574,22 +580,22 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">text-overflow</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="text-overflow:ellipsis"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="text-overflow:ellipsis"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">ellipsis</p>
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">text-transform</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="text-transform:uppercase"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="text-transform:uppercase"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">uppercase</p>
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">text-decoration</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="text-decoration:underline"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="text-decoration:underline"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">underline</p>
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">background-attachment</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="background-attachment:scroll"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="background-attachment:scroll"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">scroll</p>
                         <p class="cocreate-badge">fixed</p>
                         <p class="cocreate-badge">local</p>
@@ -598,7 +604,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">background-repeat</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="background-repeat:repeat"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="background-repeat:repeat"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">repeat</p>
                         <p class="cocreate-badge">repeat-x</p>
                         <p class="cocreate-badge">repeat-y</p>
@@ -608,7 +614,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">background-size</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="background-size:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="background-size:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">auto</p>
                         <p class="cocreate-badge">cover</p>
                         <p class="cocreate-badge">contain</p>
@@ -617,7 +623,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">background-position</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="background-position:center"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="background-position:center"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">left-top</p>
                         <p class="cocreate-badge">left-center</p>
                         <p class="cocreate-badge">left-bottom</p>
@@ -633,7 +639,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">bg (background)</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="background:blue"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="background:blue"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">transparent</p>
                         <p class="cocreate-badge">white</p>
                         <p class="cocreate-badge">black</p>
@@ -658,7 +664,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">background</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="background:black"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="background:black"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">transparent</p>
                         <p class="cocreate-badge">white</p>
                         <p class="cocreate-badge">black</p>
@@ -666,7 +672,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">opacity</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="opacity:block"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="opacity:block"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">0</p>
                         <p class="cocreate-badge">0.1</p>
                         <p class="cocreate-badge">0.2</p>
@@ -677,7 +683,7 @@
                     </div>
                     <h3 class="border-bottom:1px_solid_lightgrey margin-top:15px padding:5px">cursor</h2>
                     <div class="padding:10px">
-                        <pre class="margin-bottom:10px"><code>&lt;div class="cursor:auto"&gt;&lt;/div&gt;</code></pre>
+                        <pre class="margin-bottom:10px"><code class="language-html">&lt;div class="cursor:auto"&gt;&lt;/div&gt;</code></pre>
                         <p class="cocreate-badge">alias</p>
                         <p class="cocreate-badge">all-scroll</p>
                         <p class="cocreate-badge">auto</p>
@@ -721,7 +727,12 @@
                 <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px border-bottom:1px_solid_lightgrey">
 
                     <!-- SandBox -->
-                    <h2 class="border-bottom:1px_solid_lightgrey padding:5px_0px">Demo</h2>
+                    <div id="boilerplate-demo" class="border-bottom:1px_solid_lightgrey">
+                        <span class="display:flex align-items:center" data-hover="display:block!important" data-hover_target='[href="#boilerplate-demo"]'>
+                            <h2 class="padding:5px_0px">Demo</h2>
+                            <a class="margin-left:10px display:none" href="#boilerplate-demo"><i class="fas fa-link"></i></a>
+                        </span>
+                    </div>
                     <div class="position:sticky top:0 padding:15px_0px height:100vh">
         			    <div class="container svColumn overflow:hidden card border-radius:2px width:auto height:100% box-shadow-300" id="form-sandbox">
         			       <div class="font-size:20px position:absolute top:10px right:10px opacity:0.6 z-index:7">
@@ -781,7 +792,7 @@
         </script>
     
         <!--CoCreateJS-->
-        <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
         
         <script src="./dist/CoCreateCSS.min.js"></script>
        <script type="text/javascript">
