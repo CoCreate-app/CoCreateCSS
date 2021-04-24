@@ -66,8 +66,8 @@ window.addEventListener("load", function() {
       if (hasChange)
         window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
           detail: {
-            isOnload: true,
-            styleList
+            isOnload: false,
+            styleList: styleList.join('')
           },
         }));
 
@@ -91,7 +91,7 @@ window.addEventListener("load", function() {
     window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
       detail: {
         isOnload: true,
-        styleList
+        styleList: styleList.join('')
       },
     }));
 
