@@ -52,12 +52,14 @@ window.addEventListener("load", function() {
 
 
       // // console.log('ccCSS observer start', performance.now())
+      
+          hasChange = addParsingClassList(mutation.target.classList);
       if (mutation.type == "childList")
         mutation.target.querySelectorAll("*").forEach((el) => {
           hasChange = addParsingClassList(el.classList) || hasChange;
         });
-      else
-        hasChange = addParsingClassList(mutation.target.classList);
+
+
       // styleList.forEach(i => styleElSheet.insertRule(i))
       addNewRules()
 
