@@ -1,7 +1,7 @@
 /* 
 CoCreate Navbar: Show/Hide Nav on Scroll 
 */
-.nav {
+.nav, navbar {
   width: -moz-available;   
   width: -webkit-fill-available;  
   width: fill-available;

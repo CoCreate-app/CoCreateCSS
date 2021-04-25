@@ -36,7 +36,12 @@
   <!-- CoCreateJS -->
   <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
   <script src="https://server.cocreate.app/CoCreateCSS/dist/CoCreateCSS.js"></script>
-
+  <script>
+    window.addEventListener('newCoCreateCssStyles', function(event) {
+			const { isOnload, styleList } = event.detail;
+			console.log('>>>.', isOnload, styleList)
+		})
+  </script>
   <!-- CoCreate Color -->
   <!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-color/src/CoCreate-color.js"></script>-->
 
