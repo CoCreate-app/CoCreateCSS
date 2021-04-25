@@ -16,32 +16,42 @@
     </head>
 
     <body>
-        <div data-collection="" data-document_id="" name="" id="CoCreate-avatar">
-            <div class="display:flex flex-wrap:wrap justify-content:space-between margin:10px">
+		<navbar class="nav display:flex align-items:center background:whitesmoke padding-top:10px padding-bottom:10px" data-main_content_id="content" data-scroll="sticky-nav,hide-nav" data-scroll_up="10" data-scroll_down="10" data-collection="components" data-document_id="60395ef42b3ac232657040fd" name="html">
+		</navbar>
+		<sidenav id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-ontoggle_desktop="offcanvas" sidenav-ontoggle_tablet="expanded">
+			<menu data-collection="components" data-document_id="603717b07de7fb350ae9fec8" name="html"></menu>
+			<div class="resizeHandler"></div>
+	    </sidenav>
+        <main class="padding:15px_15px_0px_15px" data-main_content_id="content" id="cocreate-avatar">
+            <div class="display:flex flex-wrap:wrap justify-content:space-between position:relative margin:10px">
                 <div class="display:flex align-items:center">
                     <h2>CoCreate-avatar</h2>
                 </div>
-                <div class="display:flex align-items:center font-size:20px" data-share_network="true" data-share_text="Enter decription here" data-share_title="testing im a title" data-share_height="600" data-share_width="700" data-share_media="https://cdn.cocreate.app/docs/boilerplate.png">
+                <div class="display:flex align-items:center font-size:20px position:absolute right:0 padding:5px background:white">
+                    <div class="display:flex align-items:center transition:0.3s padding-left:10px" data-share_network="true" data-share_text="Enter decription here" data-share_title="testing im a title" data-share_height="600" data-share_width="700" data-share_media="https://cdn.cocreate.app/docs/boilerplate.png" data-hover="display:block!important" data-hover_target=".social-networks">
+                        <div class="display:none social-networks">
+                            <a class="margin-right:15px" data-share_network='twitter' title="Share on twitter"><i class="fab fa-twitter"></i></a>
+                            <a class="margin-right:15px" data-share_network='facebook' title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                            <a class="margin-right:15px" data-share_network='instagram' title="Share on instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <a class="margin-right:15px" data-share_network='share' title="Share on share"><i class="fas fa-share-alt"></i></a>
+                    </div>
                     <a href="https://github.com/CoCreate-app/CoCreate-avatar" target="_blank" class="margin-right:15px"><i class="fab fa-github"></i></a>
-                    <a class="margin-right:15px" data-share_network='twitter' title="Share on twitter"><i class="fab fa-twitter"></i></a>
-                    <a class="margin-right:15px" data-share_network='facebook' title="Share on Facebook"><i class="fab fa-facebook"></i></a>
-                    <a class="margin-right:15px" data-share_network='instagram' title="Share on instagram"><i class="fab fa-instagram"></i></a>
-                    <a class="margin-right:15px" data-share_network='share' title="Share on share"><i class="fas fa-share-alt"></i></a>
                 </div>
             </div>
             <p class="max-width:500px margin:20px_10px">A simple HTML5, CSS and pure javascript component. Easy configuration using data-attributes and highly styleable.</p>
             <div id="xxxxx-section" class="display:flex flex-wrap:wrap">
-                <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px">
+                <div class="flex-grow:1 width:400px padding:0px_10px margin-top:60px">
     
-                                        <div id="boilerplate-reference" class="margin-top:80px border-bottom:1px_solid_lightgrey">
-                        <span class="display:flex align-items:center width:fit-content" data-hover="display:block!important" data-hover_target='[href="#boilerplate-reference"]'>
-                            <h2 class="padding:5px_0px">Reference</h2>
-                            <a class="margin-left:10px display:none" href="#boilerplate-reference"><i class="fas fa-link"></i></a>
+                                        <div id="boilerplate-usage" class="margin-top:80px border-bottom:1px_solid_lightgrey" data-scroll data-scroll_intersect="color:dodgerblue" data-scroll_target="#boilerplate-usage-section">
+                        <span class="display:flex align-items:center width:fit-content" data-hover="display:block!important" data-hover_target='[href="#boilerplate-usage"]'>
+                            <h2 class="padding:5px_0px">Usage</h2>
+                            <a class="margin-left:10px display:none" href="#boilerplate-usage"><i class="fas fa-link"></i></a>
                         </span>
                     </div>
 
                     <div class="">
-                        <p class="padding:10px_0px">This is xxxxx reference</p>
+                        <p class="padding:10px_0px">This is xxxxx usage</p>
                 
                         <div class="flex-grow:1 min-width:300px width:100%">
                             <pre>
@@ -59,10 +69,10 @@
                         </code>
                             </pre>
                         </div>
-                        <p class="padding:10px_0px">This is xxxxx reference</p>
-                        <p class="padding:10px_0px">This is xxxxx reference</p>
+                        <p class="padding:10px_0px">This is xxxxx usage</p>
+                        <p class="padding:10px_0px">This is xxxxx usage</p>
                     </div>
-                    <div id="boilerplate-attributes" class="margin-top:80px border-bottom:1px_solid_lightgrey">
+                    <div id="boilerplate-attributes" class="margin-top:80px border-bottom:1px_solid_lightgrey" data-scroll data-scroll_intersect="color:dodgerblue" data-scroll_target="#boilerplate-attributes-section">
                         <span class="display:flex align-items:center width:fit-content" data-hover="display:block!important" data-hover_target='[href="#boilerplate-attributes"]'>
                             <h2 class="padding:5px_0px">Attributes</h2>
                             <a class="margin-left:10px display:none" href="#boilerplate-attributes"><i class="fas fa-link"></i></a>
@@ -96,9 +106,9 @@
                     </ul>
                 </div>
                 
-                <div class="flex-grow:1 width:300px padding:0px_10px margin:20px_0px  border-bottom:1px_solid_lightgrey">
+                <div class="flex-grow:1 width:350px padding:0px_10px margin-top:60px border-bottom:1px_solid_lightgrey">
                     <!-- SandBox -->
-                    <div id="boilerplate-demo" class="border-bottom:1px_solid_lightgrey">
+                    <div id="boilerplate-demo" class="border-bottom:1px_solid_lightgrey" data-scroll data-scroll_intersect="color:dodgerblue" data-scroll_target="#boilerplate-demo-section">
                         <span class="display:flex align-items:center width:fit-content" data-hover="display:block!important" data-hover_target='[href="#boilerplate-demo"]'>
                             <h2 class="padding:5px_0px">Demo</h2>
                             <a class="margin-left:10px display:none" href="#boilerplate-demo"><i class="fas fa-link"></i></a>
@@ -154,82 +164,15 @@
                 </div>
                 
             </div>				
-        </div>
+        </main>
         <script>
             var config = {
                 apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-                                organization_Id: '5de0387b12e200ea63204d6c'
+                organization_Id: '5de0387b12e200ea63204d6c'
             }
         </script>
     
         <!--CoCreateJS-->
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-                <script type="text/javascript">
-            function runcode() {
-                let codeString = "";
-                let inputData = [
-                    {pos:0, string:""},
-                    {pos:0, string:"Hello"},
-                    {pos:5, string:" world!"},
-                    {pos:5, string:" this"},
-                    {pos:0, string:"<h1>"},
-                    {pos:21, string:"</h1>"}
-                    ];
-                let idx = 0;
-                let myInterval = setInterval(addCode, 1000);
-                function addCode() {
-                    codeString = codeString.substring(0, inputData[idx].pos) + inputData[idx].string + codeString.substring(inputData[idx].pos);
-                    CoCreateCodemirror.codemirrors[0].setValue(codeString);
-                    idx++;
-                    if (idx >= inputData.length) clearInterval(myInterval);
-                }
-                
-                // CoCreateCodemirror.codemirrors[0].setValue("<p>CoCreate Win!!</p>");
-            }
-            
-            window.addEventListener('load', function(event){
-                let codeString = '<!DOCTYPE html>\n\
-<html lang="en">\n\
-  <head>\n\
-    <meta charset="utf-8">\n\
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">\n\
-    <meta name="viewport" content="width=device-width, initial-scale=1">\n\
-    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">\n\
-    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">\n\
-    <title>Avatar | CoCreate</title>\n\
-    <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />\n\
-    <link rel="stylesheet" href="./CoCreate-avatar.css" type="text/css" />\n\
-    <link rel="stylesheet" href="https://server.cocreate.app/CoCreate-components/CoCreate-flip-item/src/CoCreate-flip-item.css" type="text/css" />\n\
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />\n\
-  </head>\n\
-  <body>\n\
-    <div class="avatar-wrapper">\n\
-      <a class="avatar round">\n\
-        <span name="name" class="avatar-name">B</span>\n\
-        <span name="profile_image" class="avatar-image">\n\
-          <img src="images/Velazquez.jpg" onerror="this.style.display=\'none\'"/>\n\
-        </span>\n\
-      </a>\n\
-      <div class="avatar-status on"></div>\n\
-      <div class="avatar-label">3</div>\n\
-    </div>\n\
-    <script>\n\
-      var config = {\n\
-        apiKey: \'c2b08663-06e3-440c-ef6f-13978b42883a\',\n\
-        securityKey: \'f26baf68-e3a9-45fc-effe-502e47116265\',\n\
-        organization_Id: \'5de0387b12e200ea63204d6c\'\n\
-      }\n\
-    <\/script>\n\
-    <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"><\/script>\n\
-  </body>\n\
-</html>';
-            setTimeout(() => {
-                CoCreateCodemirror.codemirrors[0].setValue(codeString);
-            }, 1000);
-                
-            });
-        </script>
-
-        
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
     </body>
 </html>
