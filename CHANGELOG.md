@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.9...v1.0.10) (2021-04-24)
+
+
+### Bug Fixes
+
+* scan observer target classList with observer type of childList ([c1e4d7a](https://github.com/CoCreate-app/CoCreateCSS/commit/c1e4d7a336a59d95badeb25b0ef4dfef16e6c251))
+
 ## [1.0.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.8...v1.0.9) (2021-04-23)
 
 
