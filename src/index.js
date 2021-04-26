@@ -20,7 +20,7 @@ import './CoCreate-scroll.css'
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
 
 const ranges = {
-  xs: [0, 567],
+  xs: [0, 575],
   sm: [576, 768],
   md: [769, 992],
   lg: [993, 1200],
