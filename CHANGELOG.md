@@ -1,3 +1,10 @@
+## [1.0.12](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.11...v1.0.12) (2021-04-26)
+
+
+### Bug Fixes
+
+* media query size for xs ([713c3f8](https://github.com/CoCreate-app/CoCreateCSS/commit/713c3f800d81a8906893a0fc3b834fae7bb18b1a))
+
 ## [1.0.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.10...v1.0.11) (2021-04-25)
 
 
