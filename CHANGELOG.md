@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.14...v1.0.15) (2021-04-27)
+
+
+### Bug Fixes
+
+* add host in docs ([e79d94e](https://github.com/CoCreate-app/CoCreateCSS/commit/e79d94e3dafaad83a7e05eefe63675cd530b6d0b))
+
 ## [1.0.14](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.13...v1.0.14) (2021-04-27)
 
 
