@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.15...v1.1.0) (2021-05-05)
+
+
+### Features
+
+* saves any changed css to object store for content dilevery and caching. data-save='true' to lazyload save component and to save any changes to the css ([d6a8c17](https://github.com/CoCreate-app/CoCreateCSS/commit/d6a8c17c5a59d5de90b22e24188ab9998567d0a2))
+
 ## [1.0.15](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.0.14...v1.0.15) (2021-04-27)
 
 
