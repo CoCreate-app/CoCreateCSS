@@ -1,6 +1,5 @@
 /* Parsing CSS for Utility CSS*/
 import observer from '@cocreate/observer'
-
 import './box-shadow.css'
 import './CoCreate-avatar.css'
 import './CoCreate-badge.css'
@@ -31,17 +30,27 @@ const rangesArray = Object.values(ranges);
 
 
 let styleEl = document.createElement("style");
-styleEl.setAttribute('component', 'CoCreateCss')
-document.head.appendChild(styleEl);
+
 let selectorList = [];
 let styleList = [];
 let tempStyleList = [];
-let styleElSheet = styleEl.sheet;
+let styleElSheet;
 
 
 
 
 window.addEventListener("load", function() {
+
+
+  // let link = document.querySelector('link[data-collection][data-document_id][name]');
+  // if (link)
+  //   return;
+
+  styleEl.setAttribute('component', 'CoCreateCss')
+  document.head.appendChild(styleEl);
+  styleElSheet = styleEl.sheet;
+
+
   let hasChange = false;
 
   observer.init({
@@ -52,8 +61,8 @@ window.addEventListener("load", function() {
 
 
       // // console.log('ccCSS observer start', performance.now())
-      
-          hasChange = addParsingClassList(mutation.target.classList);
+
+      hasChange = addParsingClassList(mutation.target.classList);
       if (mutation.type == "childList")
         mutation.target.querySelectorAll("*").forEach((el) => {
           hasChange = addParsingClassList(el.classList) || hasChange;
@@ -179,13 +188,16 @@ function parseClass(classname) {
   let rule = "";
   let suffix = res[1]
     .replace(/\./g, "\\.")
-    .replace(/%/, "\\%")
+    .replace(/%/g, "\\%")
     .replace(/@/g, "\\@")
     .replace(/\(/g, "\\(")
     .replace(/\)/g, "\\)")
     .replace(/#/g, "\\#")
     .replace(/,/g, "\\,")
-    .replace(/!/, "\\!");
+    .replace(/!/g, "\\!")
+    .replace(/\//g, "\\/")
+    .replace(/\"/g, "\\\"")
+    .replace(/\'/g, "\\'");
   res[1] = res[1].split("@")[0];
   res[1] = res[1].replace(/_/g, " ");
   if (res.length > 2) {
