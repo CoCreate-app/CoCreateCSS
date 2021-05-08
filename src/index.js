@@ -14,7 +14,7 @@ import './CoCreate-navbar.css'
 import './CoCreate-overlay-content.css'
 import './CoCreate-progressbar.css'
 import './CoCreate-scroll.css'
-
+import crud from '@cocreate/crud-client'
 
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
 
@@ -31,27 +31,104 @@ const rangesArray = Object.values(ranges);
 
 let styleEl = document.createElement("style");
 
-let selectorList = [];
+let selectorList = new Map();
+
 let styleList = [];
 let tempStyleList = [];
 let styleElSheet;
 
+// event system
+let eventCallback = {};
+let details = {};
 
 
 
-window.addEventListener("load", function() {
 
 
-  // let link = document.querySelector('link[data-collection][data-document_id][name]');
-  // if (link)
-  //   return;
+
+// function updateAllCss(styleList, collection, document_id, name) {
+// 	//wait for ccCSs
+
+
+// 	crud.updateDocument({
+// 		collection,
+// 		document_id,
+// 		upsert: true,
+// 		// broadcast_sender,
+// 		data: {
+// 			[name + 'Array']: JSON.stringify(styleList)
+// 		},
+// 	});
+
+// }
+
+
+async function getCssArrayFromDB() {
+
+  let link = document.querySelector('[data-save=true][data-collection][data-document_id][name]');
+  if (!link) throw new Error('no [data-save=true][data-collection][data-document_id][name] found')
+
+
+  const collection = link.getAttribute('data-collection');
+  let name = link.getAttribute('name');
+  const document_id = link.getAttribute('data-document_id');
+
+  let unique = Date.now();
+  crud.readDocument({ collection: collection, document_id: document_id, event: unique });
+  let { data: responseData, metadata } = await crud.listenAsync(unique);
+  if (responseData && responseData[name + 'Array']) {
+    return new Promise((resolve, reject) => {
+
+
+      let cssArray;
+      try {
+        cssArray = JSON.parse(responseData[name + 'Array']);
+
+      }
+      catch (err) {
+        reject(err)
+        console.log('styleArray not parseable')
+      }
+
+      resolve(cssArray)
+    })
+    // 	on('parse', (styles) => updateAllCss(styles.concat(cssArray), collection, document_id, name))
+  }
+  else
+    throw new Error('no css found in db')
+
+
+
+
+
+
+}
+
+
+
+
+
+
+function on(event, callback) {
+
+  if (details[event])
+    callback(styleList);
+
+  eventCallback[event] = callback
+
+
+}
+
+
+window.addEventListener("load", async function() {
+
 
   styleEl.setAttribute('component', 'CoCreateCss')
   document.head.appendChild(styleEl);
   styleElSheet = styleEl.sheet;
 
 
-  let hasChange = false;
+
 
   observer.init({
     name: "ccCss",
@@ -59,7 +136,7 @@ window.addEventListener("load", function() {
     attributes: ["class"],
     callback: (mutation) => {
 
-
+      let hasChange = false;
       // // console.log('ccCSS observer start', performance.now())
 
       hasChange = addParsingClassList(mutation.target.classList);
@@ -76,7 +153,7 @@ window.addEventListener("load", function() {
         window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
           detail: {
             isOnload: false,
-            styleList: styleList.join('')
+            styleList: styleList
           },
         }));
 
@@ -88,21 +165,64 @@ window.addEventListener("load", function() {
     return;
 
 
+
+  let hasChange = false;
   let elements = document.querySelectorAll("[class]");
+
+
   for (let element of elements) {
     hasChange = addParsingClassList(element.classList) || hasChange;
   }
   styleList = tempStyleList;
-  tempStyleList = []
-  styleList.sort();
-  styleList.forEach(i => styleElSheet.insertRule(i))
+  tempStyleList = [];
+
+  let isSuccess;
+  try {
+    let dbCss = await getCssArrayFromDB();
+
+
+    styleList = styleList.concat(dbCss)
+    let temp = [];
+    for (let i = 0; i < styleList.length; i++) {
+      if (temp.indexOf(styleList[i]) === -1)
+        temp.push(styleList[i]);
+    }
+
+
+    styleList = temp;
+
+    for (let i = 0; i < styleList.length; i++) {
+      if (dbCss.indexOf(styleList[i]) === -1)
+        styleElSheet.insertRule(styleList[i])
+    }
+
+
+
+
+    styleList.sort();
+    isSuccess = true;
+  }
+  catch (err) {
+    console.error(err)
+  }
+
+  if (!isSuccess)
+    styleList.forEach(l => styleElSheet.insertRule(l))
+
+
   if (hasChange)
     window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
       detail: {
         isOnload: true,
-        styleList: styleList.join('')
+        styleList: styleList
       },
     }));
+
+  // 3 lines events system
+  if (eventCallback.parse)
+    eventCallback.parse()
+  details.parse = true;
+
 
 });
 
@@ -145,7 +265,7 @@ function addParsingClassList(classList) {
   for (let classname of classList) {
 
     if (re.exec(classname)) {
-      if (selectorList.indexOf(classname) == -1) {
+      if (!selectorList.has(classname)) {
         let re_at = /.+@.+/;
         if (re_at.exec(classname)) {
           let parts = classname.split("@");
@@ -164,7 +284,7 @@ function addParsingClassList(classList) {
             }
             let rule = prefix + "{" + main_rule + "}";
             tempStyleList.push(rule)
-            selectorList.push(classname);
+            selectorList.set(classname, true);
             hasChanged = true;
 
           }
@@ -173,7 +293,7 @@ function addParsingClassList(classList) {
           let rule = parseClass(classname);
 
           tempStyleList.push(rule)
-          selectorList.push(classname);
+          selectorList.set(classname, true);
           hasChanged = true;
 
         }
@@ -217,4 +337,16 @@ function parseClass(classname) {
     rule = `.${res[0]}\\:${suffix}{${res[0]}:${res[1]}}`;
   }
   return rule;
+}
+
+
+export default {
+  on,
+  get styleList() {
+    return styleList
+  },
+  set styleList(value) {
+    styleList = value;
+    styleList.sort();
+  }
 }
