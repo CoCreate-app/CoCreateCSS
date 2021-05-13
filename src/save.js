@@ -26,7 +26,7 @@ window.addEventListener('load', async() => {
 			let {isFirst, styleList} = e.detail;
 
 			// save as string
-			if (crdt) {
+			/*if (crdt) {
 				crdt.init({
 					collection,
 					document_id,
@@ -36,7 +36,7 @@ window.addEventListener('load', async() => {
 					crdt.replaceText({ collection, name, document_id, name, value: styleList.join('\r\n') });
 
 			}
-			else {
+			else {*/
 				if (styleList.length)
 					crud.updateDocument({
 						collection,
@@ -47,7 +47,7 @@ window.addEventListener('load', async() => {
 							[name]: styleList.join('\r\n')
 						},
 					});
-			}
+		//	}
 			// save as array
 			if (styleList.length)
 				crud.updateDocument({
