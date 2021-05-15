@@ -64,33 +64,40 @@ let details = {};
 
 
 async function getCssArrayFromDB() {
-console.log("getCssArrayFromDB")
+  console.log("getCssArrayFromDB")
   let link = document.querySelector('[data-save=true][data-collection][data-document_id][name]');
-  console.log(link)
-  if (!link){
+
+  if (!link) {
     console.log("error")
     return new Promise((resolve, reject) => {
-        resolve([])
-      });
-      //throw new Error('no [data-save=true][data-collection][data-document_id][name] found')
+      resolve([])
+    });
+    //throw new Error('no [data-save=true][data-collection][data-document_id][name] found')
   }
 
 
   const collection = link.getAttribute('data-collection');
   let name = link.getAttribute('name');
   const document_id = link.getAttribute('data-document_id');
-console.log("read")
   let unique = Date.now();
+
+  // here we are fetching the value cssArray from db... instaed want to fetch name:src' which is the css string..
+  // after we fetch the css string we want to convert it to an array... 
+  // how?
   crud.readDocument({ collection: collection, document_id: document_id, event: unique });
+
   let { data: responseData, metadata } = await crud.listenAsync(unique);
-  
+
   if (responseData && responseData[name + 'Array']) {
+
     return new Promise((resolve, reject) => {
 
 
       let cssArray;
+      let cssString;
       try {
-        cssArray = JSON.parse(responseData[name + 'Array']);
+        cssString = String.raw `${JSON.stringify(responseData[name])}`;
+        cssArray = cssString.trim().split(/\s(?=\.)/g).map(i => i.replace(/@media/gi, ",@media").split(',')).flat();
 
       }
       catch (err) {
@@ -115,15 +122,15 @@ console.log("read")
 
 
 function arrayUnique(array) {
-    var a = array.concat();
-    for(var i=0; i<a.length; ++i) {
-        for(var j=i+1; j<a.length; ++j) {
-            if(a[i] === a[j])
-                a.splice(j--, 1);
-        }
+  var a = array.concat();
+  for (var i = 0; i < a.length; ++i) {
+    for (var j = i + 1; j < a.length; ++j) {
+      if (a[i] === a[j])
+        a.splice(j--, 1);
     }
+  }
 
-    return a;
+  return a;
 }
 
 
@@ -198,11 +205,11 @@ window.addEventListener("load", async function() {
   try {
     let dbCss = await getCssArrayFromDB();
 
-console.log("dbCss",dbCss)
-console.log("styleList",styleList)
+    console.log("dbCss", dbCss)
+    console.log("styleList", styleList)
     styleList = arrayUnique(styleList.concat(dbCss))
-    
-    console.log("After concat ",styleList)
+
+    console.log("After concat ", styleList)
     let temp = [];
     for (let i = 0; i < styleList.length; i++) {
       if (temp.indexOf(styleList[i]) === -1)
@@ -213,12 +220,12 @@ console.log("styleList",styleList)
     styleList = temp;
 
     for (let i = 0; i < styleList.length; i++) {
-      if (Object.keys(dbCss).length ){
-        if(dbCss.indexOf(styleList[i]) === -1)
+      if (Object.keys(dbCss).length) {
+        if (dbCss.indexOf(styleList[i]) === -1)
           styleElSheet.insertRule(styleList[i])
       }
-        else
-          styleElSheet.insertRule(styleList[i])
+      else
+        styleElSheet.insertRule(styleList[i])
     }
 
 
@@ -234,7 +241,7 @@ console.log("styleList",styleList)
   if (!isSuccess)
     styleList.forEach(l => styleElSheet.insertRule(l))
 
-console.log("hasChange" ,hasChange)
+  console.log("hasChange", hasChange)
   if (hasChange)
     window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
       detail: {

@@ -49,16 +49,16 @@ window.addEventListener('load', async() => {
 					});
 		//	}
 			// save as array
-			if (styleList.length)
-				crud.updateDocument({
-					collection,
-					document_id,
-					upsert: true,
-					// broadcast_sender,
-					data: {
-						[name + 'Array']: JSON.stringify(styleList)
-					},
-				});
+			// if (styleList.length)
+			// 	crud.updateDocument({
+			// 		collection,
+			// 		document_id,
+			// 		upsert: true,
+			// 		// broadcast_sender,
+			// 		data: {
+			// 			[name + 'Array']: JSON.stringify(styleList)
+			// 		},
+			// 	});
 
 		})
 
