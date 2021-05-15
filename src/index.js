@@ -65,13 +65,7 @@ let details = {};
 
 async function getCssArrayFromDB() {
   console.log("getCssArrayFromDB")
-  let link = document.querySelector('[data-save=true][data-collection][data-document_id][name]'); <<
-  << << < HEAD
-
-    ===
-    === =
-    console.log(link) >>>
-    >>> > d2c19d74cc6b881d353755b6dfb9ee9d7c4901c2
+  let link = document.querySelector('[data-save=true][data-collection][data-document_id][name]');
   if (!link) {
     console.log("error")
     return new Promise((resolve, reject) => {
@@ -104,7 +98,7 @@ async function getCssArrayFromDB() {
       try {
         cssString = String.raw `${JSON.stringify(responseData[name])}`;
         cssArray = cssString.trim().split(/\s(?=\.)/g).map(i => i.replace(/@media/gi, ",@media").split(',')).flat();
-
+        console.log('my', cssArray);
       }
       catch (err) {
         reject(err)
