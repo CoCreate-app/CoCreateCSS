@@ -65,8 +65,13 @@ let details = {};
 
 async function getCssArrayFromDB() {
   console.log("getCssArrayFromDB")
-  let link = document.querySelector('[data-save=true][data-collection][data-document_id][name]');
+  let link = document.querySelector('[data-save=true][data-collection][data-document_id][name]'); <<
+  << << < HEAD
 
+    ===
+    === =
+    console.log(link) >>>
+    >>> > d2c19d74cc6b881d353755b6dfb9ee9d7c4901c2
   if (!link) {
     console.log("error")
     return new Promise((resolve, reject) => {
@@ -79,6 +84,7 @@ async function getCssArrayFromDB() {
   const collection = link.getAttribute('data-collection');
   let name = link.getAttribute('name');
   const document_id = link.getAttribute('data-document_id');
+
   let unique = Date.now();
 
   // here we are fetching the value cssArray from db... instaed want to fetch name:src' which is the css string..
@@ -145,7 +151,8 @@ function on(event, callback) {
 }
 
 
-window.addEventListener("load", async function() {
+
+async function init() {
 
 
   styleEl.setAttribute('component', 'CoCreateCss')
@@ -256,7 +263,7 @@ window.addEventListener("load", async function() {
   details.parse = true;
 
 
-});
+}
 
 
 function addNewRules() {
@@ -382,3 +389,9 @@ export default {
     styleList.sort();
   }
 }
+
+
+// if (document.readyState !== 'complete')
+window.addEventListener("load", init);
+// else
+// init()
