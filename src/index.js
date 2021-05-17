@@ -28,7 +28,6 @@ const ranges = {
 };
 const rangesArray = Object.values(ranges);
 
-
 let styleEl = document.createElement("style");
 
 let selectorList = new Map();
@@ -41,26 +40,6 @@ let styleElSheet;
 let eventCallback = {};
 let details = {};
 
-
-
-
-
-
-// function updateAllCss(styleList, collection, document_id, name) {
-// 	//wait for ccCSs
-
-
-// 	crud.updateDocument({
-// 		collection,
-// 		document_id,
-// 		upsert: true,
-// 		// broadcast_sender,
-// 		data: {
-// 			[name + 'Array']: JSON.stringify(styleList)
-// 		},
-// 	});
-
-// }
 
 
 async function getCssArrayFromDB() {
@@ -111,11 +90,6 @@ async function getCssArrayFromDB() {
   }
   else
     throw new Error('no css found in db')
-
-
-
-
-
 
 }
 
@@ -275,8 +249,6 @@ function addNewRules() {
       else
         low = index + 1;
 
-
-
     }
 
     styleElSheet.insertRule(rule, low);
@@ -387,5 +359,3 @@ export default {
 
 // if (document.readyState !== 'complete')
 window.addEventListener("load", init);
-// else
-// init()
