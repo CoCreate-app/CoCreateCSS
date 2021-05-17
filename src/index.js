@@ -27,15 +27,13 @@ const ranges = {
 
 };
 const rangesArray = Object.values(ranges);
-
-
 let styleEl = document.createElement("style");
-
 let selectorList = new Map();
 
 let styleList = [];
 let tempStyleList = [];
 let styleElSheet;
+let styleIndex = 0;
 
 // event system
 let eventCallback = {};
@@ -45,116 +43,66 @@ let details = {};
 
 
 
+// async function getCssArrayFromDB() {
+//   console.log("getCssArrayFromDB")
+//   let link = document.querySelector('[data-save=true][data-collection][data-document_id][name]');
+//   if (!link) {
+//     console.log("error")
+//     return new Promise((resolve, reject) => {
+//       resolve([])
+//     });
+//     //throw new Error('no [data-save=true][data-collection][data-document_id][name] found')
+//   }
 
-// function updateAllCss(styleList, collection, document_id, name) {
-// 	//wait for ccCSs
 
+//   const collection = link.getAttribute('data-collection');
+//   let name = link.getAttribute('name');
+//   const document_id = link.getAttribute('data-document_id');
+//   let unique = Date.now();
 
-// 	crud.updateDocument({
-// 		collection,
-// 		document_id,
-// 		upsert: true,
-// 		// broadcast_sender,
-// 		data: {
-// 			[name + 'Array']: JSON.stringify(styleList)
-// 		},
-// 	});
+//   crud.readDocument({ collection: collection, document_id: document_id, event: unique });
 
+//   let { data: responseData, metadata } = await crud.listenAsync(unique);
+
+//   if (responseData) {
+
+//     return new Promise((resolve, reject) => {
+
+//       let cssArray;
+//       let cssString;
+//       try {
+//         cssString = JSON.stringify(responseData[name])
+//           .replace(/\\n/g, ' ')
+//           .replace(/\\r/g, ' ')
+//           .replace(/\\\\/g, "\\");
+
+//         cssArray = cssString.trim()
+//           .split(/\s(?=\.)/g)
+//           .map(i => i.trim().replace(/@media/gi, ",@media").split(','))
+//           .flat();
+//       }
+//       catch (err) {
+//         reject(err)
+//         console.log(err)
+//       }
+
+//       resolve(cssArray)
+//     })
+//   }
+//   else
+//     throw new Error('no css found in db')
 // }
 
-
-async function getCssArrayFromDB() {
-  console.log("getCssArrayFromDB")
-  let link = document.querySelector('[data-save=true][data-collection][data-document_id][name]');
-  if (!link) {
-    console.log("error")
-    return new Promise((resolve, reject) => {
-      resolve([])
-    });
-    //throw new Error('no [data-save=true][data-collection][data-document_id][name] found')
-  }
-
-
-  const collection = link.getAttribute('data-collection');
-  let name = link.getAttribute('name');
-  const document_id = link.getAttribute('data-document_id');
-
-  let unique = Date.now();
-
-  // here we are fetching the value cssArray from db... instaed want to fetch name:src' which is the css string..
-  // after we fetch the css string we want to convert it to an array... 
-  // how?
-  crud.readDocument({ collection: collection, document_id: document_id, event: unique });
-
-  let { data: responseData, metadata } = await crud.listenAsync(unique);
-
-  if (responseData && responseData[name + 'Array']) {
-
-    return new Promise((resolve, reject) => {
-
-
-      let cssArray;
-      let cssString;
-      try {
-        cssString = String.raw `${JSON.stringify(responseData[name])}`;
-        cssArray = cssString.trim().split(/\s(?=\.)/g).map(i => i.replace(/@media/gi, ",@media").split(',')).flat();
-        console.log('my', cssArray);
-      }
-      catch (err) {
-        reject(err)
-        console.log('styleArray not parseable')
-      }
-
-      resolve(cssArray)
-    })
-    // 	on('parse', (styles) => updateAllCss(styles.concat(cssArray), collection, document_id, name))
-  }
-  else
-    throw new Error('no css found in db')
-
-
-
-
-
-
-}
-
-
-
-function arrayUnique(array) {
-  var a = array.concat();
-  for (var i = 0; i < a.length; ++i) {
-    for (var j = i + 1; j < a.length; ++j) {
-      if (a[i] === a[j])
-        a.splice(j--, 1);
-    }
-  }
-
-  return a;
-}
-
-
 function on(event, callback) {
-
   if (details[event])
     callback(styleList);
-
   eventCallback[event] = callback
-
-
 }
 
-
-
 async function init() {
-
-
   styleEl.setAttribute('component', 'CoCreateCss')
   document.head.appendChild(styleEl);
   styleElSheet = styleEl.sheet;
-
-
-
 
   observer.init({
     name: "ccCss",
@@ -163,16 +111,12 @@ async function init() {
     callback: (mutation) => {
 
       let hasChange = false;
-      // // console.log('ccCSS observer start', performance.now())
-
       hasChange = addParsingClassList(mutation.target.classList);
       if (mutation.type == "childList")
         mutation.target.querySelectorAll("*").forEach((el) => {
           hasChange = addParsingClassList(el.classList) || hasChange;
         });
 
-
-      // styleList.forEach(i => styleElSheet.insertRule(i))
       addNewRules()
 
       if (hasChange)
@@ -182,15 +126,11 @@ async function init() {
             styleList: styleList
           },
         }));
-
-
     },
   });
 
   if (document.querySelector('link[parse="false"]') || document.querySelector('link[onload="false"]'))
     return;
-
-
 
   let hasChange = false;
   let elements = document.querySelectorAll("[class]");
@@ -204,19 +144,37 @@ async function init() {
 
   let isSuccess;
   try {
-    let dbCss = await getCssArrayFromDB();
+    // let dbCss = await getCssArrayFromDB();
 
-    console.log("dbCss", dbCss)
-    console.log("styleList", styleList)
-    styleList = arrayUnique(styleList.concat(dbCss))
+    //test link tag
+    let stylesheets = document.querySelectorAll("link[type='text/css']");
 
-    console.log("After concat ", styleList)
+    for (let stylesheet of stylesheets) {
+      if (stylesheet.hasAttribute('data-save')) break;
+      styleIndex++;
+    }
+    let myRules = document.styleSheets[styleIndex].cssRules; // Returns a CSSRuleList
+    let dbCss = [];
+    for (let rule of myRules) {
+      dbCss.push(rule.cssText);
+    }
+    console.log('rules', dbCss);
+
+    // console.log("dbCss", dbCss)
+    // console.log("styleList", styleList)
+
+    const onlyUnique = (value, index, self) => {
+      return self.indexOf(value) === index;
+    }
+
+    styleList = styleList.concat(dbCss).filter(onlyUnique);
+
+    // console.log("After concat ", styleList)
     let temp = [];
     for (let i = 0; i < styleList.length; i++) {
       if (temp.indexOf(styleList[i]) === -1)
         temp.push(styleList[i]);
     }
-
 
     styleList = temp;
 
@@ -228,10 +186,6 @@ async function init() {
       else
         styleElSheet.insertRule(styleList[i])
     }
-
-
-
-
     styleList.sort();
     isSuccess = true;
   }
@@ -255,10 +209,7 @@ async function init() {
   if (eventCallback.parse)
     eventCallback.parse()
   details.parse = true;
-
-
 }
-
 
 function addNewRules() {
 
@@ -274,23 +225,13 @@ function addNewRules() {
         high = index;
       else
         low = index + 1;
-
-
-
     }
-
     styleElSheet.insertRule(rule, low);
     styleList.splice(low, 0, rule);
-
-
   }
 
   tempStyleList = []
-
 }
-
-
-
 
 function addParsingClassList(classList) {
   let re = /.+:.+/;
@@ -372,7 +313,6 @@ function parseClass(classname) {
   return rule;
 }
 
-
 export default {
   on,
   get styleList() {
@@ -384,8 +324,4 @@ export default {
   }
 }
 
-
-// if (document.readyState !== 'complete')
 window.addEventListener("load", init);
-// else
-// init()
