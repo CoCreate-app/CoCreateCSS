@@ -35,7 +35,7 @@ let parsedCSS = [];
 let tempStyleList = [];
 let concatCSS = [];
 let styleElSheet;
-let styleIndex = 0;
+
 let newCSS = [];
 // event system
 let eventCallback = {};
@@ -48,15 +48,7 @@ function on(event, callback) {
   eventCallback[event] = callback
 }
 
-const onlyUnique = (value, index, self) => {
-  return self.indexOf(value) === index;
-}
-
-const diff = (a, b) => {
-  return a.filter(item => b.indexOf(item) === -1);
-}
-
-async function init() {
+const observerInit = () => {
   styleEl.setAttribute('component', 'CoCreateCss')
   document.head.appendChild(styleEl);
   styleElSheet = styleEl.sheet;
@@ -89,10 +81,9 @@ async function init() {
 
     },
   });
+}
 
-  if (document.querySelector('link[parse="false"]') || document.querySelector('link[onload="false"]'))
-    return;
-
+const getParsedCss = () => {
   let hasChange = false;
   let elements = document.querySelectorAll("[class]");
 
@@ -102,29 +93,51 @@ async function init() {
 
   parsedCSS = tempStyleList;
   tempStyleList = [];
+  return hasChange;
+}
 
-  // let isSuccess;
+const getWholeCss = () => {
   let stylesheetCSS = [];
+  let hasChange = true;
+  let styleIndex = 0;
+  let getValidLinkTag = false;
+
   try {
     let stylesheets = document.querySelectorAll("link[type='text/css']");
 
     for (let stylesheet of stylesheets) {
-      if (stylesheet.hasAttribute('data-save')) break;
+      if (stylesheet.hasAttribute('data-save')) {
+        getValidLinkTag = true;
+        break;
+      }
       styleIndex++;
     }
-    let myRules = document.styleSheets[styleIndex].cssRules; // Returns a CSSRuleList
 
-    for (let rule of myRules) {
-      stylesheetCSS.push(rule.cssText);
+    if (getValidLinkTag) {
+      let myRules = document.styleSheets[styleIndex].cssRules; // Returns a CSSRuleList
+
+      for (let rule of myRules) {
+        stylesheetCSS.push(rule.cssText);
+      }
     }
-
+    else
+      hasChange = false;
   }
   catch (err) {
+    hasChange = false;
     console.error(err)
   }
   finally {
     console.log('stylesheetCSS', stylesheetCSS);
     console.log('parsedCss', parsedCSS)
+
+    const onlyUnique = (value, index, self) => {
+      return self.indexOf(value) === index;
+    }
+
+    const diff = (a, b) => {
+      return a.filter(item => b.indexOf(item) === -1);
+    }
 
     concatCSS = parsedCSS.concat(stylesheetCSS).filter(onlyUnique);
     newCSS = [...diff(parsedCSS, stylesheetCSS), ...diff(stylesheetCSS, parsedCSS)];
@@ -150,14 +163,12 @@ async function init() {
     }
     concatCSS.sort();
   }
+  return hasChange;
+}
 
-  // if (!isSuccess)
-  //   concatCSS.forEach(l => styleElSheet.insertRule(l))
-
+const saveCss = (hasChange) => {
   console.log("hasChange", hasChange)
-
   if (hasChange) {
-    // console.log('parsedCSS', concatCSS)
     console.log('cssString', concatCSS.join('\r\n'))
     window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
       detail: {
@@ -169,6 +180,21 @@ async function init() {
   else {
     console.log('cssString after Concat', concatCSS.join('\r\n'))
   }
+}
+
+async function init() {
+
+  observerInit();
+
+  if (document.querySelector('link[parse="false"]') || document.querySelector('link[onload="false"]'))
+    return;
+
+  let hasChange = false;
+
+  hasChange = getParsedCss();
+  hasChange = getWholeCss();
+
+  saveCss(hasChange);
 
   // 3 lines events system
   if (eventCallback.parse)
