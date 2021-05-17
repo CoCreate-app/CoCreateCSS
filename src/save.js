@@ -23,7 +23,7 @@ window.addEventListener('load', async() => {
 
 
 		window.addEventListener('newCoCreateCssStyles', function(e) {
-			let {isFirst, styleList} = e.detail;
+			let { isFirst, styleList } = e.detail;
 
 			// save as string
 			/*if (crdt) {
@@ -37,17 +37,20 @@ window.addEventListener('load', async() => {
 
 			}
 			else {*/
-				if (styleList.length)
-					crud.updateDocument({
-						collection,
-						document_id,
-						upsert: true,
-						// broadcast_sender,
-						data: {
-							[name]: styleList.join('\r\n')
-						},
-					});
-		//	}
+			if (styleList.length) {
+				console.log('saveCss', styleList.join('\r\n'));
+				crud.updateDocument({
+					collection,
+					document_id,
+					upsert: true,
+					// broadcast_sender,
+					data: {
+						[name]: styleList.join('\r\n')
+					},
+				});
+			}
+
+			//	}
 			// save as array
 			// if (styleList.length)
 			// 	crud.updateDocument({
