@@ -48,6 +48,14 @@ function on(event, callback) {
   eventCallback[event] = callback
 }
 
+const onlyUnique = (value, index, self) => {
+  return self.indexOf(value) === index;
+}
+
+const diff = (a, b) => {
+  return a.filter(item => b.indexOf(item) === -1);
+}
+
 async function init() {
   styleEl.setAttribute('component', 'CoCreateCss')
   document.head.appendChild(styleEl);
@@ -95,7 +103,8 @@ async function init() {
   parsedCSS = tempStyleList;
   tempStyleList = [];
 
-  let isSuccess;
+  // let isSuccess;
+  let stylesheetCSS = [];
   try {
     let stylesheets = document.querySelectorAll("link[type='text/css']");
 
@@ -104,20 +113,17 @@ async function init() {
       styleIndex++;
     }
     let myRules = document.styleSheets[styleIndex].cssRules; // Returns a CSSRuleList
-    let stylesheetCSS = [];
+
     for (let rule of myRules) {
       stylesheetCSS.push(rule.cssText);
     }
+
+  }
+  catch (err) {
+    console.error(err)
+  }
+  finally {
     console.log('stylesheetCSS', stylesheetCSS);
-
-    const onlyUnique = (value, index, self) => {
-      return self.indexOf(value) === index;
-    }
-
-    const diff = (a, b) => {
-      return a.filter(item => b.indexOf(item) === -1);
-    }
-
     console.log('parsedCss', parsedCSS)
 
     concatCSS = parsedCSS.concat(stylesheetCSS).filter(onlyUnique);
@@ -143,14 +149,10 @@ async function init() {
         styleElSheet.insertRule(concatCSS[i])
     }
     concatCSS.sort();
-    isSuccess = true;
-  }
-  catch (err) {
-    console.error(err)
   }
 
-  if (!isSuccess)
-    concatCSS.forEach(l => styleElSheet.insertRule(l))
+  // if (!isSuccess)
+  //   concatCSS.forEach(l => styleElSheet.insertRule(l))
 
   console.log("hasChange", hasChange)
 
