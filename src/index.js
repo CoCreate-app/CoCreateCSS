@@ -99,19 +99,18 @@ const getParsedCss = () => {
 const getWholeCss = () => {
     let stylesheetCSS = [];
     let hasChange = true;
-    let styleIndex = 0;
+    let styleIndex = -1;
     let getValidLinkTag = false;
 
     try {
         let stylesheets = document.querySelectorAll("link[type='text/css']");
 
         for (let stylesheet of stylesheets) {
+            styleIndex++;
             if (stylesheet.hasAttribute('data-save')) {
-                styleIndex++;
                 getValidLinkTag = true;
                 break;
             }
-            styleIndex++;
         }
 
         if (getValidLinkTag) {
@@ -120,15 +119,12 @@ const getWholeCss = () => {
             for (let rule of myRules) {
                 stylesheetCSS.push(rule.cssText);
             }
-        }
-        else
+        } else
             hasChange = false;
-    }
-    catch (err) {
+    } catch (err) {
         hasChange = false;
         console.error(err)
-    }
-    finally {
+    } finally {
         console.log('stylesheetCSS', stylesheetCSS);
         console.log('parsedCss', parsedCSS)
 
@@ -158,8 +154,7 @@ const getWholeCss = () => {
             if (Object.keys(stylesheetCSS).length) {
                 if (stylesheetCSS.indexOf(concatCSS[i]) === -1)
                     styleElSheet.insertRule(concatCSS[i])
-            }
-            else
+            } else
                 styleElSheet.insertRule(concatCSS[i])
         }
         concatCSS.sort();
@@ -177,8 +172,7 @@ const saveCss = (hasChange) => {
                 styleList: concatCSS
             },
         }));
-    }
-    else {
+    } else {
         console.log('cssString after Concat', concatCSS.join('\r\n'))
     }
 }
@@ -256,8 +250,7 @@ function addParsingClassList(classList) {
                         hasChanged = true;
 
                     }
-                }
-                else {
+                } else {
                     let rule = parseClass(classname);
                     tempStyleList.push(rule)
                     selectorList.set(classname, true);
@@ -299,8 +292,7 @@ function parseClass(classname) {
             rule += ", " + clsname + pseudo[i];
         }
         rule += `{${res[0]}:${res[1]}}`;
-    }
-    else {
+    } else {
         rule = `.${res[0]}\\:${suffix} { ${res[0]}: ${res[1]}; }`;
     }
     return rule;
