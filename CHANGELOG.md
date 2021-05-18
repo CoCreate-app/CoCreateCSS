@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.2.0...v1.3.0) (2021-05-18)
+
+
+### Features
+
+* options to set parse and save as true and false ([b2df9b1](https://github.com/CoCreate-app/CoCreateCSS/commit/b2df9b1e7b6578add06bb87c14650086d69b6960))
+
 # [1.2.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.1.1...v1.2.0) (2021-05-17)
 
 
