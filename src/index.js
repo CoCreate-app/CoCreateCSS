@@ -195,7 +195,8 @@ async function init() {
   hasChange = getParsedCss();
   hasChange = getWholeCss();
 
-  saveCss(hasChange);
+  if (document.querySelector('link[data-save="true"]'))
+    saveCss(hasChange);
 
   // 3 lines events system
   if (eventCallback.parse)
