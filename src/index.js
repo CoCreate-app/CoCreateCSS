@@ -107,6 +107,7 @@ const getWholeCss = () => {
 
     for (let stylesheet of stylesheets) {
       if (stylesheet.hasAttribute('data-save')) {
+        styleIndex++;
         getValidLinkTag = true;
         break;
       }
@@ -186,7 +187,7 @@ async function init() {
 
   observerInit();
 
-  if (document.querySelector('link[parse="false"]') || document.querySelector('link[onload="false"]'))
+  if (document.querySelector('link[data-parse="false"]') || document.querySelector('link[onload="false"]'))
     return;
 
   let hasChange = false;
