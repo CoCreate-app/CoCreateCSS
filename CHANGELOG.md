@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.1.1...v1.2.0) (2021-05-17)
+
+
+### Features
+
+* if cant find style sheet save is false ([94c049a](https://github.com/CoCreate-app/CoCreateCSS/commit/94c049ac2634faab37e26adf7a1a375d28f9c40f))
+
 ## [1.1.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.1.0...v1.1.1) (2021-05-08)
 
 
