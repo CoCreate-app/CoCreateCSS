@@ -313,7 +313,7 @@ const addParsingClassList = (classList) => {
 }
 
 const parseCSSForTheme = () => {
-    let initial = "prefers-color-scheme: dark {"
+    let initial = "@media (prefers-color-scheme: dark) {"
     for (let c of themeCSS.dark) {
         initial += c + "\n";
     }
