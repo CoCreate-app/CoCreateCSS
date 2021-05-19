@@ -92,11 +92,10 @@ const getParsedCss = () => {
         hasChange = addParsingClassList(element.classList) || hasChange;
     }
 
-
-    elements = document.querySelectorAll("[theme]");
-    for (let element of elements) {
-        addThemeClassList(element)
-    }
+    // elements = document.querySelectorAll("[theme]");
+    // for (let element of elements) {
+    //     addThemeClassList(element)
+    // }
 
     parsedCSS = tempStyleList;
     tempStyleList = [];
@@ -120,8 +119,14 @@ const getAllChildElements = (element) => {
 
 const makeParsingListForTheme = (classLists) => {
     for (let classname of classLists) {
-        let style, value, theme;
-        [style, value, theme] = classname.split(':');
+        makeRuleForTheme(classname);
+    }
+}
+
+const makeRuleForTheme = (className) => {
+    let style, value, theme;
+    [style, value, theme] = className.split(':');
+    if (theme == 'dark' || theme == 'light') {
         let rule = '[theme="' + theme + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}'
         tempStyleList.push(rule);
     }
@@ -260,9 +265,12 @@ const addNewRules = () => {
 
 const addParsingClassList = (classList) => {
     let re = /.+:.+/;
+    let re_theme = /.+:.+:.+/;
     let hasChanged = false;
     for (let classname of classList) {
-        if (re.exec(classname)) {
+        if (re_theme.exec(classname))
+            makeRuleForTheme(classname)
+        else if (re.exec(classname)) {
             if (!selectorList.has(classname)) {
                 let re_at = /.+@.+/;
                 if (re_at.exec(classname)) {
