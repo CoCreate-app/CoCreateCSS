@@ -283,8 +283,12 @@ const addParsingClassList = (classList) => {
 
                     for (let i = 1; i < parts.length; i++) {
                         let range_num = mediaRangeNames.indexOf(parts[i]);
-                        if (range_num == -1) continue;
-                        let range = rangesArray[range_num];
+                        let range = []
+                        if (range_num != -1) range = rangesArray[range_num];
+                        else {
+                            let customRange = parts[i].split('-');
+                            range = customRange.map(c => Number.parseInt(c))
+                        }
                         let prefix = "@media screen";
                         if (range[0] != 0) {
                             prefix += " and (min-width:" + range[0] + "px)";
