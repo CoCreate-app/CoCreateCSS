@@ -260,6 +260,8 @@ const addNewRules = () => {
                 low = index + 1;
 
         }
+
+        if (low > styleElSheet.cssRules.length) low = styleElSheet.cssRules.length;
         styleElSheet.insertRule(rule, low);
         parsedCSS.splice(low, 0, rule);
     }
@@ -273,7 +275,8 @@ const addParsingClassList = (classList) => {
     let hasChanged = false;
     for (let classname of classList) {
         if (re_theme.exec(classname)) {
-            makeRuleForTheme(classname)
+            makeRuleForTheme(classname);
+            hasChanged = true;
         } else if (re.exec(classname)) {
             if (!selectorList.has(classname)) {
                 let re_at = /.+@.+/;
@@ -325,6 +328,7 @@ const parseCSSForTheme = () => {
         }
         initial += "}";
         tempStyleList.push(initial);
+        themeCSS.dark = [];
     }
     if (themeCSS.light.length) {
         initial = "@media (prefers-color-scheme: light) {"
@@ -333,6 +337,7 @@ const parseCSSForTheme = () => {
         }
         initial += "}";
         tempStyleList.push(initial);
+        themeCSS.light = [];
     }
 
 }
