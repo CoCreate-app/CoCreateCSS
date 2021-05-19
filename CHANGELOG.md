@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.3.0...v1.3.1) (2021-05-18)
+
+
+### Bug Fixes
+
+* problem in finding link tag ([b7737f0](https://github.com/CoCreate-app/CoCreateCSS/commit/b7737f0adc61fffbcea0c172b9715ae1cc200488))
+
 # [1.3.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.2.0...v1.3.0) (2021-05-18)
 
 
