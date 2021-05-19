@@ -107,7 +107,7 @@ const getParsedCss = () => {
 const parseCSSForClassNames = () => {
     let elements = document.querySelectorAll("[className]");
     for (let ele of elements) {
-        let rule = "." + ele.getAttribute("className") + "{" + ele.getAttribute("class") + "}";
+        let rule = "." + ele.getAttribute("className") + "{" + ele.getAttribute("class").replace(/ /g, ";") + "}";
         tempStyleList.push(rule);
     }
 }
