@@ -42,7 +42,7 @@ let eventCallback = {};
 let details = {};
 
 
-function on(event, callback) {
+const on = (event, callback) => {
     if (details[event])
         callback(parsedCSS);
     eventCallback[event] = callback
@@ -61,6 +61,7 @@ const observerInit = () => {
 
             let hasChange = false;
             hasChange = addParsingClassList(mutation.target.classList);
+
             if (mutation.type == "childList")
                 mutation.target.querySelectorAll("*").forEach((el) => {
                     hasChange = addParsingClassList(el.classList) || hasChange;
@@ -198,7 +199,7 @@ async function init() {
     details.parse = true;
 }
 
-function addNewRules() {
+const addNewRules = () => {
 
     for (let i = 0, len = tempStyleList.length; i < len; i++) {
         let rule = tempStyleList[i];
@@ -221,11 +222,10 @@ function addNewRules() {
     tempStyleList = []
 }
 
-function addParsingClassList(classList) {
+const addParsingClassList = (classList) => {
     let re = /.+:.+/;
     let hasChanged = false;
     for (let classname of classList) {
-
         if (re.exec(classname)) {
             if (!selectorList.has(classname)) {
                 let re_at = /.+@.+/;
@@ -263,7 +263,7 @@ function addParsingClassList(classList) {
     return hasChanged;
 }
 
-function parseClass(classname) {
+const parseClass = (classname) => {
     let res = classname.split(":");
     let rule = "";
     let suffix = res[1]
