@@ -93,6 +93,7 @@ const getParsedCss = () => {
         hasChange = addParsingClassList(element.classList) || hasChange;
     }
     parseCSSForTheme();
+    parseCSSForClassNames();
 
     // elements = document.querySelectorAll("[theme]");
     // for (let element of elements) {
@@ -101,6 +102,14 @@ const getParsedCss = () => {
     parsedCSS = tempStyleList;
     tempStyleList = [];
     return hasChange;
+}
+
+const parseCSSForClassNames = () => {
+    let elements = document.querySelectorAll("[className]");
+    for (let ele of elements) {
+        let rule = "." + ele.getAttribute("className") + "{" + ele.getAttribute("class") + "}";
+        tempStyleList.push(rule);
+    }
 }
 
 const getAllChildElements = (element) => {
