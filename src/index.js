@@ -17,7 +17,7 @@ import './CoCreate-scroll.css'
 // import crud from '@cocreate/crud-client'
 
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
-
+const themes = ["light", "dark"];
 const ranges = {
     xs: [0, 575],
     sm: [576, 768],
@@ -128,9 +128,10 @@ const makeRuleForTheme = (className) => {
     let style, value, theme;
     [style, value, theme] = className.split(':');
     if (theme == 'dark' || theme == 'light') {
-        let rule = '[theme="' + theme + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}'
+        let rule = '[theme="' + theme + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}';
+        let reverseRule = ':not([theme="' + themes[1 - themes.indexOf(theme)] + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}';
         tempStyleList.push(rule);
-        themeCSS[theme].push(rule);
+        themeCSS[theme].push(reverseRule);
         return rule;
     }
 }
