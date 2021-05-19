@@ -271,7 +271,6 @@ const addParsingClassList = (classList) => {
     let re = /.+:.+/;
     let re_theme = /.+:.+:.+/;
     let hasChanged = false;
-
     for (let classname of classList) {
         if (re_theme.exec(classname)) {
             makeRuleForTheme(classname)
@@ -325,6 +324,7 @@ const parseCSSForTheme = () => {
             initial += c + "\n";
         }
         initial += "}";
+        tempStyleList.push(initial);
     }
     if (themeCSS.light.length) {
         initial = "@media (prefers-color-scheme: light) {"
@@ -332,8 +332,9 @@ const parseCSSForTheme = () => {
             initial += c + "\n";
         }
         initial += "}";
+        tempStyleList.push(initial);
     }
-    tempStyleList.push(initial);
+
 }
 
 const parseClass = (classname) => {
