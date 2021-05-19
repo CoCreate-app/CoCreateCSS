@@ -129,7 +129,7 @@ const makeRuleForTheme = (className) => {
     [style, value, theme] = className.split(':');
     if (theme == 'dark' || theme == 'light') {
         let rule = '[theme="' + theme + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}';
-        let reverseRule = ':not([theme="' + themes[1 - themes.indexOf(theme)] + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}';
+        let reverseRule = ':not([theme="' + themes[1 - themes.indexOf(theme)] + '"]) .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}';
         tempStyleList.push(rule);
         themeCSS[theme].push(reverseRule);
         return rule;
