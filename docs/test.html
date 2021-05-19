@@ -17,11 +17,11 @@
 </head>
 <style type="text/css" media="screen">
     /*Sidenav Search Field */
-
+    
     .floating-label_field {
         margin-top: 0px;
     }
-
+    
     .hide-nav+#menuL {
         margin-top: 0px;
         max-height: -moz-available;
@@ -33,6 +33,15 @@
         transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
         transform: translateY(0);
         -webkit-transform: translateY(0);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+         :not([theme="light"]) .background\:black\:dark {
+            background: black;
+        }
+         :not([theme="light"]) .color\:white\:dark {
+            color: white;
+        }
     }
 </style>
 
