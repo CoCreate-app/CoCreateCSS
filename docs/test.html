@@ -36,10 +36,10 @@
     }
     
     @media (prefers-color-scheme: dark) {
-         :not([theme="light"]) .background\:black\:dark {
-            background: black;
+        html:not([theme="light"]) *.background\:black\:dark {
+            background: red;
         }
-         :not([theme="light"]) .color\:white\:dark {
+        html:not([theme="light"]) *.color\:white\:dark {
             color: white;
         }
     }
