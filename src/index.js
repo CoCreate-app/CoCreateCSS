@@ -35,12 +35,12 @@ let parsedCSS = [];
 let tempStyleList = [];
 let concatCSS = [];
 let styleElSheet;
+let elementList = [];
 
 let newCSS = [];
 // event system
 let eventCallback = {};
 let details = {};
-
 
 const on = (event, callback) => {
     if (details[event])
@@ -94,7 +94,35 @@ const getParsedCss = () => {
 
     parsedCSS = tempStyleList;
     tempStyleList = [];
+
+    elements = document.querySelectorAll("[theme]");
+    for (let element of elements) {
+        elementList = [];
+        getAllChildElements(element);
+        console.log('me?', elementList);
+        addThemeClassList(element)
+    }
     return hasChange;
+}
+
+
+const getAllChildElements = (element) => {
+
+    if (element.hasChildNodes()) {
+        let children = element.childNodes;
+
+        for (let i = 0; i < children.length; i++) {
+            if (children[i].nodeName != '#text') {
+                if (children[i].hasAttribute('class'))
+                    elementList.push(children[i].className);
+                getAllChildElements(children[i]);
+            }
+        }
+    }
+}
+
+const addThemeClassList = (element) => {
+    for (let child of element.children) {}
 }
 
 const getWholeCss = () => {
