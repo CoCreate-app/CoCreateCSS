@@ -313,11 +313,21 @@ const addParsingClassList = (classList) => {
 }
 
 const parseCSSForTheme = () => {
-    let initial = "@media (prefers-color-scheme: dark) {"
-    for (let c of themeCSS.dark) {
-        initial += c + "\n";
+    let initial;
+    if (themeCSS.dark.length) {
+        initial = "@media (prefers-color-scheme: dark) {"
+        for (let c of themeCSS.dark) {
+            initial += c + "\n";
+        }
+        initial += "}";
     }
-    initial += "}";
+    if (themeCSS.light.length) {
+        initial = "@media (prefers-color-scheme: light) {"
+        for (let c of themeCSS.light) {
+            initial += c + "\n";
+        }
+        initial += "}";
+    }
     tempStyleList.push(initial);
 }
 
