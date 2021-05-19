@@ -35,7 +35,7 @@ let parsedCSS = [];
 let tempStyleList = [];
 let concatCSS = [];
 let styleElSheet;
-let elementList = [];
+let classList = [];
 
 let newCSS = [];
 // event system
@@ -92,19 +92,16 @@ const getParsedCss = () => {
         hasChange = addParsingClassList(element.classList) || hasChange;
     }
 
-    parsedCSS = tempStyleList;
-    tempStyleList = [];
 
     elements = document.querySelectorAll("[theme]");
     for (let element of elements) {
-        elementList = [];
-        getAllChildElements(element);
-        console.log('me?', elementList);
         addThemeClassList(element)
     }
+
+    parsedCSS = tempStyleList;
+    tempStyleList = [];
     return hasChange;
 }
-
 
 const getAllChildElements = (element) => {
 
@@ -114,15 +111,26 @@ const getAllChildElements = (element) => {
         for (let i = 0; i < children.length; i++) {
             if (children[i].nodeName != '#text') {
                 if (children[i].hasAttribute('class'))
-                    elementList.push(children[i].className);
+                    classList.push(children[i].className);
                 getAllChildElements(children[i]);
             }
         }
     }
 }
 
+const makeParsingListForTheme = (classLists) => {
+    for (let classname of classLists) {
+        let style, value, theme;
+        [style, value, theme] = classname.split(':');
+        let rule = '[theme="' + theme + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}'
+        tempStyleList.push(rule);
+    }
+}
+
 const addThemeClassList = (element) => {
-    for (let child of element.children) {}
+    classList = [];
+    getAllChildElements(element);
+    makeParsingListForTheme(classList);
 }
 
 const getWholeCss = () => {
