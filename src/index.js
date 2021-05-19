@@ -38,6 +38,7 @@ let styleElSheet;
 let classList = [];
 
 let newCSS = [];
+let themeCSS = { dark: [], light: [] };
 // event system
 let eventCallback = {};
 let details = {};
@@ -91,12 +92,12 @@ const getParsedCss = () => {
     for (let element of elements) {
         hasChange = addParsingClassList(element.classList) || hasChange;
     }
+    parseCSSForTheme();
 
     // elements = document.querySelectorAll("[theme]");
     // for (let element of elements) {
     //     addThemeClassList(element)
     // }
-
     parsedCSS = tempStyleList;
     tempStyleList = [];
     return hasChange;
@@ -129,6 +130,8 @@ const makeRuleForTheme = (className) => {
     if (theme == 'dark' || theme == 'light') {
         let rule = '[theme="' + theme + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}'
         tempStyleList.push(rule);
+        themeCSS[theme].push(rule);
+        return rule;
     }
 }
 
@@ -267,10 +270,11 @@ const addParsingClassList = (classList) => {
     let re = /.+:.+/;
     let re_theme = /.+:.+:.+/;
     let hasChanged = false;
+
     for (let classname of classList) {
-        if (re_theme.exec(classname))
+        if (re_theme.exec(classname)) {
             makeRuleForTheme(classname)
-        else if (re.exec(classname)) {
+        } else if (re.exec(classname)) {
             if (!selectorList.has(classname)) {
                 let re_at = /.+@.+/;
                 if (re_at.exec(classname)) {
@@ -304,7 +308,17 @@ const addParsingClassList = (classList) => {
             }
         }
     }
+
     return hasChanged;
+}
+
+const parseCSSForTheme = () => {
+    let initial = "prefers-color-scheme: dark {"
+    for (let c of themeCSS.dark) {
+        initial += c + "\n";
+    }
+    initial += "}";
+    tempStyleList.push(initial);
 }
 
 const parseClass = (classname) => {
