@@ -76,7 +76,7 @@ const observerInit = () => {
                 window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
                     detail: {
                         isOnload: false,
-                        styleList: parsedCSS.join('\r\n')
+                        styleList: concat.join('\r\n')
                     },
                 }));
             }
@@ -285,7 +285,6 @@ const addParsingClassList = (classList) => {
     for (let classname of classList) {
         if (re_theme.exec(classname)) {
             makeRuleForTheme(classname);
-            hasChanged = true;
         } else if (re.exec(classname)) {
             if (!selectorList.has(classname)) {
                 let re_at = /.+@.+/;
