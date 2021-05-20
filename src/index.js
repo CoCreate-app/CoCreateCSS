@@ -158,11 +158,11 @@ const getWholeCss = () => {
     let getValidLinkTag = false;
 
     try {
-        let stylesheets = document.querySelectorAll("link[type='text/css']");
+        // let stylesheets = document.querySelectorAll("link[type='text/css']");
 
-        for (let stylesheet of stylesheets) {
+        for (let stylesheet of document.styleSheets) {
             styleIndex++;
-            if (stylesheet.hasAttribute('data-save')) {
+            if (stylesheet.ownerNode.hasAttribute('data-save')) {
                 getValidLinkTag = true;
                 break;
             }
