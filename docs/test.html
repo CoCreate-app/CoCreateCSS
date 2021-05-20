@@ -8,7 +8,35 @@
     <title>CoCreateCSS - A utility first, atomic CSS framework</title>
     <meta name="description" content="A Low-code JavaScript framework for building collaborative No-code platforms, apps and UI">
     <link rel="icon" type="image/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
-
+    <style type="text/css" media="screen">
+        /*Sidenav Search Field */
+        
+        .floating-label_field {
+            margin-top: 0px;
+        }
+        
+        .hide-nav+#menuL {
+            margin-top: 0px;
+            max-height: -moz-available;
+            max-height: -webkit-fill-available;
+            max-height: fill-available;
+            will-change: transform;
+            transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+            transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s;
+            transition: transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1), background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            html:not([theme="light"]) *.background\:black\:dark {
+                background: red;
+            }
+            html:not([theme="light"]) *.color\:white\:dark {
+                color: white;
+            }
+        }
+    </style>
     <!-- CoCreate CSS -->
     <link rel="stylesheet" href="https://server.cocreate.app/CoCreateJS/dist/CoCreate.css" type="text/css" />
     <!--<link rel="stylesheet" href="https://ws.cocreate.app/docs/index.css" type="text/css" data-save="true" data-collection="files" data-document_id="60888216117c640e7596303f" name="src" />-->
@@ -50,6 +78,10 @@
         </div>
         <a data-toggle="dark, light" data-toggle_target="[theme]" data-toggle_attribute="theme">Toggle Darkmode</a>
     </div>
+
+    <div class="display:flex flex-wrap:wrap align-items:center flex-direction:row-reverse" className="test">hehehe</div>
+    <div class="test"></div>
+    <div class="test"></div>
 
     <nav class="nav display:flex align-items:center background:whitesmoke padding-top:10px padding-bottom:10px" data-main_content_id="content" data-scroll="sticky-nav,hide-nav" data-scroll_up="10" data-scroll_down="10" data-collection="components" data-document_id="60395ef42b3ac232657040fd"
         name="html">

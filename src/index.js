@@ -93,6 +93,7 @@ const getParsedCss = () => {
         hasChange = addParsingClassList(element.classList) || hasChange;
     }
     parseCSSForTheme();
+    parseCSSForClassNames();
 
     // elements = document.querySelectorAll("[theme]");
     // for (let element of elements) {
@@ -101,6 +102,14 @@ const getParsedCss = () => {
     parsedCSS = tempStyleList;
     tempStyleList = [];
     return hasChange;
+}
+
+const parseCSSForClassNames = () => {
+    let elements = document.querySelectorAll("[className]");
+    for (let ele of elements) {
+        let rule = "." + ele.getAttribute("className") + "{" + ele.getAttribute("class").replace(/ /g, ";") + "}";
+        tempStyleList.push(rule);
+    }
 }
 
 const getAllChildElements = (element) => {
@@ -128,8 +137,8 @@ const makeRuleForTheme = (className) => {
     let style, value, theme;
     [style, value, theme] = className.split(':');
     if (theme == 'dark' || theme == 'light') {
-        let rule = '[theme="' + theme + '"] .' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}';
-        let reverseRule = 'html:not([theme="' + themes[1 - themes.indexOf(theme)] + '"]) *.' + style + '\\:' + value + '\\:' + theme + ' {' + style + ':' + value + ';}';
+        let rule = `[theme="${theme}"] .${style}\\:${value}\\:${theme}{${style}:${value};}`;
+        let reverseRule = `html:not([theme="${themes[1 - themes.indexOf(theme)]}"]) *.${style}\\:${value}\\:${theme}{${style}:${value};}`;
         tempStyleList.push(rule);
         themeCSS[theme].push(reverseRule);
         return rule;
@@ -149,11 +158,11 @@ const getWholeCss = () => {
     let getValidLinkTag = false;
 
     try {
-        let stylesheets = document.querySelectorAll("link[type='text/css']");
+        // let stylesheets = document.querySelectorAll("link[type='text/css']");
 
-        for (let stylesheet of stylesheets) {
+        for (let stylesheet of document.styleSheets) {
             styleIndex++;
-            if (stylesheet.hasAttribute('data-save')) {
+            if (stylesheet.ownerNode.hasAttribute('data-save')) {
                 getValidLinkTag = true;
                 break;
             }
