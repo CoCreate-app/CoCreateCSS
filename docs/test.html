@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -34,18 +34,10 @@
         transform: translateY(0);
         -webkit-transform: translateY(0);
     }
-    
-    @media (prefers-color-scheme: dark) {
-        html:not([theme="light"]) *.background\:black\:dark {
-            background: red;
-        }
-        html:not([theme="light"]) *.color\:white\:dark {
-            color: white;
-        }
-    }
+   
 </style>
 
-<body theme="dark">
+<body>
     <div class="width:50%@300px-500px">
         <div class="background:black:dark">
             <h1 class="color:white:dark">hello how are you</h1>
