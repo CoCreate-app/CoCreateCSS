@@ -76,7 +76,7 @@ const observerInit = () => {
                 window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
                     detail: {
                         isOnload: false,
-                        styleList: concatCSS
+                        styleList: parsedCSS.join('\r\n')
                     },
                 }));
             }
@@ -224,7 +224,7 @@ const saveCss = (hasChange) => {
         window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
             detail: {
                 isOnload: true,
-                styleList: concatCSS
+                styleList: concatCSS.join('\r\n')
             },
         }));
     } else {
