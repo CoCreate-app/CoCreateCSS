@@ -192,7 +192,7 @@ const getWholeCss = () => {
         }
 
         concatCSS = parsedCSS.concat(stylesheetCSS).filter(onlyUnique);
-        newCSS = [...diff(stylesheetCSS, parsedCSS)];
+        newCSS = [...diff(parsedCSS, stylesheetCSS)];
 
         console.log('newCss', newCSS);
         console.log("concatCSS", concatCSS)
