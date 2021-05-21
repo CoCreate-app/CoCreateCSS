@@ -107,7 +107,7 @@ const getParsedCss = () => {
 const parseCSSForClassNames = () => {
     let elements = document.querySelectorAll("[className]");
     for (let ele of elements) {
-        let rule = "." + ele.getAttribute("className") + "{" + ele.getAttribute("class").replace(/ /g, ";") + "}";
+        let rule = "." + ele.getAttribute("className") + " { " + ele.getAttribute("class").replace(/ /g, "; ").replace(/:/g, ": ") + "; }";
         tempStyleList.push(rule);
     }
 }
@@ -307,7 +307,7 @@ const addParsingClassList = (classList) => {
                         if (range[1] != 0) {
                             prefix += " and (max-width:" + range[1] + "px)";
                         }
-                        let rule = prefix + "{" + main_rule + ";}";
+                        let rule = prefix + "{" + main_rule + "}";
                         tempStyleList.push(rule)
                         selectorList.set(classname, true);
                         hasChanged = true;
