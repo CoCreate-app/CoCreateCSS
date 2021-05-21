@@ -307,7 +307,7 @@ const addParsingClassList = (classList) => {
                         if (range[1] != 0) {
                             prefix += " and (max-width:" + range[1] + "px)";
                         }
-                        let rule = prefix + "{" + main_rule + "}";
+                        let rule = prefix + " { " + main_rule + "}";
                         tempStyleList.push(rule)
                         selectorList.set(classname, true);
                         hasChanged = true;
