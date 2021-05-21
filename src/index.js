@@ -172,7 +172,7 @@ const getWholeCss = () => {
             let myRules = document.styleSheets[styleIndex].cssRules; // Returns a CSSRuleList
 
             for (let rule of myRules) {
-                stylesheetCSS.push(rule.cssText.replace(/\n/g, ''));
+                stylesheetCSS.push(rule.cssText.replace(/\\n/g, ''));
             }
         } else
             hasChange = false;
