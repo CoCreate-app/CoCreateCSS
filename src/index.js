@@ -17,7 +17,7 @@ import './CoCreate-scroll.css'
 // import crud from '@cocreate/crud-client'
 
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
-
+const themes = ["light", "dark"];
 const ranges = {
     xs: [0, 575],
     sm: [576, 768],
@@ -35,14 +35,15 @@ let parsedCSS = [];
 let tempStyleList = [];
 let concatCSS = [];
 let styleElSheet;
+let classList = [];
 
 let newCSS = [];
+let themeCSS = { dark: [], light: [] };
 // event system
 let eventCallback = {};
 let details = {};
 
-
-function on(event, callback) {
+const on = (event, callback) => {
     if (details[event])
         callback(parsedCSS);
     eventCallback[event] = callback
@@ -61,6 +62,7 @@ const observerInit = () => {
 
             let hasChange = false;
             hasChange = addParsingClassList(mutation.target.classList);
+
             if (mutation.type == "childList")
                 mutation.target.querySelectorAll("*").forEach((el) => {
                     hasChange = addParsingClassList(el.classList) || hasChange;
@@ -74,7 +76,7 @@ const observerInit = () => {
                 window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
                     detail: {
                         isOnload: false,
-                        styleList: concatCSS
+                        styleList: concat.join('\r\n')
                     },
                 }));
             }
@@ -90,35 +92,87 @@ const getParsedCss = () => {
     for (let element of elements) {
         hasChange = addParsingClassList(element.classList) || hasChange;
     }
+    parseCSSForTheme();
+    parseCSSForClassNames();
 
+    // elements = document.querySelectorAll("[theme]");
+    // for (let element of elements) {
+    //     addThemeClassList(element)
+    // }
     parsedCSS = tempStyleList;
     tempStyleList = [];
     return hasChange;
 }
 
+const parseCSSForClassNames = () => {
+    let elements = document.querySelectorAll("[className]");
+    for (let ele of elements) {
+        let rule = "." + ele.getAttribute("className") + " { " + ele.getAttribute("class").replace(/ /g, "; ").replace(/:/g, ": ") + "; }";
+        tempStyleList.push(rule);
+    }
+}
+
+const getAllChildElements = (element) => {
+
+    if (element.hasChildNodes()) {
+        let children = element.childNodes;
+
+        for (let i = 0; i < children.length; i++) {
+            if (children[i].nodeName != '#text') {
+                if (children[i].hasAttribute('class'))
+                    classList.push(children[i].className);
+                getAllChildElements(children[i]);
+            }
+        }
+    }
+}
+
+const makeParsingListForTheme = (classLists) => {
+    for (let classname of classLists) {
+        makeRuleForTheme(classname);
+    }
+}
+
+const makeRuleForTheme = (className) => {
+    let style, value, theme;
+    [style, value, theme] = className.split(':');
+    if (theme == 'dark' || theme == 'light') {
+        let rule = `[theme="${theme}"] .${style}\\:${value}\\:${theme}{${style}:${value};}`;
+        let reverseRule = `html:not([theme="${themes[1 - themes.indexOf(theme)]}"]) *.${style}\\:${value}\\:${theme}{${style}:${value};}`;
+        tempStyleList.push(rule);
+        themeCSS[theme].push(reverseRule);
+        return rule;
+    }
+}
+
+const addThemeClassList = (element) => {
+    classList = [];
+    getAllChildElements(element);
+    makeParsingListForTheme(classList);
+}
+
 const getWholeCss = () => {
     let stylesheetCSS = [];
     let hasChange = true;
-    let styleIndex = 0;
+    let styleIndex = -1;
     let getValidLinkTag = false;
 
     try {
-        let stylesheets = document.querySelectorAll("link[type='text/css']");
+        // let stylesheets = document.querySelectorAll("link[type='text/css']");
 
-        for (let stylesheet of stylesheets) {
-            if (stylesheet.hasAttribute('data-save')) {
-                styleIndex++;
+        for (let stylesheet of document.styleSheets) {
+            styleIndex++;
+            if (stylesheet.ownerNode.hasAttribute('data-save')) {
                 getValidLinkTag = true;
                 break;
             }
-            styleIndex++;
         }
 
         if (getValidLinkTag) {
             let myRules = document.styleSheets[styleIndex].cssRules; // Returns a CSSRuleList
 
             for (let rule of myRules) {
-                stylesheetCSS.push(rule.cssText);
+                stylesheetCSS.push(rule.cssText.replace(/\\n/g, ''));
             }
         } else
             hasChange = false;
@@ -138,7 +192,7 @@ const getWholeCss = () => {
         }
 
         concatCSS = parsedCSS.concat(stylesheetCSS).filter(onlyUnique);
-        newCSS = [...diff(parsedCSS, stylesheetCSS), ...diff(stylesheetCSS, parsedCSS)];
+        newCSS = [...diff(parsedCSS, stylesheetCSS)];
 
         console.log('newCss', newCSS);
         console.log("concatCSS", concatCSS)
@@ -170,7 +224,7 @@ const saveCss = (hasChange) => {
         window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
             detail: {
                 isOnload: true,
-                styleList: concatCSS
+                styleList: concatCSS.join('\r\n')
             },
         }));
     } else {
@@ -199,7 +253,7 @@ async function init() {
     details.parse = true;
 }
 
-function addNewRules() {
+const addNewRules = () => {
 
     for (let i = 0, len = tempStyleList.length; i < len; i++) {
         let rule = tempStyleList[i];
@@ -215,6 +269,8 @@ function addNewRules() {
                 low = index + 1;
 
         }
+
+        if (low > styleElSheet.cssRules.length) low = styleElSheet.cssRules.length;
         styleElSheet.insertRule(rule, low);
         parsedCSS.splice(low, 0, rule);
     }
@@ -222,12 +278,14 @@ function addNewRules() {
     tempStyleList = []
 }
 
-function addParsingClassList(classList) {
+const addParsingClassList = (classList) => {
     let re = /.+:.+/;
+    let re_theme = /.+:.+:.+/;
     let hasChanged = false;
     for (let classname of classList) {
-
-        if (re.exec(classname)) {
+        if (re_theme.exec(classname)) {
+            makeRuleForTheme(classname);
+        } else if (re.exec(classname)) {
             if (!selectorList.has(classname)) {
                 let re_at = /.+@.+/;
                 if (re_at.exec(classname)) {
@@ -236,8 +294,12 @@ function addParsingClassList(classList) {
 
                     for (let i = 1; i < parts.length; i++) {
                         let range_num = mediaRangeNames.indexOf(parts[i]);
-                        if (range_num == -1) continue;
-                        let range = rangesArray[range_num];
+                        let range = []
+                        if (range_num != -1) range = rangesArray[range_num];
+                        else {
+                            let customRange = parts[i].split('-');
+                            range = customRange.map(c => Number.parseInt(c))
+                        }
                         let prefix = "@media screen";
                         if (range[0] != 0) {
                             prefix += " and (min-width:" + range[0] + "px)";
@@ -245,7 +307,7 @@ function addParsingClassList(classList) {
                         if (range[1] != 0) {
                             prefix += " and (max-width:" + range[1] + "px)";
                         }
-                        let rule = prefix + "{" + main_rule + ";}";
+                        let rule = prefix + " {  " + main_rule + "}";
                         tempStyleList.push(rule)
                         selectorList.set(classname, true);
                         hasChanged = true;
@@ -261,10 +323,34 @@ function addParsingClassList(classList) {
             }
         }
     }
+
     return hasChanged;
 }
 
-function parseClass(classname) {
+const parseCSSForTheme = () => {
+    let initial;
+    if (themeCSS.dark.length) {
+        initial = "@media (prefers-color-scheme: dark) {"
+        for (let c of themeCSS.dark) {
+            initial += c + "\n";
+        }
+        initial += "}";
+        tempStyleList.push(initial);
+        themeCSS.dark = [];
+    }
+    if (themeCSS.light.length) {
+        initial = "@media (prefers-color-scheme: light) {"
+        for (let c of themeCSS.light) {
+            initial += c + "\n";
+        }
+        initial += "}";
+        tempStyleList.push(initial);
+        themeCSS.light = [];
+    }
+
+}
+
+const parseClass = (classname) => {
     let res = classname.split(":");
     let rule = "";
     let suffix = res[1]
