@@ -396,4 +396,6 @@ export default {
     }
 }
 
-window.addEventListener("load", init);
+init();
+
+// window.addEventListener("load", init);
