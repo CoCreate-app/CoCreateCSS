@@ -76,7 +76,7 @@ const observerInit = () => {
                 window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
                     detail: {
                         isOnload: false,
-                        styleList: concat.join('\r\n')
+                        styleList: concatCSS.join('\r\n')
                     },
                 }));
             }
