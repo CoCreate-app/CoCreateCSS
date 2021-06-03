@@ -56,10 +56,17 @@ const observerInit = () => {
 
     observer.init({ 
         name: 'CoCreateClassNameObserver', 
-        observe: ['subtree', 'childList'],
+        observe: ['attributes'],
         include: "[classname]",
+        attributeOldValue: true,
         callback: function(mutation) {
-            // console.log('-----------', mutation.target)
+            if(mutation.target.hasAttribute('classname'))
+            {
+                let temp = []
+                temp = parsedCSS.filter(v => !(v.includes(`.${mutation.target.getAttribute('classname')}`)))
+                parsedCSS = temp;
+            }
+
             parseCSSForClassNames([mutation.target]);
         }
     })
@@ -116,11 +123,15 @@ const getParsedCss = () => {
     return hasChange;
 }
 
+const getRulesFromCss = (ele) => {
+    return "." + ele.getAttribute("className") + " { " + ele.getAttribute("class").replace(/ /g, "; ").replace(/:/g, ": ") + "; }";
+}
+
 const parseCSSForClassNames = (elements) => {
     for (let ele of elements) {
         if(ele.hasAttribute("class"))
         {
-            let rule = "." + ele.getAttribute("className") + " { " + ele.getAttribute("class").replace(/ /g, "; ").replace(/:/g, ": ") + "; }";
+            let rule = getRulesFromCss(ele);
             tempStyleList.push(rule);
         }
     }
