@@ -54,12 +54,12 @@ const observerInit = () => {
     document.head.appendChild(styleEl);
     styleElSheet = styleEl.sheet;
 
-    observer.init({ 
-        name: 'CoCreateClassNameObserver', 
-        observe: ['attributes'],
+    observer.init({
+        name: "ccCss",
+        observe: ["attributes", "childList"],
+        attributes: ["class"],
         include: "[classname]",
-        attributeOldValue: true,
-        callback: function(mutation) {
+        callback: (mutation) => {
             if(mutation.target.hasAttribute('classname'))
             {
                 let temp = []
@@ -68,15 +68,7 @@ const observerInit = () => {
             }
 
             parseCSSForClassNames([mutation.target]);
-        }
-    })
-
-    observer.init({
-        name: "ccCss",
-        observe: ["attributes", "childList"],
-        attributes: ["class"],
-        callback: (mutation) => {
-
+            
             let hasChange = false;
             hasChange = addParsingClassList(mutation.target.classList);
 
