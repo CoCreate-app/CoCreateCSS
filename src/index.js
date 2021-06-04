@@ -60,6 +60,12 @@ const observerInit = () => {
         attributes: ["class"],
         include: "[classname]",
         callback: (mutation) => {
+
+            if(!mutation.isRemoved)
+            {
+                console.log('this is just for a test');
+            }
+
             if(mutation.target.hasAttribute('classname'))
             {
                 let temp = []
