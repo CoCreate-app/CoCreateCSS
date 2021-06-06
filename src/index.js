@@ -14,7 +14,6 @@ import './CoCreate-navbar.css'
 import './CoCreate-overlay-content.css'
 import './CoCreate-progressbar.css'
 import './CoCreate-scroll.css'
-// import crud from '@cocreate/crud-client'
 
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
 const themes = ["light", "dark"];
