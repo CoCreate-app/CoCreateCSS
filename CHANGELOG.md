@@ -1,3 +1,35 @@
+# [1.4.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.3.1...v1.4.0) (2021-06-06)
+
+
+### Bug Fixes
+
+* css format ([4a70a7f](https://github.com/CoCreate-app/CoCreateCSS/commit/4a70a7fc29d1a6e326a0315aa8826ff99e7cae0d))
+* css format ([839446b](https://github.com/CoCreate-app/CoCreateCSS/commit/839446b55f191203379afd31ac86a6b0833b68e2))
+* css format again ([4deceff](https://github.com/CoCreate-app/CoCreateCSS/commit/4deceff4f9251dbc980d389872f8901662368d5f))
+* css format problem ([2630b6b](https://github.com/CoCreate-app/CoCreateCSS/commit/2630b6b295507cdbee1384b0a6cb73cf480b5a57))
+* css issue ([f159ad0](https://github.com/CoCreate-app/CoCreateCSS/commit/f159ad03c87ef88614700727afeb157079bcd6cb))
+* dark and light mode ([bb66982](https://github.com/CoCreate-app/CoCreateCSS/commit/bb669820c71d87143fdcb041cba4f7e94756648d))
+* error in media for theme ([aa12fac](https://github.com/CoCreate-app/CoCreateCSS/commit/aa12facc408f23aa5d7756792df24e22e83d1a5f))
+* has change true everytime ([e8da103](https://github.com/CoCreate-app/CoCreateCSS/commit/e8da103cfcc5aed93246bd7991ef5e6d4ccc1e6a))
+* loading link bug ([4c54d63](https://github.com/CoCreate-app/CoCreateCSS/commit/4c54d63ff760cbb3016f9706c72e13921fd6450a))
+* new css ([4096ce7](https://github.com/CoCreate-app/CoCreateCSS/commit/4096ce79cfc45bc672d74b09e094a0e2d8722909))
+* new CSS ([f78b9f2](https://github.com/CoCreate-app/CoCreateCSS/commit/f78b9f251be2379241ecbf266321ec6f19df4b9e))
+* parsing classNames ([a153fdf](https://github.com/CoCreate-app/CoCreateCSS/commit/a153fdff3011b36d2e743f8eab1cfeb6a1b085a6))
+* parsing issue ([1162d67](https://github.com/CoCreate-app/CoCreateCSS/commit/1162d67b33b818671657821b8177d4dc3567e090))
+* reformat ([3e0bbc4](https://github.com/CoCreate-app/CoCreateCSS/commit/3e0bbc4f3dad25e14c2d4122c04aec4c96115082))
+* replaced init using onload to standard init function ([caaec0a](https://github.com/CoCreate-app/CoCreateCSS/commit/caaec0af90424cf124d3266db7c6efaef2f32861))
+* save string not array ([3a6618d](https://github.com/CoCreate-app/CoCreateCSS/commit/3a6618dbf85a0d6f75ddf20722ea68ca02c0aaeb))
+* sort bug ([ab66eae](https://github.com/CoCreate-app/CoCreateCSS/commit/ab66eaedc1e51184790ece70050c14a1b5b80eed))
+* update making rules ([91054d4](https://github.com/CoCreate-app/CoCreateCSS/commit/91054d42f3dc6d6e2585f09f48f1203a31419920))
+
+
+### Features
+
+* add classname parsing ([403db83](https://github.com/CoCreate-app/CoCreateCSS/commit/403db83f0c894d82b6ce06df6b2af28b5b1d3207))
+* custom range for media ([5f6501b](https://github.com/CoCreate-app/CoCreateCSS/commit/5f6501b111403854b22b59814d05b0eb61b27a99))
+* darkmode, classname ([f0457c7](https://github.com/CoCreate-app/CoCreateCSS/commit/f0457c778f96936a32cb6311859c960d23335ce2))
+* update parsing css ([01ef735](https://github.com/CoCreate-app/CoCreateCSS/commit/01ef73531553ef6c192b75757b4abb98b6d2f391))
+
 # [1.2.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.1.1...v1.2.0) (2021-05-17)
 
 
