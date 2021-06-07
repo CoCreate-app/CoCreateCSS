@@ -57,13 +57,7 @@ const observerInit = () => {
         name: "ccCss",
         observe: ["attributes", "childList"],
         attributes: ["class"],
-        // include: "[classname]",
         callback: (mutation) => {
-
-            // if(!mutation.isRemoved)
-            // {
-            //     console.log('this is just for a test');
-            // }
 
             if(mutation.target.hasAttribute('classname'))
             {
@@ -75,11 +69,13 @@ const observerInit = () => {
             parseCSSForClassNames([mutation.target]);
             
             let hasChange = false;
-            hasChange = addParsingClassList(mutation.target.classList);
+            if(checkDataParseStatus(mutation.target))
+                hasChange = addParsingClassList(mutation.target.classList);
 
             if (mutation.type == "childList")
                 mutation.target.querySelectorAll("*").forEach((el) => {
-                    hasChange = addParsingClassList(el.classList) || hasChange;
+                    if(checkDataParseStatus(el))
+                        hasChange = addParsingClassList(el.classList) || hasChange;
                 });
 
             addNewRules()
@@ -99,13 +95,26 @@ const observerInit = () => {
     });
 }
 
+const checkDataParseStatus = (ele) => {
+    if(!ele.hasAttribute("data-parse"))
+        return true;
+    else 
+    {
+        return (ele.getAttribute("data-parse") === "true")? true:false;
+    }
+}
+
 const getParsedCss = () => {
     let hasChange = false;
     let elements = document.querySelectorAll("[class]");
 
     for (let element of elements) {
-        hasChange = addParsingClassList(element.classList) || hasChange;
+        if(checkDataParseStatus(element))
+        {
+            hasChange = addParsingClassList(element.classList) || hasChange;
+        }
     }
+
     parseCSSForTheme();
 
     elements = document.querySelectorAll("[className]");
