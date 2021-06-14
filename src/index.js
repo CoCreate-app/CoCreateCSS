@@ -97,7 +97,7 @@ const observerInit = () => {
     observer.init({
         name: "ccCssClassName",
         observe: ["subtree", "childList"],
-        includes: ["classname"],
+        include: ["classname"],
         callback: (mutation) => {
 
             if(mutation.target.hasAttribute('classname'))
