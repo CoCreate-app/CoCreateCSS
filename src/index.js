@@ -95,8 +95,9 @@ const observerInit = () => {
     });
 
     observer.init({
-        name: "ccCssClassName",
-        observe: ["subtree", "childList"],
+        name: "ccCss",
+        observe: ["subtree", "childlist"],
+        attributes: ["classname"],
         include: ["classname"],
         callback: (mutation) => {
 
@@ -134,6 +135,7 @@ const observerInit = () => {
 
         },
     });
+
 }
 
 const checkDataParseStatus = (ele) => {
