@@ -55,7 +55,7 @@ const observerInit = () => {
 
     observer.init({
         name: "ccCss",
-        observe: ["attributes", "childList"],
+        observe: ["attributes"],
         attributes: ["class"],
         callback: (mutation) => {
 
@@ -96,7 +96,7 @@ const observerInit = () => {
 
     observer.init({
         name: "ccCssClassName",
-        observe: ["attributes", "childList"],
+        observe: ["subtree", "childList"],
         includes: ["classname"],
         callback: (mutation) => {
 
