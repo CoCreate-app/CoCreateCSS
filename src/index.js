@@ -66,6 +66,11 @@ const observerInit = () => {
                 parsedCSS = temp;
             }
 
+            if(mutation.type == "childList")
+                mutation.target.querySelectorAll("*").forEach((el) => {
+                    parseCSSForClassNames([el]);
+                })
+
             parseCSSForClassNames([mutation.target]);
             
             let hasChange = false;
@@ -109,6 +114,11 @@ const observerInit = () => {
             }
 
             parseCSSForClassNames([mutation.target]);
+
+            if(mutation.type == "childList")
+                mutation.target.querySelectorAll("*").forEach((el) => {
+                    parseCSSForClassNames([el]);
+                })
             
             let hasChange = false;
             if(checkDataParseStatus(mutation.target))
