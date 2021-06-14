@@ -36,10 +36,10 @@
 </style>
 
 <body>
-    <div class="width:50%@300px-500px">
+    <div class="width:50%@300px-500px" data-parse="false">
         <div class="background:black:dark">
             <h1 class="color:white:dark">hello how are you</h1>
-            <div class="width:50%@300px-500px">
+            <div>
                 <div class="background:black:dark background:blue:light">
                     <h1 class="color:white:dark color:yellow:light">hello how are you</h1>
                 </div>
@@ -50,8 +50,8 @@
     </div>
 
     <div class="display:flex flex-wrap:wrap align-items:center flex-direction:row-reverse" className="test">hehehe</div>
-    <div class="test"></div>
-    <div class="test"></div>
+    <div class="test">first one</div>
+    <div class="test">and second one</div>
 
     <nav class="nav display:flex align-items:center background:whitesmoke padding-top:10px padding-bottom:10px" data-main_content_id="content" data-scroll="sticky-nav,hide-nav" data-scroll_up="10" data-scroll_down="10" data-collection="components" data-document_id="60395ef42b3ac232657040fd"
         name="html">
@@ -187,7 +187,7 @@
         </section>
 
         <!-- Thirdparty API Intergration -->
-        <section class="padding-top:80px padding-bottom:40px">
+        <section class="padding-top:80px padding-bottom:40px" >
             <div class="max-width:90% margin:0px_auto">
                 <div class="display:flex flex-wrap:wrap align-items:center">
                     <div class="flex-grow:1 min-width:300px width:50%">
@@ -207,7 +207,7 @@
         </section>
 
         <button href="https://github.com/CoCreate-app/CoCreate-boilerplate/tree/master/docs/index.html?message=docs%3A%20describe%20your%20change..." target="_blank" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50%">
-		        <i class="fas fa-pencil-alt"></i>
+		        <i class="fas fa-pencil-alt" data-parse="false"></i>
 	        </button>
     </main>
 
@@ -240,8 +240,8 @@
         }
     </script>
     <!--CoCreateJS-->
-     <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script> 
-    <!--<script src="../dist/CoCreateCSS.js"></script>-->
+     <!-- <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>  -->
+    <script src="../dist/CoCreateCSS.js"></script>
     <!--<script src="../src/save.js"></script>-->
     <!--<script src="https://cdn.cocreate.app/toggle/latest/CoCreate-toggle.min.js"></script>-->
 </body>
