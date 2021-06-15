@@ -99,52 +99,6 @@ const observerInit = () => {
         },
     });
 
-    observer.init({
-        name: "ccCss",
-        observe: ["subtree", "childlist"],
-        include: "[classname]",
-        callback: (mutation) => {
-
-            if(mutation.target.hasAttribute('classname'))
-            {
-                let temp = []
-                temp = parsedCSS.filter(v => !(v.includes(`.${mutation.target.getAttribute('classname')}`)))
-                parsedCSS = temp;
-            }
-
-            parseCSSForClassNames([mutation.target]);
-
-            if(mutation.type == "childList")
-                mutation.target.querySelectorAll("*").forEach((el) => {
-                    parseCSSForClassNames([el]);
-                })
-            
-            let hasChange = false;
-            if(checkDataParseStatus(mutation.target))
-                hasChange = addParsingClassList(mutation.target.classList);
-
-            if (mutation.type == "childList")
-                mutation.target.querySelectorAll("*").forEach((el) => {
-                    if(checkDataParseStatus(el))
-                        hasChange = addParsingClassList(el.classList) || hasChange;
-                });
-
-            addNewRules()
-
-            if (hasChange) {
-                console.log('parsedCSS', parsedCSS)
-                console.log('cssString', parsedCSS.join('\r\n'))
-                window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
-                    detail: {
-                        isOnload: false,
-                        styleList: concatCSS.join('\r\n')
-                    },
-                }));
-            }
-
-        },
-    });
-
 }
 
 const checkDataParseStatus = (ele) => {
