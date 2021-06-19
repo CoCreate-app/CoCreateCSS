@@ -1,5 +1,6 @@
 /* Parsing CSS for Utility CSS*/
 import observer from '@cocreate/observer'
+// import { logger } from '@cocreate/utils'
 import './box-shadow.css'
 import './CoCreate-avatar.css'
 import './CoCreate-badge.css'
@@ -14,6 +15,8 @@ import './CoCreate-navbar.css'
 import './CoCreate-overlay-content.css'
 import './CoCreate-progressbar.css'
 import './CoCreate-scroll.css'
+
+// const consoleMessage = logger(off)
 
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
 const themes = ["light", "dark"];
@@ -52,31 +55,71 @@ const observerInit = () => {
     styleEl.setAttribute('component', 'CoCreateCss')
     document.head.appendChild(styleEl);
     styleElSheet = styleEl.sheet;
-
     observer.init({
         name: "ccCss",
-        observe: ["attributes", "childList"],
-        attributes: ["class"],
-        callback: (mutation) => {
-
-            if(mutation.target.hasAttribute('classname'))
-            {
+        observe: ["addedNodes"],
+        attributeFilter: ["class"],
+        callback: mutation => {
+            if(!mutation.target.tagName ) return;
+            if ( mutation.target.hasAttribute('classname')) {
                 let temp = []
                 temp = parsedCSS.filter(v => !(v.includes(`.${mutation.target.getAttribute('classname')}`)))
                 parsedCSS = temp;
             }
 
+
+            mutation.target.querySelectorAll("*").forEach((el) => {
+                parseCSSForClassNames([el]);
+            })
+
             parseCSSForClassNames([mutation.target]);
-            
+
             let hasChange = false;
-            if(checkDataParseStatus(mutation.target))
+            if (checkDataParseStatus(mutation.target))
                 hasChange = addParsingClassList(mutation.target.classList);
 
-            if (mutation.type == "childList")
-                mutation.target.querySelectorAll("*").forEach((el) => {
-                    if(checkDataParseStatus(el))
-                        hasChange = addParsingClassList(el.classList) || hasChange;
-                });
+
+            mutation.target.querySelectorAll("*").forEach((el) => {
+                if (checkDataParseStatus(el))
+                    hasChange = addParsingClassList(el.classList) || hasChange;
+            });
+
+            addNewRules()
+
+            if (hasChange) {
+                console.log('parsedCSS', parsedCSS)
+                console.log('cssString', parsedCSS.join('\r\n'))
+                window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
+                    detail: {
+                        isOnload: false,
+                        styleList: concatCSS.join('\r\n')
+                    },
+                }));
+            }
+        }
+    })
+    observer.init({
+        name: "ccCss",
+        observe: ["attributes"],
+        attributeFilter: ["class"],
+        callback: mutation => {
+
+
+            if (mutation.target.hasAttribute('classname')) {
+                let temp = []
+                temp = parsedCSS.filter(v => !(v.includes(`.${mutation.target.getAttribute('classname')}`)))
+                parsedCSS = temp;
+            }
+
+            mutation.target.querySelectorAll("*").forEach((el) => {
+                parseCSSForClassNames([el]);
+            })
+            parseCSSForClassNames([mutation.target]);
+
+            let hasChange = false;
+            if (checkDataParseStatus(mutation.target))
+                hasChange = addParsingClassList(mutation.target.classList);
+
 
             addNewRules()
 
@@ -91,16 +134,18 @@ const observerInit = () => {
                 }));
             }
 
-        },
-    });
+        }
+    })
+
+
+
 }
 
 const checkDataParseStatus = (ele) => {
-    if(!ele.hasAttribute("data-parse"))
+    if (!ele.hasAttribute("data-parse"))
         return true;
-    else 
-    {
-        return (ele.getAttribute("data-parse") === "true")? true:false;
+    else {
+        return (ele.getAttribute("data-parse") === "true") ? true : false;
     }
 }
 
@@ -109,8 +154,7 @@ const getParsedCss = () => {
     let elements = document.querySelectorAll("[class]");
 
     for (let element of elements) {
-        if(checkDataParseStatus(element))
-        {
+        if (checkDataParseStatus(element)) {
             hasChange = addParsingClassList(element.classList) || hasChange;
         }
     }
@@ -135,8 +179,7 @@ const getRulesFromCss = (ele) => {
 
 const parseCSSForClassNames = (elements) => {
     for (let ele of elements) {
-        if(ele.hasAttribute("class"))
-        {
+        if (ele.hasAttribute("class")) {
             let rule = getRulesFromCss(ele);
             tempStyleList.push(rule);
         }
@@ -205,12 +248,15 @@ const getWholeCss = () => {
             for (let rule of myRules) {
                 stylesheetCSS.push(rule.cssText.replace(/\\n/g, ''));
             }
-        } else
+        }
+        else
             hasChange = false;
-    } catch (err) {
+    }
+    catch (err) {
         hasChange = false;
         console.error(err)
-    } finally {
+    }
+    finally {
         console.log('stylesheetCSS', stylesheetCSS);
         console.log('parsedCss', parsedCSS)
 
@@ -240,7 +286,8 @@ const getWholeCss = () => {
             if (Object.keys(stylesheetCSS).length) {
                 if (stylesheetCSS.indexOf(concatCSS[i]) === -1)
                     styleElSheet.insertRule(concatCSS[i])
-            } else
+            }
+            else
                 styleElSheet.insertRule(concatCSS[i])
         }
         concatCSS.sort();
@@ -258,7 +305,8 @@ const saveCss = (hasChange) => {
                 styleList: concatCSS.join('\r\n')
             },
         }));
-    } else {
+    }
+    else {
         console.log('cssString after Concat', concatCSS.join('\r\n'))
     }
 }
@@ -316,7 +364,8 @@ const addParsingClassList = (classList) => {
     for (let classname of classList) {
         if (re_theme.exec(classname)) {
             makeRuleForTheme(classname);
-        } else if (re.exec(classname)) {
+        }
+        else if (re.exec(classname)) {
             if (!selectorList.has(classname)) {
                 let re_at = /.+@.+/;
                 if (re_at.exec(classname)) {
@@ -344,7 +393,8 @@ const addParsingClassList = (classList) => {
                         hasChanged = true;
 
                     }
-                } else {
+                }
+                else {
                     let rule = parseClass(classname);
                     tempStyleList.push(rule)
                     selectorList.set(classname, true);
@@ -410,7 +460,8 @@ const parseClass = (classname) => {
             rule += ", " + clsname + pseudo[i];
         }
         rule += `{${res[0]}:${res[1]}}`;
-    } else {
+    }
+    else {
         rule = `.${res[0]}\\:${suffix} { ${res[0]}: ${res[1]}; }`;
     }
     return rule;
