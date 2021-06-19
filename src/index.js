@@ -1,5 +1,6 @@
 /* Parsing CSS for Utility CSS*/
 import observer from '@cocreate/observer'
+// import { logger } from '@cocreate/utils'
 import './box-shadow.css'
 import './CoCreate-avatar.css'
 import './CoCreate-badge.css'
@@ -14,6 +15,8 @@ import './CoCreate-navbar.css'
 import './CoCreate-overlay-content.css'
 import './CoCreate-progressbar.css'
 import './CoCreate-scroll.css'
+
+// const consoleMessage = logger(off)
 
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
 const themes = ["light", "dark"];
@@ -55,9 +58,10 @@ const observerInit = () => {
     observer.init({
         name: "ccCss",
         observe: ["addedNodes"],
-        attributesFilter: ["class"],
+        attributeFilter: ["class"],
         callback: mutation => {
-            if (mutation.target.hasAttribute('classname')) {
+            if(!mutation.target.tagName ) return;
+            if ( mutation.target.hasAttribute('classname')) {
                 let temp = []
                 temp = parsedCSS.filter(v => !(v.includes(`.${mutation.target.getAttribute('classname')}`)))
                 parsedCSS = temp;
@@ -97,7 +101,7 @@ const observerInit = () => {
     observer.init({
         name: "ccCss",
         observe: ["attributes"],
-        attributesFilter: ["class"],
+        attributeFilter: ["class"],
         callback: mutation => {
 
 
