@@ -107,7 +107,9 @@ const observerInit = () => {
                 parsedCSS = temp;
             }
 
-
+            mutation.target.querySelectorAll("*").forEach((el) => {
+                parseCSSForClassNames([el]);
+            })
             parseCSSForClassNames([mutation.target]);
 
             let hasChange = false;
