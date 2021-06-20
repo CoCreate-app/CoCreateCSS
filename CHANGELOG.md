@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.0...v1.4.1) (2021-06-20)
+
+
+### Bug Fixes
+
+* new mutaionObserver init function ([22c4538](https://github.com/CoCreate-app/CoCreateCSS/commit/22c4538b4482a17644ea3b6f1689d8debb8f1890))
+
 # [1.4.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.3.1...v1.4.0) (2021-06-06)
 
 
