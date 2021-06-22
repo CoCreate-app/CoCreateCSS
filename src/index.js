@@ -57,26 +57,30 @@ const observerInit = () => {
     styleElSheet = styleEl.sheet;
     observer.init({
         name: "ccCss",
-        observe: ["addedNodes"],
-        attributeFilter: ["class"],
+        observe: ["childList"],
+
         callback: mutation => {
-            if(!mutation.target.tagName ) return;
-            if ( mutation.target.hasAttribute('classname')) {
+            if (!mutation.addedNodes.length)
+                return;
+            let el = mutation.target;
+            if (el.hasAttribute('classname')) {
                 let temp = []
-                temp = parsedCSS.filter(v => !(v.includes(`.${mutation.target.getAttribute('classname')}`)))
+                temp = parsedCSS.filter(v => !(v.includes(`.${el.getAttribute('classname')}`)))
                 parsedCSS = temp;
             }
 
 
-
-            parseCSSForClassNames([mutation.target]);
+            el.querySelectorAll("*").forEach((el) => {
+                parseCSSForClassNames([el]);
+            })
+            parseCSSForClassNames([el]);
 
             let hasChange = false;
-            if (checkDataParseStatus(mutation.target))
-                hasChange = addParsingClassList(mutation.target.classList);
+            if (checkDataParseStatus(el))
+                hasChange = addParsingClassList(el.classList);
 
 
-            mutation.target.querySelectorAll("*").forEach((el) => {
+            el.querySelectorAll("*").forEach((el) => {
                 if (checkDataParseStatus(el))
                     hasChange = addParsingClassList(el.classList) || hasChange;
             });
@@ -100,28 +104,27 @@ const observerInit = () => {
         observe: ["attributes"],
         attributeFilter: ["class"],
         callback: mutation => {
+            let el = mutation.target;
 
-
-            if (mutation.target.hasAttribute('classname')) {
+            if (el.hasAttribute('classname')) {
                 let temp = []
-                temp = parsedCSS.filter(v => !(v.includes(`.${mutation.target.getAttribute('classname')}`)))
+                temp = parsedCSS.filter(v => !(v.includes(`.${el.getAttribute('classname')}`)))
                 parsedCSS = temp;
             }
 
-           
-        
-            parseCSSForClassNames([mutation.target]);
+
+
+            parseCSSForClassNames([el]);
 
             let hasChange = false;
-            if (checkDataParseStatus(mutation.target))
-                hasChange = addParsingClassList(mutation.target.classList);
+            if (checkDataParseStatus(el))
+                hasChange = addParsingClassList(el.classList);
 
 
             addNewRules()
 
             if (hasChange) {
                 console.log('parsedCSS', parsedCSS)
-                console.log('cssString', parsedCSS.join('\r\n'))
                 window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
                     detail: {
                         isOnload: false,
