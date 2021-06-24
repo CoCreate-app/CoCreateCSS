@@ -1,3 +1,11 @@
+## [1.4.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.1...v1.4.2) (2021-06-24)
+
+
+### Bug Fixes
+
+* add method to turn on and off console.log while in development ([99baf71](https://github.com/CoCreate-app/CoCreateCSS/commit/99baf71a8047a74c1b1c118413fd74123f0102dd))
+* update all [@cocreate](https://github.com/cocreate) to use latest versions ([95b27e2](https://github.com/CoCreate-app/CoCreateCSS/commit/95b27e2540b7d541d5b522b0ccc6835da09e74f4))
+
 ## [1.4.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.0...v1.4.1) (2021-06-20)
 
 
