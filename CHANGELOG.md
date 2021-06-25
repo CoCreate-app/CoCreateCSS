@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.3...v1.4.4) (2021-06-25)
+
+
+### Bug Fixes
+
+* latest version numbers applied to all cocreate packages ([6212426](https://github.com/CoCreate-app/CoCreateCSS/commit/62124262700df70b89ec5e137a2cf7ff05b8e009))
+
 ## [1.4.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.2...v1.4.3) (2021-06-24)
 
 
