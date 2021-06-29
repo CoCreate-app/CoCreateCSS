@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.4...v1.4.5) (2021-06-29)
+
+
+### Bug Fixes
+
+* add logger utility ([6a077d0](https://github.com/CoCreate-app/CoCreateCSS/commit/6a077d0467a279b5ada5bc183fef430d1a24f824))
+
 ## [1.4.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.3...v1.4.4) (2021-06-25)
 
 
