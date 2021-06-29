@@ -1,6 +1,6 @@
 /* Parsing CSS for Utility CSS*/
 import observer from '@cocreate/observer'
-// import { logger } from '@cocreate/utils'
+import { logger } from '@cocreate/utils'
 import './box-shadow.css'
 import './CoCreate-avatar.css'
 import './CoCreate-badge.css'
@@ -16,6 +16,7 @@ import './CoCreate-overlay-content.css'
 import './CoCreate-progressbar.css'
 import './CoCreate-scroll.css'
 
+let console = logger('off');
 // const consoleMessage = logger(off)
 // const consoleMessage = CoCreate.utils.logger(off)
 
@@ -89,8 +90,8 @@ const observerInit = () => {
             addNewRules()
 
             if (hasChange) {
-                //console.log('parsedCSS', parsedCSS)
-                //console.log('cssString', parsedCSS.join('\r\n'))
+                console.log('parsedCSS', parsedCSS)
+                console.log('cssString', parsedCSS.join('\r\n'))
                 window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
                     detail: {
                         isOnload: false,
@@ -125,7 +126,7 @@ const observerInit = () => {
             addNewRules()
 
             if (hasChange) {
-                //console.log('parsedCSS', parsedCSS)
+                console.log('parsedCSS', parsedCSS)
                 window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
                     detail: {
                         isOnload: false,
@@ -257,8 +258,8 @@ const getWholeCss = () => {
         console.error(err)
     }
     finally {
-        //console.log('stylesheetCSS', stylesheetCSS);
-        //console.log('parsedCss', parsedCSS)
+        console.log('stylesheetCSS', stylesheetCSS);
+        console.log('parsedCss', parsedCSS)
 
         const onlyUnique = (value, index, self) => {
             return self.indexOf(value) === index;
@@ -271,8 +272,8 @@ const getWholeCss = () => {
         concatCSS = parsedCSS.concat(stylesheetCSS).filter(onlyUnique);
         newCSS = [...diff(parsedCSS, stylesheetCSS)];
 
-        //console.log('newCss', newCSS);
-        //console.log("concatCSS", concatCSS)
+        console.log('newCss', newCSS);
+        console.log("concatCSS", concatCSS)
 
         let temp = [];
         for (let i = 0; i < concatCSS.length; i++) {
@@ -296,9 +297,9 @@ const getWholeCss = () => {
 }
 
 const saveCss = (hasChange) => {
-    //console.log("hasChange", hasChange)
+    console.log("hasChange", hasChange)
     if (hasChange) {
-        //console.log('cssString', concatCSS.join('\r\n'))
+        console.log('cssString', concatCSS.join('\r\n'))
         window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
             detail: {
                 isOnload: true,
@@ -307,7 +308,7 @@ const saveCss = (hasChange) => {
         }));
     }
     else {
-        //console.log('cssString after Concat', concatCSS.join('\r\n'))
+        console.log('cssString after Concat', concatCSS.join('\r\n'))
     }
 }
 
