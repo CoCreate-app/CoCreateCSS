@@ -2,10 +2,6 @@
     width: 5px;
     height: 5px;
   } 
-  ::-webkit-scrollbar:hover {
-    /*width: 10px!important;*/
-    /*height:10px!important;*/
-  }
   ::-webkit-scrollbar-thumb{
     background: rgba(0, 0, 0, 0.09);
   }
@@ -22,6 +18,10 @@
   }
   ::-webkit-scrollbar-track:hover {
     background: rgba(0, 0, 0, 0.06);
+    /*width: 10px!important;*/
+    /*height:10px!important;*/
+  }
+  ::-webkit-scrollbar:hover {
     /*width: 10px!important;*/
     /*height:10px!important;*/
   }
