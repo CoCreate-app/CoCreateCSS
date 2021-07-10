@@ -1,3 +1,10 @@
+## [1.4.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.7...v1.4.8) (2021-07-10)
+
+
+### Bug Fixes
+
+* gitignore all logs ([db05b8a](https://github.com/CoCreate-app/CoCreateCSS/commit/db05b8a7f187cfebd88c1d97d77ac16759574ea4))
+
 ## [1.4.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.6...v1.4.7) (2021-07-07)
 
 
