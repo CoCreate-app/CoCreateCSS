@@ -1,3 +1,10 @@
+## [1.4.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.8...v1.4.9) (2021-07-13)
+
+
+### Bug Fixes
+
+* clean core css ([86a9af4](https://github.com/CoCreate-app/CoCreateCSS/commit/86a9af4f0d12c3ce6fb2e50b92fac9f02d84b55d))
+
 ## [1.4.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.7...v1.4.8) (2021-07-10)
 
 
