@@ -59,11 +59,12 @@ const observerInit = () => {
     styleElSheet = styleEl.sheet;
     observer.init({
         name: "ccCss",
-        observe: ["childList"],
-
+        observe: ['childList'],
+        target: '[class]',
         callback: mutation => {
             if (!mutation.addedNodes.length)
                 return;
+            mutation.addedNodes.push(mutation.target);
             let el = mutation.target;
             if (el.hasAttribute('classname')) {
                 let temp = []
@@ -71,18 +72,9 @@ const observerInit = () => {
                 parsedCSS = temp;
             }
 
-
-            el.querySelectorAll("*").forEach((el) => {
-                parseCSSForClassNames([el]);
-            })
-            parseCSSForClassNames([el]);
-
             let hasChange = false;
-            if (checkDataParseStatus(el))
-                hasChange = addParsingClassList(el.classList);
-
-
-            el.querySelectorAll("*").forEach((el) => {
+            mutation.addedNodes.forEach((el) => {
+                parseCSSForClassNames([el]);
                 if (checkDataParseStatus(el))
                     hasChange = addParsingClassList(el.classList) || hasChange;
             });
@@ -104,7 +96,7 @@ const observerInit = () => {
     observer.init({
         name: "ccCss",
         observe: ["attributes"],
-        attributeFilter: ["class"],
+        attributeName: ["class"],
         callback: mutation => {
             let el = mutation.target;
 
