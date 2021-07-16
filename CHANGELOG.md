@@ -1,3 +1,25 @@
+## [1.4.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.10...v1.4.11) (2021-07-14)
+
+
+### Bug Fixes
+
+* upgrade all packages ([8eb485d](https://github.com/CoCreate-app/CoCreateCSS/commit/8eb485d05b3c0a9c31584bbe44667995ffafefed))
+
+## [1.4.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.9...v1.4.10) (2021-07-13)
+
+
+### Bug Fixes
+
+* add yarn lockfile to git ignore ([1b0ec2b](https://github.com/CoCreate-app/CoCreateCSS/commit/1b0ec2bddae14ee58f89e4fe0d3c13b991a98da7))
+* remove yarn.lock ([72101e1](https://github.com/CoCreate-app/CoCreateCSS/commit/72101e1d779e4b115bc4a979f047557fbe6fdff7))
+
+## [1.4.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.8...v1.4.9) (2021-07-13)
+
+
+### Bug Fixes
+
+* clean core css ([86a9af4](https://github.com/CoCreate-app/CoCreateCSS/commit/86a9af4f0d12c3ce6fb2e50b92fac9f02d84b55d))
+
 ## [1.4.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.7...v1.4.8) (2021-07-10)
 
 

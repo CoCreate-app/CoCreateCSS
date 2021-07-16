@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/cocreatecss",
-  "version": "1.4.8",
+  "version": "1.4.11",
   "description": "A lightweight utility-first Atomic CSS framework promoting rapid UI development. No learning curve... Apply your native css property:value directly in class, then extract and transform it.",
   "keywords": [
     "cocreatecss",
@@ -64,7 +64,7 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/crdt": "^1.1.17",
+    "@cocreate/crdt": "^1.1.20",
     "@cocreate/docs": "^1.1.29",
     "@cocreate/hosting": "^1.1.8",
     "@cocreate/observer": "^1.2.8",
