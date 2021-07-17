@@ -1,3 +1,12 @@
+## [1.4.12](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.11...v1.4.12) (2021-07-17)
+
+
+### Bug Fixes
+
+* add css to css directory ([c293f3a](https://github.com/CoCreate-app/CoCreateCSS/commit/c293f3acd8398f238b42f9f8c924a6a665eef214))
+* init and update demos scripts ([a09610b](https://github.com/CoCreate-app/CoCreateCSS/commit/a09610b3304b1b30690b63f424460a51bfb84e51))
+* workflows ([72cd87c](https://github.com/CoCreate-app/CoCreateCSS/commit/72cd87c47163d01733217fe0f7d4d841acdb2f14))
+
 ## [1.4.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.10...v1.4.11) (2021-07-14)
 
 
