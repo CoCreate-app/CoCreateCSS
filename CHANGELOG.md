@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.12...v1.5.0) (2021-07-28)
+
+
+### Features
+
+* add new is{attribute} system and remove data- from attributtes ([007f151](https://github.com/CoCreate-app/CoCreateCSS/commit/007f151f9d134c6678c685a3d198f1eaca4cba0c))
+
 ## [1.4.12](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.11...v1.4.12) (2021-07-17)
 
 
