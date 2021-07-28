@@ -10,13 +10,13 @@ import crdt from '@cocreate/crdt'
 window.addEventListener('load', async() => {
 
 
-	let links = document.querySelectorAll('[data-save=true][data-collection][data-document_id][name]');
+	let links = document.querySelectorAll('[data-save=true][collection][document_id][name]');
 
 	for (let link of links) {
 
-		const collection = link.getAttribute('data-collection');
+		const collection = link.getAttribute('collection');
 		let name = link.getAttribute('name');
-		const document_id = link.getAttribute('data-document_id');
+		const document_id = link.getAttribute('document_id');
 
 		if (!(collection && name && document_id))
 			return;
