@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.0...v1.5.1) (2021-07-28)
+
+
+### Bug Fixes
+
+* remove data- from fetch, pass and filter ([1986f11](https://github.com/CoCreate-app/CoCreateCSS/commit/1986f11f8c4f6ef0b3c2611dec5c3f69b7387be0))
+
 # [1.5.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.4.12...v1.5.0) (2021-07-28)
 
 
