@@ -1,18 +1,18 @@
 <form id="domEditorPanel" collection="builder" document_id="null" autocomplete="off">
             <div class="">
                 <div class="display:flex tabs">
-                    <div class="padding:10px_18px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#styles" data-selected_group="editor-panels" selected=""><i class="fas fa-paint-brush"></i></div>
-                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#database" data-selected_group="editor-panels"><i class="fas fa-database"></i></div>
-                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#logic" data-selected_group="editor-panels"><i class="fas fa-brain"></i></div>
-                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#broadcast" data-selected_group="editor-panels"><i class="fas fa-plug"></i></div>
-                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#settings" data-selected_group="editor-panels"><i class="fas fa-cog"></i></div>
+                    <div class="padding:10px_18px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#styles" selected-group="editor-panels" selected=""><i class="fas fa-paint-brush"></i></div>
+                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#database" selected-group="editor-panels"><i class="fas fa-database"></i></div>
+                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#logic" selected-group="editor-panels"><i class="fas fa-brain"></i></div>
+                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#broadcast" selected-group="editor-panels"><i class="fas fa-plug"></i></div>
+                    <div class="padding:10px_20px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#settings" selected-group="editor-panels"><i class="fas fa-cog"></i></div>
                 </div>
                 <div class="overflow:auto height:90vh">
                     <div class="background:silver">
                      <!--Styles -->
                     <div id="styles" class="editor-panel display:none active">
                          <!--Layout -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".sizing" data-hide=".sizing">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".sizing" hide=".sizing">
                             <span class="sizing hidden"><i class="fas fa-plus"></i></span>
                             <span class="sizing"><i class="fas fa-minus"></i></span>
                             <span>Layout</span>
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                          <!--Spacing -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".spacing" data-hide=".spacing">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".spacing" hide=".spacing">
                             <span class="spacing hidden"><i class="fas fa-plus"></i></span>
                             <span class="spacing"><i class="fas fa-minus"></i></span>
                             <span>Spacing</span>
@@ -178,7 +178,7 @@
                             </div>
                         </div>
                          <!--Size -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".sizeing" data-hide=".sizeing">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".sizeing" hide=".sizeing">
                             <span class="sizeing hidden"><i class="fas fa-plus"></i></span>
                             <span class="sizeing"><i class="fas fa-minus"></i></span>
                             <span>Size</span>
@@ -258,7 +258,7 @@
                             </div>
                         </div>
                          <!--Position -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".position" data-hide=".position">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".position" hide=".position">
                             <span class="position hidden"><i class="fas fa-plus"></i></span>
                             <span class="position"><i class="fas fa-minus"></i></span>
                             <span>Position</span>
@@ -314,7 +314,7 @@
                             </div>
                         </div>
                          <!--typography -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".typography" data-hide=".typography">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".typography" hide=".typography">
                             <span class="typography hidden"><i class="fas fa-plus"></i></span>
                             <span class="typography"><i class="fas fa-minus"></i></span>
                             <span>Typography</span>
@@ -408,7 +408,7 @@
                             </div>
                         </div>
                          <!--Border -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".border" data-hide=".border">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".border" hide=".border">
                             <span class="border hidden"><i class="fas fa-plus"></i></span>
                             <span class="border"><i class="fas fa-minus"></i></span>
                             <span>Border</span>
@@ -460,7 +460,7 @@
                             </div>
                         </div>
                          <!--Shadow -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".shadow" data-hide=".shadow">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".shadow" hide=".shadow">
                             <span class="shadow hidden"><i class="fas fa-plus"></i></span>
                             <span class="shadow"><i class="fas fa-minus"></i></span>
                             <span>Shadow</span>
@@ -523,7 +523,7 @@
                         </div>    
                              <!--Text Shadow -->
                          <!--Background-->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".backgroundset" data-hide=".backgroundset">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".backgroundset" hide=".backgroundset">
                             <span class="backgroundset hidden"><i class="fas fa-plus"></i></span>
                             <span class="backgroundset"><i class="fas fa-minus"></i></span>
                             <span>Background</span>
@@ -577,7 +577,7 @@
                             </cocreate-select></div>
                         </div>
                          <!--Extra -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".extra" data-hide=".extra">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".extra" hide=".extra">
                             <span class="extra hidden"><i class="fas fa-plus"></i></span>
                             <span class="extra"><i class="fas fa-minus"></i></span>
                             <span>Extra</span>
@@ -716,7 +716,7 @@
                     </div>
                     <!--data Base  -->
                     <div id="database" class="editor-panel display:none">
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".database" data-hide=".database">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".database" hide=".database">
                             <span class="database hidden"><i class="fas fa-plus"></i></span>
                             <span class="database"><i class="fas fa-minus"></i></span>
                             <span>Database</span>
@@ -800,7 +800,7 @@
                                 </cocreate-select></div>
                             </div>
                         </div>
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".fetchlist" data-hide=".fetchlist">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".fetchlist" hide=".fetchlist">
                             <span class="fetchlist hidden"><i class="fas fa-plus"></i></span>
                             <span class="fetchlist"><i class="fas fa-minus"></i></span>
                             <span>Fetch List</span>
@@ -828,7 +828,7 @@
                     </div>
                      <!--Logic -->
                     <div id="logic" class="editor-panel display:none">
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".logic" data-hide=".logic">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".logic" hide=".logic">
                             <span class="logic hidden"><i class="fas fa-plus"></i></span>
                             <span class="logic"><i class="fas fa-minus"></i></span>
                             <span>Logic</span>
@@ -886,70 +886,70 @@
                             </cocreate-select></div>
                             <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">pass-value_to</label></div><div class="floating-label_trailing"></div></div><input data-attributes="pass-value_to" type="text" class="floating-label text_color" placeholder="" id="pass-value_to" collection="builder" document_id="null" active=""></div>
                             <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">pass-value_id</label></div><div class="floating-label_trailing"></div></div><input data-attributes="pass-value_id" type="text" class="floating-label text_color" placeholder="" id="pass-value_id" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-get_value</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-get_value" type="text" class="floating-label text_color" placeholder="" id="data-get_value" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-room</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-room" type="text" class="floating-label text_color" placeholder="" id="data-room" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-namespace</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-namespace" type="text" class="floating-label text_color" placeholder="" id="data-namespace" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">get-value</label></div><div class="floating-label_trailing"></div></div><input data-attributes="get-value" type="text" class="floating-label text_color" placeholder="" id="get-value" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">room</label></div><div class="floating-label_trailing"></div></div><input data-attributes="room" type="text" class="floating-label text_color" placeholder="" id="room" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">namespace</label></div><div class="floating-label_trailing"></div></div><input data-attributes="namespace" type="text" class="floating-label text_color" placeholder="" id="namespace" collection="builder" document_id="null" active=""></div>
                         </div>
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".datavisible" data-hide=".datavisible">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".datavisible" hide=".datavisible">
                             <span class="datavisible hidden"><i class="fas fa-plus"></i></span>
                             <span class="datavisible"><i class="fas fa-minus"></i></span>
                             <span>Conditional Logic</span>
                         </div>
                         <div class="datavisible padding-bottom:20px margin:0_5px">
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-show</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-show" type="text" class="floating-label text_color" placeholder="" id="data-show" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-hide</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-hide" type="text" class="floating-label text_color" placeholder="" id="data-hide" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">show</label></div><div class="floating-label_trailing"></div></div><input data-attributes="show" type="text" class="floating-label text_color" placeholder="" id="show" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">hide</label></div><div class="floating-label_trailing"></div></div><input data-attributes="hide" type="text" class="floating-label text_color" placeholder="" id="hide" collection="builder" document_id="null" active=""></div>
                         </div>
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".dataselected" data-hide=".dataselected">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".dataselected" hide=".dataselected">
                             <span class="dataselected hidden"><i class="fas fa-plus"></i></span>
                             <span class="dataselected"><i class="fas fa-minus"></i></span>
                             <span>Selected</span>
                         </div>
                         <div class="dataselected padding-bottom:20px margin:0_5px">
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected" type="text" class="floating-label text_color" placeholder="" id="data-selected" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected_attribute</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected_attribute" type="text" class="floating-label text_color" placeholder="" id="data-selected_attribute" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected_target</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected_target" type="text" class="floating-label text_color" placeholder="" id="data-selected_target" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected_closest</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected_closest" type="text" class="floating-label text_color" placeholder="" id="data-selected_closest" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-selected_group</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-selected_group" type="text" class="floating-label text_color" placeholder="" id="data-selected_group" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">selected-value</label></div><div class="floating-label_trailing"></div></div><input data-attributes="selected-value" type="text" class="floating-label text_color" placeholder="" id="selected-value" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">selected-attribute</label></div><div class="floating-label_trailing"></div></div><input data-attributes="selected-attribute" type="text" class="floating-label text_color" placeholder="" id="selected-attribute" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">selected-target</label></div><div class="floating-label_trailing"></div></div><input data-attributes="selected-target" type="text" class="floating-label text_color" placeholder="" id="selected-target" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">selected-closest</label></div><div class="floating-label_trailing"></div></div><input data-attributes="selected-closest" type="text" class="floating-label text_color" placeholder="" id="selected-closest" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">selected-group</label></div><div class="floating-label_trailing"></div></div><input data-attributes="selected-group" type="text" class="floating-label text_color" placeholder="" id="selected-group" collection="builder" document_id="null" active=""></div>
                         </div>
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".toggleattr" data-hide=".toggleattr">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".toggleattr" hide=".toggleattr">
                             <span class="toggleattr hidden"><i class="fas fa-plus"></i></span>
                             <span class="toggleattr"><i class="fas fa-minus"></i></span>
                             <span>Toggle</span>
                         </div>
                         <div class="toggleattr padding-bottom:20px margin:0_5px">
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-toggle</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-toggle" type="text" class="floating-label text_color" placeholder="" id="data-toggle" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-toggle_attribute</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-toggle_attribute" type="text" class="floating-label text_color" placeholder="" id="data-toggle_attribute" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-toggle_target</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-toggle_target" type="text" class="floating-label text_color" placeholder="" id="data-toggle_target" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-toggle_closest</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-toggle_closest" type="text" class="floating-label text_color" placeholder="" id="data-toggle_closest" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">toggle</label></div><div class="floating-label_trailing"></div></div><input data-attributes="toggle" type="text" class="floating-label text_color" placeholder="" id="toggle" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">toggle-attribute</label></div><div class="floating-label_trailing"></div></div><input data-attributes="toggle-attribute" type="text" class="floating-label text_color" placeholder="" id="toggle-attribute" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">toggle-target</label></div><div class="floating-label_trailing"></div></div><input data-attributes="toggle-target" type="text" class="floating-label text_color" placeholder="" id="toggle-target" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">toggle-closest</label></div><div class="floating-label_trailing"></div></div><input data-attributes="toggle-closest" type="text" class="floating-label text_color" placeholder="" id="toggle-closest" collection="builder" document_id="null" active=""></div>
                         </div>
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".hoverattr" data-hide=".hoverattr">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".hoverattr" hide=".hoverattr">
                             <span class="hoverattr hidden"><i class="fas fa-plus"></i></span>
                             <span class="hoverattr"><i class="fas fa-minus"></i></span>
                             <span>Hover</span>
                         </div>
                         <div class="hoverattr padding-bottom:20px margin:0_5px">
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label"></label></div><div class="floating-label_trailing"></div></div><input type="text" class="floating-label text_color" data-attributes="data-hover" id="data-hover" collection="builder" document_id="null" active="" placeholder=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-hover_attribute</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-hover_attribute" class="floating-label text_color" placeholder="" id="data-hover_attribute" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-hover_target</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-hover_target" class="floating-label text_color" placeholder="" id="data-hover_target" collection="builder" document_id="null" active=""></div>
-                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-hover_closest</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-hover_closest" class="floating-label text_color" placeholder="" id="data-hover_closest" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label"></label></div><div class="floating-label_trailing"></div></div><input type="text" class="floating-label text_color" data-attributes="hover" id="hover" collection="builder" document_id="null" active="" placeholder=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">hover-attribute</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="hover-attribute" class="floating-label text_color" placeholder="" id="hover-attribute" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">hover-target</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="hover-target" class="floating-label text_color" placeholder="" id="hover-target" collection="builder" document_id="null" active=""></div>
+                            <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">hover-closest</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="hover-closest" class="floating-label text_color" placeholder="" id="hover-closest" collection="builder" document_id="null" active=""></div>
                         </div>
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".scroll" data-hide=".scroll">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".scroll" hide=".scroll">
                             <span class="scroll hidden"><i class="fas fa-plus"></i></span>
                             <span class="scroll"><i class="fas fa-minus"></i></span>
                             <span>Scroll</span>
                         </div>
                         <div class="scroll padding-bottom:20px">
                             <div class="margin:0_5px">
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll" class="floating-label text_color" placeholder="" id="data-scroll" collection="builder" document_id="null" active=""></div>
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_attribute</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_attribute" class="floating-label text_color" placeholder="" id="data-scroll_attribute" collection="builder" document_id="null" active=""></div>
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_target</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_target" class="floating-label text_color" placeholder="" id="data-scroll_target" collection="builder" document_id="null" active=""></div>
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_closest</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_closest" class="floating-label text_color" placeholder="" id="data-scroll_closest" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="scroll" class="floating-label text_color" placeholder="" id="scroll" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-attribute</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="scroll-attribute" class="floating-label text_color" placeholder="" id="scroll-attribute" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-target</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="scroll-target" class="floating-label text_color" placeholder="" id="scroll-target" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-closest</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="scroll-closest" class="floating-label text_color" placeholder="" id="scroll-closest" collection="builder" document_id="null" active=""></div>
                             </div>
                             <div class="display:flex height:50px">
                                 <div class="width:50% margin:0_5px">
-                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_up</label></div><div class="floating-label_trailing"></div></div><input id="data-scroll_up" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="data-scroll_up" collection="builder" document_id="null" active=""></div>
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-up</label></div><div class="floating-label_trailing"></div></div><input id="scroll-up" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="scroll-up" collection="builder" document_id="null" active=""></div>
                                     <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
-                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_up">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#scroll-up">
 
                                             <ul class="options overflow:auto options z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units29">
                                                 <li class="template option" template_id="units29" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
@@ -958,9 +958,9 @@
                                     </div>
                                 </div>
                                 <div class="width:50% margin:0_5px">
-                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_down:</label></div><div class="floating-label_trailing"></div></div><input id="data-scroll_down" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="data-scroll_down" collection="builder" document_id="null" active=""></div>
+                                    <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-down:</label></div><div class="floating-label_trailing"></div></div><input id="scroll-down" class="floating-label z-index:0 text_color" placeholder="" data-attributes="classstyle" data-attributes_property="scroll-down" collection="builder" document_id="null" active=""></div>
                                     <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
-                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_down">
+                                        <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#scroll-down">
 
                                             <ul class="options overflow:auto options z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units30">
                                                 <li class="template option" template_id="units30" value="{{units.--}}"><span value="{{units.--}}">Unit Name</span></li>
@@ -970,9 +970,9 @@
                                 </div>
                             </div>
                             <div class="margin:0_5px">
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_position:</label></div><div class="floating-label_trailing"></div></div><input id="data-scroll_position" data-attributes="data-scroll_position" class="floating-label z-index:0 text_color" placeholder="" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-position:</label></div><div class="floating-label_trailing"></div></div><input id="scroll-position" data-attributes="scroll-position" class="floating-label z-index:0 text_color" placeholder="" collection="builder" document_id="null" active=""></div>
                                 <div class="position:relative width:40px top:-28px right:8px float:right cursor:pointer">
-                                    <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_position">
+                                    <cocreate-select class="styleunit remove-none border:none padding:0 min-height:auto!important" data-attributes="data-attributes_unit" data-attributes_target="#scroll-position">
                                         
                                         <ul class="options z-index:7">
                                             <li class="option" value="px"><span class="margin:auto">px</span></li>
@@ -982,14 +982,14 @@
                                 </div>
                             </div>
                             <div class="margin:0_5px">
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_top</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_top" class="floating-label text_color" placeholder="" id="data-scroll_top" collection="builder" document_id="null" active=""></div>
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_bottom</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_bottom" class="floating-label text_color" placeholder="" id="data-scroll_bottomn" collection="builder" document_id="null" active=""></div>
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scrolling</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scrolling" class="floating-label text_color" placeholder="" id="data-scrolling" collection="builder" document_id="null" active=""></div>
-                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-scroll_intersect</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="data-scroll_intersect" class="floating-label text_color" placeholder="" id="data-scroll_intersect" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-top</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="scroll-top" class="floating-label text_color" placeholder="" id="scroll-top" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-bottom</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="scroll-bottom" class="floating-label text_color" placeholder="" id="scroll-bottomn" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scrolling</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="scrolling" class="floating-label text_color" placeholder="" id="scrolling" collection="builder" document_id="null" active=""></div>
+                                <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">scroll-intersect</label></div><div class="floating-label_trailing"></div></div><input type="text" data-attributes="scroll-intersect" class="floating-label text_color" placeholder="" id="scroll-intersect" collection="builder" document_id="null" active=""></div>
                             </div>
                         </div>
                          <!--Clone -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".clone" data-hide=".clone">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".clone" hide=".clone">
                             <span class="clone hidden"><i class="fas fa-plus"></i></span>
                             <span class="clone"><i class="fas fa-minus"></i></span>
                             <span>Clone</span>
@@ -998,7 +998,7 @@
                             <div class="floating-label_field active"><div class="floating-label_outline"><div class="floating-label_leading"></div><div class="floating-label_notch"><label class="floating-label_label">data-clone_id</label></div><div class="floating-label_trailing"></div></div><input data-attributes="data-clone_id" type="text" class="floating-label text_color" placeholder="" id="data-clone_id" collection="builder" document_id="null" active=""></div>
                         </div>
                           <!--Calculations -->
-                         <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".calculator" data-hide=".calculator">
+                         <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".calculator" hide=".calculator">
                             <span class="calculator hidden"><i class="fas fa-plus"></i></span>
                             <span class="calculator"><i class="fas fa-minus"></i></span>
                             <span>Calculations</span>

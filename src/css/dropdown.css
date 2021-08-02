@@ -6,7 +6,7 @@
 .dropdown a {
   text-decoration: none;
 }
-.dropdown [data-toggle="dropdown"] {
+.dropdown [toggle="dropdown"] {
   display: block;
   color: white;
   background: #C0392B;
@@ -16,10 +16,10 @@
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   padding: 10px;
 }
-.dropdown [data-toggle="dropdown"]:hover {
+.dropdown [toggle="dropdown"]:hover {
   background: #cd3d2e;
 }
-.dropdown [data-toggle="dropdown"]:before {
+.dropdown [toggle="dropdown"]:before {
   position: absolute;
   display: block;
   content: '\25BC';
@@ -100,7 +100,7 @@
   -webkit-transition: max-height 2s ease-in-out;
   transition: max-height 2s ease-in-out;
 }
-.dropdown > input[type="checkbox"]:checked + a[data-toggle="dropdown"]:before {
+.dropdown > input[type="checkbox"]:checked + a[toggle="dropdown"]:before {
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);

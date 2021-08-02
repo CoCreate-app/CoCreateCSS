@@ -76,17 +76,17 @@ footer:before{
 /*===============================
    toggle order icons transform filter.js
 =================================*/
-      a[data-toggle_order]:before {
+      a[toggle-order]:before {
         font-family: 'Font Awesome 5 Free';
         content: "\f0dc";
         font-weight: 900;
       }
-      a[data-toggle_order=asc]:before {
+      a[toggle-order=asc]:before {
         font-family: 'Font Awesome 5 Free';
         content: "\f0de";
         font-weight: 900;
       }
-      a[data-toggle_order=desc]:before {
+      a[toggle-order=desc]:before {
         font-family: 'Font Awesome 5 Free';
         content: "\f0dd";
         font-weight: 900;   
