@@ -38,7 +38,7 @@ window.addEventListener('load', async() => {
 			}
 			else {*/
 			if (styleList.length) {
-				console.log('saveCss', styleList.join('\r\n'));
+				// console.log('saveCss', styleList.join('\r\n'));
 				crud.updateDocument({
 					collection,
 					document_id,
