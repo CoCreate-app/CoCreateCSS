@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.2...v1.5.3) (2021-08-10)
+
+
+### Bug Fixes
+
+* save.js ([92c6176](https://github.com/CoCreate-app/CoCreateCSS/commit/92c6176e5ddde0004d89fb3ad687a604a1917f5d))
+
 ## [1.5.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.1...v1.5.2) (2021-08-02)
 
 
