@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.3...v1.5.4) (2021-08-12)
+
+
+### Bug Fixes
+
+* update data-module_id to document_id ([951d0b1](https://github.com/CoCreate-app/CoCreateCSS/commit/951d0b1fa252b3d2975abfb557fa8b8a8265a066))
+
 ## [1.5.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.2...v1.5.3) (2021-08-10)
 
 
