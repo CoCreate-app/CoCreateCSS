@@ -1,3 +1,12 @@
+## [1.5.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.4...v1.5.5) (2021-08-14)
+
+
+### Bug Fixes
+
+* remove data- from serch attributes ([2df8a08](https://github.com/CoCreate-app/CoCreateCSS/commit/2df8a081d2badb8c8af16d023de3c62f215442c7))
+* replace data-transform with toggle ([67897cf](https://github.com/CoCreate-app/CoCreateCSS/commit/67897cfcf295812b7a69a670306e7c5eb0368821))
+* update to  docs ([c2cede6](https://github.com/CoCreate-app/CoCreateCSS/commit/c2cede690fe9bc484d08b1c0b0e2c0f030fe419d))
+
 ## [1.5.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.3...v1.5.4) (2021-08-12)
 
 
