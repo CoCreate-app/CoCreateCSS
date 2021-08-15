@@ -16,12 +16,10 @@ import './css/overlay-content.css'
 import './css/progressbar.css'
 import './css/scroll.css'
 
-let console = logger('off');
-// const consoleMessage = logger(off)
-// const consoleMessage = CoCreate.utils.logger(off)
+let console = logger('all');
 
-const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
 const themes = ["light", "dark"];
+const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
 const ranges = {
     xs: [0, 575],
     sm: [576, 768],
@@ -52,181 +50,72 @@ const on = (event, callback) => {
         callback(parsedCSS);
     eventCallback[event] = callback
 }
+let hasChange = false;
 
-const observerInit = () => {
+function init() {
+    if (document.querySelector('link[data-parse="false"]') || document.querySelector('link[onload="false"]'))
+        return;
     styleEl.setAttribute('component', 'CoCreateCss')
     document.head.appendChild(styleEl);
     styleElSheet = styleEl.sheet;
-    observer.init({
-        name: "ccCss",
-        observe: ['childList'],
-        target: '[class]',
-        callback: mutation => {
-            if (!mutation.addedNodes.length)
-                return;
-            mutation.addedNodes.push(mutation.target);
-            let el = mutation.target;
-            if (el.hasAttribute('classname')) {
-                let temp = []
-                temp = parsedCSS.filter(v => !(v.includes(`.${el.getAttribute('classname')}`)))
-                parsedCSS = temp;
-            }
 
-            let hasChange = false;
-            mutation.addedNodes.forEach((el) => {
-                parseCSSForClassNames([el]);
-                if (checkDataParseStatus(el))
-                    hasChange = addParsingClassList(el.classList) || hasChange;
-            });
+    // 3 lines events system
+    if (eventCallback.parse)
+        eventCallback.parse()
+    details.parse = true;
 
-            addNewRules()
-
-            if (hasChange) {
-                console.log('parsedCSS', parsedCSS)
-                console.log('cssString', parsedCSS.join('\r\n'))
-                window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
-                    detail: {
-                        isOnload: false,
-                        styleList: concatCSS.join('\r\n')
-                    },
-                }));
-            }
-        }
-    })
-    observer.init({
-        name: "ccCss",
-        observe: ["attributes"],
-        attributeName: ["class"],
-        callback: mutation => {
-            let el = mutation.target;
-
-            if (el.hasAttribute('classname')) {
-                let temp = []
-                temp = parsedCSS.filter(v => !(v.includes(`.${el.getAttribute('classname')}`)))
-                parsedCSS = temp;
-            }
-
-
-
-            parseCSSForClassNames([el]);
-
-            let hasChange = false;
-            if (checkDataParseStatus(el))
-                hasChange = addParsingClassList(el.classList);
-
-
-            addNewRules()
-
-            if (hasChange) {
-                console.log('parsedCSS', parsedCSS)
-                window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
-                    detail: {
-                        isOnload: false,
-                        styleList: concatCSS.join('\r\n')
-                    },
-                }));
-            }
-
-        }
-    })
-
-
-
-}
-
-const checkDataParseStatus = (ele) => {
-    if (!ele.hasAttribute("data-parse"))
-        return true;
-    else {
-        return (ele.getAttribute("data-parse") === "true") ? true : false;
-    }
-}
-
-const getParsedCss = () => {
-    let hasChange = false;
-    let elements = document.querySelectorAll("[class]");
-
-    for (let element of elements) {
-        if (checkDataParseStatus(element)) {
-            hasChange = addParsingClassList(element.classList) || hasChange;
-        }
-    }
-
+    classQuery(document)
     parseCSSForTheme();
+    classNameQuery(document);
 
-    elements = document.querySelectorAll("[className]");
-    parseCSSForClassNames(elements);
+    parseStyleSheets();
 
-    // elements = document.querySelectorAll("[theme]");
-    // for (let element of elements) {
-    //     addThemeClassList(element)
-    // }
-    parsedCSS = tempStyleList;
-    tempStyleList = [];
-    return hasChange;
+    if (document.querySelector('link[data-save="true"]'))
+        saveCss(hasChange);
+        
+    observerInit();
 }
 
-const getRulesFromCss = (ele) => {
-    return "." + ele.getAttribute("className") + " { " + ele.getAttribute("class").replace(/ /g, "; ").replace(/:/g, ": ") + "; }";
+function initElement(element) {
+    classElement(element)
+    parseCSSForTheme();
+    classNameElement(element);
 }
 
-const parseCSSForClassNames = (elements) => {
-    for (let ele of elements) {
-        if (ele.hasAttribute("class")) {
-            let rule = getRulesFromCss(ele);
-            tempStyleList.push(rule);
-        }
-    }
+function classQuery (container) {
+    let elements = container.querySelectorAll("[class]");
+    classElements(elements)
+}
+function classElements (elements) {
+    for (let element of elements)
+        classElement (element)    
+}
+function classElement (element) {
+    parseClassList(element.classList)
 }
 
-const getAllChildElements = (element) => {
-
-    if (element.hasChildNodes()) {
-        let children = element.childNodes;
-
-        for (let i = 0; i < children.length; i++) {
-            if (children[i].nodeName != '#text') {
-                if (children[i].hasAttribute('class'))
-                    classList.push(children[i].className);
-                getAllChildElements(children[i]);
-            }
-        }
-    }
+function classNameQuery (container) {
+    let elements = document.querySelectorAll("[className]");
+    classNameElements(elements)
 }
-
-const makeParsingListForTheme = (classLists) => {
-    for (let classname of classLists) {
-        makeRuleForTheme(classname);
-    }
+function classNameElements (elements) {
+    for (let element of elements)
+        classNameElement (element)    
 }
-
-const makeRuleForTheme = (className) => {
-    let style, value, theme;
-    [style, value, theme] = className.split(':');
-    if (theme == 'dark' || theme == 'light') {
-        let rule = `[theme="${theme}"] .${style}\\:${value}\\:${theme}{${style}:${value};}`;
-        let reverseRule = `html:not([theme="${themes[1 - themes.indexOf(theme)]}"]) *.${style}\\:${value}\\:${theme}{${style}:${value};}`;
+function classNameElement (element) {
+    if (element.hasAttribute("class")) {
+        let rule = "." + element.getAttribute("className") + " { " + element.getAttribute("class").replace(/ /g, "; ").replace(/:/g, ": ") + "; }";
         tempStyleList.push(rule);
-        themeCSS[theme].push(reverseRule);
-        return rule;
     }
 }
 
-const addThemeClassList = (element) => {
-    classList = [];
-    getAllChildElements(element);
-    makeParsingListForTheme(classList);
-}
-
-const getWholeCss = () => {
+const parseStyleSheets = () => {
     let stylesheetCSS = [];
     let hasChange = true;
     let styleIndex = -1;
     let getValidLinkTag = false;
 
     try {
-        // let stylesheets = document.querySelectorAll("link[type='text/css']");
-
         for (let stylesheet of document.styleSheets) {
             styleIndex++;
             if (stylesheet.ownerNode.hasAttribute('data-save')) {
@@ -304,53 +193,20 @@ const saveCss = (hasChange) => {
     }
 }
 
-async function init() {
-
-    observerInit();
-
-    if (document.querySelector('link[data-parse="false"]') || document.querySelector('link[onload="false"]'))
-        return;
-
-    let hasChange = false;
-
-    hasChange = getParsedCss();
-    hasChange = getWholeCss();
-
-    if (document.querySelector('link[data-save="true"]'))
-        saveCss(hasChange);
-
-    // 3 lines events system
-    if (eventCallback.parse)
-        eventCallback.parse()
-    details.parse = true;
-}
-
-const addNewRules = () => {
-
-    for (let i = 0, len = tempStyleList.length; i < len; i++) {
-        let rule = tempStyleList[i];
-
-        let low = 0,
-            high = parsedCSS.length;
-        while (low < high) {
-            let index = (low + high) >>> 1;
-            let midItem = parsedCSS[index];
-            if (rule < midItem)
-                high = index;
-            else
-                low = index + 1;
-
-        }
-
-        if (low > styleElSheet.cssRules.length) low = styleElSheet.cssRules.length;
-        styleElSheet.insertRule(rule, low);
-        parsedCSS.splice(low, 0, rule);
+function save(hasChange) {
+    if (hasChange) {
+    	let link = document.querySelector('[data-save=true][collection][document_id][name]')
+    	if (link) { 
+        	var data = [{
+        		element: link,
+        		value: concatCSS.join('\r\n'),
+        	}];
+        	CoCreate.crud.save(data)
+    	}
     }
-
-    tempStyleList = []
 }
 
-const addParsingClassList = (classList) => {
+function parseClassList(classList) {
     let re = /.+:.+/;
     let re_theme = /.+:.+:.+/;
     let hasChanged = false;
@@ -363,7 +219,7 @@ const addParsingClassList = (classList) => {
                 let re_at = /.+@.+/;
                 if (re_at.exec(classname)) {
                     let parts = classname.split("@");
-                    let main_rule = parseClass(classname);
+                    let main_rule = createRule(classname);
 
                     for (let i = 1; i < parts.length; i++) {
                         let range_num = mediaRangeNames.indexOf(parts[i]);
@@ -388,17 +244,81 @@ const addParsingClassList = (classList) => {
                     }
                 }
                 else {
-                    let rule = parseClass(classname);
+                    let rule = createRule(classname);
                     tempStyleList.push(rule)
                     selectorList.set(classname, true);
                     hasChanged = true;
-
+                    addNewRule();
                 }
             }
         }
     }
 
     return hasChanged;
+}
+
+const addNewRule = () => {
+
+    for (let i = 0, len = tempStyleList.length; i < len; i++) {
+        let rule = tempStyleList[i];
+
+        let low = 0,
+            high = parsedCSS.length;
+        while (low < high) {
+            let index = (low + high) >>> 1;
+            let midItem = parsedCSS[index];
+            if (rule < midItem)
+                high = index;
+            else
+                low = index + 1;
+
+        }
+
+        if (low > styleElSheet.cssRules.length) low = styleElSheet.cssRules.length;
+        styleElSheet.insertRule(rule, low);
+        parsedCSS.splice(low, 0, rule);
+    }
+
+    tempStyleList = []
+}
+
+const getAllChildElements = (element) => {
+
+    if (element.hasChildNodes()) {
+        let children = element.childNodes;
+
+        for (let i = 0; i < children.length; i++) {
+            if (children[i].nodeName != '#text') {
+                if (children[i].hasAttribute('class'))
+                    classList.push(children[i].className);
+                getAllChildElements(children[i]);
+            }
+        }
+    }
+}
+
+const makeParsingListForTheme = (classLists) => {
+    for (let classname of classLists) {
+        makeRuleForTheme(classname);
+    }
+}
+
+const makeRuleForTheme = (className) => {
+    let style, value, theme;
+    [style, value, theme] = className.split(':');
+    if (theme == 'dark' || theme == 'light') {
+        let rule = `[theme="${theme}"] .${style}\\:${value}\\:${theme}{${style}:${value};}`;
+        let reverseRule = `html:not([theme="${themes[1 - themes.indexOf(theme)]}"]) *.${style}\\:${value}\\:${theme}{${style}:${value};}`;
+        tempStyleList.push(rule);
+        themeCSS[theme].push(reverseRule);
+        return rule;
+    }
+}
+
+const addThemeClassList = (element) => {
+    classList = [];
+    getAllChildElements(element);
+    makeParsingListForTheme(classList);
 }
 
 const parseCSSForTheme = () => {
@@ -424,7 +344,7 @@ const parseCSSForTheme = () => {
 
 }
 
-const parseClass = (classname) => {
+const createRule = (classname) => {
     let res = classname.split(":");
     let rule = "";
     let suffix = res[1]
@@ -460,6 +380,38 @@ const parseClass = (classname) => {
     return rule;
 }
 
+
+
+const observerInit = () => {
+    observer.init({
+        name: "ccCss",
+        observe: ['childList'],
+        target: '[class]',
+        callback: mutation => {
+            initElement(mutation.target);
+        }
+    })
+    observer.init({
+        name: "ccCss",
+        observe: ["attributes"],
+        attributeName: ["class"],
+        callback: mutation => {
+            classElement(mutation.target)            
+        }
+    })
+    observer.init({
+        name: "ccCss",
+        observe: ["attributes"],
+        attributeName: ["className"],
+        callback: mutation => {
+            classNameElement(mutation.target)            
+        }
+    })
+
+}
+
+init();
+
 export default {
     on,
     get parsedCSS() {
@@ -470,7 +422,3 @@ export default {
         parsedCSS.sort();
     }
 }
-
-init();
-
-// window.addEventListener("load", init);
