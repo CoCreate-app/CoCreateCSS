@@ -45,7 +45,7 @@ window.addEventListener('load', async() => {
 					upsert: true,
 					// broadcast_sender,
 					data: {
-						[name]: styleList.join('\r\n')
+						[name]: styleList
 					},
 				});
 			}
