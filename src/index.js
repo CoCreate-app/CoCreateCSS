@@ -30,7 +30,6 @@ const ranges = {
 };
 const rangesArray = Object.values(ranges);
 
-let styleEl = document.createElement("style");
 let selectorList = new Map();
 
 let parsedCSS = [];
@@ -41,75 +40,119 @@ let classList = [];
 
 let newCSS = [];
 let themeCSS = { dark: [], light: [] };
-// event system
-let eventCallback = {};
-let details = {};
 
-const on = (event, callback) => {
-    if (details[event])
-        callback(parsedCSS);
-    eventCallback[event] = callback
-}
 let hasChange = false;
 
 function init() {
-    if (document.querySelector('link[data-parse="false"]') || document.querySelector('link[onload="false"]'))
+    if (document.querySelector('link[data-parse="false"]'))
         return;
+    
+    let styleEl = document.createElement("style");
     styleEl.setAttribute('component', 'CoCreateCss')
     document.head.appendChild(styleEl);
     styleElSheet = styleEl.sheet;
 
-    // 3 lines events system
-    if (eventCallback.parse)
-        eventCallback.parse()
-    details.parse = true;
-
-    classQuery(document)
-    parseCSSForTheme();
-    classNameQuery(document);
+    let elements = document.querySelectorAll("[class]");
+    initElements(elements);
 
     parseStyleSheets();
 
-    if (document.querySelector('link[data-save="true"]'))
-        saveCss(hasChange);
+    // if (document.querySelector('link[data-save="true"]'))
+    //     save(hasChange);
         
     observerInit();
 }
 
+function initElements (elements) {
+    for(let element of elements)
+        initElement(element);
+    addNewRules();
+    // save(hasChange)
+}
+
 function initElement(element) {
-    classElement(element)
-    parseCSSForTheme();
-    classNameElement(element);
-}
-
-function classQuery (container) {
-    let elements = container.querySelectorAll("[class]");
-    classElements(elements)
-}
-function classElements (elements) {
-    for (let element of elements)
-        classElement (element)    
-}
-function classElement (element) {
     parseClassList(element.classList)
-}
-
-function classNameQuery (container) {
-    let elements = document.querySelectorAll("[className]");
-    classNameElements(elements)
-}
-function classNameElements (elements) {
-    for (let element of elements)
-        classNameElement (element)    
-}
-function classNameElement (element) {
-    if (element.hasAttribute("class")) {
+    parseCSSForTheme();
+    if (element.hasAttribute("className")) {
         let rule = "." + element.getAttribute("className") + " { " + element.getAttribute("class").replace(/ /g, "; ").replace(/:/g, ": ") + "; }";
         tempStyleList.push(rule);
     }
 }
 
-const parseStyleSheets = () => {
+function parseClassList(classList) {
+    let re = /.+:.+/;
+    let re_theme = /.+:.+:.+/;
+    let hasChanged = false;
+    for (let classname of classList) {
+        if (re_theme.exec(classname)) {
+            makeRuleForTheme(classname);
+        }
+        else if (re.exec(classname)) {
+            if (!selectorList.has(classname)) {
+                let re_at = /.+@.+/;
+                if (re_at.exec(classname)) {
+                    let parts = classname.split("@");
+                    let main_rule = createRule(classname);
+
+                    for (let i = 1; i < parts.length; i++) {
+                        let range_num = mediaRangeNames.indexOf(parts[i]);
+                        let range = []
+                        if (range_num != -1) range = rangesArray[range_num];
+                        else {
+                            let customRange = parts[i].split('-');
+                            range = customRange.map(c => Number.parseInt(c))
+                        }
+                        let prefix = "@media screen";
+                        if (range[0] != 0) {
+                            prefix += " and (min-width:" + range[0] + "px)";
+                        }
+                        if (range[1] != 0) {
+                            prefix += " and (max-width:" + range[1] + "px)";
+                        }
+                        let rule = prefix + " {  " + main_rule + "}";
+                        tempStyleList.push(rule)
+                        selectorList.set(classname, true);
+                        hasChanged = true;
+
+                    }
+                }
+                else {
+                    let rule = createRule(classname);
+                    tempStyleList.push(rule)
+                    selectorList.set(classname, true);
+                    hasChanged = true;
+                }
+            }
+        }
+    }
+    return hasChanged;
+}
+
+function addNewRules() {
+    for (let i = 0, len = tempStyleList.length; i < len; i++) {
+        let rule = tempStyleList[i];
+
+        let low = 0,
+            high = parsedCSS.length;
+        while (low < high) {
+            let index = (low + high) >>> 1;
+            let midItem = parsedCSS[index];
+            if (rule < midItem)
+                high = index;
+            else
+                low = index + 1;
+
+        }
+
+        if (low > styleElSheet.cssRules.length) low = styleElSheet.cssRules.length;
+        styleElSheet.insertRule(rule, low);
+        parsedCSS.splice(low, 0, rule);
+    }
+
+    tempStyleList = []
+}
+
+function parseStyleSheets() {
     let stylesheetCSS = [];
     let hasChange = true;
     let styleIndex = -1;
@@ -156,42 +199,14 @@ const parseStyleSheets = () => {
         console.log('newCss', newCSS);
         console.log("concatCSS", concatCSS)
 
-        let temp = [];
         for (let i = 0; i < concatCSS.length; i++) {
-            if (temp.indexOf(concatCSS[i]) === -1)
-                temp.push(concatCSS[i]);
-        }
-
-        concatCSS = temp;
-
-        for (let i = 0; i < concatCSS.length; i++) {
-            if (Object.keys(stylesheetCSS).length) {
-                if (stylesheetCSS.indexOf(concatCSS[i]) === -1)
-                    styleElSheet.insertRule(concatCSS[i])
-            }
-            else
-                styleElSheet.insertRule(concatCSS[i])
+            styleElSheet.insertRule(concatCSS[i])
         }
         concatCSS.sort();
     }
     return hasChange;
 }
 
-const saveCss = (hasChange) => {
-    console.log("hasChange", hasChange)
-    if (hasChange) {
-        console.log('cssString', concatCSS.join('\r\n'))
-        window.dispatchEvent(new CustomEvent("newCoCreateCssStyles", {
-            detail: {
-                isOnload: true,
-                styleList: concatCSS.join('\r\n')
-            },
-        }));
-    }
-    else {
-        console.log('cssString after Concat', concatCSS.join('\r\n'))
-    }
-}
 
 function save(hasChange) {
     if (hasChange) {
@@ -206,102 +221,32 @@ function save(hasChange) {
     }
 }
 
-function parseClassList(classList) {
-    let re = /.+:.+/;
-    let re_theme = /.+:.+:.+/;
-    let hasChanged = false;
-    for (let classname of classList) {
-        if (re_theme.exec(classname)) {
-            makeRuleForTheme(classname);
-        }
-        else if (re.exec(classname)) {
-            if (!selectorList.has(classname)) {
-                let re_at = /.+@.+/;
-                if (re_at.exec(classname)) {
-                    let parts = classname.split("@");
-                    let main_rule = createRule(classname);
+// const addThemeClassList = (element) => {
+//     classList = [];
+//     getAllChildElements(element);
+//     makeParsingListForTheme(classList);
+// }
 
-                    for (let i = 1; i < parts.length; i++) {
-                        let range_num = mediaRangeNames.indexOf(parts[i]);
-                        let range = []
-                        if (range_num != -1) range = rangesArray[range_num];
-                        else {
-                            let customRange = parts[i].split('-');
-                            range = customRange.map(c => Number.parseInt(c))
-                        }
-                        let prefix = "@media screen";
-                        if (range[0] != 0) {
-                            prefix += " and (min-width:" + range[0] + "px)";
-                        }
-                        if (range[1] != 0) {
-                            prefix += " and (max-width:" + range[1] + "px)";
-                        }
-                        let rule = prefix + " {  " + main_rule + "}";
-                        tempStyleList.push(rule)
-                        selectorList.set(classname, true);
-                        hasChanged = true;
+// const getAllChildElements = (element) => {
 
-                    }
-                }
-                else {
-                    let rule = createRule(classname);
-                    tempStyleList.push(rule)
-                    selectorList.set(classname, true);
-                    hasChanged = true;
-                    addNewRule();
-                }
-            }
-        }
-    }
+//     if (element.hasChildNodes()) {
+//         let children = element.childNodes;
 
-    return hasChanged;
-}
+//         for (let i = 0; i < children.length; i++) {
+//             if (children[i].nodeName != '#text') {
+//                 if (children[i].hasAttribute('class'))
+//                     classList.push(children[i].className);
+//                 getAllChildElements(children[i]);
+//             }
+//         }
+//     }
+// }
 
-const addNewRule = () => {
-
-    for (let i = 0, len = tempStyleList.length; i < len; i++) {
-        let rule = tempStyleList[i];
-
-        let low = 0,
-            high = parsedCSS.length;
-        while (low < high) {
-            let index = (low + high) >>> 1;
-            let midItem = parsedCSS[index];
-            if (rule < midItem)
-                high = index;
-            else
-                low = index + 1;
-
-        }
-
-        if (low > styleElSheet.cssRules.length) low = styleElSheet.cssRules.length;
-        styleElSheet.insertRule(rule, low);
-        parsedCSS.splice(low, 0, rule);
-    }
-
-    tempStyleList = []
-}
-
-const getAllChildElements = (element) => {
-
-    if (element.hasChildNodes()) {
-        let children = element.childNodes;
-
-        for (let i = 0; i < children.length; i++) {
-            if (children[i].nodeName != '#text') {
-                if (children[i].hasAttribute('class'))
-                    classList.push(children[i].className);
-                getAllChildElements(children[i]);
-            }
-        }
-    }
-}
-
-const makeParsingListForTheme = (classLists) => {
-    for (let classname of classLists) {
-        makeRuleForTheme(classname);
-    }
-}
+// const makeParsingListForTheme = (classLists) => {
+//     for (let classname of classLists) {
+//         makeRuleForTheme(classname);
+//     }
+// }
 
 const makeRuleForTheme = (className) => {
     let style, value, theme;
@@ -315,11 +260,6 @@ const makeRuleForTheme = (className) => {
     }
 }
 
-const addThemeClassList = (element) => {
-    classList = [];
-    getAllChildElements(element);
-    makeParsingListForTheme(classList);
-}
 
 const parseCSSForTheme = () => {
     let initial;
@@ -380,45 +320,25 @@ const createRule = (classname) => {
     return rule;
 }
 
-
-
 const observerInit = () => {
     observer.init({
         name: "ccCss",
         observe: ['childList'],
         target: '[class]',
         callback: mutation => {
-            initElement(mutation.target);
+            initElements(mutation.addedNodes);
         }
     })
     observer.init({
         name: "ccCss",
         observe: ["attributes"],
-        attributeName: ["class"],
+        attributeName: ["class", "className"],
         callback: mutation => {
-            classElement(mutation.target)            
+            initElements([mutation.target])            
         }
     })
-    observer.init({
-        name: "ccCss",
-        observe: ["attributes"],
-        attributeName: ["className"],
-        callback: mutation => {
-            classNameElement(mutation.target)            
-        }
-    })
-
 }
 
 init();
 
-export default {
-    on,
-    get parsedCSS() {
-        return parsedCSS
-    },
-    set parsedCSS(value) {
-        parsedCSS = value;
-        parsedCSS.sort();
-    }
-}
+export default {initElements}
