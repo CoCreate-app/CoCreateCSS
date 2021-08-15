@@ -1,3 +1,12 @@
+## [1.5.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.5...v1.5.6) (2021-08-15)
+
+
+### Bug Fixes
+
+* add parse link classname to classNameList to avoid duplicate parsing ([6e0c263](https://github.com/CoCreate-app/CoCreateCSS/commit/6e0c263f50a52b4c1c3c979d7794ae91a7863c35))
+* refactor init ([7a53ee0](https://github.com/CoCreate-app/CoCreateCSS/commit/7a53ee02bc1ddd0f343e9e82c742c16ccb4180ad))
+* refactor light and dark mode ([a3f3c6b](https://github.com/CoCreate-app/CoCreateCSS/commit/a3f3c6b6d97bbe44f62bc89efcd756dba9a82a7f))
+
 ## [1.5.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.4...v1.5.5) (2021-08-14)
 
 
