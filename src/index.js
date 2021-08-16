@@ -1,4 +1,5 @@
 import observer from '@cocreate/observer'
+import crud from '@cocreate/crud-client'
 import './css/avatar.css'
 import './css/badge.css'
 import './css/box-shadow.css'
@@ -234,7 +235,7 @@ function save() {
 			element: linkTag,
 			value: css.join('\r\n'),
 		}];
-		CoCreate.crud.save(data)
+		crud.save(data)
 	}
 }
 
