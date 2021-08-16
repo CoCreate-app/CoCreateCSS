@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.6...v1.5.7) (2021-08-16)
+
+
+### Bug Fixes
+
+* add crud dependancies ([833534d](https://github.com/CoCreate-app/CoCreateCSS/commit/833534dca76b998a3260c320f771d419bb426b1f))
+
 ## [1.5.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.5...v1.5.6) (2021-08-15)
 
 
