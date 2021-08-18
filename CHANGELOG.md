@@ -1,3 +1,10 @@
+## [1.5.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.7...v1.5.8) (2021-08-18)
+
+
+### Bug Fixes
+
+* refactor crud.save() ([95699bb](https://github.com/CoCreate-app/CoCreateCSS/commit/95699bbf7c632c4c9814c53fa6eca415d7676e1a))
+
 ## [1.5.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.6...v1.5.7) (2021-08-16)
 
 
