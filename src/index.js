@@ -220,22 +220,18 @@ function addNewRules() {
 		parsedCSS.splice(low, 0, rule);
 	}
 	if (tempStyleList.length > 0)
-		save()
-	tempStyleList = []
+		save();
+	tempStyleList = [];
 }
 
 function save() {
 	if (linkTag) { 
         const onlyUnique = (value, index, self) => {
             return self.indexOf(value) === index;
-        }
+        };
 
 		let css = parsedCSS.concat(linkCSS).filter(onlyUnique);
-		var data = [{
-			element: linkTag,
-			value: css.join('\r\n'),
-		}];
-		crud.save(data)
+		crud.save(linkTag, css.join('\r\n'));
 	}
 }
 
