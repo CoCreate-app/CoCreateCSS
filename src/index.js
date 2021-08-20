@@ -1,19 +1,19 @@
-import observer from '@cocreate/observer'
-import crud from '@cocreate/crud-client'
-import './css/avatar.css'
-import './css/badge.css'
-import './css/box-shadow.css'
-import './css/button.css'
-import './css/card.css'
-import './css/checkbox.css'
-import './css/core.css'
-import './css/dropdown.css'
-import './css/flip-item.css'
-import './css/menu-icon.css'
-import './css/navbar.css'
-import './css/overlay-content.css'
-import './css/progressbar.css'
-import './css/scroll.css'
+import observer from '@cocreate/observer';
+import crud from '@cocreate/crud-client';
+import './css/avatar.css';
+import './css/badge.css';
+import './css/box-shadow.css';
+import './css/button.css';
+import './css/card.css';
+import './css/checkbox.css';
+import './css/core.css';
+import './css/dropdown.css';
+import './css/flip-item.css';
+import './css/menu-icon.css';
+import './css/navbar.css';
+import './css/overlay-content.css';
+import './css/progressbar.css';
+import './css/scroll.css';
 
 const themes = ["light", "dark"];
 const mediaRangeNames = ["xs", "sm", "md", "lg", "xl"];
@@ -34,14 +34,14 @@ let linkCSS = [];
 let themeCSS = { dark: [], light: [] };
 let styleElSheet;
 
-let linkTag = document.querySelector('link[collection][document_id][name]:not([save="false"])')
+let linkTag = document.querySelector('link[collection][document_id][name]:not([save="false"])');
 
 function init() {
 	if (document.querySelector('link[parse="false"]'))
 		return;
 	
 	let styleEl = document.createElement("style");
-	styleEl.setAttribute('component', 'CoCreateCss')
+	styleEl.setAttribute('component', 'CoCreateCss');
 	document.head.appendChild(styleEl);
 	styleElSheet = styleEl.sheet;
 	
@@ -60,56 +60,11 @@ function initElements (elements) {
 }
 
 function initElement(element) {
-	parseClassList(element.classList)
+	parseClassList(element.classList);
 	createThemeMedia();
 	if (element.hasAttribute("className")) {
 		let rule = "." + element.getAttribute("className") + " { " + element.getAttribute("class").replace(/ /g, "; ").replace(/:/g, ": ") + "; }";
 		tempStyleList.push(rule);
-	}
-}
-
-function parseClassList(classList) {
-	let re = /.+:.+/;
-	let re_theme = /.+:.+:.+/;
-	for (let classname of classList) {
-		if (re_theme.exec(classname)) {
-			createThemeRule(classname);
-		}
-		else if (re.exec(classname)) {
-			if (!classNameList.has(classname)) {
-				let re_at = /.+@.+/;
-				if (re_at.exec(classname)) {
-					let parts = classname.split("@");
-					let main_rule = createRule(classname);
-
-					for (let i = 1; i < parts.length; i++) {
-						let range_num = mediaRangeNames.indexOf(parts[i]);
-						let range = []
-						if (range_num != -1) range = rangesArray[range_num];
-						else {
-							let customRange = parts[i].split('-');
-							range = customRange.map(c => Number.parseInt(c))
-						}
-						let prefix = "@media screen";
-						if (range[0] != 0) {
-							prefix += " and (min-width:" + range[0] + "px)";
-						}
-						if (range[1] != 0) {
-							prefix += " and (max-width:" + range[1] + "px)";
-						}
-						let rule = prefix + " {  " + main_rule + "}";
-						tempStyleList.push(rule)
-						classNameList.set(classname, true);
-
-					}
-				}
-				else {
-					let rule = createRule(classname);
-					tempStyleList.push(rule)
-					classNameList.set(classname, true);
-				}
-			}
-		}
 	}
 }
 
@@ -125,62 +80,134 @@ function parseLinkCSS() {
 		}
 	}
 	catch (err) {
-		console.error(err)
+		console.error(err);
 	}
 }
 
-function createRule(classname) {
-	let res = classname.split(":");
+function parseClassList(classList) {
+	for (let className of classList) {
+		if (classNameList.has(className)) continue;
+	
+		if (className.includes('@dark') || className.includes('@light')) {
+			createThemeRule(className) ;
+		}
+		else if (className.includes(':')) {
+			if (className.includes('@')) {
+				createMediaRule(className);
+			}
+			else {
+				let rule = createRule(className);
+				tempStyleList.push(rule);
+				classNameList.set(className, true);
+			}
+		}
+	}
+}
+
+function createRule(className) {
+	let res = className.split(":");
+	let property = res[0];
+	let suffix = parseValue(res[1]);
+	let value = res[1].split("@")[0].replace(/_/g, " ");
+	
 	let rule = "";
-	let suffix = res[1]
-		.replace(/\./g, "\\.")
-		.replace(/%/g, "\\%")
-		.replace(/@/g, "\\@")
-		.replace(/\(/g, "\\(")
-		.replace(/\)/g, "\\)")
-		.replace(/#/g, "\\#")
-		.replace(/,/g, "\\,")
-		.replace(/!/g, "\\!")
-		.replace(/\//g, "\\/")
-		.replace(/\"/g, "\\\"")
-		.replace(/\'/g, "\\'");
-	res[1] = res[1].split("@")[0];
-	res[1] = res[1].replace(/_/g, " ");
 	if (res.length > 2) {
-		let pseudo = [];
 		for (let i = 0; i < res.length - 2; i++) {
-			suffix += "\\:" + res[2 + i];
-			pseudo.push(":" + res[2 + i]);
+			suffix += ":" + res[2 + i];
 		}
-		let clsname = "." + res[0] + "\\:" + suffix;
-		rule += clsname + pseudo[0];
-		for (let i = 1; i < pseudo.length; i++) {
-			rule += ", " + clsname + pseudo[i];
-		}
-		rule += `{${res[0]}:${res[1]}}`;
+		rule = `.${property}\\:${suffix} { ${property}: ${value}; }`;
 	}
 	else {
-		rule = `.${res[0]}\\:${suffix} { ${res[0]}: ${res[1]}; }`;
+		rule = `.${property}\\:${suffix} { ${property}: ${value}; }`;
 	}
 	return rule;
 }
 
+function parseValue(value) {
+	return value
+	.replace(/\./g, "\\.")
+	.replace(/%/g, "\\%")
+	.replace(/@/g, "\\@")
+	.replace(/\(/g, "\\(")
+	.replace(/\)/g, "\\)")
+	.replace(/#/g, "\\#")
+	.replace(/,/g, "\\,")
+	.replace(/!/g, "\\!")
+	.replace(/\//g, "\\/")
+	.replace(/\"/g, "\\\"")
+	.replace(/\'/g, "\\'");
+}
+
+function createMediaRule(className) {
+	let parts = className.split("@");
+	let main_rule = createRule(className);
+
+	for (let i = 1; i < parts.length; i++) {
+		let range_num = mediaRangeNames.indexOf(parts[i]);
+		let range = [];
+		if (range_num != -1) range = rangesArray[range_num];
+		else {
+			let customRange = parts[i].split('-');
+			range = customRange.map(c => Number.parseInt(c));
+		}
+		let prefix = "@media screen";
+		if (range[0] != 0) {
+			prefix += " and (min-width:" + range[0] + "px)";
+		}
+		if (range[1] != 0) {
+			prefix += " and (max-width:" + range[1] + "px)";
+		}
+		let rule = prefix + " {  " + main_rule + "}";
+		tempStyleList.push(rule);
+		classNameList.set(className, true);
+	}
+}
+
 function createThemeRule(className) {
-	let style, value, theme;
-	[style, value, theme] = className.split(':');
+	let classname = className;
+	let pseudo, theme;
+	[className, theme] = className.split('@');
+	
+	if (theme.includes(':')) {
+		theme = theme.split(':');
+		pseudo = theme;
+		theme = theme[0];
+		pseudo.shift();
+	}
+	
+	let res = className.split(':');
+	if (res.length > 2) {
+		console.log('pseudo names need to be added after theme');
+		return;
+	}
+	let property = res[0];
+	let suffix = parseValue(res[1]);
+	let value = res[1].replace(/_/g, " ");
+	
+	let rule = "";
+	if (pseudo) {
+		suffix += "\\@" + theme;
+		for (let i = 0; i < pseudo.length; i++) {
+			suffix += ":" + pseudo[0 + i];
+		}
+		rule = `.${property}\\:${suffix} { ${property}: ${value}; }`;
+	}
+	else {
+		rule = `.${property}\\:${suffix}\\@${theme} { ${property}: ${value}; }`;
+	}
 	if (theme == 'dark' || theme == 'light') {
-		let rule = `[theme="${theme}"] .${style}\\:${value}\\:${theme}{${style}:${value};}`;
-		let reverseRule = `html:not([theme="${themes[1 - themes.indexOf(theme)]}"]) *.${style}\\:${value}\\:${theme}{${style}:${value};}`;
+		rule = `[theme="${theme}"] ${rule}`;
+		let reverseRule = `html:not([theme="${themes[1 - themes.indexOf(theme)]}"]) ${rule}`;
 		tempStyleList.push(rule);
 		themeCSS[theme].push(reverseRule);
-		return rule;
+		classNameList.set(classname, true);
 	}
 }
 
 function createThemeMedia() {
 	let initial;
 	if (themeCSS.dark.length) {
-		initial = "@media (prefers-color-scheme: dark) {"
+		initial = "@media (prefers-color-scheme: dark) {";
 		for (let c of themeCSS.dark) {
 			initial += c + "\n";
 		}
@@ -189,7 +216,7 @@ function createThemeMedia() {
 		themeCSS.dark = [];
 	}
 	if (themeCSS.light.length) {
-		initial = "@media (prefers-color-scheme: light) {"
+		initial = "@media (prefers-color-scheme: light) {";
 		for (let c of themeCSS.light) {
 			initial += c + "\n";
 		}
@@ -216,7 +243,12 @@ function addNewRules() {
 		}
 
 		if (low > styleElSheet.cssRules.length) low = styleElSheet.cssRules.length;
-		styleElSheet.insertRule(rule, low);
+		try {
+			styleElSheet.insertRule(rule, low);
+		}
+		catch (err) {
+			console.error(err);
+		}
 		parsedCSS.splice(low, 0, rule);
 	}
 	if (tempStyleList.length > 0)
@@ -243,17 +275,17 @@ const observerInit = () => {
 		callback: mutation => {
 			initElements(mutation.addedNodes);
 		}
-	})
+	});
 	observer.init({
 		name: "ccCss",
 		observe: ["attributes"],
 		attributeName: ["class", "className"],
 		callback: mutation => {
-			initElements([mutation.target])            
+			initElements([mutation.target]);        
 		}
-	})
-}
+	});
+};
 
 init();
 
-export default {initElements}
+export default {initElements};

@@ -35,13 +35,16 @@
     }
 </style>
 
-<body>
+<body class="background:purple@dark:first-child:after transition:background-color_.5s">
+<!--<body class="background:purple@dark::first-child:after background:black@dark transition:background-color_.5s@dark background:blue:hover transition:background-color_.5s">-->
+<!--<body class="transition:background-color_.5s">-->
+<!--<body class="background:blue@dark:hover">-->
     <div class="width:50%@300px-500px" parse="false">
-        <div class="background:black:dark">
-            <h1 class="color:white:dark">hello how are you</h1>
+        <div class="background:black@dark">
+            <h1 class="color:white@dark">hello how are you</h1>
             <div>
-                <div class="background:black:dark background:blue:light">
-                    <h1 class="color:white:dark color:yellow:light">hello how are you</h1>
+                <div class="background:black@dark background:blue@light">
+                    <h1 class="color:white@dark color:yellow@light">hello how are you</h1>
                 </div>
                 <a toggle="dark, light" toggle-target="[theme]" toggle-attribute="theme">Toggle Darkmode</a>
             </div>
@@ -51,18 +54,18 @@
 
     
 
-    <nav class="nav display:flex align-items:center background:whitesmoke padding-top:10px padding-bottom:10px" data-main_content_id="content" scroll="sticky-nav,hide-nav" scroll-up="10" scroll-down="10" collection="components" document_id="60395ef42b3ac232657040fd"
+    <nav class="nav display:flex align-items:center background:blue:hover padding-top:10px padding-bottom:10px" data-main_content_id="content" scroll="sticky-nav,hide-nav" scroll-up="10" scroll-down="10" collection="components" document_id="60395ef42b3ac232657040fd"
         name="html">
     </nav>
-    <!--<sidenav id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-ontoggle_desktop="offcanvas" sidenav-ontoggle_tablet="expanded">-->
-    <!--    <menu collection="components" document_id="603717b07de7fb350ae9fec8" name="html"></menu>-->
-    <!--    <div class="resizeHandler"></div>-->
-    <!--</sidenav>-->
+    <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-ontoggle_desktop="offcanvas" sidenav-ontoggle_tablet="expanded">
+        <menu collection="components" document_id="603717b07de7fb350ae9fec8" name="html"></menu>
+        <div class="resizeHandler"></div>
+    </sidenav>
 
-    <!-- Modal Viewport/Boundaries -->
+     Modal Viewport/Boundaries 
     <div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
 
-    <!-- Main Content -->
+     Main Content 
     <main class="width:auto" data-main_content_id="content">
         <section class="padding-top:80px padding-bottom:40px">
             <div class=" max-width:90% margin:0px_auto">
@@ -78,14 +81,14 @@
                     <div class="flex-grow:1 min-width:300px width:50% padding:0px_15px font-size:16px ">
                         <h1 class="font-size:2rem">A Utility First, <span class="color:dodgerblue">Atomic CSS Framework</span></h1>
                         <span class="font-size:16px margin-top:10px">For Building Collaborative Apps, Platforms and UI's</span>
-                        <!--<p class="margin-top:10px">HTML and CSS, No JS Required...</p>-->
+                        <p class="margin-top:10px">HTML and CSS, No JS Required...</p>
                         <button href="./elements.html" class="background-color:dodgerblue color:white border-radius-50px margin-top:20px padding:10px_30px">Get Started</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- COMPANY SECTION -->
+         COMPANY SECTION 
         <section class="background:whitesmoke padding:30px_15px">
             <div class="padding:25px_0px display:flex flex-wrap:wrap justify-content:center flex-direction:row align-items:center">
                 <div class="padding:0px_10px">
@@ -110,7 +113,7 @@
         </section>
 
 
-        <!-- Micro Component Architecture -->
+         Micro Component Architecture 
         <section class="padding-top:80px padding-bottom:40px" id="features">
             <div class="max-width:90% margin:0px_auto">
                 <div class="display:flex flex-wrap:wrap align-items:center">
@@ -124,13 +127,13 @@
                         <p class="margin-top:10px line-height:1.5">Vanilla javascript, lightweight, single purpose micro components. Easily modify, remove and/or replace components. Highly configuarable using HTML5 data-attributes. HTML5 developers can use a combination of data-attributes to create
                             a dynamic experience. Javascript developers still have access to API, callbacks and events.</p>
                         <p></p>
-                        <!--<a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>-->
+                        <a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Collabrative Headless CMS -->
+         Collabrative Headless CMS 
         <section class="background:whitesmoke padding-top:80px padding-bottom:40px">
             <div class="max-width:90% margin:0px_auto">
                 <div class="display:flex flex-wrap:wrap align-items:center flex-direction:row-reverse">
@@ -149,7 +152,7 @@
             </div>
         </section>
 
-        <!-- Fully Customizable Admin Panel -->
+         Fully Customizable Admin Panel 
         <section class="padding-top:80px padding-bottom:40px">
             <div class="max-width:90% margin:0px_auto">
                 <div class="display:flex flex-wrap:wrap align-items:center">
@@ -163,13 +166,13 @@
                         <p class="margin-top:10px line-height:1.5">HTML5 Admin dashboard UI powered by CoCreateJS. It is 100% editable and used to manage and create views for your data and content. Use it as a Collaborative CRM, CMS and ERP. Can be modified, replaced or used as an example to build
                             your own custom HTML5 admin dashboard.</p>
                         <p></p>
-                        <!--<a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>-->
+                        <a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Collabrative Builder -->
+         Collabrative Builder 
         <section class="background:whitesmoke padding-top:80px padding-bottom:40px">
             <div class="max-width:90% margin:0px_auto">
                 <div class="display:flex flex-wrap:wrap align-items:center flex-direction:row-reverse">
@@ -187,7 +190,7 @@
             </div>
         </section>
 
-        <!-- Thirdparty API Intergration -->
+         Thirdparty API Intergration 
         <section class="padding-top:80px padding-bottom:40px" >
             <div class="max-width:90% margin:0px_auto">
                 <div class="display:flex flex-wrap:wrap align-items:center">
@@ -201,7 +204,7 @@
                         <p class="margin-top:10px line-height:1.5">We have put together a few thirdparty APIs and developed them to be used and configured with HTML5 data-attributes. Build custom flows and logic without ever leaving the html page... The CoCreate Way... Almost forgot, Javascript
                             developers still have access to API, callbacks and events.</p>
                         <p></p>
-                        <!--<a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>-->
+                        <a class="text-decoration-underline padding:10px_30px background:#3690FF background:#3790FF:hover min-width:30% text-align:center color:#fff color:#ddd:hover transition:0.4s margin-top:30px display:inline-block">Sign Up Now</a>
                     </div>
                 </div>
             </div>
@@ -212,13 +215,13 @@
         </button>
     </main>
 
-    <!-- Footer -->
+     Footer 
     <footer id="spreadtheword" data-main_content_id="content" class="padding:100px_0px background-size:cover background-position:center position:relative color:white" style="background-image:url(images/banner.png)">
         <div class="position:relative">
             <h1 class="text-align:center">SPREAD THE WORD!</h1>
 
             <div class="margin:20px_30px padding-bottom:20px font-size:21px border-bottom:1px_solid_white">
-                <!-- Social Share -->
+                 Social Share 
                 <div class="display:flex justify-content:center" share-height="600" share-width="500" share-media="https://via.placeholder.com/300/09f/fff.png">
                     <a href="https://twitter.com/CoCreate_App" target="_blank" class="margin:15px color:white"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.facebook.com/CoCreate.apps/" target="_blank" class="margin:15px color:white"><i class="fab fa-facebook"></i></a>
