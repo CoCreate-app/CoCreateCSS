@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.8...v1.6.0) (2021-08-20)
+
+
+### Features
+
+* support for psuedo classes when using theme ([86bac3b](https://github.com/CoCreate-app/CoCreateCSS/commit/86bac3b074fc4f9004a1156016c156d3c4a34c73))
+
 ## [1.5.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.5.7...v1.5.8) (2021-08-18)
 
 
