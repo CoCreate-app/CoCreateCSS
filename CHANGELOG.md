@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.2...v1.6.3) (2021-08-22)
+
+
+### Bug Fixes
+
+* removed data- from main-content, clone, filter-value_type ([b51c84d](https://github.com/CoCreate-app/CoCreateCSS/commit/b51c84d692cd57078a7a90727e0354c188406daf))
+
 ## [1.6.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.1...v1.6.2) (2021-08-22)
 
 
