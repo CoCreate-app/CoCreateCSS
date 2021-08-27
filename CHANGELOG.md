@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.6...v1.6.7) (2021-08-27)
+
+
+### Bug Fixes
+
+* navbar width:100% ([82f784a](https://github.com/CoCreate-app/CoCreateCSS/commit/82f784ab060a6533b6cbeaa3f0e07ce60cdd3dcc))
+
 ## [1.6.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.5...v1.6.6) (2021-08-27)
 
 
