@@ -1,4 +1,5 @@
 .nav, navbar {
+  width:100%;
   z-index: 7;
   will-change: transform;
   transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
