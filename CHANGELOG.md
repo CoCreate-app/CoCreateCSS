@@ -1,3 +1,10 @@
+## [1.6.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.5...v1.6.6) (2021-08-27)
+
+
+### Bug Fixes
+
+* navbar width fit-available removed ([9909c5d](https://github.com/CoCreate-app/CoCreateCSS/commit/9909c5dd8bf4d58c98b4e5a8fc2d26ff7602ff34))
+
 ## [1.6.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.4...v1.6.5) (2021-08-27)
 
 
