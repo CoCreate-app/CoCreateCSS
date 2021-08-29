@@ -1,5 +1,4 @@
 .nav, navbar {
-  width:100%;
   z-index: 7;
   will-change: transform;
   transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
@@ -12,11 +11,12 @@
 .sticky-nav {
   position: fixed;
   top: 0;
-  transform: translateY(0% )!important;
-  -webkit-transform: translateY(0%) !important;
   right: 0;
+  width:100%;
   height: auto;
   background: #fff;
+  transform: translateY(0% )!important;
+  -webkit-transform: translateY(0%) !important;
   -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
@@ -26,5 +26,3 @@
   transform: translateY(-120% )!important;
   -webkit-transform: translateY(-120%) !important;
 }
-
-/* CoCreate Navbar End */

@@ -5,9 +5,9 @@
 /*body, ul{padding:0px; margin:0px;}*/
 
 *, *:before, *:after {
-  -webkit-border-sizing: border-box;
-  -moz-border-sizing: border-box;
-  border-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  boxr-sizing: border-box;
 }
 html {
     scroll-behavior: smooth;
