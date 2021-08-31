@@ -1,3 +1,11 @@
+## [1.6.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.7...v1.6.8) (2021-08-31)
+
+
+### Bug Fixes
+
+* box-sizing ([9c0a216](https://github.com/CoCreate-app/CoCreateCSS/commit/9c0a21646cd9ee0efd2475ac6bbfa80afc6c1fb5))
+* typo box-sizing ([e1b6537](https://github.com/CoCreate-app/CoCreateCSS/commit/e1b653764370681a4a1ba0418b3e8125045cb8ad))
+
 ## [1.6.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.6...v1.6.7) (2021-08-27)
 
 
