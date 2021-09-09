@@ -1,3 +1,10 @@
+## [1.6.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.10...v1.6.11) (2021-09-09)
+
+
+### Bug Fixes
+
+* CoCreate.config directory, path, name and  public ([ff5e758](https://github.com/CoCreate-app/CoCreateCSS/commit/ff5e7583d118bdf38f910a77e98a63fd52b86409))
+
 ## [1.6.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.9...v1.6.10) (2021-09-04)
 
 
