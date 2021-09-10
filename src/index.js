@@ -113,7 +113,7 @@ function createRule(className) {
 	let rule = "";
 	if (res.length > 2) {
 		for (let i = 0; i < res.length - 2; i++) {
-			suffix += ":" + res[2 + i];
+			suffix += "\\:" + res[2 + i] + ":" + res[2];
 		}
 		rule = `.${property}\\:${suffix} { ${property}: ${value}; }`;
 	}
