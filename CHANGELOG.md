@@ -1,3 +1,11 @@
+## [1.6.15](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.14...v1.6.15) (2021-09-12)
+
+
+### Bug Fixes
+
+* pseudo classes ([c96a9b7](https://github.com/CoCreate-app/CoCreateCSS/commit/c96a9b739add69b37be893960ff4d363804f4f9a))
+* update sidenav to use resize and toggle ([d8c49f5](https://github.com/CoCreate-app/CoCreateCSS/commit/d8c49f563ca3dc981c8db4a898b2dde70b11ce44))
+
 ## [1.6.14](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.13...v1.6.14) (2021-09-09)
 
 
