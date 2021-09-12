@@ -105,6 +105,13 @@ function parseClassList(classList) {
 }
 
 function createRule(className) {
+	let important = "";
+	let importantSuffix = "";
+	if (className.includes('!important')) {
+		[className, important] = className.split("!");
+		important = '!' + important;
+		importantSuffix = '\\' + important;
+	}
 	let res = className.split(":");
 	let property = res[0];
 	let suffix = parseValue(res[1]);
@@ -113,12 +120,12 @@ function createRule(className) {
 	let rule = "";
 	if (res.length > 2) {
 		for (let i = 0; i < res.length - 2; i++) {
-			suffix += "\\:" + res[2 + i] + ":" + res[2];
+			suffix += "\\:" + res[2 + i] + importantSuffix + ":" + res[2];
 		}
-		rule = `.${property}\\:${suffix} { ${property}: ${value}; }`;
+		rule = `.${property}\\:${suffix} { ${property}: ${value}${important}; }`;
 	}
 	else {
-		rule = `.${property}\\:${suffix} { ${property}: ${value}; }`;
+		rule = `.${property}\\:${suffix}${importantSuffix} { ${property}: ${value}${important}; }`;
 	}
 	return rule;
 }
