@@ -6,7 +6,7 @@ module.exports = {
     },
     "sources": [
         {
-            "entry": "./docs/index.html",
+            "entry": "./css/index.html",
             "collection": "files",
             "document_id": "60132e7286c0ba24512cca3c",
             "key": "src",
