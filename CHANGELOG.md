@@ -1,3 +1,10 @@
+## [1.6.17](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.16...v1.6.17) (2021-09-14)
+
+
+### Bug Fixes
+
+* add cocreate.app to domains ([2011a31](https://github.com/CoCreate-app/CoCreateCSS/commit/2011a31aa1448510ee49fbdfeb0bbb1b4d66af49))
+
 ## [1.6.16](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.15...v1.6.16) (2021-09-13)
 
 
