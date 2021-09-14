@@ -1,3 +1,10 @@
+## [1.6.18](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.17...v1.6.18) (2021-09-14)
+
+
+### Bug Fixes
+
+* css landing page url ([7579837](https://github.com/CoCreate-app/CoCreateCSS/commit/757983786b219217723d1f30101a2267d029e5e2))
+
 ## [1.6.17](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.16...v1.6.17) (2021-09-14)
 
 
