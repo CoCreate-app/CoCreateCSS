@@ -1,3 +1,10 @@
+## [1.6.19](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.18...v1.6.19) (2021-09-15)
+
+
+### Bug Fixes
+
+* css rules lost when saving  as a result of media queries not having selectorText ([ba2b3f4](https://github.com/CoCreate-app/CoCreateCSS/commit/ba2b3f4dcb9df8e477398d89e795e8c4dd823f91))
+
 ## [1.6.18](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.17...v1.6.18) (2021-09-14)
 
 
