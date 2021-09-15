@@ -98,27 +98,34 @@ button.white-blue {
   border-color: white;
   background: white;
 }
+
 button.white-blue:hover {
   color: white;
   background: #1172c4;
   border-color: white;
 }
+
 button.green-white {
   font-weight: 700;
   color: #7dc21e;
   border-color: #7dc21e;
   background: transparent;
 }
+
 button.green-white:hover {
   color: white;
   background: #7dc21e;
   border-color: #7dc21e;
-}button.red-white {
+  
+}
+
+button.red-white {
   font-weight: 700;
   color: #dc3545;
   border-color: #dc3545;
   background: transparent;
 }
+
 button.red-white:hover {
   color: white;
   background: #dc3545;

@@ -69,18 +69,22 @@ function initElement(element) {
 }
 
 function parseLinkCSS() {
-	try {
-		if (linkTag) {
-			let myRules = linkTag.sheet.cssRules;
+	if (linkTag) {
+		let Rules = linkTag.sheet.cssRules;
 
-			for (let rule of myRules) {
+		for (let rule of Rules) {
+			try {
 				linkCSS.push(rule.cssText);
-				classNameList.set(rule.selectorText.replace(/[.\\]/g, ''), true);
+				if (rule.selectorText) {
+					classNameList.set(rule.selectorText.replace(/[.\\]/g, ''), true);
+				} else {
+					// ToDo: handle media queriesand add to classNameList to avoid duplicate parsing
+				}
+			}
+			catch (err) {
+				console.error(err);
 			}
 		}
-	}
-	catch (err) {
-		console.error(err);
 	}
 }
 

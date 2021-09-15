@@ -2,7 +2,6 @@
     CoCreateCSS
 =================================*/
 *{padding:0px; margin:0px;}
-/*body, ul{padding:0px; margin:0px;}*/
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
