@@ -1,3 +1,10 @@
+## [1.6.21](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.20...v1.6.21) (2021-09-28)
+
+
+### Bug Fixes
+
+* update dependencies ([de987c0](https://github.com/CoCreate-app/CoCreateCSS/commit/de987c0fe544bf039ee33343a46c9e2fa9f1b2a3))
+
 ## [1.6.20](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.19...v1.6.20) (2021-09-16)
 
 
