@@ -1,3 +1,10 @@
+## [1.6.28](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.27...v1.6.28) (2021-10-12)
+
+
+### Bug Fixes
+
+* unique true or false css ([154a8c6](https://github.com/CoCreate-app/CoCreateCSS/commit/154a8c6293f5120d9426a07effd238febfca2f74))
+
 ## [1.6.27](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.26...v1.6.27) (2021-10-06)
 
 
