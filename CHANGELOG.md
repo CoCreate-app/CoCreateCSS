@@ -1,3 +1,10 @@
+## [1.6.34](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.33...v1.6.34) (2021-10-14)
+
+
+### Bug Fixes
+
+* added failed to danger class ([0ba2eb2](https://github.com/CoCreate-app/CoCreateCSS/commit/0ba2eb2684cfc294a0b1094d2f86284e9a09d916))
+
 ## [1.6.33](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.32...v1.6.33) (2021-10-14)
 
 
