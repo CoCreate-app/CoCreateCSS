@@ -99,7 +99,7 @@ a[toggle-order=desc]:before {
     color: #fff;
 }
 
-.danger {
+.danger, .failed {
     background-color: #f13b48;
     color: #fff;
 }
