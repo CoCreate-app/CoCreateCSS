@@ -1,3 +1,10 @@
+## [1.6.33](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.32...v1.6.33) (2021-10-14)
+
+
+### Bug Fixes
+
+* removed postion:relative from card.css ([f6af59e](https://github.com/CoCreate-app/CoCreateCSS/commit/f6af59ea7592617ab87df9729f566b8409a7ea6a))
+
 ## [1.6.32](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.31...v1.6.32) (2021-10-13)
 
 
