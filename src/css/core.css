@@ -56,16 +56,6 @@ footer:before {
 }
 
 
-[unique='true'] {
-    border-color: green!important;
-    color: green!important;
-}
-
-[unique='false'] {
-    border-color: red!important;
-    color: red!important;
-}
-
 /*===============================
    toggle order icons transform filter.js
 =================================*/
@@ -102,4 +92,16 @@ a[toggle-order=desc]:before {
 .danger, .failed {
     background-color: #f13b48;
     color: #fff;
+}
+
+[unique='true'] {
+    border-color: green!important;
+    color: green!important;
+    -webkit-text-fill-color: green!important;
+}
+
+[unique='false'] {
+    border-color: red!important;
+    color: red!important;
+    -webkit-text-fill-color: red!important;
 }
