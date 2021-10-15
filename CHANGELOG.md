@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.34...v1.7.0) (2021-10-15)
+
+
+### Features
+
+* unique='false' supports webkit auto complete ([eaa1f3c](https://github.com/CoCreate-app/CoCreateCSS/commit/eaa1f3c74b43bd2084e0f284d6e2cdfbb9d76774))
+
 ## [1.6.34](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.6.33...v1.6.34) (2021-10-14)
 
 
