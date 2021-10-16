@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.7.3...v1.7.4) (2021-10-16)
+
+
+### Bug Fixes
+
+* update socket package to fix bug in docs ([da81de3](https://github.com/CoCreate-app/CoCreateCSS/commit/da81de3b5c8ec043a83bf95ee3e37efdd7ab54c0))
+
 ## [1.7.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.7.2...v1.7.3) (2021-10-15)
 
 
