@@ -1,3 +1,10 @@
+## [1.7.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.7.10...v1.7.11) (2021-11-05)
+
+
+### Bug Fixes
+
+* added grabbing cursor to body id dnd isdragging ([520bd05](https://github.com/CoCreate-app/CoCreateCSS/commit/520bd059e9995da11ec4a17449f306b452f73844))
+
 ## [1.7.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.7.9...v1.7.10) (2021-11-04)
 
 
