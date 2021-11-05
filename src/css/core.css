@@ -28,6 +28,13 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+body[isdragging] * {
+  cursor: grabbing!important;
+  cursor: -moz-grabbing!important;
+  cursor: -webkit-grabbing!important;
+}
+
+
 a {
     text-decoration: none;
     cursor: pointer;
