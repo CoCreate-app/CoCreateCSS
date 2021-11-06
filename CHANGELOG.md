@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.7.11...v1.8.0) (2021-11-06)
+
+
+### Features
+
+* added css for validation=true/false ([7ce5872](https://github.com/CoCreate-app/CoCreateCSS/commit/7ce58726e8cc906d6ef8a4ca56954d150f84db6e))
+
 ## [1.7.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.7.10...v1.7.11) (2021-11-05)
 
 
