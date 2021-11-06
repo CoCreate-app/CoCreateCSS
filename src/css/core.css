@@ -101,13 +101,13 @@ a[toggle-order=desc]:before {
     color: #fff;
 }
 
-[unique='true'] {
+[unique='true'], [validation='true'] {
     border-color: green!important;
     color: green!important;
     -webkit-text-fill-color: green!important;
 }
 
-[unique='false'] {
+[unique='false'], [validation='false'] {
     border-color: red!important;
     color: red!important;
     -webkit-text-fill-color: red!important;
