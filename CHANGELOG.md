@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.2...v1.8.3) (2021-11-07)
+
+
+### Bug Fixes
+
+* added scrollbar-wisth:thin for fire fox ([b86cab6](https://github.com/CoCreate-app/CoCreateCSS/commit/b86cab6a43e064ba8280ab87b4b32cde6d6a510b))
+
 ## [1.8.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.1...v1.8.2) (2021-11-07)
 
 
