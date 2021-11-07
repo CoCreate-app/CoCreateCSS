@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.1...v1.8.2) (2021-11-07)
+
+
+### Bug Fixes
+
+* removed -moz-box-shadow ([9045f3c](https://github.com/CoCreate-app/CoCreateCSS/commit/9045f3c845514e3061f5139c9aaaff038f66766d))
+
 ## [1.8.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.0...v1.8.1) (2021-11-06)
 
 
