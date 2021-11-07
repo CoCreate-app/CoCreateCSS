@@ -10,7 +10,7 @@
   display: block;
   color: white;
   background: #C0392B;
-  -moz-box-shadow: 0 1px 0 #d65548 inset, 0 -1px 0 #962d22 inset;
+  /*-moz-box-shadow: 0 1px 0 #d65548 inset, 0 -1px 0 #962d22 inset;*/
   -webkit-box-shadow: 0 1px 0 #d65548 inset, 0 -1px 0 #962d22 inset;
   box-shadow: 0 1px 0 #d65548 inset, 0 -1px 0 #962d22 inset;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
@@ -65,7 +65,7 @@
   display: block;
   color: #6f6f6f;
   background: #EEE;
-  -moz-box-shadow: 0 1px 0 white inset, 0 -1px 0 #d5d5d5 inset;
+  /*-moz-box-shadow: 0 1px 0 white inset, 0 -1px 0 #d5d5d5 inset;*/
   -webkit-box-shadow: 0 1px 0 white inset, 0 -1px 0 #d5d5d5 inset;
   box-shadow: 0 1px 0 white inset, 0 -1px 0 #d5d5d5 inset;
   text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3);
