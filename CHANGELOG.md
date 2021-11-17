@@ -1,3 +1,10 @@
+## [1.8.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.6...v1.8.7) (2021-11-17)
+
+
+### Bug Fixes
+
+* textarea scroll vertical ([bc40789](https://github.com/CoCreate-app/CoCreateCSS/commit/bc4078910ac1f7a61db34df8e65db1cdacb7bf94))
+
 ## [1.8.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.5...v1.8.6) (2021-11-16)
 
 
