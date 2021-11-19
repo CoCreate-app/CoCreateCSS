@@ -1,3 +1,10 @@
+## [1.8.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.8...v1.8.9) (2021-11-19)
+
+
+### Bug Fixes
+
+* remove z-index from button ([5806d0f](https://github.com/CoCreate-app/CoCreateCSS/commit/5806d0ff9765cb6c13cfda5d1687b0c8c77fa433))
+
 ## [1.8.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.7...v1.8.8) (2021-11-18)
 
 
