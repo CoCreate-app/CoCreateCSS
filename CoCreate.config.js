@@ -11,13 +11,13 @@ module.exports = {
             "document_id": "60c63f2429e7550bebd6fb88",
             "key": "src",
             "data": {
-                "name": "utility.html",
-                "path": "/docs/css/utility.html",
+                "name": "index.html",
+                "path": "/docs/utility/index.html",
                 "domains": [
                     "cocreate.app",
                     "general.cocreate.app"
                 ],
-                "directory": "/docs/css",
+                "directory": "/docs",
                 "content-type": "text/html",
                 "public": "true",
                 "website_id": "5ffbceb7f11d2d00103c4535"
@@ -30,12 +30,12 @@ module.exports = {
             "key": "src",
             "data": {
                 "name": "avatar.html",
-                "path": "/docs/css/avatar.html",
+                "path": "/docs/avatar/index.html",
                 "domains": [
                     "cocreate.app",
                     "general.cocreate.app"
                 ],
-                "directory": "/docs/css",
+                "directory": "/docs",
                 "content-type": "text/html",
                 "public": "true",
                 "website_id": "5ffbceb7f11d2d00103c4535"
@@ -48,12 +48,12 @@ module.exports = {
             "key": "src",
             "data": {
                 "name": "flip-item.html",
-                "path": "/docs/css/flip-item.html",
+                "path": "/docs/flip-item/index.html",
                 "domains": [
                     "cocreate.app",
                     "general.cocreate.app"
                 ],
-                "directory": "/docs/css",
+                "directory": "/docs",
                 "content-type": "text/html",
                 "public": "true",
                 "website_id": "5ffbceb7f11d2d00103c4535"
