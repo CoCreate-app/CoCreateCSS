@@ -1,3 +1,10 @@
+## [1.8.12](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.11...v1.8.12) (2021-11-20)
+
+
+### Bug Fixes
+
+* removed width:100% from sticy-nav ([a563918](https://github.com/CoCreate-app/CoCreateCSS/commit/a5639187ffa173fbb261d4a51f033106237b9708))
+
 ## [1.8.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.10...v1.8.11) (2021-11-20)
 
 
