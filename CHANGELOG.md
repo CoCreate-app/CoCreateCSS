@@ -1,3 +1,10 @@
+## [1.8.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.10...v1.8.11) (2021-11-20)
+
+
+### Bug Fixes
+
+* updated script tags and link tags ([0acbbfa](https://github.com/CoCreate-app/CoCreateCSS/commit/0acbbfa8eaba96f1b43f74524d11f863f3a98b08))
+
 ## [1.8.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.9...v1.8.10) (2021-11-20)
 
 
