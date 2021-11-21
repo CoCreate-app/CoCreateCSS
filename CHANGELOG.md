@@ -1,3 +1,11 @@
+## [1.8.13](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.12...v1.8.13) (2021-11-21)
+
+
+### Bug Fixes
+
+* add width:100% to sticky nav ([d724de5](https://github.com/CoCreate-app/CoCreateCSS/commit/d724de5045540149327e5ad90b148b7347cde263))
+* sticky nav ([72f7cdb](https://github.com/CoCreate-app/CoCreateCSS/commit/72f7cdb16ca449a35de73818f4fcecae2fa8bd05))
+
 ## [1.8.12](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.11...v1.8.12) (2021-11-20)
 
 
