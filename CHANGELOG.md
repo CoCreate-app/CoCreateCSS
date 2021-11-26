@@ -1,3 +1,12 @@
+## [1.8.16](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.15...v1.8.16) (2021-11-26)
+
+
+### Bug Fixes
+
+* add nav and sidenav to docs ([25df042](https://github.com/CoCreate-app/CoCreateCSS/commit/25df042d51a8445bac5a1b6b27fadb5ac879ba50))
+* docs sidenav width ([c63868d](https://github.com/CoCreate-app/CoCreateCSS/commit/c63868deeed4b484584abec8dd2f619a53bd5995))
+* sticky-nav width fill-available ([88c687b](https://github.com/CoCreate-app/CoCreateCSS/commit/88c687b0eda4b5930b295d16b2c65697fe1730a9))
+
 ## [1.8.15](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.14...v1.8.15) (2021-11-26)
 
 
