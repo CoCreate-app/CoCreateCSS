@@ -12,7 +12,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  width:100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
   height: auto;
   background: #fff;
   transform: translateY(0% )!important;
