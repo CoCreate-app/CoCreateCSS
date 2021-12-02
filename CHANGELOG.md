@@ -1,3 +1,10 @@
+## [1.8.21](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.20...v1.8.21) (2021-12-02)
+
+
+### Bug Fixes
+
+* remove footer import ([3a5324f](https://github.com/CoCreate-app/CoCreateCSS/commit/3a5324f83706a772d9ad51922351a19c9e78b2d9))
+
 ## [1.8.20](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.19...v1.8.20) (2021-12-02)
 
 
