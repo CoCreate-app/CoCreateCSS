@@ -1,3 +1,10 @@
+## [1.8.20](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.19...v1.8.20) (2021-12-02)
+
+
+### Bug Fixes
+
+* removed footer css file as it conflicted with already existing footers styles ([29ccd82](https://github.com/CoCreate-app/CoCreateCSS/commit/29ccd82bb0f75f1d85b0019c7fc13b6e4313c452))
+
 ## [1.8.19](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.18...v1.8.19) (2021-11-27)
 
 
