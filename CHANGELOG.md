@@ -1,3 +1,10 @@
+## [1.8.24](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.23...v1.8.24) (2021-12-24)
+
+
+### Bug Fixes
+
+* add action deleteDocuments ([9bb2b9e](https://github.com/CoCreate-app/CoCreateCSS/commit/9bb2b9e68bbdf12be39182ea02743bf63a2be647))
+
 ## [1.8.23](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.22...v1.8.23) (2021-12-15)
 
 
