@@ -1,3 +1,10 @@
+## [1.8.25](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.24...v1.8.25) (2022-01-01)
+
+
+### Bug Fixes
+
+* removed data- from attributes ([776addb](https://github.com/CoCreate-app/CoCreateCSS/commit/776addb2affe74deec69b49556fd00020fdc09b6))
+
 ## [1.8.24](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.23...v1.8.24) (2021-12-24)
 
 
