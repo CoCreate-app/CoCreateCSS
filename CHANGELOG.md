@@ -1,3 +1,10 @@
+## [1.8.26](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.25...v1.8.26) (2022-01-01)
+
+
+### Bug Fixes
+
+* get-value attribute value now supports a selector added # to all values currently in get-value attributes ([de587b2](https://github.com/CoCreate-app/CoCreateCSS/commit/de587b227d35bfc5f8152f060d0af67fd072379d))
+
 ## [1.8.25](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.24...v1.8.25) (2022-01-01)
 
 
