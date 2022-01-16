@@ -1,3 +1,10 @@
+## [1.8.27](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.26...v1.8.27) (2022-01-16)
+
+
+### Bug Fixes
+
+* update class overflow:overlay to overflow:auto ([94158ff](https://github.com/CoCreate-app/CoCreateCSS/commit/94158ff5bba6f073d2f20f770ffcb56dad96d250))
+
 ## [1.8.26](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.25...v1.8.26) (2022-01-01)
 
 
