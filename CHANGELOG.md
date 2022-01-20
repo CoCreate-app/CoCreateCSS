@@ -1,3 +1,10 @@
+## [1.8.28](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.27...v1.8.28) (2022-01-20)
+
+
+### Bug Fixes
+
+* created new file css-parser.js ([227a871](https://github.com/CoCreate-app/CoCreateCSS/commit/227a871fbf25afcfb11526ea34a089919fa90a72))
+
 ## [1.8.27](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.26...v1.8.27) (2022-01-16)
 
 
