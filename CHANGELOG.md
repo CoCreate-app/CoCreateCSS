@@ -1,3 +1,10 @@
+## [1.8.29](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.28...v1.8.29) (2022-01-22)
+
+
+### Bug Fixes
+
+* formating ([90a4aa0](https://github.com/CoCreate-app/CoCreateCSS/commit/90a4aa0aeae9d8958903b0ecf866f28dab3fc634))
+
 ## [1.8.28](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.27...v1.8.28) (2022-01-20)
 
 
