@@ -30,9 +30,9 @@ body {
 }
 
 body[isdragging] * {
-  cursor: grabbing!important;
-  cursor: -moz-grabbing!important;
-  cursor: -webkit-grabbing!important;
+    cursor: grabbing!important;
+    cursor: -moz-grabbing!important;
+    cursor: -webkit-grabbing!important;
 }
 
 
