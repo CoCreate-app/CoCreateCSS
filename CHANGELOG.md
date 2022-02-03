@@ -1,3 +1,10 @@
+## [1.8.31](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.30...v1.8.31) (2022-02-03)
+
+
+### Bug Fixes
+
+* replaced show and hide class hidden with attribute hidden ([bc42f49](https://github.com/CoCreate-app/CoCreateCSS/commit/bc42f49730019027d8c9aa1ff546c7a5d1a68629))
+
 ## [1.8.30](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.29...v1.8.30) (2022-02-01)
 
 
