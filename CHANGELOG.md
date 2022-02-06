@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.32...v1.9.0) (2022-02-06)
+
+
+### Features
+
+* add box-shadow-top ([2a71d09](https://github.com/CoCreate-app/CoCreateCSS/commit/2a71d098c8f5613a3db1c158bd7e9074c4121669))
+
 ## [1.8.32](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.8.31...v1.8.32) (2022-02-03)
 
 
