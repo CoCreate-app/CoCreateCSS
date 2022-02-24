@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.3...v1.9.4) (2022-02-24)
+
+
+### Bug Fixes
+
+* CoCreate.config replace CoCreate.app with * ([5dac073](https://github.com/CoCreate-app/CoCreateCSS/commit/5dac073659d67a3fdc1adb56206de7a50eddf34f))
+
 ## [1.9.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.2...v1.9.3) (2022-02-16)
 
 
