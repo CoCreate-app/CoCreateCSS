@@ -14,7 +14,7 @@ module.exports = {
                 "name": "index.html",
                 "path": "/docs/utility/index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "directory": "/docs",
@@ -32,7 +32,7 @@ module.exports = {
                 "name": "avatar.html",
                 "path": "/docs/avatar/index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "directory": "/docs",
@@ -50,7 +50,7 @@ module.exports = {
                 "name": "flip-item.html",
                 "path": "/docs/flip-item/index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "directory": "/docs",
