@@ -1,3 +1,10 @@
+## [1.9.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.4...v1.9.5) (2022-05-06)
+
+
+### Bug Fixes
+
+* update config organization_Id to organization_id ([eff9c13](https://github.com/CoCreate-app/CoCreateCSS/commit/eff9c13289742ece01fc1945ba6613b448ad9d04))
+
 ## [1.9.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.3...v1.9.4) (2022-02-24)
 
 
