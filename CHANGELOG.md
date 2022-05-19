@@ -1,3 +1,10 @@
+## [1.9.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.5...v1.9.6) (2022-05-19)
+
+
+### Bug Fixes
+
+* update document_id on link index.css ([22601de](https://github.com/CoCreate-app/CoCreateCSS/commit/22601de186a65b41a867a7bb1a7b31c03f1bf104))
+
 ## [1.9.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.4...v1.9.5) (2022-05-06)
 
 
