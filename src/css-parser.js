@@ -55,22 +55,22 @@ function initElement(element) {
 }
 
 function parseLinkCSS() {
-	if (linkTag) {
+	if (linkTag && linkTag.sheet) {
 		let Rules = linkTag.sheet.cssRules;
-
-		for (let rule of Rules) {
-			try {
-				linkCSS.push(rule.cssText);
-				if (rule.selectorText) {
-					classNameList.set(rule.selectorText.replace(/[.\\]/g, ''), true);
-				} else {
-					// ToDo: handle media queriesand add to classNameList to avoid duplicate parsing
+		if (Rules)
+			for (let rule of Rules) {
+				try {
+					linkCSS.push(rule.cssText);
+					if (rule.selectorText) {
+						classNameList.set(rule.selectorText.replace(/[.\\]/g, ''), true);
+					} else {
+						// ToDo: handle media queriesand add to classNameList to avoid duplicate parsing
+					}
+				}
+				catch (err) {
+					console.error(err);
 				}
 			}
-			catch (err) {
-				console.error(err);
-			}
-		}
 	}
 }
 
