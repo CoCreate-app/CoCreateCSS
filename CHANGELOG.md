@@ -1,3 +1,10 @@
+## [1.9.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.6...v1.9.7) (2022-05-20)
+
+
+### Bug Fixes
+
+* added an if condition for linkTag.sheet to fix bug in safari ([eb88311](https://github.com/CoCreate-app/CoCreateCSS/commit/eb88311acd6617b874465dcbf95ed6e1b4ed00b5))
+
 ## [1.9.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.5...v1.9.6) (2022-05-19)
 
 
