@@ -25,6 +25,8 @@
 }
 
 .hide-nav {
-  transform: translateY(-120% )!important;
-  -webkit-transform: translateY(-120%) !important;
+  height: 0px;
+  overflow: hidden;
+  /* transform: translateY(-120% )!important;
+  -webkit-transform: translateY(-120%) !important; */
 }
