@@ -1,3 +1,10 @@
+## [1.9.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.8...v1.9.9) (2022-06-02)
+
+
+### Bug Fixes
+
+* .hide-nav height 0 and overflow hidden ([e9b2bb5](https://github.com/CoCreate-app/CoCreateCSS/commit/e9b2bb524a22010e0bd21252128c45e6da6e2818))
+
 ## [1.9.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.7...v1.9.8) (2022-05-23)
 
 
