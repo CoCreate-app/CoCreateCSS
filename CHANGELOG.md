@@ -1,3 +1,12 @@
+## [1.9.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.9...v1.9.10) (2022-06-12)
+
+
+### Bug Fixes
+
+* update dependencies ([40c25c1](https://github.com/CoCreate-app/CoCreateCSS/commit/40c25c1338b0703cb9d3bb6e3e1723200425d72a))
+* update docs css document_id ([fc240e3](https://github.com/CoCreate-app/CoCreateCSS/commit/fc240e3632a7cbd4c4c94cc9bc806ab5420cdf70))
+* update modal btn to actions ([4c23341](https://github.com/CoCreate-app/CoCreateCSS/commit/4c2334174493130b3997544f5a5748d50dff26b0))
+
 ## [1.9.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.8...v1.9.9) (2022-06-02)
 
 
