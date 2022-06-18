@@ -23,8 +23,11 @@ let styleElSheet;
 let linkTag = document.querySelector('link[collection][document_id][name]:not([save="false"])');
 
 function init() {
-	if (document.querySelector('link[parse="false"]'))
-		return;
+	let parse;
+	if (linkTag)
+		parse = linkTag.getAttribute('parse');
+	// if (document.querySelector('link[parse="false"]'))
+	// 	return;
 	
 	let styleEl = document.createElement("style");
 	styleEl.setAttribute('component', 'CoCreateCss');
@@ -33,8 +36,10 @@ function init() {
 	
 	parseLinkCSS();
 
-	let elements = document.querySelectorAll("[class]");
-	initElements(elements);
+	if (parse != false) {
+		let elements = document.querySelectorAll("[class]");
+		initElements(elements);
+	}
 
 	observerInit();
 }
