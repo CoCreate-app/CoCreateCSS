@@ -1,3 +1,10 @@
+## [1.9.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.10...v1.9.11) (2022-06-18)
+
+
+### Bug Fixes
+
+* update css-parse attribute ([f1c56b7](https://github.com/CoCreate-app/CoCreateCSS/commit/f1c56b7912f15c8a73574c16ce3d8b418a547231))
+
 ## [1.9.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.9...v1.9.10) (2022-06-12)
 
 
