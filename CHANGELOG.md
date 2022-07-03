@@ -1,3 +1,10 @@
+## [1.9.13](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.12...v1.9.13) (2022-07-03)
+
+
+### Bug Fixes
+
+* update pass-fetch and pass-filter attributes ([639454d](https://github.com/CoCreate-app/CoCreateCSS/commit/639454d8fca331e542078dc0e1c15304ba687ae5))
+
 ## [1.9.12](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.11...v1.9.12) (2022-06-18)
 
 
