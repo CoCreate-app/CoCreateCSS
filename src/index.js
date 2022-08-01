@@ -12,4 +12,3 @@ import './css/navbar.css';
 import './css/overlay-content.css';
 import './css/progressbar.css';
 import './css/scroll.css';
-import './css-parser';
