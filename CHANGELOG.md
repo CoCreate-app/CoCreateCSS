@@ -1,3 +1,10 @@
+## [1.9.14](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.13...v1.9.14) (2022-08-01)
+
+
+### Bug Fixes
+
+* moved css-parser to a dedicated component @cocreate/css-parser ([8cc45c1](https://github.com/CoCreate-app/CoCreateCSS/commit/8cc45c11bbae931f378524ff76e3db4209a88cec))
+
 ## [1.9.13](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.12...v1.9.13) (2022-07-03)
 
 
