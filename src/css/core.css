@@ -55,7 +55,7 @@ textarea {
     display: none!important;
 }
 
-.template {
+.template, [template] {
     display: none!important;
 }
 
