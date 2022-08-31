@@ -1,3 +1,10 @@
+## [1.9.15](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.14...v1.9.15) (2022-08-31)
+
+
+### Bug Fixes
+
+* add atrribute template display:none ([9d8cf6e](https://github.com/CoCreate-app/CoCreateCSS/commit/9d8cf6e228782aebe5efa9ba741c7780cfe1d82d))
+
 ## [1.9.14](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.13...v1.9.14) (2022-08-01)
 
 
