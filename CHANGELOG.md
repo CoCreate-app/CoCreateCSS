@@ -1,3 +1,10 @@
+## [1.9.17](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.16...v1.9.17) (2022-09-29)
+
+
+### Bug Fixes
+
+* config renameed to CoCreateConfig ([585cfd7](https://github.com/CoCreate-app/CoCreateCSS/commit/585cfd7d048ec2c3ec74239e069e48d322872766))
+
 ## [1.9.16](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.15...v1.9.16) (2022-09-01)
 
 
