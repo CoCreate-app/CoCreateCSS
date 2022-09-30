@@ -1,3 +1,10 @@
+## [1.9.18](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.17...v1.9.18) (2022-09-30)
+
+
+### Bug Fixes
+
+* bump dependencies ([4502d25](https://github.com/CoCreate-app/CoCreateCSS/commit/4502d252c083047f5e94389d091a9555f64d3154))
+
 ## [1.9.17](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.16...v1.9.17) (2022-09-29)
 
 
