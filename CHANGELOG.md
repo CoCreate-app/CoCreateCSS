@@ -1,3 +1,10 @@
+## [1.9.23](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.22...v1.9.23) (2022-10-02)
+
+
+### Bug Fixes
+
+* bump @cocreate/hosting and @cocreate/socket-client ([008d21d](https://github.com/CoCreate-app/CoCreateCSS/commit/008d21df783ec672f2f75eee44a223cdf5844439))
+
 ## [1.9.22](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.21...v1.9.22) (2022-10-01)
 
 
