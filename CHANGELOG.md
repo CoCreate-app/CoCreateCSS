@@ -1,3 +1,10 @@
+## [1.9.27](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.26...v1.9.27) (2022-11-21)
+
+
+### Bug Fixes
+
+* replaced document_id with document._id ([0835e6a](https://github.com/CoCreate-app/CoCreateCSS/commit/0835e6a9153a21663bbe98968edb60073a0881f3))
+
 ## [1.9.26](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.25...v1.9.26) (2022-11-21)
 
 
