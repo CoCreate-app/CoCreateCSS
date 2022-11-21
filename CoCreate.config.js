@@ -10,7 +10,7 @@ module.exports = {
             "collection": "files",
             "document_id": "60c63f2429e7550bebd6fb88",
             "key": "src",
-            "data": {
+            "document": {
                 "name": "index.html",
                 "path": "/docs/utility/index.html",
                 "domains": [
@@ -28,7 +28,7 @@ module.exports = {
             "collection": "files",
             "document_id": "60c63f2429e7550bebd6fb89",
             "key": "src",
-            "data": {
+            "document": {
                 "name": "avatar.html",
                 "path": "/docs/avatar/index.html",
                 "domains": [
@@ -46,7 +46,7 @@ module.exports = {
             "collection": "files",
             "document_id": "60c63f2429e7550bebd6fb8a",
             "key": "src",
-            "data": {
+            "document": {
                 "name": "flip-item.html",
                 "path": "/docs/flip-item/index.html",
                 "domains": [
