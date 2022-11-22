@@ -1,3 +1,10 @@
+## [1.9.29](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.28...v1.9.29) (2022-11-22)
+
+
+### Bug Fixes
+
+* apply src: {{source}} to CoCreate.config ([ad70410](https://github.com/CoCreate-app/CoCreateCSS/commit/ad70410a6ab5617ff0c1bd30d802fe3d8cb72cbb))
+
 ## [1.9.28](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.27...v1.9.28) (2022-11-21)
 
 
