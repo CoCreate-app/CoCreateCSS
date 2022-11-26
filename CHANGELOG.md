@@ -1,3 +1,11 @@
+## [1.9.34](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.33...v1.9.34) (2022-11-26)
+
+
+### Bug Fixes
+
+* bump dependencies ([b5a1afd](https://github.com/CoCreate-app/CoCreateCSS/commit/b5a1afd5e95e99076a66cca8e80f0d4ae390a71b))
+* renamed toggle-order to filter-sort-toggle ([de460c0](https://github.com/CoCreate-app/CoCreateCSS/commit/de460c0cb334f288242046621a80a25b7b7635a7))
+
 ## [1.9.33](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.32...v1.9.33) (2022-11-25)
 
 
