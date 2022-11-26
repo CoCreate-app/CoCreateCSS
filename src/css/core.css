@@ -64,19 +64,19 @@ textarea {
    toggle order icons transform filter.js
 =================================*/
 
-a[toggle-order]:before {
+a[filter-sort-toggle]:before {
     font-family: 'Font Awesome 5 Free';
     content: "\f0dc";
     font-weight: 900;
 }
 
-a[toggle-order=asc]:before {
+a[filter-sort-toggle=asc]:before {
     font-family: 'Font Awesome 5 Free';
     content: "\f0de";
     font-weight: 900;
 }
 
-a[toggle-order=desc]:before {
+a[filter-sort-toggle=desc]:before {
     font-family: 'Font Awesome 5 Free';
     content: "\f0dd";
     font-weight: 900;
