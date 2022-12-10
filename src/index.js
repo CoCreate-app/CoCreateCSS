@@ -7,6 +7,7 @@ import './css/checkbox.css';
 import './css/core.css';
 import './css/dropdown.css';
 import './css/flip-item.css';
+import './css/input.css';
 import './css/menu-icon.css';
 import './css/navbar.css';
 import './css/overlay-content.css';
