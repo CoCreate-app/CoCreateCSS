@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.43...v1.10.0) (2022-12-10)
+
+
+### Features
+
+* add input.css ([79a7f83](https://github.com/CoCreate-app/CoCreateCSS/commit/79a7f832e31cd92a34027baeae40585dc9a49e7d))
+
 ## [1.9.43](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.9.42...v1.9.43) (2022-12-09)
 
 
