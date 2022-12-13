@@ -1,3 +1,10 @@
+## [1.10.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.4...v1.10.5) (2022-12-13)
+
+
+### Bug Fixes
+
+* add min.css to /latest ([0b9b8e0](https://github.com/CoCreate-app/CoCreateCSS/commit/0b9b8e0e1d8588c0c0bc59f771bbec09d20eb023))
+
 ## [1.10.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.3...v1.10.4) (2022-12-13)
 
 
