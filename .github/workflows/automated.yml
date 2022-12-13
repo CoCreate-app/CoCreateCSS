@@ -79,7 +79,7 @@ jobs:
           aws-key-id: "${{ secrets.AWSACCESSKEYID }}"
           aws-access-key: "${{ secrets.AWSSECERTACCESSKEY }}"
           bucket: testcrudbucket
-          source: ./dist/CoCreate.min.css
+          source: ./dist
           destination: /latest
           acl: public-read
           invalidations: true

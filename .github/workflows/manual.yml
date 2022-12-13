@@ -42,3 +42,13 @@ jobs:
           destination: /CoCreateCSS/latest
           acl: public-read
           invalidations: ${{ github.event.inputs.invalidations }}
+      - name: upload css to latest
+        uses: CoCreate-app/CoCreate-s3@master
+        with:
+          aws-key-id: "${{ secrets.AWSACCESSKEYID }}"
+          aws-access-key: "${{ secrets.AWSSECERTACCESSKEY }}"
+          bucket: testcrudbucket
+          source: ./dist
+          destination: /latest
+          acl: public-read
+          invalidations: true
