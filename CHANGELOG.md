@@ -1,3 +1,10 @@
+## [1.10.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.3...v1.10.4) (2022-12-13)
+
+
+### Bug Fixes
+
+* removed unused dependencies ([3ed0f01](https://github.com/CoCreate-app/CoCreateCSS/commit/3ed0f01deeb242a01ac6ec8fbd0abd9cd5575721))
+
 ## [1.10.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.2...v1.10.3) (2022-12-12)
 
 
