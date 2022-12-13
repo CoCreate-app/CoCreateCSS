@@ -73,6 +73,16 @@ jobs:
           destination: /CoCreateCSS/latest
           acl: public-read
           invalidations: true
+      - name: upload bundle as latest
+        uses: CoCreate-app/CoCreate-s3@master
+        with:
+          aws-key-id: "${{ secrets.AWSACCESSKEYID }}"
+          aws-access-key: "${{ secrets.AWSSECERTACCESSKEY }}"
+          bucket: testcrudbucket
+          source: ./dist/CoCreate.min.css
+          destination: /latest
+          acl: public-read
+          invalidations: true
   docs:
     runs-on: ubuntu-latest
     steps:
