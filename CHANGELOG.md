@@ -1,3 +1,10 @@
+## [1.10.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.7...v1.10.8) (2022-12-14)
+
+
+### Bug Fixes
+
+* bump @cocreate/floating-label ([817e87f](https://github.com/CoCreate-app/CoCreateCSS/commit/817e87f945796063700e83b41981d421f4423a14))
+
 ## [1.10.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.6...v1.10.7) (2022-12-13)
 
 
