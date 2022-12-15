@@ -1,3 +1,10 @@
+## [1.10.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.10...v1.10.11) (2022-12-15)
+
+
+### Bug Fixes
+
+* add missing dev dependency style-loader ([7cc1dda](https://github.com/CoCreate-app/CoCreateCSS/commit/7cc1dda6e35ca7a5a9258f3110bb326f055c060a))
+
 ## [1.10.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.9...v1.10.10) (2022-12-15)
 
 
