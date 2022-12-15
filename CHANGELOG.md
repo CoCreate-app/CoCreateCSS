@@ -1,3 +1,10 @@
+## [1.10.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.8...v1.10.9) (2022-12-15)
+
+
+### Bug Fixes
+
+* add select and flloating-label minimum css for rendering ([bd709af](https://github.com/CoCreate-app/CoCreateCSS/commit/bd709afccf8d5d23535492bc5fc5764f9551176b))
+
 ## [1.10.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.7...v1.10.8) (2022-12-14)
 
 
