@@ -1,3 +1,10 @@
+## [1.10.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.9...v1.10.10) (2022-12-15)
+
+
+### Bug Fixes
+
+* removed @cocreate/floating-label ([9fbd9ef](https://github.com/CoCreate-app/CoCreateCSS/commit/9fbd9efc5bc62e4c184870e9fd12f2a4993a63c1))
+
 ## [1.10.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.8...v1.10.9) (2022-12-15)
 
 
