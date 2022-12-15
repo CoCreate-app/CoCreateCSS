@@ -109,3 +109,31 @@ a[filter-sort-toggle=desc]:before {
     color: red!important;
     -webkit-text-fill-color: red!important;
 }
+
+/**
+* ToDo: Reuires away for CoCreateJS to add to min.css as it is minimum required csss for rendering
+*/
+cocreate-select:not(.active) > * {
+    visibility: hidden;
+}
+
+floating-label, .floating-label_field {
+    position: relative;
+    margin-top:10px;
+    display: block;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px 4px 4px 4px;
+    border-color: rgba(0, 0, 0, 0.24)
+
+}
+
+floating-label .floating-label,
+.floating-label_field .floating-label  {
+    padding: 8px 14px 8px 14px;
+    border: none !important;
+    outline: none !important;
+    font-size: 16px;
+    line-height: 1.5;
+}
