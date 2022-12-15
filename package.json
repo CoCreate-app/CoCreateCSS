@@ -62,7 +62,6 @@
   },
   "dependencies": {
     "@cocreate/docs": "^1.4.19",
-    "@cocreate/floating-label": "^1.4.44",
     "@cocreate/hosting": "^1.6.18"
   }
 }
