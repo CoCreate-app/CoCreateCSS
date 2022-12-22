@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/cocreatecss",
-  "version": "1.10.13",
+  "version": "1.10.14",
   "description": "A lightweight utility-first Atomic CSS framework promoting rapid UI development. No learning curve... Apply your native css property:value directly in class, then extract and transform it.",
   "keywords": [
     "cocreatecss",
@@ -20,7 +20,9 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "npx webpack --config webpack.config.js",
     "build": "NODE_ENV=production npx webpack --config webpack.config.js",
@@ -34,7 +36,9 @@
   },
   "author": "CoCreate LLC",
   "license": "MIT",
-  "bugs": { "url": "https://github.com/CoCreate-app/CoCreateCSS/issues" },
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreateCSS/issues"
+  },
   "homepage": "https://cocreate.app/css/",
   "funding": {
     "type": "GitHub Sponsors ❤",

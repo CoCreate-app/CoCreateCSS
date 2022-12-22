@@ -1,3 +1,10 @@
+## [1.10.14](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.13...v1.10.14) (2022-12-22)
+
+
+### Bug Fixes
+
+* update demos and bump dependencies ([fcbeedf](https://github.com/CoCreate-app/CoCreateCSS/commit/fcbeedf9040772820c94c60decf2ef84b2b9b5b3))
+
 ## [1.10.13](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.12...v1.10.13) (2022-12-21)
 
 
