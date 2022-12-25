@@ -1,3 +1,12 @@
+## [1.10.17](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.16...v1.10.17) (2022-12-25)
+
+
+### Bug Fixes
+
+* bump dependencies ([32bb72b](https://github.com/CoCreate-app/CoCreateCSS/commit/32bb72b4318837ae9935ccf3587e32390f46989b))
+* bumpcdn to 1.34.4 ([f2ac563](https://github.com/CoCreate-app/CoCreateCSS/commit/f2ac563aeede05b114936b33bec3e13b8b9d5a26))
+* type="modal" and pass_to updated to action="pass, openModal" ([645e81d](https://github.com/CoCreate-app/CoCreateCSS/commit/645e81dd03601b9bc9af47eafb8b0590fc50f5d4))
+
 ## [1.10.16](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.15...v1.10.16) (2022-12-23)
 
 
