@@ -1,3 +1,11 @@
+## [1.10.18](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.17...v1.10.18) (2022-12-27)
+
+
+### Bug Fixes
+
+* bump dependencies ([78ea4e9](https://github.com/CoCreate-app/CoCreateCSS/commit/78ea4e95108701e2c4e6f65b701340a2a82ba0b8))
+* modal href updated to modal-src ([b81ef5f](https://github.com/CoCreate-app/CoCreateCSS/commit/b81ef5f39405b452f71b5704e24f306690115f4c))
+
 ## [1.10.17](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.16...v1.10.17) (2022-12-25)
 
 
