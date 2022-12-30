@@ -6,13 +6,12 @@ module.exports = {
     },
     "sources": [
         {
-            "entry": "./docs/utility.html",
             "collection": "files",
             "document": {
                 "_id": "60c63f2429e7550bebd6fb88",
                 "name": "index.html",
                 "path": "/docs/utility/index.html",
-                "src": "{{source}}",
+                "src": "{{./docs/utility.html}}",
                 "domains": [
                     "*",
                     "general.cocreate.app"
@@ -24,13 +23,12 @@ module.exports = {
             }
         },
         {
-            "entry": "./docs/avatar.html",
             "collection": "files",
             "document": {
                 "_id": "60c63f2429e7550bebd6fb89",
                 "name": "avatar.html",
                 "path": "/docs/avatar/index.html",
-                "src": "{{source}}",
+                "src": "{{./docs/avatar.html}}",
                 "domains": [
                     "*",
                     "general.cocreate.app"
@@ -42,13 +40,13 @@ module.exports = {
             }
         },
         {
-            "entry": "./docs/flip-item.html",
+            "entry": "",
             "collection": "files",
             "document": {
                 "_id": "60c63f2429e7550bebd6fb8a",
                 "name": "flip-item.html",
                 "path": "/docs/flip-item/index.html",
-                "src": "{{source}}",
+                "src": "{{./docs/flip-item.html}}",
                 "domains": [
                     "*",
                     "general.cocreate.app"
