@@ -1,3 +1,10 @@
+## [1.10.20](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.19...v1.10.20) (2022-12-30)
+
+
+### Bug Fixes
+
+* update config sources to use template  braces with entry on src ([e28d1f3](https://github.com/CoCreate-app/CoCreateCSS/commit/e28d1f36088a19375f2ba749fa06f457fe415456))
+
 ## [1.10.19](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.18...v1.10.19) (2022-12-29)
 
 
