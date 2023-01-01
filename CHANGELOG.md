@@ -1,3 +1,10 @@
+## [1.10.22](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.21...v1.10.22) (2023-01-01)
+
+
+### Bug Fixes
+
+* docs sanbox overflow ([08cb823](https://github.com/CoCreate-app/CoCreateCSS/commit/08cb823285ee0445757c64392a5d9a161ac28cdb))
+
 ## [1.10.21](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.20...v1.10.21) (2022-12-31)
 
 
