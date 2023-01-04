@@ -1,3 +1,11 @@
+## [1.10.23](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.22...v1.10.23) (2023-01-04)
+
+
+### Bug Fixes
+
+* bump cdn to 1.39.4 ([8cb3c8c](https://github.com/CoCreate-app/CoCreateCSS/commit/8cb3c8ceea38884a0a25a371822dc1001f846217))
+* removed some of the button css ([d9fbea7](https://github.com/CoCreate-app/CoCreateCSS/commit/d9fbea7cb71f179dee72610ecfb3350d9729bcc5))
+
 ## [1.10.22](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.21...v1.10.22) (2023-01-01)
 
 
