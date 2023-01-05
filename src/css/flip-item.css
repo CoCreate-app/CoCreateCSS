@@ -7,7 +7,6 @@
 }
 
 .flip-container > .flip-item.flipped {transform: rotateY(180deg);}
-
 .flip-container.active > .flip-item {transform: rotateY(180deg);}
 .flip-container.active > .flip-item.flipped {transform: rotateY(0deg);}
 

@@ -1,6 +1,7 @@
 /**
   check box
 **/
+
 .checkbox {
   position:relative;
   padding-left: 35px;
@@ -8,6 +9,7 @@
   font-size: 20px;
   min-height: 20px;
 }
+
 .checkbox input[type="checkbox"] {
   position: absolute;
   opacity: 0;
