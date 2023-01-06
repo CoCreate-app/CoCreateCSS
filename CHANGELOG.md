@@ -1,3 +1,12 @@
+## [1.10.25](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.24...v1.10.25) (2023-01-06)
+
+
+### Bug Fixes
+
+* bump dependencies, worklow [@v3](https://github.com/v3) ([4288872](https://github.com/CoCreate-app/CoCreateCSS/commit/42888720554147b9f4657225929fedebfeb12262))
+* edit in github btn styles ([28d5c1b](https://github.com/CoCreate-app/CoCreateCSS/commit/28d5c1b128da6ad51d173af40f4c82edf532e170))
+* removed unused css ([7a51965](https://github.com/CoCreate-app/CoCreateCSS/commit/7a519654b6c4fccf100cc8784164ba542f6893c3))
+
 ## [1.10.24](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.10.23...v1.10.24) (2023-01-05)
 
 
