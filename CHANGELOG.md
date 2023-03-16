@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.1...v1.11.2) (2023-03-16)
+
+
+### Bug Fixes
+
+* filter-sort-direction icon ([3f055d3](https://github.com/CoCreate-app/CoCreateCSS/commit/3f055d3f697657796bfbb1881017384a7cd3fb45))
+
 ## [1.11.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.0...v1.11.1) (2023-03-16)
 
 
