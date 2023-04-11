@@ -1,3 +1,10 @@
+## [1.11.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.4...v1.11.5) (2023-04-11)
+
+
+### Bug Fixes
+
+* renamed domains to hosts ([588bf2c](https://github.com/CoCreate-app/CoCreateCSS/commit/588bf2c161d9748687824a0558c0a0ef16591fd0))
+
 ## [1.11.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.3...v1.11.4) (2023-03-30)
 
 
