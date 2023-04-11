@@ -12,7 +12,7 @@ module.exports = {
                 "name": "index.html",
                 "path": "/docs/utility/index.html",
                 "src": "{{./docs/utility.html}}",
-                "domains": [
+                "hosts": [
                     "*",
                     "general.cocreate.app"
                 ],
@@ -29,7 +29,7 @@ module.exports = {
                 "name": "avatar.html",
                 "path": "/docs/avatar/index.html",
                 "src": "{{./docs/avatar.html}}",
-                "domains": [
+                "hosts": [
                     "*",
                     "general.cocreate.app"
                 ],
@@ -47,7 +47,7 @@ module.exports = {
                 "name": "flip-item.html",
                 "path": "/docs/flip-item/index.html",
                 "src": "{{./docs/flip-item.html}}",
-                "domains": [
+                "hosts": [
                     "*",
                     "general.cocreate.app"
                 ],
