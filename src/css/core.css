@@ -110,9 +110,9 @@ a[icon][filter-sort-direction=desc]:before {
 }
 
 /**
-* ToDo: Reuires away for CoCreateJS to add to min.css as it is minimum required csss for rendering
+* ToDo: Requires away for CoCreateJS to add to min.css as it is minimum required csss for rendering
 */
-cocreate-select:not(.active) > * {
+cocreate-select:not(.open) > * {
     visibility: hidden;
 }
 
