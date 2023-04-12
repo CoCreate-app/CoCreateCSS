@@ -1,3 +1,10 @@
+## [1.11.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.7...v1.11.8) (2023-04-12)
+
+
+### Bug Fixes
+
+* .active renamed to open ([a5ed903](https://github.com/CoCreate-app/CoCreateCSS/commit/a5ed903a0711f98605653f47ff8e60713b79341b))
+
 ## [1.11.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.6...v1.11.7) (2023-04-11)
 
 
