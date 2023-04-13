@@ -1,3 +1,10 @@
+## [1.11.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.8...v1.11.9) (2023-04-13)
+
+
+### Bug Fixes
+
+* cdn deployment ([673871a](https://github.com/CoCreate-app/CoCreateCSS/commit/673871adf0920cf402ed6f1cf059fbb3903ec6cb))
+
 ## [1.11.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.7...v1.11.8) (2023-04-12)
 
 
