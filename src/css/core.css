@@ -112,8 +112,8 @@ a[icon][filter-sort-direction=desc]:before {
 /**
 * ToDo: Requires away for CoCreateJS to add to min.css as it is minimum required csss for rendering
 */
-cocreate-select:not(.open) > * {
-    visibility: hidden;
+cocreate-select:not(.open) > input~* {
+    display: none;
 }
 
 floating-label, .floating-label_field {
