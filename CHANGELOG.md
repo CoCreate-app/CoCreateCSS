@@ -1,3 +1,10 @@
+## [1.11.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.9...v1.11.10) (2023-04-14)
+
+
+### Bug Fixes
+
+* cocreate-select display none ([4fbae16](https://github.com/CoCreate-app/CoCreateCSS/commit/4fbae1610793b8f0ac120461c31557faf2653140))
+
 ## [1.11.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.8...v1.11.9) (2023-04-13)
 
 
