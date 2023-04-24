@@ -1,3 +1,10 @@
+## [1.12.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.2...v1.12.3) (2023-04-24)
+
+
+### Bug Fixes
+
+* workflow node version updated  16 ([38101cc](https://github.com/CoCreate-app/CoCreateCSS/commit/38101ccdbdf5b6d849a8d91ae794f5dce3542f30))
+
 ## [1.12.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.1...v1.12.2) (2023-04-24)
 
 
