@@ -1,3 +1,10 @@
+## [1.12.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.1...v1.12.2) (2023-04-24)
+
+
+### Bug Fixes
+
+* bump [@cocreate](https://github.com/cocreate) dependencies ([5195a83](https://github.com/CoCreate-app/CoCreateCSS/commit/5195a8304446ecf9729c2e195e674b7d71d41dc6))
+
 ## [1.12.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.0...v1.12.1) (2023-04-24)
 
 
