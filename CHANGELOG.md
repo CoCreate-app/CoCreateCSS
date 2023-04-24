@@ -1,3 +1,10 @@
+## [1.12.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.3...v1.12.4) (2023-04-24)
+
+
+### Bug Fixes
+
+* updated worrkflows to v3 and node version 16 ([68e4b22](https://github.com/CoCreate-app/CoCreateCSS/commit/68e4b22c8774d34b7de370c9e4b6247ebbb93ccc))
+
 ## [1.12.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.2...v1.12.3) (2023-04-24)
 
 
