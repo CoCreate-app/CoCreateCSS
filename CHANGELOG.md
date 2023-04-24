@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.10...v1.12.0) (2023-04-24)
+
+
+### Features
+
+* added pwa manifest ([d21b58d](https://github.com/CoCreate-app/CoCreateCSS/commit/d21b58d7a07b550cf7d2a467fe7ee7161cc91b87))
+
 ## [1.11.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.9...v1.11.10) (2023-04-14)
 
 
