@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.0...v1.12.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* removed uglifyjs-webpack-plugin ([102876b](https://github.com/CoCreate-app/CoCreateCSS/commit/102876be8dd42da799fee4fbf307e6c28323ad88))
+
 # [1.12.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.11.10...v1.12.0) (2023-04-24)
 
 
