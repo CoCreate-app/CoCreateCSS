@@ -81,12 +81,14 @@ a[icon][filter-sort-direction=desc]:before {
     content: "\f0dd";
     font-weight: 900;
 }
+
 a[fullscreen]:before {
     font-family: 'Font Awesome 5 Free';
     content: "\f065";
     font-weight: 900;
 }
-a[fullscreen=false]:before {
+
+a[fullscreen=true]:before {
     font-family: 'Font Awesome 5 Free';
     content: "\f066";
     font-weight: 900;
