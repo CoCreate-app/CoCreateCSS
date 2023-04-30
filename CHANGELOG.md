@@ -1,3 +1,15 @@
+## [1.12.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.4...v1.12.5) (2023-04-30)
+
+
+### Bug Fixes
+
+* fullscreen target updated to fullscreen fullscreen-target ([b6734d8](https://github.com/CoCreate-app/CoCreateCSS/commit/b6734d880e41b5ccb8921a4e0d5b995b7c09a87e))
+* package-lock.json and pnpm-lock.yaml added to .gitignore ([94c925d](https://github.com/CoCreate-app/CoCreateCSS/commit/94c925de630030430f0d52cf4f3f1e8801d36234))
+* relocated fullscreen css to fullscreen component ([b68192b](https://github.com/CoCreate-app/CoCreateCSS/commit/b68192b4f436f6a6658ff5d3dca48383af8e528d))
+* removed toogle fullscreen icons. now using css content ([19822bf](https://github.com/CoCreate-app/CoCreateCSS/commit/19822bf305e7b3883ffc6dca34c0ecae6e79ea80))
+* replaced sessionUser and sessionOrg with localstorage attributes ([b51f8e7](https://github.com/CoCreate-app/CoCreateCSS/commit/b51f8e7dab5fd5453e55afbe5ae0d03fe9095a0b))
+* typo fullscreen icon ([0a02930](https://github.com/CoCreate-app/CoCreateCSS/commit/0a02930d77bc0cddf72b7349509b85a83c5e41de))
+
 ## [1.12.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.3...v1.12.4) (2023-04-24)
 
 
