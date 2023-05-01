@@ -1,3 +1,10 @@
+## [1.12.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.7...v1.12.8) (2023-05-01)
+
+
+### Bug Fixes
+
+* update manifest.json to manifest.webmanifest ([b9b4ec6](https://github.com/CoCreate-app/CoCreateCSS/commit/b9b4ec6a9f61be34c8a8b57842f3a45921e70bb3))
+
 ## [1.12.7](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.6...v1.12.7) (2023-05-01)
 
 
