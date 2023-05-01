@@ -1,3 +1,10 @@
+## [1.12.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.9...v1.12.10) (2023-05-01)
+
+
+### Bug Fixes
+
+* favicon ([92fa7c2](https://github.com/CoCreate-app/CoCreateCSS/commit/92fa7c261b904e7405ebecb32642ab92ea12880a))
+
 ## [1.12.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.8...v1.12.9) (2023-05-01)
 
 
