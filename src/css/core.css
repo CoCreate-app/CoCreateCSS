@@ -43,6 +43,11 @@ a {
     color: inherit;
 }
 
+svg {
+    height: inherit;
+    fill: inherit;
+}
+
 textarea {
     resize: vertical;
 }
