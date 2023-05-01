@@ -1,3 +1,10 @@
+## [1.12.6](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.5...v1.12.6) (2023-05-01)
+
+
+### Bug Fixes
+
+* css for svg ([37c0d7b](https://github.com/CoCreate-app/CoCreateCSS/commit/37c0d7b99001d06631e282df3f98162a4577b2a8))
+
 ## [1.12.5](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.4...v1.12.5) (2023-04-30)
 
 
