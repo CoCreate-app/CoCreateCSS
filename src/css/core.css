@@ -45,7 +45,9 @@ a {
 
 svg {
     height: inherit;
+    width: inherit;
     fill: inherit;
+    stroke: inherit;
 }
 
 textarea {
