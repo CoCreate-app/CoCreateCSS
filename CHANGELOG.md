@@ -1,3 +1,10 @@
+## [1.12.9](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.8...v1.12.9) (2023-05-01)
+
+
+### Bug Fixes
+
+* svg inherit css for width and stroke ([ab48cd5](https://github.com/CoCreate-app/CoCreateCSS/commit/ab48cd523ee6c5d6119d24e1ba38ac6216030803))
+
 ## [1.12.8](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.7...v1.12.8) (2023-05-01)
 
 
