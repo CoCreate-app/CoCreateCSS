@@ -1,3 +1,10 @@
+## [1.12.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.10...v1.12.11) (2023-05-01)
+
+
+### Bug Fixes
+
+* replaced icon toggles with new svg ([addd6dd](https://github.com/CoCreate-app/CoCreateCSS/commit/addd6dd5e7b3a6e8fdf76b485885b28d77af566c))
+
 ## [1.12.10](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.9...v1.12.10) (2023-05-01)
 
 
