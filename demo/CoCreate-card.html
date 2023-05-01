@@ -32,13 +32,19 @@
         <a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a>
       </li>
       <li class="margin-right:15px">
-        <a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a>
+        <a actions="minMaxModal">
+          <i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
+        </a>
       </li>
       <li class="margin-right:15px">
         <a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a>
       </li>
       <li class="margin-right:15px">
-        <a fullscreen></a>
+        <a fullscreen>
+						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
+						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
+					</a>
+
       </li>
       <li class="margin-right:15px">
         <a actions="pass, openModal" modal-src="render.html" pass-collection="modules" pass-document_id=""  pass_to="builder" modal-width="100%" pass_id="render">
