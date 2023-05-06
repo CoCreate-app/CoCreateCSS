@@ -1,3 +1,11 @@
+## [1.12.12](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.11...v1.12.12) (2023-05-06)
+
+
+### Bug Fixes
+
+* bump [@cocreate](https://github.com/cocreate) dependencies ([9c79809](https://github.com/CoCreate-app/CoCreateCSS/commit/9c79809f41fbf275d3d7ad01f72154e3a124a530))
+* removed filter-sort-direction css ([8dd0d2e](https://github.com/CoCreate-app/CoCreateCSS/commit/8dd0d2e912f365a7e4c31629362179c612c913bd))
+
 ## [1.12.11](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.10...v1.12.11) (2023-05-01)
 
 
