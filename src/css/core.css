@@ -71,24 +71,6 @@ textarea {
    toggle order icons transform filter.js
 =================================*/
 
-a[icon][filter-sort-direction]:before {
-    font-family: 'Font Awesome 5 Free';
-    content: "\f0dc";
-    font-weight: 900;
-}
-
-a[icon][filter-sort-direction=asc]:before {
-    font-family: 'Font Awesome 5 Free';
-    content: "\f0de";
-    font-weight: 900;
-}
-
-a[icon][filter-sort-direction=desc]:before {
-    font-family: 'Font Awesome 5 Free';
-    content: "\f0dd";
-    font-weight: 900;
-}
-
 .success {
     background-color: #70ca63;
     color: #fff;
