@@ -1,3 +1,10 @@
+## [1.12.13](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.12...v1.12.13) (2023-05-10)
+
+
+### Bug Fixes
+
+* apikey renamed to key ([38ec1e1](https://github.com/CoCreate-app/CoCreateCSS/commit/38ec1e1abb92fcd317158dabb0766fef425bc817))
+
 ## [1.12.12](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.11...v1.12.12) (2023-05-06)
 
 
