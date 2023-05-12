@@ -99,7 +99,7 @@ textarea {
 }
 
 /**
-* ToDo: Requires away for CoCreateJS to add to min.css as it is minimum required csss for rendering
+* TODO: Requires away for CoCreateJS to add to min.css as it is minimum required csss for rendering
 */
 cocreate-select:not(.open) > input~* {
     display: none;
