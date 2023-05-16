@@ -1,94 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <title>Card | CoCreate</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-  <title>Card | CoCreate</title>
+        <!-- CoCreateCSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.cocreate.app/CoCreate.min.css"
+            type="text/css" />
 
-  <!-- CoCreateCSS -->
-  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-  
-  
-    <link rel="manifest" href="/manifest.webmanifest">
-</head>
+    <body>
+        <div id="modal-viewport" hidden></div>
+        <div
+            content_id="content"
+            class="nav width:100% display:flex align-items-center bg-light-gray height:50px"
+            scroll-effect="hide-nav"
+            scroll-position="50">
+            <!--<a href="#" class="logo">Navbar</a>-->
+            <!--<a class="nav-toggle menu_icon--Vdots" toggle-sidenav="menuL">-->
+            <!--  <div class="circle"></div>-->
+            <!--  <div class="circle"></div>-->
+            <!--  <div class="circle"></div>-->
+            <!--  <div class="circle"></div>-->
+            <!--  <div class="circle"></div>-->
+            <!--</a>-->
+            <ul
+                class="overflow:auto display:inline-flex direction:rtl width:100% font-size:20px align-items-center list-style-type-none">
+                <li class="margin-right:15px">
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="render.html"
+                        pass-collection="modules"
+                        pass-document_id=""
+                        pass_to="builder"
+                        modal-width="100%"
+                        pass_id="render">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="render"
+                            class="sessionBuilderUI_Id"></div>
+                    </a>
+                </li>
 
-<body>
-  <div id="modal-viewport" hidden></div>
-  <div content_id="content" class="nav width:100% display:flex align-items-center bg-light-gray height:50px" scroll-effect="hide-nav" scroll-position="50">
-    <!--<a href="#" class="logo">Navbar</a>-->
-    <!--<a class="nav-toggle menu_icon--Vdots" toggle-sidenav="menuL">-->
-    <!--  <div class="circle"></div>-->
-    <!--  <div class="circle"></div>-->
-    <!--  <div class="circle"></div>-->
-    <!--  <div class="circle"></div>-->
-    <!--  <div class="circle"></div>-->
-    <!--</a>-->
-    <ul class="overflow:auto display:inline-flex direction:rtl width:100% font-size:20px align-items-center list-style-type-none">
-      <li class="margin-right:15px">
-        <a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a>
-      </li>
-      <li class="margin-right:15px">
-        <a actions="minMaxModal">
-          <i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-        </a>
-      </li>
-      <li class="margin-right:15px">
-        <a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a>
-      </li>
-      <li class="margin-right:15px">
-        <a fullscreen>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-					</a>
-
-      </li>
-      <li class="margin-right:15px">
-        <a actions="pass, openModal" modal-src="render.html" pass-collection="modules" pass-document_id=""  pass_to="builder" modal-width="100%" pass_id="render">
-              		<i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-            		 <div pass-collection="modules"
-      						   pass-document_id=""
-      						   pass_to="render"
-      						   class="sessionBuilderUI_Id">
-    						 </div>
-              </a>
-      </li>
-
-      <li class="margin-right:15px">
-        <a actions="deleteDocument, closeModal" collection="modules" document_id="" pass_id="form-fields"><i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i></a>
-      </li>
-    </ul>
-  </div>
-  <div content_id="content">
-
-    <div class="card max-width:300px margin:0px_10px margin:10px_0px box-shadow-hover" id="template1">
-      <div class="position:relative">
-        <img collection="module_activity" document_id="" name="image" pass_id="me1234" src="https://via.placeholder.com/150" width="100%"></img>
-        <button class="imageUpload font-size:20px position:absolute bg-blue round float:right bottom:-15px right-20px grow-hover"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></button>
-        <div class="position:absolute bottom-5px width:100% padding:0px_10px font-size-25px color-white bg-black opacity-04">
-          <span collection="module_activity" document_id="" name="name" pass_id="me1234">Template Name</span>
+                <li class="margin-right:15px">
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection="modules"
+                        document_id=""
+                        pass_id="form-fields"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i
+                    ></a>
+                </li>
+            </ul>
         </div>
-      </div>
-      <div>
-        <p collection="module_activity" document_id="" name="description" pass_id="me1234">Description</p>
-      </div>
+        <div content_id="content">
+            <div
+                class="card max-width:300px margin:0px_10px margin:10px_0px box-shadow-hover"
+                id="template1">
+                <div class="position:relative">
+                    <img
+                        collection="module_activity"
+                        document_id=""
+                        name="image"
+                        pass_id="me1234"
+                        src="https://via.placeholder.com/150"
+                        width="100%" />
+                    <button
+                        class="imageUpload font-size:20px position:absolute bg-blue round float:right bottom:-15px right-20px grow-hover">
+                        <i
+                            class="height:16px fill:#505050"
+                            src="/assets/svg/plus.svg"></i>
+                    </button>
+                    <div
+                        class="position:absolute bottom-5px width:100% padding:0px_10px font-size-25px color-white bg-black opacity-04">
+                        <span
+                            collection="module_activity"
+                            document_id=""
+                            name="name"
+                            pass_id="me1234"
+                            >Template Name</span
+                        >
+                    </div>
+                </div>
+                <div>
+                    <p
+                        collection="module_activity"
+                        document_id=""
+                        name="description"
+                        pass_id="me1234">
+                        Description
+                    </p>
+                </div>
+            </div>
 
-    </div>
+            <button
+                class="submitBtn position:fixed bottom:15px right:15px bg-blue grow-hover round">
+                <i
+                    class="height:20px fill:#505050"
+                    src="/assets/svg/save.svg"></i>
+            </button>
+        </div>
 
-    <button class="submitBtn position:fixed bottom:15px right:15px bg-blue grow-hover round"><i class="height:20px fill:#505050" src="/assets/svg/save.svg"></i></button>
-
-  </div>
-
-
-  <!--CoCreateJS-->
-  <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-  <script src="../dist/CoCreateCSS.js"></script>
-  <!--CoCreateUI-->
-
-
-</body>
-
+        <!--CoCreateJS-->
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <script src="../dist/CoCreateCSS.js"></script>
+        <!--CoCreateUI-->
+    </body>
 </html>
