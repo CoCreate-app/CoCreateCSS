@@ -1,3 +1,10 @@
+## [1.12.14](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.13...v1.12.14) (2023-05-19)
+
+
+### Bug Fixes
+
+* update packages to latest version. This commit updates various packages in the dependencies section of the package.json file to their latest published versions, thereby fixing multiple bugs and improving overall performance. ([1dd33b6](https://github.com/CoCreate-app/CoCreateCSS/commit/1dd33b6505c0d7e8e1190662be0a7deca5feab03))
+
 ## [1.12.13](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.12...v1.12.13) (2023-05-10)
 
 
