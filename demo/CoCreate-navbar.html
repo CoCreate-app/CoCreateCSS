@@ -1,98 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <title>Navbar | CoCreate</title>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-	<title>Navbar | CoCreate</title>
+        <!-- CoCreateCSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.cocreate.app/CoCreate.min.css"
+            type="text/css" />
 
-	<!-- CoCreateCSS -->
-	<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-	<link rel="manifest" href="/manifest.webmanifest">
-</head>
+    <body>
+        <!-- Navbar effects: sticky-nav, hidden-nav -->
+        <div
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5"
+            class="nav display:flex align-items-center bg-light-gray">
+            <!--<a href="#" class="logo">Navbar</a>-->
 
-<body>
-	<!-- Navbar effects: sticky-nav, hidden-nav -->
-	<div content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5"
-		class="nav display:flex align-items-center bg-light-gray">
-		<!--<a href="#" class="logo">Navbar</a>-->
+            <!-- Menu Icon -->
+            <a
+                class="menu_icon display:none@md@lg@xl"
+                toggle="open"
+                toggle-sidenav="menuL">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
 
-		<!-- Menu Icon -->
-		<a class="menu_icon display:none@md@lg@xl" toggle="open" toggle-sidenav="menuL">
-			<span></span>
-			<span></span>
-			<span></span>
-		</a>
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul
+                class="overflow:auto display:inline-flex direction:rtl font-size:20px align-items-center list-style-type-none width:100% height:50px">
+                <!-- Fullscreen toogle and icon transform -->
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
+                    </a>
+                </li>
 
-		<!-- Horizontal Scroll Nav/Tabs -->
-		<ul
-			class="overflow:auto display:inline-flex direction:rtl font-size:20px align-items-center list-style-type-none width:100% height:50px">
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="render.html"
+                        pass-collection="modules"
+                        pass-document_id=""
+                        pass_to="builder"
+                        modal-width="100%"
+                        class="sessionAdminUI_Id">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="render"
+                            class="sessionBuilderUI_Id"></div>
+                    </a>
+                </li>
+                <li class="display:flex">
+                    <span
+                        class="cocreate-badge position:relative right-8px bottom-5px border-radius-5px"
+                        >4</span
+                    >
+                    <a
+                        actions="pass, openModal"
+                        modal-src="render.html"
+                        pass-collection="modules"
+                        pass-document_id=""
+                        pass_to="render"
+                        modal-width="100%"
+                        modal-height="100%"
+                        modal-color="#229954">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/history.svg"></i>
+                    </a>
+                </li>
+                <li class="display:flex">
+                    <span
+                        class="cocreate-badge position:relative right-8px bottom-5px border-radius-5px"
+                        >4</span
+                    >
+                    <a
+                        actions="pass, openModal"
+                        modal-src="render.html"
+                        pass-collection="modules"
+                        pass-document_id="5dc846ebcddd6b0de2c40b80"
+                        pass_to="render"
+                        modal-width="100%"
+                        modal-height="100%"
+                        modal-color="#229954">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/calendar.svg"></i>
+                    </a>
+                </li>
+            </ul>
 
-			<!-- Fullscreen toogle and icon transform -->
-			<li class="margin-right:15px">
-				<a fullscreen>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-					</a>
+            <!-- Avatar -->
+            <div
+                localstorage-get="user_id"
+                localstorage-key="userId"
+                localstorage-target=".avatar-wrapper"></div>
+            <div class="avatar-wrapper margin:5px_0px margin-right:10px">
+                <a
+                    class="avatar round"
+                    actions="pass, openModal"
+                    modal-src="render.html"
+                    pass-collection="modules"
+                    pass-document_id="5dd010bccbc25f0cdb1a4d9f"
+                    pass_to="render"
+                    modal-width="300px"
+                    modal-height="375px"
+                    modal-color="#229954">
+                    <span
+                        collection="users"
+                        document_id="{{userId}}"
+                        name="name"
+                        class="width:12px avatar-name"
+                        >B</span
+                    >
+                    <span
+                        collection="users"
+                        document_id="{{userId}}"
+                        name="profile_image"
+                        class="avatar-image">
+                        <img
+                            src="/_static/Velazquez.jpg"
+                            onerror="this.style.display='none'" />
+                    </span>
+                </a>
+                <div class="avatar-status off"></div>
+            </div>
+        </div>
 
-			</li>
+        <div id="modal-viewport" content_id="content"></div>
 
-			<!-- Render Builder -->
-			<li class="margin-right:15px">
-				<a actions="pass, openModal" modal-src="render.html" pass-collection="modules" pass-document_id=""
-					pass_to="builder" modal-width="100%" class="sessionAdminUI_Id">
-					<i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-					<div pass-collection="modules" pass-document_id="" pass_to="render" class="sessionBuilderUI_Id">
-					</div>
-				</a>
-			</li>
-			<li class="display:flex">
-				<span class="cocreate-badge position:relative right-8px bottom-5px border-radius-5px">4</span>
-				<a actions="pass, openModal" modal-src="render.html" pass-collection="modules" pass-document_id=""
-					pass_to="render" modal-width="100%" modal-height="100%" modal-color="#229954">
-					<i class="height:18px fill:#505050" src="/assets/svg/history.svg"></i>
-				</a>
-			</li>
-			<li class="display:flex">
-				<span class="cocreate-badge position:relative right-8px bottom-5px border-radius-5px">4</span>
-				<a actions="pass, openModal" modal-src="render.html" pass-collection="modules"
-					pass-document_id="5dc846ebcddd6b0de2c40b80" pass_to="render" modal-width="100%" modal-height="100%"
-					modal-color="#229954">
-					<i class="height:18px fill:#505050" src="/assets/svg/calendar.svg"></i>
-				</a>
-			</li>
-		</ul>
+        <div
+            id="menuL"
+            class="cocreate-sidenav bg-medium-light-gray"
+            content_id="content"
+            sidenav_default_desktop="expanded"
+            sidenav_default_tablet="collapsed">
+            <div resize="right"></div>
+        </div>
 
-		<!-- Avatar -->
-		<div localstorage-get="user_id" localstorage-key="userId" localstorage-target=".avatar-wrapper"></div>
-		<div class="avatar-wrapper margin:5px_0px margin-right:10px">
-			<a class="avatar round" actions="pass, openModal" modal-src="render.html" pass-collection="modules"
-				pass-document_id="5dd010bccbc25f0cdb1a4d9f" pass_to="render" modal-width="300px" modal-height="375px"
-				modal-color="#229954">
-				<span collection="users" document_id="{{userId}}" name="name" class="width:12px avatar-name">B</span>
-				<span collection="users" document_id="{{userId}}" name="profile_image" class="avatar-image">
-					<img src="/_static/Velazquez.jpg" onerror="this.style.display='none'" />
-				</span>
-			</a>
-			<div class="avatar-status off"></div>
-		</div>
-	</div>
-
-	<div id="modal-viewport" content_id="content">
-
-	</div>
-
-	<div id="menuL" class="cocreate-sidenav bg-medium-light-gray" content_id="content"
-		sidenav_default_desktop="expanded" sidenav_default_tablet="collapsed">
-		<div resize="right"></div>
-	</div>
-
-	<!--CoCreateJS-->
-	<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-
-</body>
-
+        <!--CoCreateJS-->
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+    </body>
 </html>
