@@ -1,3 +1,10 @@
+## [1.12.16](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.15...v1.12.16) (2023-06-02)
+
+
+### Bug Fixes
+
+* format demo html ([e6fcb86](https://github.com/CoCreate-app/CoCreateCSS/commit/e6fcb86f24cd8e62a24a8b0f588ac73cd99e2672))
+
 ## [1.12.15](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.14...v1.12.15) (2023-05-21)
 
 
