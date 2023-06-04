@@ -1,3 +1,11 @@
+## [1.12.18](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.17...v1.12.18) (2023-06-04)
+
+
+### Bug Fixes
+
+* replaced secert GITHUB_TOKEN with GITHUB ([ff7a2f4](https://github.com/CoCreate-app/CoCreateCSS/commit/ff7a2f472f8d350ac9bcec51d693dcac58e5155f))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([6eab2bc](https://github.com/CoCreate-app/CoCreateCSS/commit/6eab2bcd16717a499b26bf805b7644a742d34588))
+
 ## [1.12.17](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.16...v1.12.17) (2023-06-04)
 
 
