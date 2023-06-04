@@ -1,3 +1,10 @@
+## [1.12.17](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.16...v1.12.17) (2023-06-04)
+
+
+### Bug Fixes
+
+* **semantic-release:** worklow error solved by running node version 14 ([4e094c8](https://github.com/CoCreate-app/CoCreateCSS/commit/4e094c85a63d058f1f1b009e44b5435bb15b6bbb))
+
 ## [1.12.16](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.15...v1.12.16) (2023-06-02)
 
 
