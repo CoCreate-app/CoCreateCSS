@@ -1,3 +1,10 @@
+## [1.12.19](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.18...v1.12.19) (2023-06-04)
+
+
+### Bug Fixes
+
+* Refactor CoCreate.config.js to remove hard-coded credentials ([8932c4d](https://github.com/CoCreate-app/CoCreateCSS/commit/8932c4d2f2d5b22cfdf501242365ba3df7c320f4))
+
 ## [1.12.18](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.17...v1.12.18) (2023-06-04)
 
 
