@@ -1,3 +1,10 @@
+## [1.12.28](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.27...v1.12.28) (2023-06-11)
+
+
+### Bug Fixes
+
+* testing workflow ([11f3725](https://github.com/CoCreate-app/CoCreateCSS/commit/11f37258192c542e9070005989b1596f92023579))
+
 ## [1.12.27](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.26...v1.12.27) (2023-06-11)
 
 
