@@ -1,3 +1,10 @@
+## [1.12.24](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.23...v1.12.24) (2023-06-11)
+
+
+### Bug Fixes
+
+* postintall error ([0a1d77a](https://github.com/CoCreate-app/CoCreateCSS/commit/0a1d77adbd5645692050c0ea690d84c781bb029f))
+
 ## [1.12.23](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.22...v1.12.23) (2023-06-11)
 
 
