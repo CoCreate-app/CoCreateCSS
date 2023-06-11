@@ -1,3 +1,10 @@
+## [1.12.21](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.20...v1.12.21) (2023-06-11)
+
+
+### Bug Fixes
+
+* renamed hosts to host. the value can be a string or an array of strings ([4a3b2b5](https://github.com/CoCreate-app/CoCreateCSS/commit/4a3b2b5fb4aab6e81b2f9b290b34b58e47f00ad6))
+
 ## [1.12.20](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.19...v1.12.20) (2023-06-10)
 
 
