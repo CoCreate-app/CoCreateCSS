@@ -1,3 +1,10 @@
+## [1.12.23](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.22...v1.12.23) (2023-06-11)
+
+
+### Bug Fixes
+
+* @cocreate/cli moved to dependencies ([370b66e](https://github.com/CoCreate-app/CoCreateCSS/commit/370b66eb19bc872297e22bf64477fee126983edc))
+
 ## [1.12.22](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.21...v1.12.22) (2023-06-11)
 
 
