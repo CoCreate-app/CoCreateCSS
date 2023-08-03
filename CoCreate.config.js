@@ -8,8 +8,8 @@ module.exports = {
             "exclude": [
                 "demo"
             ],
-            "collection": "files",
-            "document": {
+            "array": "files",
+            "object": {
                 "name": "{{name}}",
                 "src": "{{source}}",
                 "host": [
