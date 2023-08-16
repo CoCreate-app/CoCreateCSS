@@ -1,3 +1,17 @@
+# [1.13.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.32...v1.13.0) (2023-08-16)
+
+
+### Bug Fixes
+
+* crud attributes renamed ([e94976f](https://github.com/CoCreate-app/CoCreateCSS/commit/e94976fe61ee576e1ae2ce143102d312e72af75f))
+* replace -target -selector ([7ba728f](https://github.com/CoCreate-app/CoCreateCSS/commit/7ba728f0ac0ffffda8ec4e832b6a8de034b2a5e0))
+* webpack.config and package.json make use of mode=production instead of process.env ([0d229ab](https://github.com/CoCreate-app/CoCreateCSS/commit/0d229aba2ce9b80f3f0729de89ee8d606890ba46))
+
+
+### Features
+
+* name attribute and variable renamed to key ([205ac62](https://github.com/CoCreate-app/CoCreateCSS/commit/205ac62079a0c35a72af32c75fe6045373183927))
+
 ## [1.12.32](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.12.31...v1.12.32) (2023-06-14)
 
 
