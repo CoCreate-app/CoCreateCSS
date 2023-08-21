@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/cocreatecss",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "description": "A lightweight utility-first Atomic CSS framework promoting rapid UI development. No learning curve... Apply your native css property:value directly in class, then extract and transform it.",
   "keywords": [
     "cocreatecss",

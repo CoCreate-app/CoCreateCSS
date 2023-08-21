@@ -1,3 +1,12 @@
+## [1.14.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.14.0...v1.14.1) (2023-08-21)
+
+
+### Bug Fixes
+
+* /dist/CoCreate.js updated to https://CoCreate.app/dist/CoCreate.js ([b302a39](https://github.com/CoCreate-app/CoCreateCSS/commit/b302a393b0b25548537d00ba9f277a4107225e9b))
+* replace cdn with /dist ([818af72](https://github.com/CoCreate-app/CoCreateCSS/commit/818af721b08681040620d77046074a28ed51a087))
+* update file uploader ([f35cc3b](https://github.com/CoCreate-app/CoCreateCSS/commit/f35cc3bc451adf79a77a03e4dfeb95b1b156524a))
+
 # [1.14.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.13.0...v1.14.0) (2023-08-17)
 
 
