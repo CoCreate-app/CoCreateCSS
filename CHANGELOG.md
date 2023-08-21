@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.14.1...v1.15.0) (2023-08-21)
+
+
+### Features
+
+* Update cocreate dependencies for the latest features and bug fixes ([2c08110](https://github.com/CoCreate-app/CoCreateCSS/commit/2c0811047f18eed408023c673501aea1a4343c76))
+
 ## [1.14.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.14.0...v1.14.1) (2023-08-21)
 
 
