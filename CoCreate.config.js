@@ -16,9 +16,8 @@ module.exports = {
                     "*",
                     "general.cocreate.app"
                 ],
-                "directory": "/docs",
-                "parentDirectory": "docs",
-                "path": "{{path}}",
+                "directory": "docs",
+                "path": "/CoCreateCSS/docs/{{path}}",
                 "pathname": "{{pathname}}",
                 "content-type": "{{content-type}}",
                 "public": "true"
