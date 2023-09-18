@@ -1,3 +1,11 @@
+## [1.15.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.15.1...v1.15.2) (2023-09-18)
+
+
+### Bug Fixes
+
+*  Add path and pathname ([17fdf51](https://github.com/CoCreate-app/CoCreateCSS/commit/17fdf512ed3f8bcc556b714e018e12fcf90d669b))
+* Update CoCreate depndencies to latest versions ([06ed5b3](https://github.com/CoCreate-app/CoCreateCSS/commit/06ed5b3e16c432eef868cd5564adb15d43f9e573))
+
 ## [1.15.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.15.0...v1.15.1) (2023-08-21)
 
 
