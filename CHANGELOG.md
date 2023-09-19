@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.15.2...v1.15.3) (2023-09-19)
+
+
+### Bug Fixes
+
+* support pathname ([8698ee2](https://github.com/CoCreate-app/CoCreateCSS/commit/8698ee2088a7a6de005304f5899cbc0266b1cbf2))
+
 ## [1.15.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.15.1...v1.15.2) (2023-09-18)
 
 
