@@ -5,8 +5,24 @@ module.exports = {
     "directories": [
         {
             "entry": "./docs",
+            "array": "files",
+            "object": {
+                "name": "{{name}}",
+                "src": "{{source}}",
+                "host": [
+                    "*"
+                ],
+                "directory": "docs",
+                "path": "/docs/CoCreateCSS/{{path}}",
+                "pathname": "{{pathname}}",
+                "content-type": "{{content-type}}",
+                "public": "true"
+            }
+        },
+        {
+            "entry": "./dist",
             "exclude": [
-                "demo"
+                ".txt", ".js"
             ],
             "array": "files",
             "object": {
@@ -15,28 +31,12 @@ module.exports = {
                 "host": [
                     "*"
                 ],
-                "directory": "docs",
-                "path": "/CoCreateCSS/docs/{{path}}",
+                "directory": "{{directory}}",
+                "path": "{{path}}",
                 "pathname": "{{pathname}}",
                 "content-type": "{{content-type}}",
                 "public": "true"
             }
         },
-        {
-            "entry": "./docs",
-            "array": "files",
-            "object": {
-                "name": "{{name}}",
-                "src": "{{source}}",
-                "host": [
-                    "*"
-                ],
-                "directory": "docs",
-                "path": "/CoCreateCSS/docs/{{path}}",
-                "pathname": "{{pathname}}",
-                "content-type": "{{content-type}}",
-                "public": "true"
-            }
-        }
     ]
 }
