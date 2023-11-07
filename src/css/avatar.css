@@ -69,32 +69,3 @@
 .avatar-status.off {
   background-color: #f44336;
 }
-
-/*.avatar-label {*/
-/*  position: absolute;*/
-/*  top: -3px;*/
-/*  left: -3px;*/
-/*  color: rgba(0, 0, 0, 0.87);*/
-/*  height: 18px;*/
-/*  padding: 3px 5px;*/
-/*  font-size: 11px;*/
-/*  min-width: 18px;*/
-/*  text-align: center;*/
-/*  align-items: center;*/
-/*  border-radius: 10px;*/
-/*  z-index: 10;*/
-/*  background-color: #61dafb;*/
-/*}*/
-
-
-/*.avatar-content {*/
-/*}*/
-
-/*.avatar-content .avatar-title {*/
-/*  font-weight: bold;*/
-/*}*/
-
-/*.avatar-content > .avatar-subtitle {*/
-/*  width: 100%;*/
-/*  font-size: 0.9em;*/
-/*}*/
