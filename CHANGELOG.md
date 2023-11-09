@@ -1,3 +1,17 @@
+## [1.17.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.17.1...v1.17.2) (2023-11-09)
+
+
+### Bug Fixes
+
+* config dist for uploading ([16ec524](https://github.com/CoCreate-app/CoCreateCSS/commit/16ec524d4da20118d53d6cfe9a4e3156e08de943))
+* meta name typo ([1cb0d10](https://github.com/CoCreate-app/CoCreateCSS/commit/1cb0d10dec7b28db043339ed06e5ba54c6f79f85))
+* removed button and dropdown ([67955e7](https://github.com/CoCreate-app/CoCreateCSS/commit/67955e762d3ba1c65f26b8dfae8af12715ba734d))
+* removed button and drpdown ([598b9e0](https://github.com/CoCreate-app/CoCreateCSS/commit/598b9e04baef104fffc8dc04e50241928be4743a))
+* removed dead css ([b0d2f0b](https://github.com/CoCreate-app/CoCreateCSS/commit/b0d2f0bfdd7ea7028329e95ab8eff7cc02239908))
+* removed dragging css as not required onload ([39fa46e](https://github.com/CoCreate-app/CoCreateCSS/commit/39fa46e5a5dd05cf235a71433887c38f1d059b4b))
+* update color ([80cc548](https://github.com/CoCreate-app/CoCreateCSS/commit/80cc5482e7f1cb821d71f7bdbdd9679ecb30b0d0))
+* update host ([f01eca9](https://github.com/CoCreate-app/CoCreateCSS/commit/f01eca9a2419a349570d120c296efae7a6dc73c3))
+
 ## [1.17.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.17.0...v1.17.1) (2023-11-03)
 
 
