@@ -6,7 +6,6 @@ import './css/checkbox.css';
 import './css/core.css';
 import './css/flip-item.css';
 import './css/menu-icon.css';
-import './css/navbar.css';
 import './css/overlay-content.css';
 import './css/progressbar.css';
 import './css/scroll.css';
