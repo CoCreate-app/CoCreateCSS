@@ -1,3 +1,17 @@
+# [1.19.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.18.0...v1.19.0) (2023-11-25)
+
+
+### Bug Fixes
+
+* pass attributes renamed to state ([e4fa08b](https://github.com/CoCreate-app/CoCreateCSS/commit/e4fa08be2bdb1960827113ad197d4d245e9b0c07))
+* remove nav and navbar css ([c85ab44](https://github.com/CoCreate-app/CoCreateCSS/commit/c85ab4471cc75c0a9ac3dd13363a62c4460dc67d))
+* update nav, edit button and css path ([c61865c](https://github.com/CoCreate-app/CoCreateCSS/commit/c61865c9adb467ccbcfa8f3d1374f2e41022f562))
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([bc74940](https://github.com/CoCreate-app/CoCreateCSS/commit/bc7494018f243125df2c450431895c0b16aa1977))
+
 # [1.18.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.17.3...v1.18.0) (2023-11-19)
 
 
