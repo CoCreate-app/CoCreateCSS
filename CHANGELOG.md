@@ -1,3 +1,10 @@
+## [1.20.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.20.2...v1.20.3) (2024-05-19)
+
+
+### Bug Fixes
+
+* replaced localstorage-key with $user_id operator ([fb22b7c](https://github.com/CoCreate-app/CoCreateCSS/commit/fb22b7c9408411ad5d4d56d0974c537587822f50))
+
 ## [1.20.2](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.20.1...v1.20.2) (2024-04-29)
 
 
