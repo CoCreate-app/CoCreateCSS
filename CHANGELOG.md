@@ -1,3 +1,11 @@
+## [1.20.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.20.3...v1.20.4) (2024-06-12)
+
+
+### Bug Fixes
+
+* bump cocreate dependencies ([99ac2f4](https://github.com/CoCreate-app/CoCreateCSS/commit/99ac2f44dcd1c022f20117bb0e85273769d20f6c))
+* svg icon class ([61faeac](https://github.com/CoCreate-app/CoCreateCSS/commit/61faeac538f356a4949434c4c7c3201cbdce5fd4))
+
 ## [1.20.3](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.20.2...v1.20.3) (2024-05-19)
 
 
