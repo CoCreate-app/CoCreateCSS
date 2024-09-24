@@ -1,27 +1,31 @@
-  ::-webkit-scrollbar {
+/* WebKit browsers (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-  } 
-  ::-webkit-scrollbar-thumb{
+}
+
+::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.09);
-  }
-  ::-webkit-scrollbar-thumb:hover {
-      background: #3790ff;
-      opacity: .08;
-      /*width: 10px;*/
-      /*height: 10px;*/
-  }
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3790ff;
+    opacity: 0.08;
+}
+
+::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.03);
     width: 5px;
-    height:5px;
-  }
-  ::-webkit-scrollbar-track:hover {
+    height: 5px;
+}
+
+::-webkit-scrollbar-track:hover {
     background: rgba(0, 0, 0, 0.06);
-    /*width: 10px!important;*/
-    /*height:10px!important;*/
-  }
-  /* ::-webkit-scrollbar:hover {
-    width: 10px!important;
-    height:10px!important;
-  } */
+}
+
+/* Firefox browsers */
+* {
+    scrollbar-width: thin;
+    /* Options: auto, thin, none */
+    scrollbar-color: rgba(0, 0, 0, 0.09) rgba(0, 0, 0, 0.03);
+}
