@@ -1,3 +1,17 @@
+# [1.21.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.20.4...v1.21.0) (2024-11-04)
+
+
+### Bug Fixes
+
+* pretier.config.js and file formating ([a8a97d0](https://github.com/CoCreate-app/CoCreateCSS/commit/a8a97d08217a7b681dd05cffbee1aec428ca0cc0))
+* scroll css ([a007aa4](https://github.com/CoCreate-app/CoCreateCSS/commit/a007aa4f8f7ca5519e522d2205609037bf3dd329))
+
+
+### Features
+
+* add prettier.config.js and format files ([a90cf9c](https://github.com/CoCreate-app/CoCreateCSS/commit/a90cf9cf583ff1242cc38a0077e28df230863de5))
+* add prettier.config.js and format files ([98238c8](https://github.com/CoCreate-app/CoCreateCSS/commit/98238c860f4c3261b494dd151eec08e57fcef89b))
+
 ## [1.20.4](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.20.3...v1.20.4) (2024-06-12)
 
 
