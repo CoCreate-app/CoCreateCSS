@@ -1,167 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Navbar | CoCreate</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Navbar | CoCreate</title>
 
-        <!-- CoCreateCSS -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.cocreate.app/CoCreate.min.css"
-            type="text/css" />
+		<!-- CoCreateCSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.cocreate.app/CoCreate.min.css"
+			type="text/css" />
 
-        <link rel="manifest" href="/manifest.webmanifest" />
-    </head>
+		<link rel="manifest" href="/manifest.webmanifest" />
+	</head>
 
-    <body>
-        <!-- Navbar effects: sticky-nav, hidden-nav -->
-        <div
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5"
-            class="nav display:flex align-items-center bg-light-gray">
-            <!--<a href="#" class="logo">Navbar</a>-->
+	<body>
+		<!-- Navbar effects: sticky-nav, hidden-nav -->
+		<div
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5"
+			class="nav display:flex align-items-center bg-light-gray">
+			<!--<a href="#" class="logo">Navbar</a>-->
 
-            <!-- Menu Icon -->
-            <a
-                class="menu_icon display:none@md@lg@xl"
-                toggle="open"
-                toggle-sidenav="menuL">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+			<!-- Menu Icon -->
+			<a
+				class="menu_icon display:none@md@lg@xl"
+				toggle="open"
+				toggle-sidenav="menuL">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
 
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="overflow:auto display:inline-flex direction:rtl font-size:20px align-items-center list-style-type-none width:100% height:50px">
-                <!-- Fullscreen toogle and icon transform -->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i class="height:18px" src="/assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="/assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="overflow:auto display:inline-flex direction:rtl font-size:20px align-items-center list-style-type-none width:100% height:50px">
+				<!-- Fullscreen toogle and icon transform -->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i class="height:18px" src="/assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="/assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="render.html"
-                        state-array="modules"
-                        state-object=""
-                        state_to="builder"
-                        modal-width="100%"
-                        class="sessionAdminUI_Id">
-                        <i
-                            class="height:18px"
-                            src="/assets/svg/palette.svg"></i>
-                        <div
-                            state-array="modules"
-                            state-object=""
-                            state_to="render"
-                            class="sessionBuilderUI_Id"></div>
-                    </a>
-                </li>
-                <li class="display:flex">
-                    <span
-                        class="cocreate-badge position:relative right-8px bottom-5px border-radius-5px"
-                        >4</span
-                    >
-                    <a
-                        actions="state, openModal"
-                        modal-src="render.html"
-                        state-array="modules"
-                        state-object=""
-                        state_to="render"
-                        modal-width="100%"
-                        modal-height="100%"
-                        modal-color="#229954">
-                        <i
-                            class="height:18px"
-                            src="/assets/svg/history.svg"></i>
-                    </a>
-                </li>
-                <li class="display:flex">
-                    <span
-                        class="cocreate-badge position:relative right-8px bottom-5px border-radius-5px"
-                        >4</span
-                    >
-                    <a
-                        actions="state, openModal"
-                        modal-src="render.html"
-                        state-array="modules"
-                        state-object="5dc846ebcddd6b0de2c40b80"
-                        state_to="render"
-                        modal-width="100%"
-                        modal-height="100%"
-                        modal-color="#229954">
-                        <i
-                            class="height:18px"
-                            src="/assets/svg/calendar.svg"></i>
-                    </a>
-                </li>
-            </ul>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="render.html"
+						state-array="modules"
+						state-object=""
+						state_to="builder"
+						modal-width="100%"
+						class="sessionAdminUI_Id">
+						<i
+							class="height:18px"
+							src="/assets/svg/palette.svg"></i>
+						<div
+							state-array="modules"
+							state-object=""
+							state_to="render"
+							class="sessionBuilderUI_Id"></div>
+					</a>
+				</li>
+				<li class="display:flex">
+					<span
+						class="cocreate-badge position:relative right-8px bottom-5px border-radius-5px"
+						>4</span
+					>
+					<a
+						actions="state, openModal"
+						modal-src="render.html"
+						state-array="modules"
+						state-object=""
+						state_to="render"
+						modal-width="100%"
+						modal-height="100%"
+						modal-color="#229954">
+						<i
+							class="height:18px"
+							src="/assets/svg/history.svg"></i>
+					</a>
+				</li>
+				<li class="display:flex">
+					<span
+						class="cocreate-badge position:relative right-8px bottom-5px border-radius-5px"
+						>4</span
+					>
+					<a
+						actions="state, openModal"
+						modal-src="render.html"
+						state-array="modules"
+						state-object="5dc846ebcddd6b0de2c40b80"
+						state_to="render"
+						modal-width="100%"
+						modal-height="100%"
+						modal-color="#229954">
+						<i
+							class="height:18px"
+							src="/assets/svg/calendar.svg"></i>
+					</a>
+				</li>
+			</ul>
 
-            <!-- Avatar -->
-            <div
-                localstorage-get="user_id"
-                localstorage-key="userId"
-                localstorage-selector=".avatar-wrapper"></div>
-            <div class="avatar-wrapper margin:5px_0px margin-right:10px">
-                <a
-                    class="avatar round"
-                    actions="state, openModal"
-                    modal-src="render.html"
-                    state-array="modules"
-                    state-object="5dd010bccbc25f0cdb1a4d9f"
-                    state_to="render"
-                    modal-width="300px"
-                    modal-height="375px"
-                    modal-color="#229954">
-                    <span
-                        array="users"
-                        object="$user_id"
-                        key="name"
-                        class="width:12px avatar-name"
-                        >B</span
-                    >
-                    <span
-                        array="users"
-                        object="$user_id"
-                        key="profile_image"
-                        class="avatar-image">
-                        <img
-                            src="/_static/Velazquez.jpg"
-                            onerror="this.style.display='none'" />
-                    </span>
-                </a>
-                <div class="avatar-status off"></div>
-            </div>
-        </div>
+			<!-- Avatar -->
+			<div
+				localstorage-get="user_id"
+				localstorage-key="userId"
+				localstorage-query=".avatar-wrapper"></div>
+			<div class="avatar-wrapper margin:5px_0px margin-right:10px">
+				<a
+					class="avatar round"
+					actions="state, openModal"
+					modal-src="render.html"
+					state-array="modules"
+					state-object="5dd010bccbc25f0cdb1a4d9f"
+					state_to="render"
+					modal-width="300px"
+					modal-height="375px"
+					modal-color="#229954">
+					<span
+						array="users"
+						object="$user_id"
+						key="name"
+						class="width:12px avatar-name"
+						>B</span
+					>
+					<span
+						array="users"
+						object="$user_id"
+						key="profile_image"
+						class="avatar-image">
+						<img
+							src="/_static/Velazquez.jpg"
+							onerror="this.style.display='none'" />
+					</span>
+				</a>
+				<div class="avatar-status off"></div>
+			</div>
+		</div>
 
-        <div id="modal-viewport" content_id="content"></div>
+		<div id="modal-viewport" content_id="content"></div>
 
-        <div
-            id="menuL"
-            class="cocreate-sidenav bg-medium-light-gray"
-            content_id="content"
-            sidenav_default_desktop="expanded"
-            sidenav_default_tablet="collapsed">
-            <div resize="right"></div>
-        </div>
+		<div
+			id="menuL"
+			class="cocreate-sidenav bg-medium-light-gray"
+			content_id="content"
+			sidenav_default_desktop="expanded"
+			sidenav_default_tablet="collapsed">
+			<div resize="right"></div>
+		</div>
 
-        <!--CoCreateJS-->
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<!--CoCreateJS-->
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>
