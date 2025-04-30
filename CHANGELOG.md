@@ -1,3 +1,12 @@
+## [1.21.1](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.21.0...v1.21.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* update query attributes ([edb573d](https://github.com/CoCreate-app/CoCreateCSS/commit/edb573d50f31b66e1b7d7f2509bb91a32a276692))
+* updated cocreate modules versions ([0e74b75](https://github.com/CoCreate-app/CoCreateCSS/commit/0e74b7573b4e78c271b40c7150629ae8848e1a78))
+* webpack.config and devdependencies ([790bcf8](https://github.com/CoCreate-app/CoCreateCSS/commit/790bcf804617f4d70c673daf30bd46d76e9a23e6))
+
 # [1.21.0](https://github.com/CoCreate-app/CoCreateCSS/compare/v1.20.4...v1.21.0) (2024-11-04)
 
 
